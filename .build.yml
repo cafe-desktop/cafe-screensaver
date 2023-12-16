@@ -3,8 +3,8 @@
 ##########################################################
 requires:
   debian:
-    # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-screensaver
+    # Useful URL: https://github.com/cafe-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/cafe-screensaver
     - aptitude
     - autoconf-archive
     - autopoint
@@ -18,9 +18,9 @@ requires:
     - libdconf-dev
     - libglib2.0-dev
     - libgtk-3-dev
-    - libmate-desktop-dev
-    - libmate-menu-dev
-    - libmatekbd-dev
+    - libcafe-desktop-dev
+    - libcafe-menu-dev
+    - libcafekbd-dev
     - libnotify-dev
     - libpam0g-dev
     - libstartup-notification0-dev
@@ -31,7 +31,7 @@ requires:
     - libxt-dev
     - libxxf86vm-dev
     - make
-    - mate-common
+    - cafe-common
     - x11proto-scrnsaver-dev
     - x11proto-xext-dev
     - x11proto-xf86vidmode-dev

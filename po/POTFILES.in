@@ -1,11 +1,11 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/mate-screensaver-preferences.desktop.in
-data/mate-screensaver-preferences.ui
-data/mate-screensaver.directory.desktop.in
+data/cafe-screensaver-preferences.desktop.in
+data/cafe-screensaver-preferences.ui
+data/cafe-screensaver.directory.desktop.in
 data/images/cosmos/cosmos.xml.in.in
 data/lock-dialog-default.ui
-data/org.mate.screensaver.gschema.xml.in
+data/org.cafe.screensaver.gschema.xml.in
 savers/cosmos-slideshow.desktop.in.in
 savers/footlogo-floaters.desktop.in.in
 savers/gnomelogo-floaters.desktop.in.in
@@ -15,11 +15,11 @@ savers/popsquares.c
 savers/floaters.c
 savers/slideshow.c
 src/copy-theme-dialog.c
-src/mate-screensaver-command.c
-src/mate-screensaver-dialog.c
-src/mate-screensaver-preferences.c
-src/mate-screensaver.c
-src/mate-screensaver.desktop.in.in
+src/cafe-screensaver-command.c
+src/cafe-screensaver-dialog.c
+src/cafe-screensaver-preferences.c
+src/cafe-screensaver.c
+src/cafe-screensaver.desktop.in.in
 src/gs-auth-pam.c
 src/gs-listener-dbus.c
 src/gs-lock-plug.c

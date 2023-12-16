@@ -1,11 +1,11 @@
 dnl -*- mode: m4 -*-
 
 AC_PREREQ(2.60)
-AC_INIT([mate-screensaver],
+AC_INIT([cafe-screensaver],
         [1.24.1],
-        [https://mate-desktop.org/])
+        [https://cafe-desktop.org/])
 
-AC_CONFIG_SRCDIR(src/mate-screensaver.c)
+AC_CONFIG_SRCDIR(src/cafe-screensaver.c)
 AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz check-news])
@@ -33,7 +33,7 @@ ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
-GETTEXT_PACKAGE=mate-screensaver
+GETTEXT_PACKAGE=cafe-screensaver
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Name of default gettext domain])
 
@@ -67,8 +67,8 @@ PKG_CHECK_MODULES(MATE_SCREENSAVER,
         gtk+-3.0 >= $GTK_REQUIRED_VERSION
         dbus-glib-1 >= $DBUS_REQUIRED_VERSION
         gio-2.0 >= $GLIB_REQUIRED_VERSION
-        mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED_VERSION
-        libmate-menu >= $LIBMATE_MENU_REQUIRED_VERSION)
+        cafe-desktop-2.0 >= $MATE_DESKTOP_REQUIRED_VERSION
+        libcafe-menu >= $LIBMATE_MENU_REQUIRED_VERSION)
 AC_SUBST(MATE_SCREENSAVER_CFLAGS)
 AC_SUBST(MATE_SCREENSAVER_LIBS)
 
@@ -76,15 +76,15 @@ PKG_CHECK_MODULES(MATE_SCREENSAVER_DIALOG,
         gio-2.0 >= $GLIB_REQUIRED_VERSION
         gthread-2.0
         gtk+-3.0 >= $GTK_REQUIRED_VERSION
-        mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED_VERSION)
+        cafe-desktop-2.0 >= $MATE_DESKTOP_REQUIRED_VERSION)
 AC_SUBST(MATE_SCREENSAVER_DIALOG_CFLAGS)
 AC_SUBST(MATE_SCREENSAVER_DIALOG_LIBS)
 
 PKG_CHECK_MODULES(MATE_SCREENSAVER_CAPPLET,
         gio-2.0 >= $GLIB_REQUIRED_VERSION
         gtk+-3.0 >= $GTK_REQUIRED_VERSION
-        mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED_VERSION
-        libmate-menu >= $LIBMATE_MENU_REQUIRED_VERSION)
+        cafe-desktop-2.0 >= $MATE_DESKTOP_REQUIRED_VERSION
+        libcafe-menu >= $LIBMATE_MENU_REQUIRED_VERSION)
 AC_SUBST(MATE_SCREENSAVER_CAPPLET_CFLAGS)
 AC_SUBST(MATE_SCREENSAVER_CAPPLET_LIBS)
 
@@ -168,9 +168,9 @@ AC_ARG_WITH(doc-dir,
               [AC_HELP_STRING([--with-doc-dir=<dir>],
               [directory to install documentation])])
 if ! test -z "$with_doc_dir"; then
-   DOCDIR="$with_doc_dir/mate-screensaver-$VERSION"
+   DOCDIR="$with_doc_dir/cafe-screensaver-$VERSION"
 else
-   DOCDIR="$datadir/doc/mate-screensaver-$VERSION"
+   DOCDIR="$datadir/doc/cafe-screensaver-$VERSION"
 fi
 AC_SUBST(DOCDIR)
 
@@ -970,16 +970,16 @@ AM_CONDITIONAL(WITH_ELOGIND, [test "x$use_elogind" = "xyes"])
 AC_SUBST(WITH_ELOGIND)
 
 dnl ---------------------------------------------------------------------------
-dnl libmatekbd
+dnl libcafekbd
 dnl ---------------------------------------------------------------------------
 
-have_libmatekbdui=no
+have_libcafekbdui=no
 AC_ARG_WITH(kbd-layout-indicator,[  --without-kbd-layout-indicator         disable keyboard layout indicator],
             [with_kbd_layout_indicator="$withval"],[with_kbd_layout_indicator=yes])
 if test x$with_kbd_layout_indicator != xno; then
-  PKG_CHECK_MODULES(LIBMATEKBDUI, libmatekbdui >= $LIBMATEKBDUI_REQUIRED_VERSION, have_libmatekbdui=yes, have_libmatekbdui=no)
+  PKG_CHECK_MODULES(LIBMATEKBDUI, libcafekbdui >= $LIBMATEKBDUI_REQUIRED_VERSION, have_libcafekbdui=yes, have_libcafekbdui=no)
 fi
-if test "x$have_libmatekbdui" = "xyes"; then
+if test "x$have_libcafekbdui" = "xyes"; then
   AC_SUBST(LIBMATEKBDUI_CFLAGS)
   AC_SUBST(LIBMATEKBDUI_LIBS)
   AC_DEFINE(WITH_KBD_LAYOUT_INDICATOR, 1, [Define if keyboard layout indicator should be built])
@@ -1078,7 +1078,7 @@ SLIDESHOW_COSMOS_DIR="${EXPANDED_DATADIR}/backgrounds/cosmos"
 
 AC_SUBST(SLIDESHOW_COSMOS_DIR)
 
-FLOATERS_FOOT_LOGO_IMAGE="${EXPANDED_DATADIR}/pixmaps/mate-logo-white.svg"
+FLOATERS_FOOT_LOGO_IMAGE="${EXPANDED_DATADIR}/pixmaps/cafe-logo-white.svg"
 AC_SUBST(FLOATERS_FOOT_LOGO_IMAGE)
 FLOATERS_FOOT_GNOME_LOGO_IMAGE="${EXPANDED_DATADIR}/pixmaps/gnome-logo-white.svg"
 AC_SUBST(FLOATERS_FOOT_GNOME_LOGO_IMAGE)
@@ -1091,10 +1091,10 @@ AC_SUBST(MATE_SCREENSAVER_THEMES_DIR)
 # Special directories
 # Used for .pc.in file
 
-privlibexecdir='${libexecdir}'/mate-screensaver
+privlibexecdir='${libexecdir}'/cafe-screensaver
 AC_SUBST(privlibexecdir)
 
-privdatadir='${datadir}'/mate-screensaver
+privdatadir='${datadir}'/cafe-screensaver
 AC_SUBST(privdatadir)
 
 themesdir='${datadir}'/applications/screensavers
@@ -1107,20 +1107,20 @@ AC_OUTPUT([
 Makefile
 po/Makefile.in
 src/Makefile
-src/mate-screensaver.desktop.in
+src/cafe-screensaver.desktop.in
 data/Makefile
-data/mate-screensavers.menu
-data/mate-screensaver.pc
-data/org.mate.ScreenSaver.service
+data/cafe-screensavers.menu
+data/cafe-screensaver.pc
+data/org.cafe.ScreenSaver.service
 data/images/Makefile
 data/images/cosmos/Makefile
 savers/Makefile
 doc/Makefile
-doc/mate-screensaver.xml
+doc/cafe-screensaver.xml
 ])
 
 echo "
-                    mate-screensaver $VERSION
+                    cafe-screensaver $VERSION
                     ========================
 
         prefix:                   ${prefix}

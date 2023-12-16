@@ -31,7 +31,7 @@
 #endif /* HAVE_UNISTD_H */
 
 #include <glib-object.h>
-#include <matemenu-tree.h>
+#include <cafemenu-tree.h>
 
 #include "gs-theme-manager.h"
 #include "gs-debug.h"
@@ -228,7 +228,7 @@ gs_theme_info_get_exec (GSThemeInfo *info)
 }
 
 static GSThemeInfo *
-gs_theme_info_new_from_matemenu_tree_entry (MateMenuTreeEntry *entry)
+gs_theme_info_new_from_cafemenu_tree_entry (MateMenuTreeEntry *entry)
 {
 	GSThemeInfo *info;
 	const char     *str;
@@ -236,14 +236,14 @@ gs_theme_info_new_from_matemenu_tree_entry (MateMenuTreeEntry *entry)
 	GDesktopAppInfo *ginfo;
 
 	info = g_new0 (GSThemeInfo, 1);
-	ginfo = matemenu_tree_entry_get_app_info (entry);
+	ginfo = cafemenu_tree_entry_get_app_info (entry);
 
 	info->refcount = 1;
 	info->name     = g_strdup (g_app_info_get_name(G_APP_INFO(ginfo)));
 	info->exec     = g_strdup (g_app_info_get_commandline(G_APP_INFO(ginfo)));
 
 	/* remove the .desktop suffix */
-	str = matemenu_tree_entry_get_desktop_file_id (entry);
+	str = cafemenu_tree_entry_get_desktop_file_id (entry);
 	pos = g_strrstr (str, ".desktop");
 	if (pos)
 	{
@@ -266,30 +266,30 @@ find_info_for_id (MateMenuTree  *tree,
 	MateMenuTreeIter *iter;
 	MateMenuTreeItemType type;
 
-	root = matemenu_tree_get_root_directory (tree);
+	root = cafemenu_tree_get_root_directory (tree);
 	if (root == NULL)
 	{
 		return NULL;
 	}
 
 	info = NULL;
-	iter = matemenu_tree_directory_iter (root);
-	while ((type = matemenu_tree_iter_next (iter)) != MATEMENU_TREE_ITEM_INVALID) {
+	iter = cafemenu_tree_directory_iter (root);
+	while ((type = cafemenu_tree_iter_next (iter)) != MATEMENU_TREE_ITEM_INVALID) {
 		if (info == NULL && type == MATEMENU_TREE_ITEM_ENTRY) {
 			MateMenuTreeEntry *entry;
 			const char     *file_id;
 
-			entry = matemenu_tree_iter_get_entry(iter);
-			file_id = matemenu_tree_entry_get_desktop_file_id (entry);
+			entry = cafemenu_tree_iter_get_entry(iter);
+			file_id = cafemenu_tree_entry_get_desktop_file_id (entry);
 			if (file_id && id && strcmp (file_id, id) == 0)
 			{
-				info = gs_theme_info_new_from_matemenu_tree_entry (entry);
+				info = gs_theme_info_new_from_cafemenu_tree_entry (entry);
 			}
-			matemenu_tree_item_unref (entry);
+			cafemenu_tree_item_unref (entry);
 		}
 	}
-	matemenu_tree_iter_unref (iter);
-	matemenu_tree_item_unref (root);
+	cafemenu_tree_iter_unref (iter);
+	cafemenu_tree_item_unref (root);
 	return info;
 }
 
@@ -317,7 +317,7 @@ theme_prepend_entry (GSList         **parent_list,
 {
 	GSThemeInfo *info;
 
-	info = gs_theme_info_new_from_matemenu_tree_entry (entry);
+	info = gs_theme_info_new_from_cafemenu_tree_entry (entry);
 
 	*parent_list = g_slist_prepend (*parent_list, info);
 }
@@ -330,16 +330,16 @@ make_theme_list (GSList             **parent_list,
 	MateMenuTreeIter *iter;
 	MateMenuTreeItemType type;
 
-	iter = matemenu_tree_directory_iter (directory);
-	while ((type = matemenu_tree_iter_next (iter)) != MATEMENU_TREE_ITEM_INVALID) {
+	iter = cafemenu_tree_directory_iter (directory);
+	while ((type = cafemenu_tree_iter_next (iter)) != MATEMENU_TREE_ITEM_INVALID) {
 		if (type == MATEMENU_TREE_ITEM_ENTRY) {
 			MateMenuTreeEntry *item;
-			item = matemenu_tree_iter_get_entry (iter);
+			item = cafemenu_tree_iter_get_entry (iter);
 			theme_prepend_entry (parent_list, (MateMenuTreeEntry*)item, filename);
-			matemenu_tree_item_unref (item);
+			cafemenu_tree_item_unref (item);
 		}
 	}
-	matemenu_tree_iter_unref (iter);
+	cafemenu_tree_iter_unref (iter);
 	*parent_list = g_slist_reverse (*parent_list);
 }
 
@@ -351,12 +351,12 @@ gs_theme_manager_get_info_list (GSThemeManager *theme_manager)
 
 	g_return_val_if_fail (GS_IS_THEME_MANAGER (theme_manager), NULL);
 
-	root = matemenu_tree_get_root_directory (theme_manager->priv->menu_tree);
+	root = cafemenu_tree_get_root_directory (theme_manager->priv->menu_tree);
 
 	if (root != NULL)
 	{
-		make_theme_list (&l, root, "mate-screensavers.menu");
-		matemenu_tree_item_unref (root);
+		make_theme_list (&l, root, "cafe-screensavers.menu");
+		cafemenu_tree_item_unref (root);
 	}
 
 	return l;
@@ -380,9 +380,9 @@ get_themes_tree (void)
 	   and since this is only run once we'll do it here */
 	add_known_engine_locations_to_path ();
 
-	themes_tree = matemenu_tree_new ("mate-screensavers.menu", MATEMENU_TREE_FLAGS_NONE);
-	if (!matemenu_tree_load_sync (themes_tree, &error)) {
-		g_debug("Load matemenu tree got error: %s\n", error->message);
+	themes_tree = cafemenu_tree_new ("cafe-screensavers.menu", MATEMENU_TREE_FLAGS_NONE);
+	if (!cafemenu_tree_load_sync (themes_tree, &error)) {
+		g_debug("Load cafemenu tree got error: %s\n", error->message);
 		g_error_free(error);
 		g_object_unref(themes_tree);
 		return NULL;

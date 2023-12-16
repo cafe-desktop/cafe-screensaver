@@ -29,7 +29,7 @@
 #include <gio/gio.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
-#include <libmate-desktop/mate-bg.h>
+#include <libcafe-desktop/cafe-bg.h>
 
 #include "gs-prefs.h"        /* for GSSaverMode */
 
@@ -1041,18 +1041,18 @@ gs_manager_init (GSManager *manager)
 	manager->priv->grab = gs_grab_new ();
 	manager->priv->theme_manager = gs_theme_manager_new ();
 
-	manager->priv->bg = mate_bg_new ();
+	manager->priv->bg = cafe_bg_new ();
 
 	g_signal_connect (manager->priv->bg,
 					  "changed",
 					  G_CALLBACK (on_bg_changed),
 					  manager);
 
-	mate_bg_load_from_preferences (manager->priv->bg);
-	GSettings *settings = g_settings_new ("org.mate.screensaver");
+	cafe_bg_load_from_preferences (manager->priv->bg);
+	GSettings *settings = g_settings_new ("org.cafe.screensaver");
 	char *filename= g_settings_get_string (settings, "picture-filename");
 	if (g_file_test (filename, G_FILE_TEST_EXISTS)) {
-		mate_bg_set_filename (manager->priv->bg, filename);
+		cafe_bg_set_filename (manager->priv->bg, filename);
 	}
 	g_free (filename);
 	g_object_unref (settings);
@@ -1274,13 +1274,13 @@ apply_background_to_window (GSManager *manager,
 	int              width;
 	int              height;
 
-	mate_bg_load_from_preferences(manager->priv->bg);
+	cafe_bg_load_from_preferences(manager->priv->bg);
 
-	settings = g_settings_new ("org.mate.screensaver");
+	settings = g_settings_new ("org.cafe.screensaver");
 	filename = g_settings_get_string (settings, "picture-filename");
 
 	if (g_file_test (filename, G_FILE_TEST_EXISTS)) {
-		mate_bg_set_filename (manager->priv->bg, filename);
+		cafe_bg_set_filename (manager->priv->bg, filename);
 	}
 	g_free (filename);
 	g_object_unref (settings);
@@ -1294,7 +1294,7 @@ apply_background_to_window (GSManager *manager,
 	gtk_widget_get_preferred_width (GTK_WIDGET (window), &width, NULL);
 	gtk_widget_get_preferred_height (GTK_WIDGET (window), &height, NULL);
 	gs_debug ("Creating background w:%d h:%d", width, height);
-	surface = mate_bg_create_surface (manager->priv->bg,
+	surface = cafe_bg_create_surface (manager->priv->bg,
 	                                  gs_window_get_gdk_window (window),
 	                                  width,
 	                                  height,

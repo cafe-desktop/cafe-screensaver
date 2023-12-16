@@ -25,7 +25,7 @@ background-1.xml: background-1.xml.in Makefile
 	$(AM_V_GEN) $(edit) $< >$@
 
 metadata_in_files = cosmos.xml.in
-metadatadir = $(datadir)/mate-background-properties
+metadatadir = $(datadir)/cafe-background-properties
 metadata_DATA = $(metadata_in_files:.xml.in=.xml)
 
 $(metadata_DATA): $(metadata_in_files)

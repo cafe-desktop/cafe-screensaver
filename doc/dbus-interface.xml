@@ -22,15 +22,15 @@
         <tbody>
           <row>
             <entry>DBUS Service:</entry>
-            <entry><literal>org.mate.ScreenSaver</literal></entry>
+            <entry><literal>org.cafe.ScreenSaver</literal></entry>
           </row>
           <row>
             <entry>DBUS Object Path:</entry>
-            <entry><literal>/org/mate/ScreenSaver</literal></entry>
+            <entry><literal>/org/cafe/ScreenSaver</literal></entry>
           </row>
           <row>
             <entry>DBUS Interface:</entry>
-            <entry><literal>org.mate.ScreenSaver</literal></entry>
+            <entry><literal>org.cafe.ScreenSaver</literal></entry>
           </row>
         </tbody>
       </tgroup>
@@ -172,7 +172,7 @@
             <row>
               <entry>in</entry>
               <entry>string</entry>
-              <entry>the application name, e.g. "mate-power-manager"</entry>
+              <entry>the application name, e.g. "cafe-power-manager"</entry>
             </row>
             <row>
               <entry>in</entry>
@@ -447,24 +447,24 @@
     </para>
     <screen>
 dbus-send --session \
-          --dest=org.mate.ScreenSaver \
+          --dest=org.cafe.ScreenSaver \
           --type=method_call \
           --print-reply \
           --reply-timeout=20000 \
-          /org/mate/ScreenSaver \
-          org.mate.ScreenSaver.GetSessionIdleTime
+          /org/cafe/ScreenSaver \
+          org.cafe.ScreenSaver.GetSessionIdleTime
     </screen>
     <para>
       You can activate the screensaver like so:
     </para>
     <screen>
 dbus-send --session \
-          --dest=org.mate.ScreenSaver \
+          --dest=org.cafe.ScreenSaver \
           --type=method_call \
           --print-reply \
           --reply-timeout=20000 \
-          /org/mate/ScreenSaver \
-          org.mate.ScreenSaver.SetActive \
+          /org/cafe/ScreenSaver \
+          org.cafe.ScreenSaver.SetActive \
           boolean:true
     </screen>
 
@@ -473,7 +473,7 @@ dbus-send --session \
     </para>
     <screen>
 dbus-monitor --session \
-          "type='signal',interface='org.mate.ScreenSaver'"
+          "type='signal',interface='org.cafe.ScreenSaver'"
     </screen>
 
     <para>
@@ -481,7 +481,7 @@ dbus-monitor --session \
     </para>
     <screen>
 dbus-monitor --session \
-          "type='signal',interface='org.mate.ScreenSaver',member='SessionIdleChanged'"
+          "type='signal',interface='org.cafe.ScreenSaver',member='SessionIdleChanged'"
     </screen>
   </sect1>
 

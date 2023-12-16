@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-screensaver package.
+# This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,92 +8,92 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-screensaver 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-screensaver 1.23.1\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2019-11-04 23:36+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
-"Language-Team: Panjabi (Punjabi) (https://www.transifex.com/mate/teams/13566/pa/)\n"
+"Language-Team: Panjabi (Punjabi) (https://www.transifex.com/cafe/teams/13566/pa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pa\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/mate-screensaver-preferences.desktop.in:3
-#: src/mate-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Screensaver"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ"
 
-#: data/mate-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:4
 msgid "Set your screensaver preferences"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਲਈ ਆਪਣੀ ਪਸੰਦ ਦਿਓ"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver-preferences.desktop.in:6
-#: src/mate-screensaver.desktop.in.in:7
+#: data/cafe-screensaver-preferences.desktop.in:6
+#: src/cafe-screensaver.desktop.in.in:7
 msgid "preferences-desktop-screensaver"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: data/mate-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:12
 msgid "MATE;screensaver;preferences;"
 msgstr ""
 
-#: data/mate-screensaver-preferences.ui:20
+#: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਝਲਕ"
 
-#: data/mate-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:56
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>ਸਕਰੀਨ-ਸੇਵਰ ਝਲਕ</b>"
 
-#: data/mate-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:164
 msgid "Screensaver Preferences"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਪਸੰਦ"
 
-#: data/mate-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:196
 msgid "Power _Management"
 msgstr "ਊਰਜਾ ਪਰਬੰਧ(_M)"
 
-#: data/mate-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:212
 msgid "_Preview"
 msgstr "ਝਲਕ(_P)"
 
-#: data/mate-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:272
 msgid "_Screensaver theme:"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਥੀਮ(_S):"
 
-#: data/mate-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:390
 msgid "Regard the computer as _idle after:"
 msgstr "ਕੰਪਿਊਟਰ ਨੂੰ ਇੰਨੇ ਸਮੇਂ ਬਾਅਦ ਵੇਹਲਾ ਮੰਨੋ(_i):"
 
-#: data/mate-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:433
 msgid "_Activate screensaver when computer is idle"
 msgstr "ਜਦੋਂ ਕੰਪਿਊਟਰ ਵੇਹਲਾ ਹੋਵੇ ਤਾਂ ਸਕਰੀਨ-ਸੇਵਰ ਸਰਗਰਮ ਕਰੋ(_A)"
 
-#: data/mate-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:448
 msgid "_Lock screen when screensaver is active"
 msgstr "ਜਦੋਂ ਸਕਰੀਨ-ਸੇਵਰ ਸਰਗਰਮ ਹੋਵੇ ਤਾਂ ਸਕਰੀਨ ਲਾਕ ਕਰੋ(_L)"
 
-#: data/mate-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:465
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>ਚੇਤਾਵਨੀ: ਸਕਰੀਨ root ਯੂਜ਼ਰ ਲਈ ਤਾਲਾਬੰਦ ਨਹੀਂ ਹੋਵੇਗੀ।</b>"
 
-#: data/mate-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:4
 msgid "Screensavers"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ"
 
-#: data/mate-screensaver.directory.desktop.in:5
-#: data/org.mate.screensaver.gschema.xml.in:25
+#: data/cafe-screensaver.directory.desktop.in:5
+#: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਥੀਮ"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver.directory.desktop.in:7
+#: data/cafe-screensaver.directory.desktop.in:7
 msgid "screensaver"
 msgstr ""
 
@@ -133,27 +133,27 @@ msgstr "ਤਾਲਾ ਖੋਲ੍ਹੋ(_U)"
 msgid "<b>Leave a message for %R:</b>"
 msgstr "<b>%R ਲਈ ਇੱਕ ਸੁਨੇਹਾ ਛੱਡ ਕੇ ਜਾਓ:</b>"
 
-#: data/org.mate.screensaver.gschema.xml.in:10
+#: data/org.cafe.screensaver.gschema.xml.in:10
 msgid "Activate when idle"
 msgstr "ਜਦੋਂ ਵੇਹਲਾ ਹੋਵੇ ਤਾਂ ਸਰਗਰਮ"
 
-#: data/org.mate.screensaver.gschema.xml.in:11
+#: data/org.cafe.screensaver.gschema.xml.in:11
 msgid "Set this to TRUE to activate the screensaver when the session is idle."
 msgstr "ਇਹ ਨੂੰ ਸੱਚ ਕਰੋ, ਜੇਕਰ ਸ਼ੈਸ਼ਨ ਵੇਹਲਾ ਹੋਣ ਸਮੇਂ ਸਕਰੀਨ ਨੂੰ ਤਾਲਾਬੰਦ ਕਰਨਾ ਹੈ"
 
-#: data/org.mate.screensaver.gschema.xml.in:15
+#: data/org.cafe.screensaver.gschema.xml.in:15
 msgid "Lock on activation"
 msgstr "ਸਰਗਰਮੀ ਸਮੇਂ ਲਾਕ ਕਰੋ"
 
-#: data/org.mate.screensaver.gschema.xml.in:16
+#: data/org.cafe.screensaver.gschema.xml.in:16
 msgid "Set this to TRUE to lock the screen when the screensaver goes active."
 msgstr "ਇਹ ਨੂੰ ਸੱਚ ਕਰੋ, ਜੇਕਰ ਸਕਰੀਨ-ਸੇਵਰ ਸਰਗਰਮ ਹੋਣ ਸਮੇਂ ਸਕਰੀਨ ਨੂੰ ਲਾਕ ਕਰਨਾ ਹੈ"
 
-#: data/org.mate.screensaver.gschema.xml.in:20
+#: data/org.cafe.screensaver.gschema.xml.in:20
 msgid "Screensaver theme selection mode"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਥੀਮ ਚੋਣ ਢੰਗ"
 
-#: data/org.mate.screensaver.gschema.xml.in:21
+#: data/org.cafe.screensaver.gschema.xml.in:21
 msgid ""
 "The selection mode used by screensaver. May be \"blank-only\" to enable the "
 "screensaver without using any theme on activation, \"single\" to enable "
@@ -167,7 +167,7 @@ msgstr ""
 " ਲਾਜ਼ਮੀ ਹੈ) ਅਤੇ \"ਰਲਵਾਂ (random)\" ਨੂੰ ਸਰਗਰਮ ਹੋਣ ਦੀ ਹਾਲਤ ਵਿੱਚ ਰਲਵੇਂ ਥੀਮ ਵਰਤਣ"
 " ਲਈ ਯੋਗ ਕਰਦਾ ਹੈ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:26
+#: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
 "This key specifies the list of themes to be used by the screensaver. It's "
 "ignored when \"mode\" key is \"blank-only\", should provide the theme name "
@@ -179,29 +179,29 @@ msgstr ""
 "ਨਾਂ ਦੇਣਾ ਲਾਜ਼ਮੀ ਹੈ, ਜਦੋਂ \"mode\" ਨੂੰ \"single\" ਮੁੱਲ ਦਿੱਤਾ ਹੋਵੇ ਅਤੇ "
 "\"mode\" ਨੂੰ \"random\" ਮੁੱਲ ਹੋਣ ਦੀ ਹਾਲਤ ਵਿੱਚ ਥੀਮਾਂ ਦੀ ਲਿਸਟ ਦੇਣਾ ਲਾਜ਼ਮੀ ਹੈ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:30
+#: data/org.cafe.screensaver.gschema.xml.in:30
 msgid "Time before power management baseline"
 msgstr ""
 
-#: data/org.mate.screensaver.gschema.xml.in:31
+#: data/org.cafe.screensaver.gschema.xml.in:31
 msgid ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
 msgstr ""
 
-#: data/org.mate.screensaver.gschema.xml.in:35
+#: data/org.cafe.screensaver.gschema.xml.in:35
 msgid "Time before theme change"
 msgstr "ਥੀਮ ਬਦਲਣ ਤੋਂ ਪਹਿਲਾਂ ਟਾਈਮ"
 
-#: data/org.mate.screensaver.gschema.xml.in:36
+#: data/org.cafe.screensaver.gschema.xml.in:36
 msgid "The number of minutes to run before changing the screensaver theme."
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਥੀਮ ਬਦਲਣ ਤੋਂ ਪਹਿਲਾਂ ਉਸ ਨੂੰ ਚਲਾਉਣ ਦਾ ਟਾਈਮ ਮਿੰਟਾਂ ਵਿੱਚ ਹੈ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:40
+#: data/org.cafe.screensaver.gschema.xml.in:40
 msgid "Time before locking"
 msgstr "ਲਾਕ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਟਾਈਮ"
 
-#: data/org.mate.screensaver.gschema.xml.in:41
+#: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
 "The number of minutes after screensaver activation before locking the "
 "screen."
@@ -209,11 +209,11 @@ msgstr ""
 "ਸਕਰੀਨ ਨੂੰ ਸਕਰੀਨ-ਸੇਵਰ ਸਰਗਰਮ ਹੋਣ ਦੇ ਬਾਅਦ ਲਾਕ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਟਾਈਮ (ਅੰਤਰਾਲ) "
 "ਮਿੰਟਾਂ ਵਿੱਚ ਹੈ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:45
+#: data/org.cafe.screensaver.gschema.xml.in:45
 msgid "Allow embedding a keyboard into the window"
 msgstr "ਇੱਕ ਕੀ-ਬੋਰਡ ਨੂੰ ਵਿੰਡੋ ਵਿੱਚ ਸ਼ਾਮਲ ਰੱਖਣਾ ਮਨਜ਼ੂਰ"
 
-#: data/org.mate.screensaver.gschema.xml.in:46
+#: data/org.cafe.screensaver.gschema.xml.in:46
 msgid ""
 "Set this to TRUE to allow embedding a keyboard into the window when trying "
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
@@ -223,11 +223,11 @@ msgstr ""
 "ਤਾਲਾ-ਖੋਲ੍ਹਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੋਵੇ। \"keyboard_command\" ਕੁੰਜੀ ਨੂੰ "
 "ਢੁੱਕਵੀਂ ਕਮਾਂਡ ਲਈ ਸੈੱਟ ਕੀਤਾ ਹੋਣਾ ਲਾਜ਼ਮੀ ਹੈ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:50
+#: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
 msgstr "ਸ਼ਾਮਿਲ ਕੀ-ਬੋਰਡ ਕਮਾਂਡ"
 
-#: data/org.mate.screensaver.gschema.xml.in:51
+#: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
 "set to TRUE, to embed a keyboard widget into the window. This command should"
@@ -239,32 +239,32 @@ msgstr ""
 "XEMBED ਪਲੱਗ ਇੰਟਰਫੇਸ ਰਾਹੀਂ ਬਣਾਇਆ ਗਿਆ ਹੈ ਅਤੇ ਸਟੈਂਡਰਡ ਆਉਟਪੁੱਟ ਉੱਤੇ ਇੱਕ ਵਿੰਡੋ "
 "XID ਆਉਟਪੁੱਟ ਹੈ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:55
+#: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
 msgstr "ਲਾਗਆਉਟ ਮਨਜ਼ੂਰ"
 
-#: data/org.mate.screensaver.gschema.xml.in:56
+#: data/org.cafe.screensaver.gschema.xml.in:56
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
 msgstr ""
 
-#: data/org.mate.screensaver.gschema.xml.in:60
+#: data/org.cafe.screensaver.gschema.xml.in:60
 msgid "Time before logout option"
 msgstr "ਲਾਗਆਉਟ ਚੋਣ ਤੋਂ ਪਹਿਲਾਂ ਟਾਈਮ"
 
-#: data/org.mate.screensaver.gschema.xml.in:61
+#: data/org.cafe.screensaver.gschema.xml.in:61
 msgid ""
 "The number of minutes after the screensaver activation before a logout "
 "option will appear in the unlock dialog. This key has effect only if the "
 "\"logout_enable\" key is set to TRUE."
 msgstr ""
 
-#: data/org.mate.screensaver.gschema.xml.in:65
+#: data/org.cafe.screensaver.gschema.xml.in:65
 msgid "Logout command"
 msgstr "ਲਾਗਆਉਟ ਕਮਾਂਡ"
 
-#: data/org.mate.screensaver.gschema.xml.in:66
+#: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
 "The command to invoke when the logout button is clicked. This command should"
 " simply log the user out without any interaction. This key has effect only "
@@ -274,11 +274,11 @@ msgstr ""
 "ਕਿਸੇ ਯੂਜ਼ਰ ਦਖਲ ਦੇ ਲਾਗ ਆਉਟ ਕਰ ਦੇਣ ਵਾਲੀ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ। ਇਹ ਕੁੰਜੀ ਤਾਂ ਹੀ ਪਰਭਾਵੀ"
 " ਹੈ, ਜੇਕਰ \"logout_enable\" ਕੁੰਜੀ ਨੂੰ ਸੱਚ ਕੀਤਾ ਹੋਵੇਗਾ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:70
+#: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
 msgstr "ਯੂਜ਼ਰ ਬਦਲਣਾ ਮਨਜ਼ੂਰ"
 
-#: data/org.mate.screensaver.gschema.xml.in:71
+#: data/org.cafe.screensaver.gschema.xml.in:71
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to switch to a "
 "different user account."
@@ -286,19 +286,19 @@ msgstr ""
 "ਇਹ ਨੂੰ ਸੱਚ ਕਰੋ, ਜੇਕਰ ਤਾਲਾ ਖੋਲ੍ਹਣ ਡਾਈਲਾਗ ਵਿੱਚ ਇੱਕ ਚੋਣ ਦਿੱਤੀ ਜਾਵੇ, ਜਿਸ ਨਾਲ "
 "ਵੱਖਰੇ ਯੂਜ਼ਰ ਅਕਾਊਂਟ ਲਈ ਬਦਲਿਆ ਜਾ ਸਕੇ।"
 
-#: data/org.mate.screensaver.gschema.xml.in:75
+#: data/org.cafe.screensaver.gschema.xml.in:75
 msgid "Theme for lock dialog"
 msgstr "ਲਾਕ ਡਾਈਲਾਗ ਲਈ ਥੀਮ"
 
-#: data/org.mate.screensaver.gschema.xml.in:76
+#: data/org.cafe.screensaver.gschema.xml.in:76
 msgid "Theme to use for the lock dialog"
 msgstr ""
 
-#: data/org.mate.screensaver.gschema.xml.in:80
+#: data/org.cafe.screensaver.gschema.xml.in:80
 msgid "Allow the session status message to be displayed"
 msgstr "ਸ਼ੈਸ਼ਨ ਹਾਲਤ ਸੁਨੇਹੇ ਵੇਖਾਉਣਾ ਮਨਜ਼ੂਰ"
 
-#: data/org.mate.screensaver.gschema.xml.in:81
+#: data/org.cafe.screensaver.gschema.xml.in:81
 msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "ਜਦੋਂ ਸਕਰੀਨ ਲਾਕ (ਤਾਲਾਬੰਦ) ਹੋਵੇ ਤਾਂ ਸ਼ੈਸ਼ਨ ਸੁਨੇਹੇ ਵੇਖਾਉਣ ਦੀ ਮਨਜ਼ੂਰੀ ਹੈ।"
@@ -468,43 +468,43 @@ msgstr "%s ਫਾਇਲ ਇੱਕ ਠੀਕ ਸਕਰੀਨ-ਸੇਵਰ ਥੀ�
 msgid "Copying file: %u of %u"
 msgstr "ਫਾਇਲ ਕਾਪੀ ਜਾਰੀ: %2$u ਵਿੱਚੋਂ %1$u"
 
-#: src/mate-screensaver-command.c:60
+#: src/cafe-screensaver-command.c:60
 msgid "Causes the screensaver to exit gracefully"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਨੂੰ ਮਾਣ ਨਾਲ ਬੰਦ ਕਰਨ ਦਾ ਕਾਰਨ ਬਣਦਾ ਹੈ"
 
-#: src/mate-screensaver-command.c:64
+#: src/cafe-screensaver-command.c:64
 msgid "Query the state of the screensaver"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਦੀ ਹਾਲਤ ਬਾਰੇ ਸਵਾਲ"
 
-#: src/mate-screensaver-command.c:68
+#: src/cafe-screensaver-command.c:68
 msgid "Query the length of time the screensaver has been active"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਸਰਗਰਮ ਹੋਣ ਦੇ ਸਮੇਂ ਦੀ ਲੰਬਾਈ ਬਾਰੇ ਸਵਾਲ"
 
-#: src/mate-screensaver-command.c:72
+#: src/cafe-screensaver-command.c:72
 msgid "Tells the running screensaver process to lock the screen immediately"
 msgstr "ਚੱਲਦੇ ਸਕਰੀਨ-ਸੇਵਰ ਕਾਰਵਾਈ ਨੂੰ ਸਕਰੀਨ ਨੂੰ ਤੁਰੰਤ ਲਾਕ ਕਰਨ ਦਾ ਸੰਕੇਤ ਦਿਓ"
 
-#: src/mate-screensaver-command.c:76
+#: src/cafe-screensaver-command.c:76
 msgid "Tells the running screensaver process to unlock the screen immediately"
 msgstr ""
 
-#: src/mate-screensaver-command.c:80
+#: src/cafe-screensaver-command.c:80
 msgid "If the screensaver is active then switch to another graphics demo"
 msgstr "ਜੇਕਰ ਸਕਰੀਨ-ਸੇਵਰ ਸਰਗਰਮ ਹੋਵੇ ਤਾਂ ਹੋਰ ਗਰਾਫਿਕਸ ਡੈਮੋ ਲਈ ਤਬਦੀਲ ਕਰੋ"
 
-#: src/mate-screensaver-command.c:84
+#: src/cafe-screensaver-command.c:84
 msgid "Turn the screensaver on (blank the screen)"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਚਾਲੂ ਕਰੋ (ਖਾਲੀ ਸਕਰੀਨ ਹੀ)"
 
-#: src/mate-screensaver-command.c:88
+#: src/cafe-screensaver-command.c:88
 msgid "If the screensaver is active then deactivate it (un-blank the screen)"
 msgstr "ਜੇਕਰ ਸਕਰੀਨ-ਸੇਵਰ ਸਰਗਰਮ ਹੋਵੇ ਤਾਂ ਉਸ ਨੂੰ ਨਾ-ਸਰਗਰਮ ਕਰੋ (ਨਾ-ਖਾਲੀ ਸਕਰੀਨ)"
 
-#: src/mate-screensaver-command.c:92
+#: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਨੂੰ ਯੂਜ਼ਰ ਕਾਰਵਾਈਆਂ ਮੁਤਾਬਕ ਨਕਲ ਕਰਨ ਲਈ ਤਿਆਰ ਕਰੋ"
 
-#: src/mate-screensaver-command.c:96
+#: src/cafe-screensaver-command.c:96
 msgid ""
 "Inhibit the screensaver from activating.  Command blocks while inhibit is "
 "active."
@@ -512,235 +512,235 @@ msgstr ""
 "ਸਕਰੀਨ-ਸੇਵਰ ਨੂੰ ਸਰਗਰਮ ਹੋਣ ਤੋਂ ਰੋਕਿਆ ਗਿਆ।  ਕਮਾਂਡਾਂ ਉੱਤੇ ਰੋਕ ਹੈ, ਜਦੋਂ ਕਿ ਰੋਕਣਾ "
 "ਸਰਗਰਮ ਹੈ।"
 
-#: src/mate-screensaver-command.c:100
+#: src/cafe-screensaver-command.c:100
 msgid "The calling application that is inhibiting the screensaver"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਨੂੰ ਰੋਕਣ ਵਾਲੇ ਕਾਰਜ ਬਾਰੇ ਜਾਣਕਾਰੀ ਲਈ ਜਾ ਰਹੀ ਹੈ"
 
-#: src/mate-screensaver-command.c:104
+#: src/cafe-screensaver-command.c:104
 msgid "The reason for inhibiting the screensaver"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਰੋਕਣ ਲਈ ਕਾਰਨ"
 
-#: src/mate-screensaver-command.c:108 src/mate-screensaver-dialog.c:58
-#: src/mate-screensaver.c:55
+#: src/cafe-screensaver-command.c:108 src/cafe-screensaver-dialog.c:58
+#: src/cafe-screensaver.c:55
 msgid "Version of this application"
 msgstr "ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਦਾ ਵਰਜਨ"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 #, c-format
 msgid "The screensaver is %s\n"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ %s ਹੈ।\n"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "active"
 msgstr "ਸਰਗਰਮ"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "inactive"
 msgstr "ਨਾ-ਸਰਗਰਮ"
 
-#: src/mate-screensaver-command.c:373
+#: src/cafe-screensaver-command.c:373
 msgid "The screensaver is not inhibited\n"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਇੰਹੈਬਿਟ ਨਹੀਂ ਹੈ\n"
 
-#: src/mate-screensaver-command.c:381
+#: src/cafe-screensaver-command.c:381
 msgid "The screensaver is being inhibited by:\n"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਇੰਹੈਬਿਟ ਕੀਤਾ ਹੈ:\n"
 
-#: src/mate-screensaver-command.c:416
+#: src/cafe-screensaver-command.c:416
 #, c-format
 msgid "The screensaver has been active for %d seconds.\n"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ %d ਸਕਿੰਟਾਂ ਤੋਂ ਸਰਗਰਮ ਹੈ।\n"
 
-#: src/mate-screensaver-command.c:422
+#: src/cafe-screensaver-command.c:422
 msgid "The screensaver is not currently active.\n"
 msgstr "ਸਕਰੀਨ-ਸੇਵਰ ਹਾਲੇ ਐਕਟਿਵ ਨਹੀਂ ਹੈ।\n"
 
-#: src/mate-screensaver-dialog.c:57
+#: src/cafe-screensaver-dialog.c:57
 msgid "Show debugging output"
 msgstr "ਡੀਬੱਗ ਆਉਟਪੁੱਟ ਵੇਖਾਓ"
 
-#: src/mate-screensaver-dialog.c:59
+#: src/cafe-screensaver-dialog.c:59
 msgid "Show the logout button"
 msgstr "ਲਾਗਆਉਟ ਬਟਨ ਵੇਖਾਓ"
 
-#: src/mate-screensaver-dialog.c:60
+#: src/cafe-screensaver-dialog.c:60
 msgid "Command to invoke from the logout button"
 msgstr "ਲਾਗਆਉਟ ਬਟਨ ਲਈ ਕੰਮ ਕਰਨ ਵਾਲੀ ਕਮਾਂਡ"
 
-#: src/mate-screensaver-dialog.c:61
+#: src/cafe-screensaver-dialog.c:61
 msgid "Show the switch user button"
 msgstr "ਯੂਜ਼ਰ ਬਦਲਣ ਵਾਲਾ ਬਟਨ ਵੇਖਾਓ"
 
-#: src/mate-screensaver-dialog.c:62
+#: src/cafe-screensaver-dialog.c:62
 msgid "Message to show in the dialog"
 msgstr "ਡਾਈਲਾਗ ਵਿੱਚ ਸੁਨੇਹਾ ਵੇਖਾਓ"
 
-#: src/mate-screensaver-dialog.c:62 src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:62 src/cafe-screensaver-dialog.c:63
 msgid "MESSAGE"
 msgstr "ਸੁਨੇਹਾ"
 
-#: src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:63
 msgid "Not used"
 msgstr "ਨਹੀਂ ਵਰਤਿਆ"
 
-#: src/mate-screensaver-dialog.c:165 src/mate-screensaver-dialog.c:166
-#: src/mate-screensaver-dialog.c:167 src/gs-auth-pam.c:745
+#: src/cafe-screensaver-dialog.c:165 src/cafe-screensaver-dialog.c:166
+#: src/cafe-screensaver-dialog.c:167 src/gs-auth-pam.c:745
 msgid "Username:"
 msgstr "ਯੂਜ਼ਰ-ਨਾਂ:"
 
-#: src/mate-screensaver-dialog.c:168 src/mate-screensaver-dialog.c:169
+#: src/cafe-screensaver-dialog.c:168 src/cafe-screensaver-dialog.c:169
 #: src/gs-auth-pam.c:171
 msgid "Password:"
 msgstr "ਪਾਸਵਰਡ:"
 
-#: src/mate-screensaver-dialog.c:170
+#: src/cafe-screensaver-dialog.c:170
 msgid "You are required to change your password immediately (password aged)"
 msgstr "ਤੁਹਾਨੂੰ ਆਪਣਾ ਪਾਸਵਰਡ ਹੁਣੇ ਬਦਲਣਾ ਪਵੇਗਾ (ਪਾਸਵਰਡ ਦੀ ਮਿਆਦ ਪੁੱਗੀ)"
 
-#: src/mate-screensaver-dialog.c:171
+#: src/cafe-screensaver-dialog.c:171
 msgid "You are required to change your password immediately (root enforced)"
 msgstr "ਤੁਹਾਨੂੰ ਆਪਣਾ ਪਾਸਵਰਡ ਹੁਣੇ ਬਦਲਣਾ ਪਵੇਗਾ (root ਵਲੋਂ ਮਜਬੂਰ ਕੀਤਾ ਗਿਆ ਹੈ)"
 
-#: src/mate-screensaver-dialog.c:172
+#: src/cafe-screensaver-dialog.c:172
 msgid "Your account has expired; please contact your system administrator"
 msgstr ""
 "ਤੁਹਾਡੇ ਅਕਾਊਂਟ ਦੀ ਮਿਆਦ ਖਤਮ ਹੋ ਗਈ ਹੈ; ਆਪਣੇ ਸਿਸਟਮ ਪਰਸ਼ਾਸ਼ਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ ਜੀ।"
 
-#: src/mate-screensaver-dialog.c:173
+#: src/cafe-screensaver-dialog.c:173
 msgid "No password supplied"
 msgstr "ਕੋਈ ਪਾਸਵਰਡ ਨਹੀਂ ਦਿੱਤਾ ਗਿਆ"
 
-#: src/mate-screensaver-dialog.c:174
+#: src/cafe-screensaver-dialog.c:174
 msgid "Password unchanged"
 msgstr "ਪਾਸਵਰਡ ਬਦਲਿਆ ਗਿਆ"
 
-#: src/mate-screensaver-dialog.c:175
+#: src/cafe-screensaver-dialog.c:175
 msgid "Can not get username"
 msgstr "ਯੂਜ਼ਰ ਨਾਂ ਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: src/mate-screensaver-dialog.c:176
+#: src/cafe-screensaver-dialog.c:176
 msgid "Retype new UNIX password:"
 msgstr "ਨਵਾਂ UNIX ਪਾਸਵਰਡ ਮੁੜ-ਲਿਖੋ:"
 
-#: src/mate-screensaver-dialog.c:177
+#: src/cafe-screensaver-dialog.c:177
 msgid "Enter new UNIX password:"
 msgstr "ਨਵਾਂ UNIX ਪਾਸਵਰਡ ਦਿਓ:"
 
-#: src/mate-screensaver-dialog.c:178
+#: src/cafe-screensaver-dialog.c:178
 msgid "(current) UNIX password:"
 msgstr "(ਮੌਜੂਦਾ) UNIX ਪਾਸਵਰਡ:"
 
-#: src/mate-screensaver-dialog.c:179
+#: src/cafe-screensaver-dialog.c:179
 msgid "Error while changing NIS password."
 msgstr "NIS ਪਾਸਵਰਡ ਬਦਲਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
 
-#: src/mate-screensaver-dialog.c:180
+#: src/cafe-screensaver-dialog.c:180
 msgid "You must choose a longer password"
 msgstr "ਤੁਹਾਨੂੰ ਇੱਕ ਲੰਮਾ ਪਾਸਵਰਡ ਚੁਣਨਾ ਚਾਹੀਦਾ ਹੈ"
 
-#: src/mate-screensaver-dialog.c:181
+#: src/cafe-screensaver-dialog.c:181
 msgid "Password has been already used. Choose another."
 msgstr "ਪਾਸਵਰਡ ਪਹਿਲਾਂ ਹੀ ਬਦਲਿਆ ਗਿਆ ਹੈ। ਹੋਰ ਚੁਣੋ ਜੀ।"
 
-#: src/mate-screensaver-dialog.c:182
+#: src/cafe-screensaver-dialog.c:182
 msgid "You must wait longer to change your password"
 msgstr "ਤੁਹਾਨੂੰ ਆਪਣਾ ਪਾਸਵਰਡ ਬਦਲਣ ਲਈ ਹੋਰ ਵੱਧ ਉਡੀਕ ਕਰਨੀ ਪਵੇਗੀ।"
 
-#: src/mate-screensaver-dialog.c:183
+#: src/cafe-screensaver-dialog.c:183
 msgid "Sorry, passwords do not match"
 msgstr "ਅਫ਼ਸੋਸ ਹੈ ਕਿ ਪਾਸਵਰਡ ਮਿਲਦਾ ਨਹੀਂ ਹੈ"
 
-#: src/mate-screensaver-dialog.c:254
+#: src/cafe-screensaver-dialog.c:254
 msgid "Checking..."
 msgstr "ਚੈੱਕ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
 
-#: src/mate-screensaver-dialog.c:300 src/gs-auth-pam.c:483
+#: src/cafe-screensaver-dialog.c:300 src/gs-auth-pam.c:483
 msgid "Authentication failed."
 msgstr "ਪਰਮਾਣਕਿਤਾ ਫ਼ੇਲ੍ਹ ਹੋ ਗਈ ਹੈ।"
 
-#: src/mate-screensaver-preferences.c:455
+#: src/cafe-screensaver-preferences.c:455
 msgid "Blank screen"
 msgstr "ਖਾਲੀ ਸਕਰੀਨ"
 
-#: src/mate-screensaver-preferences.c:461
+#: src/cafe-screensaver-preferences.c:461
 msgid "Random"
 msgstr "ਰਲਵੇਂ"
 
-#: src/mate-screensaver-preferences.c:947
-#: src/mate-screensaver-preferences.c:957
+#: src/cafe-screensaver-preferences.c:947
+#: src/cafe-screensaver-preferences.c:957
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/mate-screensaver-preferences.c:950
-#: src/mate-screensaver-preferences.c:959
-#: src/mate-screensaver-preferences.c:968
-#: src/mate-screensaver-preferences.c:971
-#: src/mate-screensaver-preferences.c:976
-#: src/mate-screensaver-preferences.c:979
-#: src/mate-screensaver-preferences.c:984
-#: src/mate-screensaver-preferences.c:987
+#: src/cafe-screensaver-preferences.c:950
+#: src/cafe-screensaver-preferences.c:959
+#: src/cafe-screensaver-preferences.c:968
+#: src/cafe-screensaver-preferences.c:971
+#: src/cafe-screensaver-preferences.c:976
+#: src/cafe-screensaver-preferences.c:979
+#: src/cafe-screensaver-preferences.c:984
+#: src/cafe-screensaver-preferences.c:987
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/mate-screensaver-preferences.c:953
+#: src/cafe-screensaver-preferences.c:953
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/mate-screensaver-preferences.c:956
-#: src/mate-screensaver-preferences.c:1003
-#: src/mate-screensaver-preferences.c:1016
+#: src/cafe-screensaver-preferences.c:956
+#: src/cafe-screensaver-preferences.c:1003
+#: src/cafe-screensaver-preferences.c:1016
 #, c-format
 msgid "%s %s"
 msgstr "%s %s"
 
-#: src/mate-screensaver-preferences.c:998
+#: src/cafe-screensaver-preferences.c:998
 #, c-format
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
-#: src/mate-screensaver-preferences.c:1008
-#: src/mate-screensaver-preferences.c:1021
-#: src/mate-screensaver-preferences.c:1057
+#: src/cafe-screensaver-preferences.c:1008
+#: src/cafe-screensaver-preferences.c:1021
+#: src/cafe-screensaver-preferences.c:1057
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: src/mate-screensaver-preferences.c:1072
+#: src/cafe-screensaver-preferences.c:1072
 msgid "Never"
 msgstr "ਕਦੇ ਨਹੀਂ"
 
-#: src/mate-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1554
 msgid "Could not load the main interface"
 msgstr "ਮੁੱਖ ਇੰਟਰਫੇਸ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ ਹੈ।"
 
-#: src/mate-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1556
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "ਜਾਂਚ ਕਰੋ ਕਿ ਸਕਰੀਨ-ਸੇਵਰ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਹੈ ਜੀ"
 
-#: src/mate-screensaver.c:56
+#: src/cafe-screensaver.c:56
 msgid "Don't become a daemon"
 msgstr "ਇੱਕ ਡੈਮਨ ਨਾ ਬਣਾਓ"
 
-#: src/mate-screensaver.c:57
+#: src/cafe-screensaver.c:57
 msgid "Enable debugging code"
 msgstr "ਡੀਬੱਗ ਕੋਡ ਨੂੰ ਯੋਗ"
 
-#: src/mate-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:5
 msgid "Launch screensaver and locker program"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: src/mate-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:12
 msgid "MATE;screensaver;locker;"
 msgstr ""
 

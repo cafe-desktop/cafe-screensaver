@@ -50,9 +50,9 @@ static DBusHandlerResult gs_listener_message_handler    (DBusConnection  *connec
         DBusMessage     *message,
         void            *user_data);
 
-#define GS_LISTENER_SERVICE   "org.mate.ScreenSaver"
-#define GS_LISTENER_PATH      "/org/mate/ScreenSaver"
-#define GS_LISTENER_INTERFACE "org.mate.ScreenSaver"
+#define GS_LISTENER_SERVICE   "org.cafe.ScreenSaver"
+#define GS_LISTENER_PATH      "/org/cafe/ScreenSaver"
+#define GS_LISTENER_INTERFACE "org.cafe.ScreenSaver"
 
 /* systemd logind */
 #define SYSTEMD_LOGIND_SERVICE   "org.freedesktop.login1"
@@ -772,7 +772,7 @@ listener_add_ref_entry (GSListener         *listener,
 
 	if (entry_type == REF_ENTRY_TYPE_INHIBIT)
 	{
-		/* proxy inhibit over to mate session */
+		/* proxy inhibit over to cafe session */
 		add_session_inhibit (listener, entry);
 	}
 
@@ -806,7 +806,7 @@ listener_remove_ref_entry (GSListener *listener,
 
 	if (entry_type == REF_ENTRY_TYPE_INHIBIT)
 	{
-		/* remove inhibit from mate session */
+		/* remove inhibit from cafe session */
 		remove_session_inhibit (listener, entry);
 	}
 
@@ -1070,7 +1070,7 @@ listener_ref_entry_remove_for_connection (GSListener  *listener,
 
 			if (entry->entry_type == REF_ENTRY_TYPE_INHIBIT)
 			{
-				/* remove inhibit from mate session */
+				/* remove inhibit from cafe session */
 				remove_session_inhibit (listener, entry);
 			}
 
@@ -1366,7 +1366,7 @@ do_introspect (DBusConnection *connection,
 
 	/* ScreenSaver interface */
 	xml = g_string_append (xml,
-	                       "  <interface name=\"org.mate.ScreenSaver\">\n"
+	                       "  <interface name=\"org.cafe.ScreenSaver\">\n"
 	                       "    <method name=\"Lock\">\n"
 	                       "    </method>\n"
 	                       "    <method name=\"Unlock\">\n"
@@ -1789,7 +1789,7 @@ listener_dbus_handle_system_message (DBusConnection *connection,
 		/* NB that `ActiveChanged' refers to the active
 		 * session in ConsoleKit terminology - ie which
 		 * session is currently displayed on the screen.
-		 * mate-screensaver uses `active' to mean `is the
+		 * cafe-screensaver uses `active' to mean `is the
 		 * screensaver active' (ie, is the screen locked) but
 		 * that's not what we're referring to here.
 		 */
