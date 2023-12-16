@@ -13,12 +13,12 @@ PKG_NAME="cafe-screensaver"
 }
 
 which cafe-autogen || {
-    echo "You need to install cafe-common from the MATE Git"
+    echo "You need to install cafe-common from the CAFE Git"
     exit 1
 }
 
 REQUIRED_AUTOMAKE_VERSION=1.9
-MATE_DATADIR="$cafe_datadir"
+CAFE_DATADIR="$cafe_datadir"
 
 . cafe-autogen
 

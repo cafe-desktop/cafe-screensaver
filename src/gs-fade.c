@@ -41,7 +41,7 @@
 #include "gs-fade.h"
 #include "gs-debug.h"
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 
 #include "libcafe-desktop/cafe-rr.h"
 

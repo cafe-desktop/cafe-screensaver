@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -42,7 +42,7 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
+msgid "CAFE;screensaver;preferences;"
 msgstr ""
 
 #: data/cafe-screensaver-preferences.ui:20
@@ -303,21 +303,21 @@ msgstr "우주 그림의 슬라이드를 보여줍니다"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
 msgstr ""
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
+msgid "Floating CAFE"
 msgstr "떠다니는 마테"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
+msgid "Bubbles the CAFE logo around the screen"
 msgstr "화면에 마테 로고가 떠다닙니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
+msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
@@ -331,7 +331,7 @@ msgstr "화면에 그놈 발바닥 로고가 떠다닙니다"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
 #: savers/personal-slideshow.desktop.in.in:3
@@ -345,7 +345,7 @@ msgstr "그림 폴더에 있는 그림의 슬라이드를 보여줍니다"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -359,7 +359,7 @@ msgstr "고동치는 색깔의 팝아트 형식 격자 모양."
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
@@ -728,7 +728,7 @@ msgstr "화면 보호기 및 잠금 프로그램 실행"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
+msgid "CAFE;screensaver;locker;"
 msgstr ""
 
 #: src/gs-auth-pam.c:413

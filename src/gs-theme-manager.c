@@ -274,8 +274,8 @@ find_info_for_id (MateMenuTree  *tree,
 
 	info = NULL;
 	iter = cafemenu_tree_directory_iter (root);
-	while ((type = cafemenu_tree_iter_next (iter)) != MATEMENU_TREE_ITEM_INVALID) {
-		if (info == NULL && type == MATEMENU_TREE_ITEM_ENTRY) {
+	while ((type = cafemenu_tree_iter_next (iter)) != CAFEMENU_TREE_ITEM_INVALID) {
+		if (info == NULL && type == CAFEMENU_TREE_ITEM_ENTRY) {
 			MateMenuTreeEntry *entry;
 			const char     *file_id;
 
@@ -331,8 +331,8 @@ make_theme_list (GSList             **parent_list,
 	MateMenuTreeItemType type;
 
 	iter = cafemenu_tree_directory_iter (directory);
-	while ((type = cafemenu_tree_iter_next (iter)) != MATEMENU_TREE_ITEM_INVALID) {
-		if (type == MATEMENU_TREE_ITEM_ENTRY) {
+	while ((type = cafemenu_tree_iter_next (iter)) != CAFEMENU_TREE_ITEM_INVALID) {
+		if (type == CAFEMENU_TREE_ITEM_ENTRY) {
 			MateMenuTreeEntry *item;
 			item = cafemenu_tree_iter_get_entry (iter);
 			theme_prepend_entry (parent_list, (MateMenuTreeEntry*)item, filename);
@@ -380,7 +380,7 @@ get_themes_tree (void)
 	   and since this is only run once we'll do it here */
 	add_known_engine_locations_to_path ();
 
-	themes_tree = cafemenu_tree_new ("cafe-screensavers.menu", MATEMENU_TREE_FLAGS_NONE);
+	themes_tree = cafemenu_tree_new ("cafe-screensavers.menu", CAFEMENU_TREE_FLAGS_NONE);
 	if (!cafemenu_tree_load_sync (themes_tree, &error)) {
 		g_debug("Load cafemenu tree got error: %s\n", error->message);
 		g_error_free(error);

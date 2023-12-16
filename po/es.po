@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -46,8 +46,8 @@ msgstr "preferences-desktop-screensaver"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
-msgstr "MATE;salvapantallas;preferencias;"
+msgid "CAFE;screensaver;preferences;"
+msgstr "CAFE;salvapantallas;preferencias;"
 
 #: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
@@ -333,22 +333,22 @@ msgstr "Mostrar una presentación con imágenes del cosmos"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
-msgstr "MATE;salvapantallas;presentación;cosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
+msgstr "CAFE;salvapantallas;presentación;cosmos;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
-msgstr "MATE flotante"
+msgid "Floating CAFE"
+msgstr "CAFE flotante"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
-msgstr "Burbujas con el logo de MATE por toda la pantalla"
+msgid "Bubbles the CAFE logo around the screen"
+msgstr "Burbujas con el logo de CAFE por toda la pantalla"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
-msgstr "MATE;salvapantallas;logo;burbujas;"
+msgid "CAFE;screensaver;logo;bubbles;"
+msgstr "CAFE;salvapantallas;logo;burbujas;"
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
 msgid "Floating GNOME"
@@ -361,8 +361,8 @@ msgstr "Burbujas con el logo de GNOME por toda la pantalla"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
-msgstr "MATE;salvapantallas;GNOME;logo;burbujas;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
+msgstr "CAFE;salvapantallas;GNOME;logo;burbujas;"
 
 #: savers/personal-slideshow.desktop.in.in:3
 msgid "Pictures folder"
@@ -375,8 +375,8 @@ msgstr "Mostrar una presentación a partir de la carpeta de imágenes"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "MATE;salvapantallas;personalizar;presentación;carpeta;imágenes"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+msgstr "CAFE;salvapantallas;personalizar;presentación;carpeta;imágenes"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -389,8 +389,8 @@ msgstr "Una rejilla de estilo de arte pop de colores pulsantes."
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
-msgstr "MATE;salvapantallas;cuadrícula;colores;pulsantes;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
+msgstr "CAFE;salvapantallas;cuadrícula;colores;pulsantes;"
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
 #, c-format
@@ -776,8 +776,8 @@ msgstr "Lanzar el salvapantallas y el programa de bloqueo"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
-msgstr "MATE;salvapantallas;bloqueo"
+msgid "CAFE;screensaver;locker;"
+msgstr "CAFE;salvapantallas;bloqueo"
 
 #: src/gs-auth-pam.c:413
 #, c-format

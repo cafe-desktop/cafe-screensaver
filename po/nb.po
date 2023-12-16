@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -43,8 +43,8 @@ msgstr "preferences-desktop-screensaver"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
-msgstr "MATE;skjermsparer;innstillinger;"
+msgid "CAFE;screensaver;preferences;"
+msgstr "CAFE;skjermsparer;innstillinger;"
 
 #: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
@@ -318,22 +318,22 @@ msgstr "Lysbildevisning med bilder fra verdensrommet"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
-msgstr "MATE;skjermsparer;lysbilder;kosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
+msgstr "CAFE;skjermsparer;lysbilder;kosmos;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
-msgstr "Flytende MATE"
+msgid "Floating CAFE"
+msgstr "Flytende CAFE"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
-msgstr "Bobler av MATE-logoen rundt omkring på skjermen"
+msgid "Bubbles the CAFE logo around the screen"
+msgstr "Bobler av CAFE-logoen rundt omkring på skjermen"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
-msgstr "MATE;skjermsparer;logo;bobler;"
+msgid "CAFE;screensaver;logo;bubbles;"
+msgstr "CAFE;skjermsparer;logo;bobler;"
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
 msgid "Floating GNOME"
@@ -346,8 +346,8 @@ msgstr "Bobler av GNOME-logoen rundt omkring på skjermen"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
-msgstr "MATE;skjermsparer;GNOME;logo;bobler;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
+msgstr "CAFE;skjermsparer;GNOME;logo;bobler;"
 
 #: savers/personal-slideshow.desktop.in.in:3
 msgid "Pictures folder"
@@ -360,8 +360,8 @@ msgstr "Vis en lysbildefremvisning fra din bildemappe"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "MATE;skjermsparer;tilpasset;lysbilder;bilder;mappe;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+msgstr "CAFE;skjermsparer;tilpasset;lysbilder;bilder;mappe;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -374,8 +374,8 @@ msgstr "Et popkunst-aktig rutenett med pulserende farger."
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
-msgstr "MATE;skjermsparer;rutenett;pulserende;farger;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
+msgstr "CAFE;skjermsparer;rutenett;pulserende;farger;"
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
 #, c-format
@@ -748,8 +748,8 @@ msgstr "Start skjermsparer og låseprogram"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
-msgstr "MATE;skjermsparer;skjermlås;"
+msgid "CAFE;screensaver;locker;"
+msgstr "CAFE;skjermsparer;skjermlås;"
 
 #: src/gs-auth-pam.c:413
 #, c-format

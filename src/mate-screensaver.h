@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef __MATE_SCREENSAVER_H
-#define __MATE_SCREENSAVER_H
+#ifndef __CAFE_SCREENSAVER_H
+#define __CAFE_SCREENSAVER_H
 
 #include <glib.h>
 

@@ -21,7 +21,7 @@ StartupNotify=false
 Terminal=false
 Type=Application
 Categories=Screensaver;
-OnlyShowIn=MATE;
+OnlyShowIn=CAFE;
 </xsl:template>
 
 </xsl:stylesheet>

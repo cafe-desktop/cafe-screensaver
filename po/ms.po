@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -40,8 +40,8 @@ msgstr "preferences-desktop-screensaver"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
-msgstr "MATE;penyelamatskrin;keutamaan"
+msgid "CAFE;screensaver;preferences;"
+msgstr "CAFE;penyelamatskrin;keutamaan"
 
 #: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
@@ -323,22 +323,22 @@ msgstr "Papar paparan slaid gambar kosmos"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
-msgstr "MATE;penyelamatskrin;paparanslaid;kosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
+msgstr "CAFE;penyelamatskrin;paparanslaid;kosmos;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
-msgstr "MATE terapung"
+msgid "Floating CAFE"
+msgstr "CAFE terapung"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
-msgstr "Buih-buih logo MATE disekeliling skrin"
+msgid "Bubbles the CAFE logo around the screen"
+msgstr "Buih-buih logo CAFE disekeliling skrin"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
-msgstr "MATE;penyelamatskrin;logo;buih;"
+msgid "CAFE;screensaver;logo;bubbles;"
+msgstr "CAFE;penyelamatskrin;logo;buih;"
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
 msgid "Floating GNOME"
@@ -351,8 +351,8 @@ msgstr "Buih-buih logo GNOME disekeliling skrin"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
-msgstr "MATE;penyelamatskrin;GNOME;logo;buih;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
+msgstr "CAFE;penyelamatskrin;GNOME;logo;buih;"
 
 #: savers/personal-slideshow.desktop.in.in:3
 msgid "Pictures folder"
@@ -365,8 +365,8 @@ msgstr "Paparkan paparan slaid dari folder Gambar anda"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "MATE;penyelamatskrin;suai;paparanslaid;gambar;folder;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+msgstr "CAFE;penyelamatskrin;suai;paparanslaid;gambar;folder;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -379,8 +379,8 @@ msgstr "Grid bergaya seni pop dengan warna-warna berdenyut."
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
-msgstr "MATE;penyelamatskrin;grid;denyutan;warna;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
+msgstr "CAFE;penyelamatskrin;grid;denyutan;warna;"
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
 #, c-format
@@ -759,8 +759,8 @@ msgstr "Lancar penyelamat skrin dan program pengunci"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
-msgstr "MATE;penyelamatskrin;pengunci;"
+msgid "CAFE;screensaver;locker;"
+msgstr "CAFE;penyelamatskrin;pengunci;"
 
 #: src/gs-auth-pam.c:413
 #, c-format

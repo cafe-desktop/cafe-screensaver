@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -41,8 +41,8 @@ msgstr "preferences-desktop-screensaver"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
-msgstr "MATE;screensaver;preferences;"
+msgid "CAFE;screensaver;preferences;"
+msgstr "CAFE;screensaver;preferences;"
 
 #: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
@@ -298,22 +298,22 @@ msgstr "顯示宇宙圖片的幻燈片放映"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
-msgstr "MATE;screensaver;slideshow;cosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
+msgstr "CAFE;screensaver;slideshow;cosmos;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
-msgstr "浮動 MATE"
+msgid "Floating CAFE"
+msgstr "浮動 CAFE"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
-msgstr "讓 MATE 標誌圍繞畫面"
+msgid "Bubbles the CAFE logo around the screen"
+msgstr "讓 CAFE 標誌圍繞畫面"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
-msgstr "MATE;screensaver;logo;bubbles;"
+msgid "CAFE;screensaver;logo;bubbles;"
+msgstr "CAFE;screensaver;logo;bubbles;"
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
 msgid "Floating GNOME"
@@ -326,8 +326,8 @@ msgstr "讓 GNOME 標誌圍繞畫面"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
-msgstr "MATE;screensaver;GNOME;logo;bubbles;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
+msgstr "CAFE;screensaver;GNOME;logo;bubbles;"
 
 #: savers/personal-slideshow.desktop.in.in:3
 msgid "Pictures folder"
@@ -340,8 +340,8 @@ msgstr "顯示圖片資料夾的幻燈片放映"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "MATE;screensaver;custom;slideshow;pictures;folder;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+msgstr "CAFE;screensaver;custom;slideshow;pictures;folder;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -354,8 +354,8 @@ msgstr "一個交替轉換深淺色的方陣。"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
-msgstr "MATE;screensaver;grid;pulsing;colors;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
+msgstr "CAFE;screensaver;grid;pulsing;colors;"
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
 #, c-format
@@ -723,8 +723,8 @@ msgstr "啟動螢幕保護程式以及鎖定程式"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
-msgstr "MATE;screensaver;locker;"
+msgid "CAFE;screensaver;locker;"
+msgstr "CAFE;screensaver;locker;"
 
 #: src/gs-auth-pam.c:413
 #, c-format

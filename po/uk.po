@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -43,8 +43,8 @@ msgstr "preferences-desktop-screensaver"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
-msgstr "MATE;зберігач екрану;уподобання;"
+msgid "CAFE;screensaver;preferences;"
+msgstr "CAFE;зберігач екрану;уподобання;"
 
 #: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
@@ -326,21 +326,21 @@ msgstr "Показує слайди космічних малюнків"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
-msgstr "MATE;зберігач екрану;показ слайдів;космос;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
+msgstr "CAFE;зберігач екрану;показ слайдів;космос;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
-msgstr "Плавучий MATE"
+msgid "Floating CAFE"
+msgstr "Плавучий CAFE"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
-msgstr "Логотипи MATE, що виринають по усьому екрану"
+msgid "Bubbles the CAFE logo around the screen"
+msgstr "Логотипи CAFE, що виринають по усьому екрану"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
+msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
@@ -354,7 +354,7 @@ msgstr "Логотипи GNOME, що виринають по усьому екр
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
 #: savers/personal-slideshow.desktop.in.in:3
@@ -368,8 +368,8 @@ msgstr "Показує слайди зображень з теки малюнк�
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "MATE;зберігач екрану;користувацький;показ слайдів;зображення;тека;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+msgstr "CAFE;зберігач екрану;користувацький;показ слайдів;зображення;тека;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -382,7 +382,7 @@ msgstr "Мережа з пульсівних кольорових комірок
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
@@ -764,7 +764,7 @@ msgstr "Запустити зберігач екрану і програму б�
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
+msgid "CAFE;screensaver;locker;"
 msgstr ""
 
 #: src/gs-auth-pam.c:413
