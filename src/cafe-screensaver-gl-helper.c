@@ -57,7 +57,7 @@ main (int    argc,
 		}
 		else
 		{
-			g_warning ("Unable to initialize GTK+");
+			g_warning ("Unable to initialize CTK+");
 		}
 		exit (1);
 	}

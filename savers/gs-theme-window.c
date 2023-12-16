@@ -42,7 +42,7 @@ static void gs_theme_window_real_realize (GtkWidget *widget);
 
 static GObjectClass   *parent_class = NULL;
 
-G_DEFINE_TYPE (GSThemeWindow, gs_theme_window, GTK_TYPE_WINDOW)
+G_DEFINE_TYPE (GSThemeWindow, gs_theme_window, CTK_TYPE_WINDOW)
 
 #define MIN_SIZE 10
 
@@ -53,7 +53,7 @@ gs_theme_window_class_init (GSThemeWindowClass *klass)
 	GtkWidgetClass *widget_class;
 
 	object_class = G_OBJECT_CLASS (klass);
-	widget_class = GTK_WIDGET_CLASS (klass);
+	widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 
@@ -65,7 +65,7 @@ gs_theme_window_class_init (GSThemeWindowClass *klass)
 static void
 gs_theme_window_init (GSThemeWindow *window)
 {
-	ctk_widget_set_app_paintable (GTK_WIDGET (window), TRUE);
+	ctk_widget_set_app_paintable (CTK_WIDGET (window), TRUE);
 }
 
 static void
@@ -116,14 +116,14 @@ gs_theme_window_real_realize (GtkWidget *widget)
 				 * flags gs-window-x11.c does, to ensure they
 				 * don't get unset by ctk_window_map() later.
 				 */
-				ctk_window_set_decorated (GTK_WINDOW (widget), FALSE);
+				ctk_window_set_decorated (CTK_WINDOW (widget), FALSE);
 
-				ctk_window_set_skip_taskbar_hint (GTK_WINDOW (widget), TRUE);
-				ctk_window_set_skip_pager_hint (GTK_WINDOW (widget), TRUE);
+				ctk_window_set_skip_taskbar_hint (CTK_WINDOW (widget), TRUE);
+				ctk_window_set_skip_pager_hint (CTK_WINDOW (widget), TRUE);
 
-				ctk_window_set_keep_above (GTK_WINDOW (widget), TRUE);
+				ctk_window_set_keep_above (CTK_WINDOW (widget), TRUE);
 
-				ctk_window_fullscreen (GTK_WINDOW (widget));
+				ctk_window_fullscreen (CTK_WINDOW (widget));
 
 				event_mask = GDK_EXPOSURE_MASK | GDK_STRUCTURE_MASK;
 				ctk_widget_set_events (widget, ctk_widget_get_events (widget) | event_mask);
@@ -135,7 +135,7 @@ gs_theme_window_real_realize (GtkWidget *widget)
 	{
 		GtkWidgetClass *parent_class;
 
-		parent_class = GTK_WIDGET_CLASS (gs_theme_window_parent_class);
+		parent_class = CTK_WIDGET_CLASS (gs_theme_window_parent_class);
 
 		if (parent_class->realize != NULL)
 			parent_class->realize (widget);
@@ -166,7 +166,7 @@ gs_theme_window_real_realize (GtkWidget *widget)
 	allocation.width = width;
 	allocation.height = height;
 	ctk_widget_size_allocate (widget, &allocation);
-	ctk_window_resize (GTK_WINDOW (widget), width, height);
+	ctk_window_resize (CTK_WINDOW (widget), width, height);
 }
 
 GtkWidget *
@@ -175,8 +175,8 @@ gs_theme_window_new (void)
 	GSThemeWindow *window;
 
 	window = g_object_new (GS_TYPE_THEME_WINDOW,
-	                       "type", GTK_WINDOW_TOPLEVEL,
+	                       "type", CTK_WINDOW_TOPLEVEL,
 	                       NULL);
 
-	return GTK_WIDGET (window);
+	return CTK_WIDGET (window);
 }

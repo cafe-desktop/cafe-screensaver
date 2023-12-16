@@ -320,7 +320,7 @@ update_display (GSTESlideshow *show)
 
 	cairo_destroy (cr);
 
-	ctk_widget_queue_draw (GTK_WIDGET (show));
+	ctk_widget_queue_draw (CTK_WIDGET (show));
 }
 
 static gboolean
@@ -838,9 +838,9 @@ gste_slideshow_real_show (GtkWidget *widget)
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
 	int            delay;
 
-	if (GTK_WIDGET_CLASS (parent_class)->show)
+	if (CTK_WIDGET_CLASS (parent_class)->show)
 	{
-		GTK_WIDGET_CLASS (parent_class)->show (widget);
+		CTK_WIDGET_CLASS (parent_class)->show (widget);
 	}
 
 	start_new_load (show, 10);
@@ -861,8 +861,8 @@ gste_slideshow_real_draw (GtkWidget *widget,
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
 
-	if (GTK_WIDGET_CLASS (parent_class)->draw) {
-		GTK_WIDGET_CLASS (parent_class)->draw (widget, cr);
+	if (CTK_WIDGET_CLASS (parent_class)->draw) {
+		CTK_WIDGET_CLASS (parent_class)->draw (widget, cr);
 	}
 
 	cairo_set_source_surface (cr, show->priv->surf, 0, 0);
@@ -906,9 +906,9 @@ gste_slideshow_real_configure (GtkWidget         *widget,
 	/* schedule a redraw */
 	ctk_widget_queue_draw (widget);
 
-	if (GTK_WIDGET_CLASS (parent_class)->configure_event)
+	if (CTK_WIDGET_CLASS (parent_class)->configure_event)
 	{
-		handled = GTK_WIDGET_CLASS (parent_class)->configure_event (widget, event);
+		handled = CTK_WIDGET_CLASS (parent_class)->configure_event (widget, event);
 	}
 
 	return handled;
@@ -918,7 +918,7 @@ static void
 gste_slideshow_class_init (GSTESlideshowClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 
@@ -988,7 +988,7 @@ gste_slideshow_init (GSTESlideshow *show)
 
 	g_thread_new ("loadthread", (GThreadFunc)load_threadfunc, show->priv->op_q);
 
-	set_visual (GTK_WIDGET (show));
+	set_visual (CTK_WIDGET (show));
 }
 
 static void

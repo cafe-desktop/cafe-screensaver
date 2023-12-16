@@ -1111,7 +1111,7 @@ screen_saver_do_update_state (ScreenSaver *screen_saver)
 	{
 		GdkDisplay *display;
 
-		display = ctk_widget_get_display (GTK_WIDGET(screen_saver->drawing_area));
+		display = ctk_widget_get_display (CTK_WIDGET(screen_saver->drawing_area));
 		gdk_display_flush (display);
 		screen_saver->draw_ops_pending = FALSE;
 	}
@@ -1207,10 +1207,10 @@ main (int   argc,
 	g_signal_connect (G_OBJECT (window), "delete-event",
 	                  G_CALLBACK (ctk_main_quit), NULL);
 
-	drawing_area = GTK_WIDGET (ctk_drawing_area_new ());
+	drawing_area = CTK_WIDGET (ctk_drawing_area_new ());
 
 	ctk_widget_show (drawing_area);
-	ctk_container_add (GTK_CONTAINER (window), drawing_area);
+	ctk_container_add (CTK_CONTAINER (window), drawing_area);
 
 	screen_saver = screen_saver_new (drawing_area,
 	                                 filenames[0], max_floater_count,
@@ -1223,8 +1223,8 @@ main (int   argc,
 		               screen_saver);
 
 	if ((geometry == NULL)
-	        || !ctk_window_parse_geometry (GTK_WINDOW (window), geometry))
-		ctk_window_set_default_size (GTK_WINDOW (window), 640, 480);
+	        || !ctk_window_parse_geometry (CTK_WINDOW (window), geometry))
+		ctk_window_set_default_size (CTK_WINDOW (window), 640, 480);
 
 	ctk_widget_show (window);
 

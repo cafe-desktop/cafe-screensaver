@@ -23,7 +23,7 @@ AM_CPPFLAGS =							\
 	-DCAFELOCALEDIR=\""$(datadir)/locale"\"			\
 	-DSAVERDIR=\""$(saverdir)"\"				\
 	-DTHEMESDIR=\""$(themesdir)"\"				\
-	-DGTKBUILDERDIR=\"$(pkgdatadir)\"			\
+	-DCTKBUILDERDIR=\"$(pkgdatadir)\"			\
 	-DPAM_SERVICE_NAME=\""cafe-screensaver"\"		\
 	$(WARN_CFLAGS)						\
 	$(AUTH_CFLAGS)						\

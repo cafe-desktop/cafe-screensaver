@@ -365,8 +365,8 @@ gs_grab_grab_offscreen (GSGrab *grab,
 
 	gs_debug ("Grabbing an offscreen window");
 
-	window = ctk_widget_get_window (GTK_WIDGET (grab->priv->invisible));
-	screen = ctk_invisible_get_screen (GTK_INVISIBLE (grab->priv->invisible));
+	window = ctk_widget_get_window (CTK_WIDGET (grab->priv->invisible));
+	screen = ctk_invisible_get_screen (CTK_INVISIBLE (grab->priv->invisible));
 	display = gdk_screen_get_display (screen);
 	res = gs_grab_grab_window (grab, window, display,
 	                           no_pointer_grab, hide_cursor);

@@ -129,11 +129,11 @@ main (int argc, char **argv)
 		g_object_set (engine, "no-stretch", no_stretch, NULL);
 	}
 
-	ctk_container_add (GTK_CONTAINER (window), GTK_WIDGET (engine));
+	ctk_container_add (CTK_CONTAINER (window), CTK_WIDGET (engine));
 
-	ctk_widget_show (GTK_WIDGET (engine));
+	ctk_widget_show (CTK_WIDGET (engine));
 
-	ctk_window_set_default_size (GTK_WINDOW (window), 640, 480);
+	ctk_window_set_default_size (CTK_WINDOW (window), 640, 480);
 	ctk_widget_show (window);
 
 	ctk_main ();

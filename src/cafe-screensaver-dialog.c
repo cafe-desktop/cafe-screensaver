@@ -69,7 +69,7 @@ static char* get_id_string(GtkWidget* widget)
 	char* id = NULL;
 
 	g_return_val_if_fail(widget != NULL, NULL);
-	g_return_val_if_fail(GTK_IS_WIDGET(widget), NULL);
+	g_return_val_if_fail(CTK_IS_WIDGET(widget), NULL);
 
 	id = g_strdup_printf("%" G_GUINT32_FORMAT, (guint32) GDK_WINDOW_XID(ctk_widget_get_window(widget)));
 	return id;
@@ -209,7 +209,7 @@ static gboolean auth_message_handler(GSAuthMessageStyle style, const char* msg, 
 	gs_profile_start(NULL);
 	gs_debug("Got message style %d: '%s'", style, msg);
 
-	ctk_widget_show(GTK_WIDGET(plug));
+	ctk_widget_show(CTK_WIDGET(plug));
 	gs_lock_plug_set_ready(plug);
 
 	ret = TRUE;
@@ -314,7 +314,7 @@ static gboolean do_auth_check(GSLockPlug* plug)
 
 static void response_cb(GSLockPlug* plug, gint response_id)
 {
-	if ((response_id == GS_LOCK_PLUG_RESPONSE_CANCEL) || (response_id == GTK_RESPONSE_DELETE_EVENT))
+	if ((response_id == GS_LOCK_PLUG_RESPONSE_CANCEL) || (response_id == CTK_RESPONSE_DELETE_EVENT))
 	{
 		quit_response_cancel();
 	}
