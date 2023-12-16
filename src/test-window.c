@@ -26,7 +26,7 @@
 #include <stdlib.h>
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-window.h"
 #include "gs-grab.h"
@@ -92,7 +92,7 @@ window_destroyed_cb (GtkWindow *window,
 {
 	disconnect_window_signals (GS_WINDOW (window));
 	gs_grab_release (grab, TRUE);
-	gtk_main_quit ();
+	ctk_main_quit ();
 }
 
 static void
@@ -153,7 +153,7 @@ main (int    argc,
 	textdomain (GETTEXT_PACKAGE);
 #endif
 
-	if (! gtk_init_with_args (&argc, &argv, NULL, NULL, NULL, &error))
+	if (! ctk_init_with_args (&argc, &argv, NULL, NULL, NULL, &error))
 	{
 		fprintf (stderr, "%s", error->message);
 		g_error_free (error);
@@ -167,9 +167,9 @@ main (int    argc,
 	test_window ();
 
 	/* safety valve in case we can't authenticate */
-	g_timeout_add (30000, (GSourceFunc)gtk_main_quit, NULL);
+	g_timeout_add (30000, (GSourceFunc)ctk_main_quit, NULL);
 
-	gtk_main ();
+	ctk_main ();
 
 	g_object_unref (grab);
 

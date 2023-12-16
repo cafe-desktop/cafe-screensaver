@@ -26,7 +26,7 @@
 #include <glib.h>
 #include <glib/gstdio.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gio/gio.h>
 
 #include "copy-theme-dialog.h"
@@ -47,7 +47,7 @@ copy_theme_dialog_update_num_files (CopyThemeDialog *dlg);
 static void
 copy_theme_dialog_response (GtkDialog *dialog, gint response_id);
 static void
-eel_gtk_label_make_bold (GtkLabel *label);
+eel_ctk_label_make_bold (GtkLabel *label);
 static void
 create_titled_label (GtkGrid    *grid,
                      int         row,
@@ -166,65 +166,65 @@ copy_theme_dialog_init (CopyThemeDialog *dlg)
 	dlg->priv->cancellable = g_cancellable_new ();
 
 	/* GUI settings */
-	dialog_vbox = gtk_dialog_get_content_area (GTK_DIALOG (dlg));
+	dialog_vbox = ctk_dialog_get_content_area (GTK_DIALOG (dlg));
 
-	gtk_container_set_border_width (GTK_CONTAINER (dialog_vbox),
+	ctk_container_set_border_width (GTK_CONTAINER (dialog_vbox),
 	                                4);
-	gtk_box_set_spacing (GTK_BOX (dialog_vbox), 4);
+	ctk_box_set_spacing (GTK_BOX (dialog_vbox), 4);
 
-	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-	gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
-	gtk_box_pack_start (GTK_BOX (dialog_vbox), vbox, TRUE, TRUE, 0);
+	vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+	ctk_container_set_border_width (GTK_CONTAINER (vbox), 6);
+	ctk_box_pack_start (GTK_BOX (dialog_vbox), vbox, TRUE, TRUE, 0);
 
-	dlg->priv->status = gtk_label_new ("");
+	dlg->priv->status = ctk_label_new ("");
 	markup = g_strdup_printf ("<big><b>%s</b></big>", _("Copying files"));
-	gtk_label_set_markup (GTK_LABEL (dlg->priv->status), markup);
+	ctk_label_set_markup (GTK_LABEL (dlg->priv->status), markup);
 	g_free (markup);
 
-	gtk_widget_set_halign (dlg->priv->status, GTK_ALIGN_START);
-	gtk_widget_set_valign (dlg->priv->status, GTK_ALIGN_START);
-	gtk_box_pack_start (GTK_BOX (vbox), dlg->priv->status, FALSE, FALSE, 0);
+	ctk_widget_set_halign (dlg->priv->status, GTK_ALIGN_START);
+	ctk_widget_set_valign (dlg->priv->status, GTK_ALIGN_START);
+	ctk_box_pack_start (GTK_BOX (vbox), dlg->priv->status, FALSE, FALSE, 0);
 
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-	gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
+	hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	ctk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
 
-	grid = gtk_grid_new ();
-	gtk_grid_set_row_spacing (GTK_GRID (grid), 4);
-	gtk_grid_set_column_spacing (GTK_GRID (grid), 4);
-	gtk_grid_set_column_homogeneous (GTK_GRID (grid), TRUE);
+	grid = ctk_grid_new ();
+	ctk_grid_set_row_spacing (GTK_GRID (grid), 4);
+	ctk_grid_set_column_spacing (GTK_GRID (grid), 4);
+	ctk_grid_set_column_homogeneous (GTK_GRID (grid), TRUE);
 
 	create_titled_label (GTK_GRID (grid), 0,
 	                     &label,
 	                     &dlg->priv->from);
-	gtk_label_set_text (GTK_LABEL (label), _("From:"));
+	ctk_label_set_text (GTK_LABEL (label), _("From:"));
 	create_titled_label (GTK_GRID (grid), 1,
 	                     &label,
 	                     &dlg->priv->to);
-	gtk_label_set_text (GTK_LABEL (label), _("To:"));
+	ctk_label_set_text (GTK_LABEL (label), _("To:"));
 
-	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (grid), FALSE, FALSE, 0);
+	ctk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (grid), FALSE, FALSE, 0);
 
-	progress_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-	gtk_box_set_homogeneous (GTK_BOX (progress_vbox), TRUE);
-	gtk_box_pack_start (GTK_BOX (vbox), progress_vbox, FALSE, FALSE, 0);
+	progress_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+	ctk_box_set_homogeneous (GTK_BOX (progress_vbox), TRUE);
+	ctk_box_pack_start (GTK_BOX (vbox), progress_vbox, FALSE, FALSE, 0);
 
-	dlg->priv->progress = gtk_progress_bar_new ();
-	gtk_box_pack_start (GTK_BOX (progress_vbox),
+	dlg->priv->progress = ctk_progress_bar_new ();
+	ctk_box_pack_start (GTK_BOX (progress_vbox),
 	                    dlg->priv->progress, FALSE, FALSE, 0);
 
-	dlg->priv->current = gtk_label_new ("");
-	gtk_box_pack_start (GTK_BOX (progress_vbox),
+	dlg->priv->current = ctk_label_new ("");
+	ctk_box_pack_start (GTK_BOX (progress_vbox),
 	                    dlg->priv->current, FALSE, FALSE, 0);
-	gtk_widget_set_halign (dlg->priv->current, GTK_ALIGN_START);
+	ctk_widget_set_halign (dlg->priv->current, GTK_ALIGN_START);
 
-	gtk_dialog_add_button (GTK_DIALOG (dlg),
-	                       "gtk-cancel", GTK_RESPONSE_CANCEL);
+	ctk_dialog_add_button (GTK_DIALOG (dlg),
+	                       "ctk-cancel", GTK_RESPONSE_CANCEL);
 
-	gtk_window_set_title (GTK_WINDOW (dlg),
+	ctk_window_set_title (GTK_WINDOW (dlg),
 	                      _("Copying themes"));
-	gtk_container_set_border_width (GTK_CONTAINER (dlg), 6);
+	ctk_container_set_border_width (GTK_CONTAINER (dlg), 6);
 
-	gtk_widget_show_all (dialog_vbox);
+	ctk_widget_show_all (dialog_vbox);
 }
 
 static void
@@ -260,21 +260,21 @@ add_file_to_dialog (gpointer data, gpointer user_data)
 		GtkWidget *dialog;
 		gchar *uri;
 
-		dialog = gtk_message_dialog_new (GTK_WINDOW (user_data),
+		dialog = ctk_message_dialog_new (GTK_WINDOW (user_data),
 		                                 GTK_DIALOG_MODAL,
 		                                 GTK_MESSAGE_ERROR,
 		                                 GTK_BUTTONS_OK,
 		                                 _("Invalid screensaver theme"));
 		uri = g_file_get_uri (file);
-		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+		ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 		        _("%s does not appear to be a valid screensaver theme."),
 		        uri);
 		g_free (uri);
-		gtk_window_set_title (GTK_WINDOW (dialog), "");
-		gtk_window_set_icon_name (GTK_WINDOW (dialog), "preferences-desktop-screensaver");
+		ctk_window_set_title (GTK_WINDOW (dialog), "");
+		ctk_window_set_icon_name (GTK_WINDOW (dialog), "preferences-desktop-screensaver");
 
-		gtk_dialog_run (GTK_DIALOG (dialog));
-		gtk_widget_destroy (dialog);
+		ctk_dialog_run (GTK_DIALOG (dialog));
+		ctk_widget_destroy (dialog);
 	}
 }
 
@@ -399,7 +399,7 @@ timeout_display_dialog (gpointer data)
 		CopyThemeDialog *dialog = COPY_THEME_DIALOG (data);
 		if (!copy_finished (dialog))
 		{
-			gtk_widget_show (GTK_WIDGET (dialog));
+			ctk_widget_show (GTK_WIDGET (dialog));
 
 			g_signal_connect (dialog, "response",
 			                  G_CALLBACK (copy_theme_dialog_response),
@@ -412,7 +412,7 @@ timeout_display_dialog (gpointer data)
 void
 copy_theme_dialog_begin (CopyThemeDialog *dialog)
 {
-	gtk_widget_hide (GTK_WIDGET (dialog));
+	ctk_widget_hide (GTK_WIDGET (dialog));
 
 	/* If the copy operation takes more than half a second to
 	 * complete, display the dialog.
@@ -449,7 +449,7 @@ copy_theme_dialog_update_num_files (CopyThemeDialog *dlg)
 {
 	gchar *str = g_strdup_printf (_("Copying file: %u of %u"),
 	                              dlg->priv->index, dlg->priv->total_files);
-	gtk_progress_bar_set_text (GTK_PROGRESS_BAR (dlg->priv->progress), str);
+	ctk_progress_bar_set_text (GTK_PROGRESS_BAR (dlg->priv->progress), str);
 	g_free (str);
 }
 
@@ -460,13 +460,13 @@ copy_theme_dialog_response (GtkDialog *dialog, gint response_id)
 }
 
 /**
- * eel_gtk_label_make_bold.
+ * eel_ctk_label_make_bold.
  *
  * Switches the font of label to a bold equivalent.
  * @label: The label.
  **/
 static void
-eel_gtk_label_make_bold (GtkLabel *label)
+eel_ctk_label_make_bold (GtkLabel *label)
 {
 	PangoFontDescription *font_desc;
 
@@ -480,7 +480,7 @@ eel_gtk_label_make_bold (GtkLabel *label)
 	 * theme or user prefs, since the font desc only has the
 	 * weight flag turned on.
 	 */
-	gtk_widget_override_font (GTK_WIDGET (label), font_desc);
+	ctk_widget_override_font (GTK_WIDGET (label), font_desc);
 	pango_font_description_free (font_desc);
 }
 
@@ -491,21 +491,21 @@ create_titled_label (GtkGrid    *grid,
                      GtkWidget **title_widget,
                      GtkWidget **label_text_widget)
 {
-	*title_widget = gtk_label_new ("");
-	eel_gtk_label_make_bold (GTK_LABEL (*title_widget));
-	gtk_widget_set_halign (*title_widget, GTK_ALIGN_END);
-	gtk_widget_set_valign (*title_widget, GTK_ALIGN_START);
+	*title_widget = ctk_label_new ("");
+	eel_ctk_label_make_bold (GTK_LABEL (*title_widget));
+	ctk_widget_set_halign (*title_widget, GTK_ALIGN_END);
+	ctk_widget_set_valign (*title_widget, GTK_ALIGN_START);
 
-	gtk_grid_attach (grid, *title_widget,
+	ctk_grid_attach (grid, *title_widget,
 	                 0, row, 1, 1);
-	gtk_widget_show (*title_widget);
+	ctk_widget_show (*title_widget);
 
-	*label_text_widget = gtk_label_new ("");
-	gtk_label_set_ellipsize (GTK_LABEL (*label_text_widget), PANGO_ELLIPSIZE_END);
-	gtk_widget_set_hexpand (*label_text_widget, TRUE);
-	gtk_grid_attach (grid, *label_text_widget,
+	*label_text_widget = ctk_label_new ("");
+	ctk_label_set_ellipsize (GTK_LABEL (*label_text_widget), PANGO_ELLIPSIZE_END);
+	ctk_widget_set_hexpand (*label_text_widget, TRUE);
+	ctk_grid_attach (grid, *label_text_widget,
 	                 1, row, 1, 1);
-	gtk_widget_show (*label_text_widget);
-	gtk_widget_set_halign (*label_text_widget, GTK_ALIGN_START);
-	gtk_widget_set_valign (*label_text_widget, GTK_ALIGN_START);
+	ctk_widget_show (*label_text_widget);
+	ctk_widget_set_halign (*label_text_widget, GTK_ALIGN_START);
+	ctk_widget_set_valign (*label_text_widget, GTK_ALIGN_START);
 }

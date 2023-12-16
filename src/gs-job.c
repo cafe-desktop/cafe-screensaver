@@ -76,7 +76,7 @@ widget_get_id_string (GtkWidget *widget)
 	g_return_val_if_fail (widget != NULL, NULL);
 
 	id = g_strdup_printf ("0x%X",
-	                      (guint32)GDK_WINDOW_XID (gtk_widget_get_window (widget)));
+	                      (guint32)GDK_WINDOW_XID (ctk_widget_get_window (widget)));
 	return id;
 }
 
@@ -271,7 +271,7 @@ get_env_vars (GtkWidget *widget)
 
 	env = g_ptr_array_new ();
 
-	display_name = gdk_display_get_name (gtk_widget_get_display (widget));
+	display_name = gdk_display_get_name (ctk_widget_get_display (widget));
 	g_ptr_array_add (env, g_strdup_printf ("DISPLAY=%s", display_name));
 
 	g_ptr_array_add (env, g_strdup_printf ("HOME=%s",

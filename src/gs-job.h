@@ -23,7 +23,7 @@
 #ifndef __GS_JOB_H
 #define __GS_JOB_H
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 G_BEGIN_DECLS
 

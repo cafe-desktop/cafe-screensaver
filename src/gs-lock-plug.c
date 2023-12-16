@@ -35,8 +35,8 @@
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
-#include <gtk/gtkx.h>
+#include <ctk/ctk.h>
+#include <ctk/ctkx.h>
 #include <gio/gio.h>
 
 #define CAFE_DESKTOP_USE_UNSTABLE_API
@@ -171,11 +171,11 @@ gs_lock_plug_style_set (GtkWidget *widget,
 		return;
 	}
 
-	gtk_container_set_border_width (GTK_CONTAINER (plug->priv->vbox), 12);
-	gtk_box_set_spacing (GTK_BOX (plug->priv->vbox), 12);
+	ctk_container_set_border_width (GTK_CONTAINER (plug->priv->vbox), 12);
+	ctk_box_set_spacing (GTK_BOX (plug->priv->vbox), 12);
 
-	gtk_container_set_border_width (GTK_CONTAINER (plug->priv->auth_action_area), 0);
-	gtk_box_set_spacing (GTK_BOX (plug->priv->auth_action_area), 5);
+	ctk_container_set_border_width (GTK_CONTAINER (plug->priv->auth_action_area), 0);
+	ctk_box_set_spacing (GTK_BOX (plug->priv->auth_action_area), 5);
 }
 
 static gboolean
@@ -283,7 +283,7 @@ set_status_text (GSLockPlug *plug,
 {
 	if (plug->priv->auth_message_label != NULL)
 	{
-		gtk_label_set_text (GTK_LABEL (plug->priv->auth_message_label), text);
+		ctk_label_set_text (GTK_LABEL (plug->priv->auth_message_label), text);
 	}
 }
 
@@ -301,13 +301,13 @@ date_time_update (GSLockPlug *plug)
 	date = g_date_time_format (datetime, _("%A, %B %e"));
 
 	str = g_strdup_printf ("<span size=\"xx-large\" weight=\"ultrabold\">%s</span>", time);
-	gtk_label_set_text (GTK_LABEL (plug->priv->auth_time_label), str);
-	gtk_label_set_use_markup (GTK_LABEL (plug->priv->auth_time_label), TRUE);
+	ctk_label_set_text (GTK_LABEL (plug->priv->auth_time_label), str);
+	ctk_label_set_use_markup (GTK_LABEL (plug->priv->auth_time_label), TRUE);
 	g_free (str);
 
 	str = g_strdup_printf ("<span size=\"large\">%s</span>", date);
-	gtk_label_set_markup (GTK_LABEL (plug->priv->auth_date_label), str);
-	gtk_label_set_use_markup (GTK_LABEL (plug->priv->auth_date_label), TRUE);
+	ctk_label_set_markup (GTK_LABEL (plug->priv->auth_date_label), str);
+	ctk_label_set_use_markup (GTK_LABEL (plug->priv->auth_date_label), TRUE);
 	g_free (str);
 
 	g_free (time);
@@ -321,8 +321,8 @@ gs_lock_plug_set_sensitive (GSLockPlug *plug,
 {
 	g_return_if_fail (GS_IS_LOCK_PLUG (plug));
 
-	gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, sensitive);
-	gtk_widget_set_sensitive (plug->priv->auth_action_area, sensitive);
+	ctk_widget_set_sensitive (plug->priv->auth_prompt_entry, sensitive);
+	ctk_widget_set_sensitive (plug->priv->auth_action_area, sensitive);
 }
 
 static void
@@ -377,7 +377,7 @@ gs_lock_plug_response (GSLockPlug *plug,
 
 	if (response_id == GS_LOCK_PLUG_RESPONSE_CANCEL)
 	{
-		gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), "");
+		ctk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), "");
 	}
 
 	g_signal_emit (plug,
@@ -430,12 +430,12 @@ capslock_update (GSLockPlug *plug,
 
 	if (is_on)
 	{
-		gtk_label_set_text (GTK_LABEL (plug->priv->auth_capslock_label),
+		ctk_label_set_text (GTK_LABEL (plug->priv->auth_capslock_label),
 		                    _("You have the Caps Lock key on."));
 	}
 	else
 	{
-		gtk_label_set_text (GTK_LABEL (plug->priv->auth_capslock_label),
+		ctk_label_set_text (GTK_LABEL (plug->priv->auth_capslock_label),
 		                    "");
 	}
 }
@@ -474,12 +474,12 @@ gs_lock_plug_get_text (GSLockPlug *plug,
 	char       *null_text;
 	char       *local_text;
 
-	typed_text = gtk_entry_get_text (GTK_ENTRY (plug->priv->auth_prompt_entry));
+	typed_text = ctk_entry_get_text (GTK_ENTRY (plug->priv->auth_prompt_entry));
 	local_text = g_locale_from_utf8 (typed_text, strlen (typed_text), NULL, NULL, NULL);
 
 	null_text = g_strnfill (strlen (typed_text) + 1, '\b');
-	gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), null_text);
-	gtk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), "");
+	ctk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), null_text);
+	ctk_entry_set_text (GTK_ENTRY (plug->priv->auth_prompt_entry), "");
 	g_free (null_text);
 
 	if (text != NULL)
@@ -559,7 +559,7 @@ run_keymap_handler (GdkKeymap *keymap,
 	capslock_update (plug, is_capslock_on ());
 }
 
-/* adapted from GTK+ gtkdialog.c */
+/* adapted from GTK+ ctkdialog.c */
 int
 gs_lock_plug_run (GSLockPlug *plug)
 {
@@ -576,18 +576,18 @@ gs_lock_plug_run (GSLockPlug *plug)
 
 	g_object_ref (plug);
 
-	was_modal = gtk_window_get_modal (GTK_WINDOW (plug));
+	was_modal = ctk_window_get_modal (GTK_WINDOW (plug));
 	if (!was_modal)
 	{
-		gtk_window_set_modal (GTK_WINDOW (plug), TRUE);
+		ctk_window_set_modal (GTK_WINDOW (plug), TRUE);
 	}
 
-	if (!gtk_widget_get_visible (GTK_WIDGET (plug)))
+	if (!ctk_widget_get_visible (GTK_WIDGET (plug)))
 	{
-		gtk_widget_show (GTK_WIDGET (plug));
+		ctk_widget_show (GTK_WIDGET (plug));
 	}
 
-	keymap = gdk_keymap_get_for_display (gtk_widget_get_display (GTK_WIDGET (plug)));
+	keymap = gdk_keymap_get_for_display (ctk_widget_get_display (GTK_WIDGET (plug)));
 
 	keymap_handler =
 	    g_signal_connect (keymap,
@@ -631,7 +631,7 @@ gs_lock_plug_run (GSLockPlug *plug)
 	{
 		if (! was_modal)
 		{
-			gtk_window_set_modal (GTK_WINDOW (plug), FALSE);
+			ctk_window_set_modal (GTK_WINDOW (plug), FALSE);
 		}
 
 		g_signal_handler_disconnect (plug, response_handler);
@@ -879,7 +879,7 @@ image_set_from_pixbuf (GtkImage  *image,
 	GdkPixbuf *pixbuf;
 
 	pixbuf = frame_pixbuf (source);
-	gtk_image_set_from_pixbuf (image, pixbuf);
+	ctk_image_set_from_pixbuf (image, pixbuf);
 	g_object_unref (pixbuf);
 }
 
@@ -982,7 +982,7 @@ gs_lock_plug_get_preferred_width (GtkWidget *widget, gint *minimum_width, gint *
 
     GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->get_preferred_width (widget, minimum_width, natural_width);
 
-    scale = gtk_widget_get_scale_factor (widget);
+    scale = ctk_widget_get_scale_factor (widget);
     *minimum_width /= scale;
     *natural_width /= scale;
 }
@@ -994,7 +994,7 @@ gs_lock_plug_get_preferred_height_for_width (GtkWidget *widget, gint width, gint
 
     GTK_WIDGET_CLASS (gs_lock_plug_parent_class)->get_preferred_height_for_width (widget, width, minimum_height, natural_height);
 
-    scale = gtk_widget_get_scale_factor (widget);
+    scale = ctk_widget_get_scale_factor (widget);
     *minimum_height /= scale;
     *natural_height /= scale;
 }
@@ -1056,7 +1056,7 @@ forward_key_events (GSLockPlug *plug)
 	{
 		GdkEventKey *event = plug->priv->key_events->data;
 
-		gtk_window_propagate_key_event (GTK_WINDOW (plug), event);
+		ctk_window_propagate_key_event (GTK_WINDOW (plug), event);
 
 		gdk_event_free ((GdkEvent *)event);
 
@@ -1086,11 +1086,11 @@ gs_lock_plug_set_logout_enabled (GSLockPlug *plug,
 
 	if (logout_enabled)
 	{
-		gtk_widget_show (plug->priv->auth_logout_button);
+		ctk_widget_show (plug->priv->auth_logout_button);
 	}
 	else
 	{
-		gtk_widget_hide (plug->priv->auth_logout_button);
+		ctk_widget_hide (plug->priv->auth_logout_button);
 	}
 }
 
@@ -1125,13 +1125,13 @@ gs_lock_plug_set_status_message (GSLockPlug *plug,
 	{
 		if (plug->priv->status_message)
 		{
-			gtk_label_set_text (GTK_LABEL (plug->priv->status_message_label),
+			ctk_label_set_text (GTK_LABEL (plug->priv->status_message_label),
 			                    plug->priv->status_message);
-			gtk_widget_show (plug->priv->status_message_label);
+			ctk_widget_show (plug->priv->status_message_label);
 		}
 		else
 		{
-			gtk_widget_hide (plug->priv->status_message_label);
+			ctk_widget_hide (plug->priv->status_message_label);
 		}
 	}
 }
@@ -1190,27 +1190,27 @@ gs_lock_plug_set_switch_enabled (GSLockPlug *plug,
 		if (process_is_running ("mdm"))
 		{
 			/* MDM  */
-			gtk_widget_show (plug->priv->auth_switch_button);
+			ctk_widget_show (plug->priv->auth_switch_button);
 		}
 		else if (process_is_running ("gdm") || process_is_running("gdm3") || process_is_running("gdm-binary"))
 		{
 			/* GDM */
-			gtk_widget_show (plug->priv->auth_switch_button);
+			ctk_widget_show (plug->priv->auth_switch_button);
 		}
 		else if (g_getenv ("XDG_SEAT_PATH") != NULL)
 		{
 			/* LightDM */
-			gtk_widget_show (plug->priv->auth_switch_button);
+			ctk_widget_show (plug->priv->auth_switch_button);
 		}
 		else
 		{
 			gs_debug ("Warning: Unknown DM for switch button");
-			gtk_widget_hide (plug->priv->auth_switch_button);
+			ctk_widget_hide (plug->priv->auth_switch_button);
 		}
 	}
 	else
 	{
-		gtk_widget_hide (plug->priv->auth_switch_button);
+		ctk_widget_hide (plug->priv->auth_switch_button);
 	}
 }
 
@@ -1253,10 +1253,10 @@ gs_lock_plug_close (GSLockPlug *plug)
 	GdkEvent  *event;
 
 	event = gdk_event_new (GDK_DELETE);
-	event->any.window = g_object_ref (gtk_widget_get_window(widget));
+	event->any.window = g_object_ref (ctk_widget_get_window(widget));
 	event->any.send_event = TRUE;
 
-	gtk_main_do_event (event);
+	ctk_main_do_event (event);
 	gdk_event_free (event);
 }
 
@@ -1326,9 +1326,9 @@ gs_lock_plug_class_init (GSLockPlugClass *klass)
 	                                         FALSE,
 	                                         G_PARAM_READWRITE));
 
-	binding_set = gtk_binding_set_by_class (klass);
+	binding_set = ctk_binding_set_by_class (klass);
 
-	gtk_binding_entry_add_signal (binding_set, GDK_KEY_Escape, 0,
+	ctk_binding_entry_add_signal (binding_set, GDK_KEY_Escape, 0,
 	                              "close", 0);
 }
 
@@ -1337,12 +1337,12 @@ clear_clipboards (GSLockPlug *plug)
 {
 	GtkClipboard *clipboard;
 
-	clipboard = gtk_widget_get_clipboard (GTK_WIDGET (plug), GDK_SELECTION_PRIMARY);
-	gtk_clipboard_clear (clipboard);
-	gtk_clipboard_set_text (clipboard, "", -1);
-	clipboard = gtk_widget_get_clipboard (GTK_WIDGET (plug), GDK_SELECTION_CLIPBOARD);
-	gtk_clipboard_clear (clipboard);
-	gtk_clipboard_set_text (clipboard, "", -1);
+	clipboard = ctk_widget_get_clipboard (GTK_WIDGET (plug), GDK_SELECTION_PRIMARY);
+	ctk_clipboard_clear (clipboard);
+	ctk_clipboard_set_text (clipboard, "", -1);
+	clipboard = ctk_widget_get_clipboard (GTK_WIDGET (plug), GDK_SELECTION_CLIPBOARD);
+	ctk_clipboard_clear (clipboard);
+	ctk_clipboard_set_text (clipboard, "", -1);
 }
 
 static void
@@ -1351,8 +1351,8 @@ take_note (GtkButton  *button,
 {
 	int page;
 
-	page = gtk_notebook_page_num (GTK_NOTEBOOK (plug->priv->notebook), plug->priv->note_tab);
-	gtk_notebook_set_current_page (GTK_NOTEBOOK (plug->priv->notebook), page);
+	page = ctk_notebook_page_num (GTK_NOTEBOOK (plug->priv->notebook), plug->priv->note_tab);
+	ctk_notebook_set_current_page (GTK_NOTEBOOK (plug->priv->notebook), page);
 	/* this counts as activity so restart the timer */
 	restart_cancel_timeout (plug);
 }
@@ -1371,11 +1371,11 @@ submit_note (GtkButton  *button,
 	struct tm          *tmp;
 	NotifyNotification *note;
 
-	gtk_notebook_set_current_page (GTK_NOTEBOOK (plug->priv->notebook), AUTH_PAGE);
-	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (plug->priv->note_text_view));
-	gtk_text_buffer_get_bounds (buffer, &start, &end);
-	text = gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
-	gtk_text_buffer_set_text (buffer, "", 0);
+	ctk_notebook_set_current_page (GTK_NOTEBOOK (plug->priv->notebook), AUTH_PAGE);
+	buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (plug->priv->note_text_view));
+	ctk_text_buffer_get_bounds (buffer, &start, &end);
+	text = ctk_text_buffer_get_text (buffer, &start, &end, FALSE);
+	ctk_text_buffer_set_text (buffer, "", 0);
 	escaped_text = g_markup_escape_text (text, -1);
 
 	t = time (NULL);
@@ -1400,14 +1400,14 @@ cancel_note (GtkButton  *button,
 {
 	GtkTextBuffer *buffer;
 
-	gtk_notebook_set_current_page (GTK_NOTEBOOK (plug->priv->notebook), AUTH_PAGE);
-	buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (plug->priv->note_text_view));
-	gtk_text_buffer_set_text (buffer, "", 0);
+	ctk_notebook_set_current_page (GTK_NOTEBOOK (plug->priv->notebook), AUTH_PAGE);
+	buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (plug->priv->note_text_view));
+	ctk_text_buffer_set_text (buffer, "", 0);
 
 	/* this counts as activity so restart the timer */
 	restart_cancel_timeout (plug);
 
-	gtk_window_set_default (GTK_WINDOW (plug), plug->priv->auth_unlock_button);
+	ctk_window_set_default (GTK_WINDOW (plug), plug->priv->auth_unlock_button);
 
 	clear_clipboards (plug);
 }
@@ -1459,12 +1459,12 @@ gs_lock_plug_set_busy (GSLockPlug *plug)
 	GdkCursor *cursor;
 	GtkWidget *top_level;
 
-	top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
+	top_level = ctk_widget_get_toplevel (GTK_WIDGET (plug));
 
-	display = gtk_widget_get_display (GTK_WIDGET (plug));
+	display = ctk_widget_get_display (GTK_WIDGET (plug));
 	cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
 
-	gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
+	gdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
 	g_object_unref (cursor);
 }
 
@@ -1475,11 +1475,11 @@ gs_lock_plug_set_ready (GSLockPlug *plug)
 	GdkCursor *cursor;
 	GtkWidget *top_level;
 
-	top_level = gtk_widget_get_toplevel (GTK_WIDGET (plug));
+	top_level = ctk_widget_get_toplevel (GTK_WIDGET (plug));
 
-	display = gtk_widget_get_display (GTK_WIDGET (plug));
+	display = ctk_widget_get_display (GTK_WIDGET (plug));
 	cursor = gdk_cursor_new_for_display (display, GDK_LEFT_PTR);
-	gdk_window_set_cursor (gtk_widget_get_window (top_level), cursor);
+	gdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
 	g_object_unref (cursor);
 }
 
@@ -1492,18 +1492,18 @@ gs_lock_plug_enable_prompt (GSLockPlug *plug,
 
 	gs_debug ("Setting prompt to: %s", message);
 
-	gtk_widget_set_sensitive (plug->priv->auth_unlock_button, TRUE);
-	gtk_widget_show (plug->priv->auth_unlock_button);
-	gtk_widget_grab_default (plug->priv->auth_unlock_button);
-	gtk_label_set_text (GTK_LABEL (plug->priv->auth_prompt_label), message);
-	gtk_widget_show (plug->priv->auth_prompt_label);
-	gtk_entry_set_visibility (GTK_ENTRY (plug->priv->auth_prompt_entry), visible);
-	gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, TRUE);
-	gtk_widget_show (plug->priv->auth_prompt_entry);
+	ctk_widget_set_sensitive (plug->priv->auth_unlock_button, TRUE);
+	ctk_widget_show (plug->priv->auth_unlock_button);
+	ctk_widget_grab_default (plug->priv->auth_unlock_button);
+	ctk_label_set_text (GTK_LABEL (plug->priv->auth_prompt_label), message);
+	ctk_widget_show (plug->priv->auth_prompt_label);
+	ctk_entry_set_visibility (GTK_ENTRY (plug->priv->auth_prompt_entry), visible);
+	ctk_widget_set_sensitive (plug->priv->auth_prompt_entry, TRUE);
+	ctk_widget_show (plug->priv->auth_prompt_entry);
 
-	if (! gtk_widget_has_focus (plug->priv->auth_prompt_entry))
+	if (! ctk_widget_has_focus (plug->priv->auth_prompt_entry))
 	{
-		gtk_widget_grab_focus (plug->priv->auth_prompt_entry);
+		ctk_widget_grab_focus (plug->priv->auth_prompt_entry);
 	}
 
 	/* were there any key events sent to the plug while the
@@ -1519,13 +1519,13 @@ gs_lock_plug_disable_prompt (GSLockPlug *plug)
 {
 	g_return_if_fail (GS_IS_LOCK_PLUG (plug));
 
-	/* gtk_widget_hide (plug->priv->auth_prompt_entry); */
-	/* gtk_widget_hide (plug->priv->auth_prompt_label); */
-	gtk_widget_set_sensitive (plug->priv->auth_unlock_button, FALSE);
-	gtk_widget_set_sensitive (plug->priv->auth_prompt_entry, FALSE);
-	/* gtk_widget_hide (plug->priv->auth_unlock_button); */
+	/* ctk_widget_hide (plug->priv->auth_prompt_entry); */
+	/* ctk_widget_hide (plug->priv->auth_prompt_label); */
+	ctk_widget_set_sensitive (plug->priv->auth_unlock_button, FALSE);
+	ctk_widget_set_sensitive (plug->priv->auth_prompt_entry, FALSE);
+	/* ctk_widget_hide (plug->priv->auth_unlock_button); */
 
-	gtk_widget_grab_default (plug->priv->auth_cancel_button);
+	ctk_widget_grab_default (plug->priv->auth_cancel_button);
 }
 
 void
@@ -1560,8 +1560,8 @@ entry_key_press (GtkWidget   *widget,
 	/* if the input widget is visible and ready for input
 	 * then just carry on as usual
 	 */
-	if (gtk_widget_get_visible (plug->priv->auth_prompt_entry) &&
-	        gtk_widget_is_sensitive (plug->priv->auth_prompt_entry))
+	if (ctk_widget_get_visible (plug->priv->auth_prompt_entry) &&
+	        ctk_widget_is_sensitive (plug->priv->auth_prompt_entry))
 	{
 		return FALSE;
 	}
@@ -1576,7 +1576,7 @@ entry_key_press (GtkWidget   *widget,
 	return TRUE;
 }
 
-/* adapted from gtk_dialog_add_button */
+/* adapted from ctk_dialog_add_button */
 static GtkWidget *
 gs_lock_plug_add_button (GSLockPlug  *plug,
                          GtkWidget   *action_area,
@@ -1593,11 +1593,11 @@ gs_lock_plug_add_button (GSLockPlug  *plug,
 	                                   "use-underline", TRUE,
 	                                   NULL));
 
-	gtk_widget_set_can_default (button, TRUE);
+	ctk_widget_set_can_default (button, TRUE);
 
-	gtk_widget_show (button);
+	ctk_widget_show (button);
 
-	gtk_box_pack_end (GTK_BOX (action_area),
+	ctk_box_pack_end (GTK_BOX (action_area),
 	                  button,
 	                  FALSE, TRUE, 0);
 
@@ -1654,29 +1654,29 @@ create_page_one_buttons (GSLockPlug *plug)
 	plug->priv->auth_switch_button =  gs_lock_plug_add_button (GS_LOCK_PLUG (plug),
 	                                  plug->priv->auth_action_area,
 	                                  _("S_witch User..."));
-	gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (plug->priv->auth_action_area),
+	ctk_button_box_set_child_secondary (GTK_BUTTON_BOX (plug->priv->auth_action_area),
 	                                    plug->priv->auth_switch_button,
 	                                    TRUE);
-	gtk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_switch_button), FALSE);
-	gtk_widget_set_no_show_all (plug->priv->auth_switch_button, TRUE);
+	ctk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_switch_button), FALSE);
+	ctk_widget_set_no_show_all (plug->priv->auth_switch_button, TRUE);
 
 	plug->priv->auth_logout_button =  gs_lock_plug_add_button (GS_LOCK_PLUG (plug),
 	                                  plug->priv->auth_action_area,
 	                                  _("Log _Out"));
-	gtk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_logout_button), FALSE);
-	gtk_widget_set_no_show_all (plug->priv->auth_logout_button, TRUE);
+	ctk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_logout_button), FALSE);
+	ctk_widget_set_no_show_all (plug->priv->auth_logout_button, TRUE);
 
 	plug->priv->auth_cancel_button =  gs_lock_plug_add_button (GS_LOCK_PLUG (plug),
 	                                  plug->priv->auth_action_area,
-	                                  "gtk-cancel");
-	gtk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_cancel_button), FALSE);
+	                                  "ctk-cancel");
+	ctk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_cancel_button), FALSE);
 
 	plug->priv->auth_unlock_button =  gs_lock_plug_add_button (GS_LOCK_PLUG (plug),
 	                                  plug->priv->auth_action_area,
 	                                  _("_Unlock"));
-	gtk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_unlock_button), FALSE);
+	ctk_widget_set_focus_on_click (GTK_WIDGET (plug->priv->auth_unlock_button), FALSE);
 
-	gtk_window_set_default (GTK_WINDOW (plug), plug->priv->auth_unlock_button);
+	ctk_window_set_default (GTK_WINDOW (plug), plug->priv->auth_unlock_button);
 
 	gs_profile_end ("page one buttons");
 }
@@ -1815,9 +1815,9 @@ expand_string_for_label (GtkWidget *label)
 	const char *template;
 	char       *str;
 
-	template = gtk_label_get_label (GTK_LABEL (label));
+	template = ctk_label_get_label (GTK_LABEL (label));
 	str = expand_string (template);
-	gtk_label_set_label (GTK_LABEL (label), str);
+	ctk_label_set_label (GTK_LABEL (label), str);
 	g_free (str);
 }
 
@@ -1831,95 +1831,95 @@ create_page_one (GSLockPlug *plug)
 
 	gs_profile_start ("page one");
 
-	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
-	gtk_widget_set_halign (GTK_WIDGET (vbox),
+	vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 12);
+	ctk_widget_set_halign (GTK_WIDGET (vbox),
 	                       GTK_ALIGN_CENTER);
-	gtk_widget_set_valign (GTK_WIDGET (vbox),
+	ctk_widget_set_valign (GTK_WIDGET (vbox),
 	                       GTK_ALIGN_CENTER);
-	gtk_notebook_append_page (GTK_NOTEBOOK (plug->priv->notebook), vbox, NULL);
+	ctk_notebook_append_page (GTK_NOTEBOOK (plug->priv->notebook), vbox, NULL);
 
-	vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-	gtk_box_pack_start (GTK_BOX (vbox), vbox2, FALSE, FALSE, 0);
+	vbox2 = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+	ctk_box_pack_start (GTK_BOX (vbox), vbox2, FALSE, FALSE, 0);
 
 	str = g_strdup ("<span size=\"xx-large\" weight=\"ultrabold\">%s</span>");
-	plug->priv->auth_time_label = gtk_label_new (str);
+	plug->priv->auth_time_label = ctk_label_new (str);
 	g_free (str);
-	gtk_label_set_xalign (GTK_LABEL (plug->priv->auth_time_label), 0.5);
-	gtk_label_set_yalign (GTK_LABEL (plug->priv->auth_time_label), 0.5);
-	gtk_label_set_use_markup (GTK_LABEL (plug->priv->auth_time_label), TRUE);
-	gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_time_label, FALSE, FALSE, 0);
+	ctk_label_set_xalign (GTK_LABEL (plug->priv->auth_time_label), 0.5);
+	ctk_label_set_yalign (GTK_LABEL (plug->priv->auth_time_label), 0.5);
+	ctk_label_set_use_markup (GTK_LABEL (plug->priv->auth_time_label), TRUE);
+	ctk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_time_label, FALSE, FALSE, 0);
 
 	str = g_strdup ("<span size=\"large\">%s</span>");
-	plug->priv->auth_date_label = gtk_label_new (str);
+	plug->priv->auth_date_label = ctk_label_new (str);
 	g_free (str);
-	gtk_label_set_xalign (GTK_LABEL (plug->priv->auth_date_label), 0.5);
-	gtk_label_set_yalign (GTK_LABEL (plug->priv->auth_date_label), 0.5);
-	gtk_label_set_use_markup (GTK_LABEL (plug->priv->auth_date_label), TRUE);
-	gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_date_label, FALSE, FALSE, 0);
+	ctk_label_set_xalign (GTK_LABEL (plug->priv->auth_date_label), 0.5);
+	ctk_label_set_yalign (GTK_LABEL (plug->priv->auth_date_label), 0.5);
+	ctk_label_set_use_markup (GTK_LABEL (plug->priv->auth_date_label), TRUE);
+	ctk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_date_label, FALSE, FALSE, 0);
 
-	plug->priv->auth_face_image = gtk_image_new ();
-	gtk_box_pack_start (GTK_BOX (vbox), plug->priv->auth_face_image, TRUE, TRUE, 0);
-	gtk_widget_set_halign (plug->priv->auth_face_image, GTK_ALIGN_CENTER);
-	gtk_widget_set_valign (plug->priv->auth_face_image, GTK_ALIGN_END);
+	plug->priv->auth_face_image = ctk_image_new ();
+	ctk_box_pack_start (GTK_BOX (vbox), plug->priv->auth_face_image, TRUE, TRUE, 0);
+	ctk_widget_set_halign (plug->priv->auth_face_image, GTK_ALIGN_CENTER);
+	ctk_widget_set_valign (plug->priv->auth_face_image, GTK_ALIGN_END);
 
-	vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-	gtk_box_pack_start (GTK_BOX (vbox), vbox2, FALSE, FALSE, 0);
+	vbox2 = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+	ctk_box_pack_start (GTK_BOX (vbox), vbox2, FALSE, FALSE, 0);
 
 	str = g_strdup ("<span size=\"x-large\">%R</span>");
-	plug->priv->auth_realname_label = gtk_label_new (str);
+	plug->priv->auth_realname_label = ctk_label_new (str);
 	g_free (str);
 	expand_string_for_label (plug->priv->auth_realname_label);
-	gtk_label_set_xalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
-	gtk_label_set_yalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
-	gtk_label_set_use_markup (GTK_LABEL (plug->priv->auth_realname_label), TRUE);
-	gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_realname_label, FALSE, FALSE, 0);
+	ctk_label_set_xalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
+	ctk_label_set_yalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
+	ctk_label_set_use_markup (GTK_LABEL (plug->priv->auth_realname_label), TRUE);
+	ctk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_realname_label, FALSE, FALSE, 0);
 
 	/* To translators: This expands to USERNAME on HOSTNAME */
 	str = g_strdup_printf ("<span size=\"small\">%s</span>", _("%U on %h"));
-	plug->priv->auth_username_label = gtk_label_new (str);
+	plug->priv->auth_username_label = ctk_label_new (str);
 	g_free (str);
 	expand_string_for_label (plug->priv->auth_username_label);
-	gtk_label_set_xalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
-	gtk_label_set_yalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
-	gtk_label_set_use_markup (GTK_LABEL (plug->priv->auth_username_label), TRUE);
-	gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_username_label, FALSE, FALSE, 0);
+	ctk_label_set_xalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
+	ctk_label_set_yalign (GTK_LABEL (plug->priv->auth_realname_label), 0.5);
+	ctk_label_set_use_markup (GTK_LABEL (plug->priv->auth_username_label), TRUE);
+	ctk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_username_label, FALSE, FALSE, 0);
 
-	vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-	gtk_box_pack_start (GTK_BOX (vbox), vbox2, TRUE, TRUE, 0);
+	vbox2 = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+	ctk_box_pack_start (GTK_BOX (vbox), vbox2, TRUE, TRUE, 0);
 
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start (GTK_BOX (vbox2), hbox, FALSE, FALSE, 0);
+	hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+	ctk_box_pack_start (GTK_BOX (vbox2), hbox, FALSE, FALSE, 0);
 
-	plug->priv->auth_prompt_label = gtk_label_new_with_mnemonic (_("_Password:"));
-	gtk_label_set_xalign (GTK_LABEL (plug->priv->auth_prompt_label), 0.0);
-	gtk_label_set_yalign (GTK_LABEL (plug->priv->auth_prompt_label), 0.5);
-	gtk_box_pack_start (GTK_BOX (hbox), plug->priv->auth_prompt_label, FALSE, FALSE, 0);
+	plug->priv->auth_prompt_label = ctk_label_new_with_mnemonic (_("_Password:"));
+	ctk_label_set_xalign (GTK_LABEL (plug->priv->auth_prompt_label), 0.0);
+	ctk_label_set_yalign (GTK_LABEL (plug->priv->auth_prompt_label), 0.5);
+	ctk_box_pack_start (GTK_BOX (hbox), plug->priv->auth_prompt_label, FALSE, FALSE, 0);
 
-	plug->priv->auth_prompt_entry = gtk_entry_new ();
-	gtk_box_pack_start (GTK_BOX (hbox), plug->priv->auth_prompt_entry, TRUE, TRUE, 0);
+	plug->priv->auth_prompt_entry = ctk_entry_new ();
+	ctk_box_pack_start (GTK_BOX (hbox), plug->priv->auth_prompt_entry, TRUE, TRUE, 0);
 
-	gtk_label_set_mnemonic_widget (GTK_LABEL (plug->priv->auth_prompt_label),
+	ctk_label_set_mnemonic_widget (GTK_LABEL (plug->priv->auth_prompt_label),
 	                               plug->priv->auth_prompt_entry);
 
-	plug->priv->auth_capslock_label = gtk_label_new ("");
-	gtk_label_set_xalign (GTK_LABEL (plug->priv->auth_capslock_label), 0.5);
-	gtk_label_set_yalign (GTK_LABEL (plug->priv->auth_capslock_label), 0.5);
-	gtk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_capslock_label, FALSE, FALSE, 0);
+	plug->priv->auth_capslock_label = ctk_label_new ("");
+	ctk_label_set_xalign (GTK_LABEL (plug->priv->auth_capslock_label), 0.5);
+	ctk_label_set_yalign (GTK_LABEL (plug->priv->auth_capslock_label), 0.5);
+	ctk_box_pack_start (GTK_BOX (vbox2), plug->priv->auth_capslock_label, FALSE, FALSE, 0);
 
 	/* Status text */
 
-	plug->priv->auth_message_label = gtk_label_new (NULL);
-	gtk_box_pack_start (GTK_BOX (vbox), plug->priv->auth_message_label,
+	plug->priv->auth_message_label = ctk_label_new (NULL);
+	ctk_box_pack_start (GTK_BOX (vbox), plug->priv->auth_message_label,
 	                    FALSE, FALSE, 0);
 	/* Buttons */
-	plug->priv->auth_action_area = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+	plug->priv->auth_action_area = ctk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
 
-	gtk_button_box_set_layout (GTK_BUTTON_BOX (plug->priv->auth_action_area),
+	ctk_button_box_set_layout (GTK_BUTTON_BOX (plug->priv->auth_action_area),
 	                           GTK_BUTTONBOX_END);
 
-	gtk_box_pack_end (GTK_BOX (vbox), plug->priv->auth_action_area,
+	ctk_box_pack_end (GTK_BOX (vbox), plug->priv->auth_action_area,
 	                  FALSE, TRUE, 0);
-	gtk_widget_show (plug->priv->auth_action_area);
+	ctk_widget_show (plug->priv->auth_action_area);
 
 	create_page_one_buttons (plug);
 
@@ -1975,7 +1975,7 @@ load_theme (GSLockPlug *plug)
 {
 	char       *theme;
 	char       *filename;
-	char       *gtkbuilder;
+	char       *ctkbuilder;
 	char       *css;
 	GtkBuilder *builder;
 	GtkWidget  *lock_dialog;
@@ -1988,11 +1988,11 @@ load_theme (GSLockPlug *plug)
 	}
 
 	filename = g_strdup_printf ("lock-dialog-%s.ui", theme);
-	gtkbuilder = g_build_filename (GTKBUILDERDIR, filename, NULL);
+	ctkbuilder = g_build_filename (GTKBUILDERDIR, filename, NULL);
 	g_free (filename);
-	if (! g_file_test (gtkbuilder, G_FILE_TEST_IS_REGULAR))
+	if (! g_file_test (ctkbuilder, G_FILE_TEST_IS_REGULAR))
 	{
-		g_free (gtkbuilder);
+		g_free (ctkbuilder);
 		g_free (theme);
 		return FALSE;
 	}
@@ -2007,74 +2007,74 @@ load_theme (GSLockPlug *plug)
 
 		if (style_provider == NULL)
 		{
-			style_provider = gtk_css_provider_new ();
+			style_provider = ctk_css_provider_new ();
 
-			gtk_style_context_add_provider_for_screen (gdk_screen_get_default(),
+			ctk_style_context_add_provider_for_screen (gdk_screen_get_default(),
 			                                           GTK_STYLE_PROVIDER (style_provider),
 			                                           GTK_STYLE_PROVIDER_PRIORITY_USER);
 		}
 
-		gtk_css_provider_load_from_path (style_provider, css, NULL);
+		ctk_css_provider_load_from_path (style_provider, css, NULL);
 	}
 	g_free (css);
 
-	builder = gtk_builder_new();
-	if (!gtk_builder_add_from_file (builder,gtkbuilder,&error))
+	builder = ctk_builder_new();
+	if (!ctk_builder_add_from_file (builder,ctkbuilder,&error))
 	{
-		g_warning ("Couldn't load builder file '%s': %s", gtkbuilder, error->message);
+		g_warning ("Couldn't load builder file '%s': %s", ctkbuilder, error->message);
 		g_error_free(error);
-		g_free (gtkbuilder);
+		g_free (ctkbuilder);
 		return FALSE;
 	}
-	g_free (gtkbuilder);
+	g_free (ctkbuilder);
 
-	lock_dialog = GTK_WIDGET (gtk_builder_get_object(builder, "lock-dialog"));
-	gtk_container_add (GTK_CONTAINER (plug), lock_dialog);
+	lock_dialog = GTK_WIDGET (ctk_builder_get_object(builder, "lock-dialog"));
+	ctk_container_add (GTK_CONTAINER (plug), lock_dialog);
 
 	plug->priv->vbox = NULL;
-	plug->priv->notebook = GTK_WIDGET (gtk_builder_get_object(builder, "notebook"));
+	plug->priv->notebook = GTK_WIDGET (ctk_builder_get_object(builder, "notebook"));
 
-	plug->priv->auth_face_image = GTK_WIDGET (gtk_builder_get_object(builder, "auth-face-image"));
-	plug->priv->auth_action_area = GTK_WIDGET (gtk_builder_get_object(builder, "auth-action-area"));
-	plug->priv->auth_time_label = GTK_WIDGET (gtk_builder_get_object(builder, "auth-time-label"));
-	plug->priv->auth_date_label = GTK_WIDGET (gtk_builder_get_object(builder, "auth-date-label"));
-	plug->priv->auth_realname_label = GTK_WIDGET (gtk_builder_get_object(builder, "auth-realname-label"));
-	plug->priv->auth_username_label = GTK_WIDGET (gtk_builder_get_object(builder, "auth-username-label"));
-	plug->priv->auth_prompt_label = GTK_WIDGET (gtk_builder_get_object(builder, "auth-prompt-label"));
-	plug->priv->auth_prompt_entry = GTK_WIDGET (gtk_builder_get_object(builder, "auth-prompt-entry"));
-	plug->priv->auth_prompt_box = GTK_WIDGET (gtk_builder_get_object(builder, "auth-prompt-box"));
-	plug->priv->auth_capslock_label = GTK_WIDGET (gtk_builder_get_object(builder, "auth-capslock-label"));
-	plug->priv->auth_message_label = GTK_WIDGET (gtk_builder_get_object(builder, "auth-status-label"));
-	plug->priv->auth_unlock_button = GTK_WIDGET (gtk_builder_get_object(builder, "auth-unlock-button"));
-	plug->priv->auth_cancel_button = GTK_WIDGET (gtk_builder_get_object(builder, "auth-cancel-button"));
-	plug->priv->auth_logout_button = GTK_WIDGET (gtk_builder_get_object(builder, "auth-logout-button"));
-	plug->priv->auth_switch_button = GTK_WIDGET (gtk_builder_get_object(builder, "auth-switch-button"));
-	plug->priv->auth_note_button = GTK_WIDGET (gtk_builder_get_object(builder, "auth-note-button"));
-	plug->priv->note_tab = GTK_WIDGET (gtk_builder_get_object(builder, "note-tab"));
-	plug->priv->note_tab_label = GTK_WIDGET (gtk_builder_get_object(builder, "note-tab-label"));
-	plug->priv->note_ok_button = GTK_WIDGET (gtk_builder_get_object(builder, "note-ok-button"));
-	plug->priv->note_text_view = GTK_WIDGET (gtk_builder_get_object(builder, "note-text-view"));
-	plug->priv->note_cancel_button = GTK_WIDGET (gtk_builder_get_object(builder, "note-cancel-button"));
+	plug->priv->auth_face_image = GTK_WIDGET (ctk_builder_get_object(builder, "auth-face-image"));
+	plug->priv->auth_action_area = GTK_WIDGET (ctk_builder_get_object(builder, "auth-action-area"));
+	plug->priv->auth_time_label = GTK_WIDGET (ctk_builder_get_object(builder, "auth-time-label"));
+	plug->priv->auth_date_label = GTK_WIDGET (ctk_builder_get_object(builder, "auth-date-label"));
+	plug->priv->auth_realname_label = GTK_WIDGET (ctk_builder_get_object(builder, "auth-realname-label"));
+	plug->priv->auth_username_label = GTK_WIDGET (ctk_builder_get_object(builder, "auth-username-label"));
+	plug->priv->auth_prompt_label = GTK_WIDGET (ctk_builder_get_object(builder, "auth-prompt-label"));
+	plug->priv->auth_prompt_entry = GTK_WIDGET (ctk_builder_get_object(builder, "auth-prompt-entry"));
+	plug->priv->auth_prompt_box = GTK_WIDGET (ctk_builder_get_object(builder, "auth-prompt-box"));
+	plug->priv->auth_capslock_label = GTK_WIDGET (ctk_builder_get_object(builder, "auth-capslock-label"));
+	plug->priv->auth_message_label = GTK_WIDGET (ctk_builder_get_object(builder, "auth-status-label"));
+	plug->priv->auth_unlock_button = GTK_WIDGET (ctk_builder_get_object(builder, "auth-unlock-button"));
+	plug->priv->auth_cancel_button = GTK_WIDGET (ctk_builder_get_object(builder, "auth-cancel-button"));
+	plug->priv->auth_logout_button = GTK_WIDGET (ctk_builder_get_object(builder, "auth-logout-button"));
+	plug->priv->auth_switch_button = GTK_WIDGET (ctk_builder_get_object(builder, "auth-switch-button"));
+	plug->priv->auth_note_button = GTK_WIDGET (ctk_builder_get_object(builder, "auth-note-button"));
+	plug->priv->note_tab = GTK_WIDGET (ctk_builder_get_object(builder, "note-tab"));
+	plug->priv->note_tab_label = GTK_WIDGET (ctk_builder_get_object(builder, "note-tab-label"));
+	plug->priv->note_ok_button = GTK_WIDGET (ctk_builder_get_object(builder, "note-ok-button"));
+	plug->priv->note_text_view = GTK_WIDGET (ctk_builder_get_object(builder, "note-text-view"));
+	plug->priv->note_cancel_button = GTK_WIDGET (ctk_builder_get_object(builder, "note-cancel-button"));
 
 	/* Placeholder for the keyboard indicator */
-	plug->priv->auth_prompt_kbd_layout_indicator = GTK_WIDGET (gtk_builder_get_object(builder, "auth-prompt-kbd-layout-indicator"));
+	plug->priv->auth_prompt_kbd_layout_indicator = GTK_WIDGET (ctk_builder_get_object(builder, "auth-prompt-kbd-layout-indicator"));
 	if (plug->priv->auth_logout_button != NULL)
 	{
-		gtk_widget_set_no_show_all (plug->priv->auth_logout_button, TRUE);
+		ctk_widget_set_no_show_all (plug->priv->auth_logout_button, TRUE);
 	}
 	if (plug->priv->auth_switch_button != NULL)
 	{
-		gtk_widget_set_no_show_all (plug->priv->auth_switch_button, TRUE);
+		ctk_widget_set_no_show_all (plug->priv->auth_switch_button, TRUE);
 	}
 	if (plug->priv->auth_note_button != NULL)
 	{
-		gtk_widget_set_no_show_all (plug->priv->auth_note_button, TRUE);
+		ctk_widget_set_no_show_all (plug->priv->auth_note_button, TRUE);
 	}
 
 	date_time_update (plug);
-	gtk_widget_show_all (lock_dialog);
+	ctk_widget_show_all (lock_dialog);
 
-	plug->priv->status_message_label = GTK_WIDGET (gtk_builder_get_object(builder, "status-message-label"));
+	plug->priv->status_message_label = GTK_WIDGET (ctk_builder_get_object(builder, "status-message-label"));
 
 	return TRUE;
 }
@@ -2095,8 +2095,8 @@ on_note_text_buffer_changed (GtkTextBuffer *buffer,
 {
 	int len;
 
-	len = gtk_text_buffer_get_char_count (buffer);
-	gtk_widget_set_sensitive (plug->priv->note_ok_button, len <= NOTE_BUFFER_MAX_CHARS);
+	len = ctk_text_buffer_get_char_count (buffer);
+	ctk_widget_set_sensitive (plug->priv->note_ok_button, len <= NOTE_BUFFER_MAX_CHARS);
 }
 
 static void
@@ -2117,36 +2117,36 @@ gs_lock_plug_init (GSLockPlug *plug)
 
 	GtkStyleContext *context;
 
-	context = gtk_widget_get_style_context (GTK_WIDGET (plug));
-	gtk_style_context_add_class (context, "lock-dialog");
+	context = ctk_widget_get_style_context (GTK_WIDGET (plug));
+	ctk_style_context_add_class (context, "lock-dialog");
 
 	if (! load_theme (plug))
 	{
 		gs_debug ("Unable to load theme!");
 
-		plug->priv->vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-		gtk_container_add (GTK_CONTAINER (plug), plug->priv->vbox);
+		plug->priv->vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+		ctk_container_add (GTK_CONTAINER (plug), plug->priv->vbox);
 
 		/* Notebook */
 
-		plug->priv->notebook = gtk_notebook_new ();
-		gtk_notebook_set_show_tabs (GTK_NOTEBOOK (plug->priv->notebook), FALSE);
-		gtk_notebook_set_show_border (GTK_NOTEBOOK (plug->priv->notebook), FALSE);
-		gtk_box_pack_start (GTK_BOX (plug->priv->vbox), plug->priv->notebook, TRUE, TRUE, 0);
+		plug->priv->notebook = ctk_notebook_new ();
+		ctk_notebook_set_show_tabs (GTK_NOTEBOOK (plug->priv->notebook), FALSE);
+		ctk_notebook_set_show_border (GTK_NOTEBOOK (plug->priv->notebook), FALSE);
+		ctk_box_pack_start (GTK_BOX (plug->priv->vbox), plug->priv->notebook, TRUE, TRUE, 0);
 
 		/* Page 1 */
 
 		create_page_one (plug);
 
 		date_time_update (plug);
-		gtk_widget_show_all (plug->priv->vbox);
+		ctk_widget_show_all (plug->priv->vbox);
 	}
 	plug->priv->datetime_timeout_id = g_timeout_add_seconds (1, (GSourceFunc) date_time_update, plug);
 
 	if (plug->priv->note_text_view != NULL)
 	{
 		GtkTextBuffer *buffer;
-		buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (plug->priv->note_text_view));
+		buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (plug->priv->note_text_view));
 		g_signal_connect (buffer, "changed", G_CALLBACK (on_note_text_buffer_changed), plug);
 	}
 
@@ -2163,18 +2163,18 @@ gs_lock_plug_init (GSLockPlug *plug)
 
 			layout_indicator = cafekbd_indicator_new ();
 			cafekbd_indicator_set_parent_tooltips (CAFEKBD_INDICATOR (layout_indicator), TRUE);
-			gtk_box_pack_start (GTK_BOX (plug->priv->auth_prompt_kbd_layout_indicator),
+			ctk_box_pack_start (GTK_BOX (plug->priv->auth_prompt_kbd_layout_indicator),
 			                    layout_indicator,
 			                    FALSE,
 			                    FALSE,
 			                    6);
 
-			gtk_widget_show_all (layout_indicator);
-			gtk_widget_show (plug->priv->auth_prompt_kbd_layout_indicator);
+			ctk_widget_show_all (layout_indicator);
+			ctk_widget_show (plug->priv->auth_prompt_kbd_layout_indicator);
 		}
 		else
 		{
-			gtk_widget_hide (plug->priv->auth_prompt_kbd_layout_indicator);
+			ctk_widget_hide (plug->priv->auth_prompt_kbd_layout_indicator);
 		}
 
 		g_object_unref (engine);
@@ -2185,26 +2185,26 @@ gs_lock_plug_init (GSLockPlug *plug)
 	{
 		if (plug->priv->leave_note_enabled)
 		{
-			gtk_widget_show_all (plug->priv->auth_note_button);
+			ctk_widget_show_all (plug->priv->auth_note_button);
 		}
 		else
 		{
-			gtk_widget_hide (plug->priv->auth_note_button);
+			ctk_widget_hide (plug->priv->auth_note_button);
 		}
 	}
 	if (plug->priv->auth_switch_button != NULL)
 	{
 		if (plug->priv->switch_enabled)
 		{
-			gtk_widget_show_all (plug->priv->auth_switch_button);
+			ctk_widget_show_all (plug->priv->auth_switch_button);
 		}
 		else
 		{
-			gtk_widget_hide (plug->priv->auth_switch_button);
+			ctk_widget_hide (plug->priv->auth_switch_button);
 		}
 	}
 
-	gtk_widget_grab_default (plug->priv->auth_unlock_button);
+	ctk_widget_grab_default (plug->priv->auth_unlock_button);
 
 	if (plug->priv->auth_username_label != NULL)
 	{
@@ -2220,7 +2220,7 @@ gs_lock_plug_init (GSLockPlug *plug)
 	{
 		if (plug->priv->auth_logout_button != NULL)
 		{
-			gtk_widget_hide (plug->priv->auth_logout_button);
+			ctk_widget_hide (plug->priv->auth_logout_button);
 		}
 	}
 
@@ -2232,8 +2232,8 @@ gs_lock_plug_init (GSLockPlug *plug)
 	/* button press handler used to inhibit popup menu */
 	g_signal_connect (plug->priv->auth_prompt_entry, "button_press_event",
 	                  G_CALLBACK (entry_button_press), NULL);
-	gtk_entry_set_activates_default (GTK_ENTRY (plug->priv->auth_prompt_entry), TRUE);
-	gtk_entry_set_visibility (GTK_ENTRY (plug->priv->auth_prompt_entry), FALSE);
+	ctk_entry_set_activates_default (GTK_ENTRY (plug->priv->auth_prompt_entry), TRUE);
+	ctk_entry_set_visibility (GTK_ENTRY (plug->priv->auth_prompt_entry), FALSE);
 
 	g_signal_connect (plug->priv->auth_unlock_button, "clicked",
 	                  G_CALLBACK (unlock_button_clicked), plug);
@@ -2245,12 +2245,12 @@ gs_lock_plug_init (GSLockPlug *plug)
 	{
 		if (plug->priv->status_message)
 		{
-			gtk_label_set_text (GTK_LABEL (plug->priv->status_message_label),
+			ctk_label_set_text (GTK_LABEL (plug->priv->status_message_label),
 			                    plug->priv->status_message);
 		}
 		else
 		{
-			gtk_widget_hide (plug->priv->status_message_label);
+			ctk_widget_hide (plug->priv->status_message_label);
 		}
 	}
 
@@ -2317,7 +2317,7 @@ gs_lock_plug_new (void)
 
 	result = g_object_new (GS_TYPE_LOCK_PLUG, NULL);
 
-	gtk_window_set_focus_on_map (GTK_WINDOW (result), TRUE);
+	ctk_window_set_focus_on_map (GTK_WINDOW (result), TRUE);
 
 	return result;
 }

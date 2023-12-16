@@ -33,8 +33,8 @@
 
 #include <glib/gi18n.h>
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
-#include <gtk/gtkx.h>
+#include <ctk/ctk.h>
+#include <ctk/ctkx.h>
 
 #include "gs-lock-plug.h"
 
@@ -71,7 +71,7 @@ static char* get_id_string(GtkWidget* widget)
 	g_return_val_if_fail(widget != NULL, NULL);
 	g_return_val_if_fail(GTK_IS_WIDGET(widget), NULL);
 
-	id = g_strdup_printf("%" G_GUINT32_FORMAT, (guint32) GDK_WINDOW_XID(gtk_widget_get_window(widget)));
+	id = g_strdup_printf("%" G_GUINT32_FORMAT, (guint32) GDK_WINDOW_XID(ctk_widget_get_window(widget)));
 	return id;
 }
 
@@ -107,14 +107,14 @@ static void response_ok(void)
 static gboolean quit_response_ok(void)
 {
 	response_ok();
-	gtk_main_quit();
+	ctk_main_quit();
 	return FALSE;
 }
 
 static gboolean quit_response_cancel(void)
 {
 	response_cancel();
-	gtk_main_quit();
+	ctk_main_quit();
 	return FALSE;
 }
 
@@ -209,7 +209,7 @@ static gboolean auth_message_handler(GSAuthMessageStyle style, const char* msg, 
 	gs_profile_start(NULL);
 	gs_debug("Got message style %d: '%s'", style, msg);
 
-	gtk_widget_show(GTK_WIDGET(plug));
+	ctk_widget_show(GTK_WIDGET(plug));
 	gs_lock_plug_set_ready(plug);
 
 	ret = TRUE;
@@ -256,9 +256,9 @@ static gboolean auth_message_handler(GSAuthMessageStyle style, const char* msg, 
 	}
 
 	/* we may have pending events that should be processed before continuing back into PAM */
-	while (gtk_events_pending())
+	while (ctk_events_pending())
 	{
-		gtk_main_iteration();
+		ctk_main_iteration();
 	}
 
 	gs_lock_plug_set_busy(plug);
@@ -329,7 +329,7 @@ static gboolean response_request_quit(void)
 
 static gboolean quit_timeout_cb(gpointer data)
 {
-	gtk_main_quit();
+	ctk_main_quit();
 	return FALSE;
 }
 
@@ -407,7 +407,7 @@ static gboolean popup_dialog_idle(void)
 	g_signal_connect(GS_LOCK_PLUG(widget), "response", G_CALLBACK(response_cb), NULL);
 	g_signal_connect(widget, "show", G_CALLBACK(show_cb), NULL);
 
-	gtk_widget_realize(widget);
+	ctk_widget_realize(widget);
 
 	g_idle_add((GSourceFunc) auth_check_idle, widget);
 
@@ -564,7 +564,7 @@ int main(int argc, char** argv)
 
 	error = NULL;
 
-	if (!gtk_init_with_args(&argc, &argv, NULL, entries, NULL, &error))
+	if (!ctk_init_with_args(&argc, &argv, NULL, entries, NULL, &error))
 	{
 		if (error != NULL)
 		{
@@ -597,7 +597,7 @@ int main(int argc, char** argv)
 
 	g_idle_add((GSourceFunc) popup_dialog_idle, NULL);
 
-	gtk_main();
+	ctk_main();
 
 	gs_profile_end(NULL);
 	gs_debug_shutdown();

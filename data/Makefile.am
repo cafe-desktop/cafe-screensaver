@@ -30,8 +30,8 @@ menu_DATA =					\
 	cafe-screensavers.menu			\
 	$(NULL)
 
-gtkbuilderdir = $(pkgdatadir)
-gtkbuilder_DATA = 					\
+ctkbuilderdir = $(pkgdatadir)
+ctkbuilder_DATA = 					\
 	lock-dialog-default.ui		\
 	$(NULL)
 
@@ -53,7 +53,7 @@ EXTRA_DIST = 				\
 	$(gsettingsschema_in_files)	\
 	$(desktop_in_files)		\
 	$(directory_in_files)		\
-	$(gtkbuilder_DATA)		\
+	$(ctkbuilder_DATA)		\
 	$(man_MANS)			\
 	cafe-screensaver		\
 	cafe-screensaver.pc.in		\

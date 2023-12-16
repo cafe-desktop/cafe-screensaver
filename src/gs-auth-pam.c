@@ -42,7 +42,7 @@
 #include <glib.h>
 #include <glib/gstdio.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-auth.h"
 
@@ -611,7 +611,7 @@ gs_auth_loop_quit (GIOChannel  *source,
                    gboolean    *thread_done)
 {
 	*thread_done = TRUE;
-	gtk_main_quit ();
+	ctk_main_quit ();
 	return FALSE;
 }
 
@@ -672,7 +672,7 @@ gs_auth_pam_verify_user (pam_handle_t *handle,
 		goto out;
 	}
 
-	gtk_main ();
+	ctk_main ();
 
 	/* if the event loop was quit before the thread is done then we can't
 	 * reap the thread without blocking on it finishing.  The

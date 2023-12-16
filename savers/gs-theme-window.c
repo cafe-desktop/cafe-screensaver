@@ -33,7 +33,7 @@
 #include <glib/gi18n.h>
 
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-theme-window.h"
 
@@ -65,7 +65,7 @@ gs_theme_window_class_init (GSThemeWindowClass *klass)
 static void
 gs_theme_window_init (GSThemeWindow *window)
 {
-	gtk_widget_set_app_paintable (GTK_WIDGET (window), TRUE);
+	ctk_widget_set_app_paintable (GTK_WIDGET (window), TRUE);
 }
 
 static void
@@ -114,19 +114,19 @@ gs_theme_window_real_realize (GtkWidget *widget)
 			{
 				/* This is a kludge; we need to set the same
 				 * flags gs-window-x11.c does, to ensure they
-				 * don't get unset by gtk_window_map() later.
+				 * don't get unset by ctk_window_map() later.
 				 */
-				gtk_window_set_decorated (GTK_WINDOW (widget), FALSE);
+				ctk_window_set_decorated (GTK_WINDOW (widget), FALSE);
 
-				gtk_window_set_skip_taskbar_hint (GTK_WINDOW (widget), TRUE);
-				gtk_window_set_skip_pager_hint (GTK_WINDOW (widget), TRUE);
+				ctk_window_set_skip_taskbar_hint (GTK_WINDOW (widget), TRUE);
+				ctk_window_set_skip_pager_hint (GTK_WINDOW (widget), TRUE);
 
-				gtk_window_set_keep_above (GTK_WINDOW (widget), TRUE);
+				ctk_window_set_keep_above (GTK_WINDOW (widget), TRUE);
 
-				gtk_window_fullscreen (GTK_WINDOW (widget));
+				ctk_window_fullscreen (GTK_WINDOW (widget));
 
 				event_mask = GDK_EXPOSURE_MASK | GDK_STRUCTURE_MASK;
-				gtk_widget_set_events (widget, gtk_widget_get_events (widget) | event_mask);
+				ctk_widget_set_events (widget, ctk_widget_get_events (widget) | event_mask);
 			}
 		}
 	}
@@ -143,14 +143,14 @@ gs_theme_window_real_realize (GtkWidget *widget)
 		return;
 	}
 
-	gtk_style_context_set_background (gtk_widget_get_style_context (widget),
+	ctk_style_context_set_background (ctk_widget_get_style_context (widget),
 	                                  window);
 	gdk_window_set_decorations (window, (GdkWMDecoration) 0);
 	gdk_window_set_events (window, gdk_window_get_events (window) | event_mask);
 
-	gtk_widget_set_window (widget, window);
+	ctk_widget_set_window (widget, window);
 	gdk_window_set_user_data (window, widget);
-	gtk_widget_set_realized (widget, TRUE);
+	ctk_widget_set_realized (widget, TRUE);
 
 	gdk_window_get_geometry (window, &x, &y, &width, &height);
 
@@ -160,13 +160,13 @@ gs_theme_window_real_realize (GtkWidget *widget)
 		exit (1);
 	}
 
-	gtk_widget_get_preferred_size (widget, &requisition, NULL);
+	ctk_widget_get_preferred_size (widget, &requisition, NULL);
 	allocation.x = x;
 	allocation.y = y;
 	allocation.width = width;
 	allocation.height = height;
-	gtk_widget_size_allocate (widget, &allocation);
-	gtk_window_resize (GTK_WINDOW (widget), width, height);
+	ctk_widget_size_allocate (widget, &allocation);
+	ctk_window_resize (GTK_WINDOW (widget), width, height);
 }
 
 GtkWidget *

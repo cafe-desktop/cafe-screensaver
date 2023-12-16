@@ -27,7 +27,7 @@
 #include <string.h>
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-theme-engine.h"
 #include "gste-popsquares.h"
@@ -293,21 +293,21 @@ set_colors (GtkWidget *widget,
 {
 	GtkStyleContext  *style;
 
-	style = gtk_widget_get_style_context (widget);
+	style = ctk_widget_get_style_context (widget);
 
-	gtk_style_context_save (style);
-	gtk_style_context_set_state (style, GTK_STATE_FLAG_SELECTED);
-	gtk_style_context_get_background_color (style,
-	                                        gtk_style_context_get_state (style),
+	ctk_style_context_save (style);
+	ctk_style_context_set_state (style, GTK_STATE_FLAG_SELECTED);
+	ctk_style_context_get_background_color (style,
+	                                        ctk_style_context_get_state (style),
 	                                        bg);
 	if (bg->alpha == 0.0)
 	{
-		gtk_style_context_add_class (style, GTK_STYLE_CLASS_VIEW);
-		gtk_style_context_get_background_color (style,
-		                                        gtk_style_context_get_state (style),
+		ctk_style_context_add_class (style, GTK_STYLE_CLASS_VIEW);
+		ctk_style_context_get_background_color (style,
+		                                        ctk_style_context_get_state (style),
 		                                        bg);
 	}
-	gtk_style_context_restore (style);
+	ctk_style_context_restore (style);
 
 	fg->red   = bg->red * 0.7;
 	fg->green = bg->green * 0.7;
@@ -473,7 +473,7 @@ gste_popsquares_real_configure (GtkWidget         *widget,
 	setup_colors (pop);
 
 	/* schedule a redraw */
-	gtk_widget_queue_draw (widget);
+	ctk_widget_queue_draw (widget);
 
 	if (GTK_WIDGET_CLASS (parent_class)->configure_event)
 	{
@@ -559,7 +559,7 @@ draw_frame (GSTEPopsquares *pop,
 static gboolean
 draw_iter (GSTEPopsquares *pop)
 {
-	gtk_widget_queue_draw (GTK_WIDGET (pop));
+	ctk_widget_queue_draw (GTK_WIDGET (pop));
 	return TRUE;
 }
 

@@ -29,8 +29,8 @@
 
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
-#include <gtk/gtk.h>
-#include <gtk/gtkx.h>
+#include <ctk/ctk.h>
+#include <ctk/ctkx.h>
 
 #include "gs-window.h"
 #include "gs-marshal.h"
@@ -165,14 +165,14 @@ set_invisible_cursor (GdkWindow *window,
 static void
 gs_window_override_user_time (GSWindow *window)
 {
-	guint32 ev_time = gtk_get_current_event_time ();
+	guint32 ev_time = ctk_get_current_event_time ();
 
 	if (ev_time == 0)
 	{
-		gint ev_mask = gtk_widget_get_events (GTK_WIDGET (window));
+		gint ev_mask = ctk_widget_get_events (GTK_WIDGET (window));
 		if (!(ev_mask & GDK_PROPERTY_CHANGE_MASK))
 		{
-			gtk_widget_add_events (GTK_WIDGET (window),
+			ctk_widget_add_events (GTK_WIDGET (window),
 			                       GDK_PROPERTY_CHANGE_MASK);
 		}
 
@@ -180,10 +180,10 @@ gs_window_override_user_time (GSWindow *window)
 		 * NOTE: Last resort for D-BUS or other non-interactive
 		 *       openings.  Causes roundtrip to server.  Lame.
 		 */
-		ev_time = gdk_x11_get_server_time (gtk_widget_get_window (GTK_WIDGET (window)));
+		ev_time = gdk_x11_get_server_time (ctk_widget_get_window (GTK_WIDGET (window)));
 	}
 
-	gdk_x11_window_set_user_time (gtk_widget_get_window (GTK_WIDGET (window)), ev_time);
+	gdk_x11_window_set_user_time (ctk_widget_get_window (GTK_WIDGET (window)), ev_time);
 }
 
 static void
@@ -231,11 +231,11 @@ widget_clear_all_children (GtkWidget *widget)
 	GdkDisplay *display;
 
 	gs_debug ("Clearing all child windows");
-	display = gtk_widget_get_display (widget);
+	display = ctk_widget_get_display (widget);
 
 	gdk_x11_display_error_trap_push (display);
 
-	w = gtk_widget_get_window (widget);
+	w = ctk_widget_get_window (widget);
 
 	clear_children (GDK_WINDOW_XID (w));
 
@@ -260,7 +260,7 @@ gs_window_set_background_surface (GSWindow        *window,
 		window->priv->background_surface = cairo_surface_reference (surface);
 	}
 
-	gtk_widget_queue_draw (GTK_WIDGET (window));
+	ctk_widget_queue_draw (GTK_WIDGET (window));
 }
 
 void
@@ -271,21 +271,21 @@ gs_window_clear (GSWindow *window)
 
 	gs_debug ("Clearing widgets");
 
-	if (gtk_widget_get_realized (GTK_WIDGET (window)))
+	if (ctk_widget_get_realized (GTK_WIDGET (window)))
 	{
-		gtk_widget_queue_draw (GTK_WIDGET (window));
+		ctk_widget_queue_draw (GTK_WIDGET (window));
 		/* If a screensaver theme adds child windows
 		   we need to clear them too */
 		widget_clear_all_children (GTK_WIDGET (window));
 	}
 
-	if (gtk_widget_get_realized (window->priv->drawing_area))
+	if (ctk_widget_get_realized (window->priv->drawing_area))
 	{
-		gtk_widget_queue_draw (window->priv->drawing_area);
+		ctk_widget_queue_draw (window->priv->drawing_area);
 		widget_clear_all_children (window->priv->drawing_area);
 	}
 
-	display = gtk_widget_get_display (GTK_WIDGET(window));
+	display = ctk_widget_get_display (GTK_WIDGET(window));
 	gdk_display_flush (display);
 }
 
@@ -297,7 +297,7 @@ get_outside_region (GSWindow *window)
 	int         num_monitors;
 	cairo_region_t *region;
 
-	display = gtk_widget_get_display (GTK_WIDGET (window));
+	display = ctk_widget_get_display (GTK_WIDGET (window));
 
 	region = cairo_region_create ();
 
@@ -367,7 +367,7 @@ monitor_geometry_notify (GdkMonitor *monitor,
                          GSWindow   *window)
 {
 	gs_debug ("Got monitor geometry notify signal");
-	gtk_widget_queue_resize (GTK_WIDGET (window));
+	ctk_widget_queue_resize (GTK_WIDGET (window));
 }
 
 /* copied from panel-toplevel.c */
@@ -380,9 +380,9 @@ gs_window_move_resize_window (GSWindow *window,
 	GdkWindow *gdkwindow;
 
 	widget = GTK_WIDGET (window);
-	gdkwindow = gtk_widget_get_window (GTK_WIDGET (window));
+	gdkwindow = ctk_widget_get_window (GTK_WIDGET (window));
 
-	g_assert (gtk_widget_get_realized (widget));
+	g_assert (ctk_widget_get_realized (widget));
 
 	gs_debug ("Move and/or resize window: x=%d y=%d w=%d h=%d",
 	          window->priv->geometry.x,
@@ -562,10 +562,10 @@ widget_set_best_visual (GtkWidget *widget)
 
 	g_return_if_fail (widget != NULL);
 
-	visual = get_best_visual_for_display (gtk_widget_get_display (widget));
+	visual = get_best_visual_for_display (ctk_widget_get_display (widget));
 	if (visual != NULL)
 	{
-		gtk_widget_set_visual (widget, visual);
+		ctk_widget_set_visual (widget, visual);
 		g_object_unref (visual);
 	}
 }
@@ -599,7 +599,7 @@ watchdog_timer (GSWindow *window)
 {
 	GtkWidget *widget = GTK_WIDGET (window);
 
-	gdk_window_focus (gtk_widget_get_window (widget), GDK_CURRENT_TIME);
+	gdk_window_focus (ctk_widget_get_window (widget), GDK_CURRENT_TIME);
 
 	return TRUE;
 }
@@ -662,7 +662,7 @@ gs_window_raise (GSWindow *window)
 
 	gs_debug ("Raising screensaver window");
 
-	win = gtk_widget_get_window (GTK_WIDGET (window));
+	win = ctk_widget_get_window (GTK_WIDGET (window));
 
 	gdk_window_raise (win);
 }
@@ -688,7 +688,7 @@ x11_window_is_ours (Window window)
 static void
 unshape_window (GSWindow *window)
 {
-	gdk_window_shape_combine_region (gtk_widget_get_window (GTK_WIDGET (window)),
+	gdk_window_shape_combine_region (ctk_widget_get_window (GTK_WIDGET (window)),
 	                                 NULL,
 	                                 0,
 	                                 0);
@@ -791,13 +791,13 @@ window_select_shape_events (GSWindow *window)
 	int           shape_error_base;
 	GdkDisplay *display;
 
-	display = gtk_widget_get_display (GTK_WIDGET(window));
+	display = ctk_widget_get_display (GTK_WIDGET(window));
 
 	gdk_x11_display_error_trap_push (display);
 
 	if (XShapeQueryExtension (GDK_DISPLAY_XDISPLAY (display), &window->priv->shape_event_base, &shape_error_base)) {
 		events = ShapeNotifyMask;
-		XShapeSelectInput (GDK_DISPLAY_XDISPLAY (display), GDK_WINDOW_XID (gtk_widget_get_window (GTK_WIDGET (window))), events);
+		XShapeSelectInput (GDK_DISPLAY_XDISPLAY (display), GDK_WINDOW_XID (ctk_widget_get_window (GTK_WIDGET (window))), events);
 	}
 
 	gdk_x11_display_error_trap_pop_ignored (display);
@@ -837,7 +837,7 @@ gs_window_real_show (GtkWidget *widget)
 
 	gs_window_clear (GS_WINDOW (widget));
 
-	set_invisible_cursor (gtk_widget_get_window (widget), TRUE);
+	set_invisible_cursor (ctk_widget_get_window (widget), TRUE);
 
 	window = GS_WINDOW (widget);
 	if (window->priv->timer)
@@ -869,47 +869,47 @@ set_info_text_and_icon (GSWindow   *window,
 	GtkWidget *primary_label;
 	GtkWidget *secondary_label;
 
-	hbox_content = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
-	gtk_widget_show (hbox_content);
+	hbox_content = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+	ctk_widget_show (hbox_content);
 
-	image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_DIALOG);
-	gtk_widget_show (image);
-	gtk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
-	gtk_widget_set_valign (image, GTK_ALIGN_START);
+	image = ctk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_DIALOG);
+	ctk_widget_show (image);
+	ctk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
+	ctk_widget_set_valign (image, GTK_ALIGN_START);
 
-	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-	gtk_widget_show (vbox);
-	gtk_box_pack_start (GTK_BOX (hbox_content), vbox, FALSE, FALSE, 0);
+	vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+	ctk_widget_show (vbox);
+	ctk_box_pack_start (GTK_BOX (hbox_content), vbox, FALSE, FALSE, 0);
 
 	primary_markup = g_strdup_printf ("<b>%s</b>", primary_text);
-	primary_label = gtk_label_new (primary_markup);
+	primary_label = ctk_label_new (primary_markup);
 	g_free (primary_markup);
-	gtk_widget_show (primary_label);
-	gtk_box_pack_start (GTK_BOX (vbox), primary_label, TRUE, TRUE, 0);
-	gtk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
-	gtk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
-	gtk_widget_set_halign (primary_label, GTK_ALIGN_START);
+	ctk_widget_show (primary_label);
+	ctk_box_pack_start (GTK_BOX (vbox), primary_label, TRUE, TRUE, 0);
+	ctk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
+	ctk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
+	ctk_widget_set_halign (primary_label, GTK_ALIGN_START);
 
 	if (secondary_text != NULL)
 	{
 		secondary_markup = g_strdup_printf ("<small>%s</small>",
 		                                    secondary_text);
-		secondary_label = gtk_label_new (secondary_markup);
+		secondary_label = ctk_label_new (secondary_markup);
 		g_free (secondary_markup);
-		gtk_widget_show (secondary_label);
-		gtk_box_pack_start (GTK_BOX (vbox), secondary_label, TRUE, TRUE, 0);
-		gtk_label_set_use_markup (GTK_LABEL (secondary_label), TRUE);
-		gtk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
-		gtk_widget_set_halign (secondary_label, GTK_ALIGN_START);
+		ctk_widget_show (secondary_label);
+		ctk_box_pack_start (GTK_BOX (vbox), secondary_label, TRUE, TRUE, 0);
+		ctk_label_set_use_markup (GTK_LABEL (secondary_label), TRUE);
+		ctk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
+		ctk_widget_set_halign (secondary_label, GTK_ALIGN_START);
 	}
 
 	/* remove old content */
-	content_area = gtk_info_bar_get_content_area (GTK_INFO_BAR (window->priv->info_bar));
+	content_area = ctk_info_bar_get_content_area (GTK_INFO_BAR (window->priv->info_bar));
 	if (window->priv->info_content != NULL)
 	{
-		gtk_container_remove (GTK_CONTAINER (content_area), window->priv->info_content);
+		ctk_container_remove (GTK_CONTAINER (content_area), window->priv->info_content);
 	}
-	gtk_box_pack_start (GTK_BOX (content_area),
+	ctk_box_pack_start (GTK_BOX (content_area),
 	                    hbox_content,
 	                    TRUE, FALSE, 0);
 	window->priv->info_content = hbox_content;
@@ -919,7 +919,7 @@ static gboolean
 info_bar_timeout (GSWindow *window)
 {
 	window->priv->info_bar_timer_id = 0;
-	gtk_widget_hide (window->priv->info_bar);
+	ctk_widget_hide (window->priv->info_bar);
 	return FALSE;
 }
 
@@ -935,7 +935,7 @@ gs_window_show_message (GSWindow   *window,
 	                        icon,
 	                        summary,
 	                        body);
-	gtk_widget_show (window->priv->info_bar);
+	ctk_widget_show (window->priv->info_bar);
 
 	if (window->priv->info_bar_timer_id > 0)
 	{
@@ -952,7 +952,7 @@ gs_window_show (GSWindow *window)
 {
 	g_return_if_fail (GS_IS_WINDOW (window));
 
-	gtk_widget_show (GTK_WIDGET (window));
+	ctk_widget_show (GTK_WIDGET (window));
 }
 
 static void
@@ -979,7 +979,7 @@ gs_window_destroy (GSWindow *window)
 
 	gs_window_cancel_unlock_request (window);
 
-	gtk_widget_destroy (GTK_WIDGET (window));
+	ctk_widget_destroy (GTK_WIDGET (window));
 }
 
 GdkWindow *
@@ -987,7 +987,7 @@ gs_window_get_gdk_window (GSWindow *window)
 {
 	g_return_val_if_fail (GS_IS_WINDOW (window), NULL);
 
-	return gtk_widget_get_window (GTK_WIDGET (window));
+	return ctk_widget_get_window (GTK_WIDGET (window));
 }
 
 GtkWidget *
@@ -1075,7 +1075,7 @@ spawn_on_window (GSWindow *window,
 	}
 
 	error = NULL;
-	envp = spawn_make_environment_for_display (gtk_widget_get_display (GTK_WIDGET (window)), NULL);
+	envp = spawn_make_environment_for_display (ctk_widget_get_display (GTK_WIDGET (window)), NULL);
 	result = g_spawn_async_with_pipes (NULL,
 	                                   argv,
 	                                   envp,
@@ -1143,15 +1143,15 @@ static void
 lock_plug_added (GtkWidget *widget,
                  GSWindow  *window)
 {
-	gtk_widget_show (widget);
+	ctk_widget_show (widget);
 }
 
 static gboolean
 lock_plug_removed (GtkWidget *widget,
                    GSWindow  *window)
 {
-	gtk_widget_hide (widget);
-	gtk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->lock_box));
+	ctk_widget_hide (widget);
+	ctk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->lock_box));
 	window->priv->lock_box = NULL;
 
 	return TRUE;
@@ -1161,15 +1161,15 @@ static void
 keyboard_plug_added (GtkWidget *widget,
                      GSWindow  *window)
 {
-	gtk_widget_show (widget);
+	ctk_widget_show (widget);
 }
 
 static gboolean
 keyboard_plug_removed (GtkWidget *widget,
                        GSWindow  *window)
 {
-	gtk_widget_hide (widget);
-	gtk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->keyboard_socket));
+	ctk_widget_hide (widget);
+	ctk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->keyboard_socket));
 
 	return TRUE;
 }
@@ -1194,7 +1194,7 @@ forward_key_events (GSWindow *window)
 	{
 		GdkEventKey *event = window->priv->key_events->data;
 
-		gtk_window_propagate_key_event (GTK_WINDOW (window), event);
+		ctk_window_propagate_key_event (GTK_WINDOW (window), event);
 
 		gdk_event_free ((GdkEvent *)event);
 		window->priv->key_events = g_list_delete_link (window->priv->key_events,
@@ -1221,7 +1221,7 @@ static void
 lock_socket_show (GtkWidget *widget,
                   GSWindow  *window)
 {
-	gtk_widget_child_focus (window->priv->lock_socket, GTK_DIR_TAB_FORWARD);
+	ctk_widget_child_focus (window->priv->lock_socket, GTK_DIR_TAB_FORWARD);
 
 	/* send queued events to the dialog */
 	forward_key_events (window);
@@ -1245,10 +1245,10 @@ create_keyboard_socket (GSWindow *window,
 {
 	int height;
 
-	height = (HeightOfScreen (gdk_x11_screen_get_xscreen (gtk_widget_get_screen (GTK_WIDGET (window))))) / 4;
+	height = (HeightOfScreen (gdk_x11_screen_get_xscreen (ctk_widget_get_screen (GTK_WIDGET (window))))) / 4;
 
-	window->priv->keyboard_socket = gtk_socket_new ();
-	gtk_widget_set_size_request (window->priv->keyboard_socket, -1, height);
+	window->priv->keyboard_socket = ctk_socket_new ();
+	ctk_widget_set_size_request (window->priv->keyboard_socket, -1, height);
 
 	g_signal_connect (window->priv->keyboard_socket, "destroy",
 	                  G_CALLBACK (keyboard_socket_destroyed), window);
@@ -1256,8 +1256,8 @@ create_keyboard_socket (GSWindow *window,
 	                  G_CALLBACK (keyboard_plug_added), window);
 	g_signal_connect (window->priv->keyboard_socket, "plug_removed",
 	                  G_CALLBACK (keyboard_plug_removed), window);
-	gtk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->keyboard_socket, FALSE, FALSE, 0);
-	gtk_socket_add_id (GTK_SOCKET (window->priv->keyboard_socket), id);
+	ctk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->keyboard_socket, FALSE, FALSE, 0);
+	ctk_socket_add_id (GTK_SOCKET (window->priv->keyboard_socket), id);
 }
 
 /* adapted from gspawn.c */
@@ -1417,16 +1417,16 @@ static void
 create_lock_socket (GSWindow *window,
                     guint32   id)
 {
-	window->priv->lock_socket = gtk_socket_new ();
-	window->priv->lock_box = gtk_grid_new ();
-	gtk_widget_set_halign (GTK_WIDGET (window->priv->lock_box),
+	window->priv->lock_socket = ctk_socket_new ();
+	window->priv->lock_box = ctk_grid_new ();
+	ctk_widget_set_halign (GTK_WIDGET (window->priv->lock_box),
 	                       GTK_ALIGN_CENTER);
-	gtk_widget_set_valign (GTK_WIDGET (window->priv->lock_box),
+	ctk_widget_set_valign (GTK_WIDGET (window->priv->lock_box),
 	                       GTK_ALIGN_CENTER);
-	gtk_widget_show (window->priv->lock_box);
-	gtk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->lock_box, TRUE, TRUE, 0);
+	ctk_widget_show (window->priv->lock_box);
+	ctk_box_pack_start (GTK_BOX (window->priv->vbox), window->priv->lock_box, TRUE, TRUE, 0);
 
-	gtk_container_add (GTK_CONTAINER (window->priv->lock_box), window->priv->lock_socket);
+	ctk_container_add (GTK_CONTAINER (window->priv->lock_box), window->priv->lock_socket);
 
 	g_signal_connect (window->priv->lock_socket, "show",
 	                  G_CALLBACK (lock_socket_show), window);
@@ -1437,7 +1437,7 @@ create_lock_socket (GSWindow *window,
 	g_signal_connect (window->priv->lock_socket, "plug_removed",
 	                  G_CALLBACK (lock_plug_removed), window);
 
-	gtk_socket_add_id (GTK_SOCKET (window->priv->lock_socket), id);
+	ctk_socket_add_id (GTK_SOCKET (window->priv->lock_socket), id);
 
 	if (window->priv->keyboard_enabled)
 	{
@@ -1508,14 +1508,14 @@ shake_dialog (GSWindow *window)
 			break;
 		}
 
-		gtk_widget_set_margin_start (GTK_WIDGET (window->priv->lock_box),
+		ctk_widget_set_margin_start (GTK_WIDGET (window->priv->lock_box),
 		                             start);
-		gtk_widget_set_margin_end (GTK_WIDGET (window->priv->lock_box),
+		ctk_widget_set_margin_end (GTK_WIDGET (window->priv->lock_box),
 		                           end);
 
-		while (gtk_events_pending ())
+		while (ctk_events_pending ())
 		{
-			gtk_main_iteration ();
+			ctk_main_iteration ();
 		}
 
 		g_usleep (10000);
@@ -1543,10 +1543,10 @@ popdown_dialog (GSWindow *window)
 {
 	gs_window_dialog_finish (window);
 
-	gtk_widget_show (window->priv->drawing_area);
+	ctk_widget_show (window->priv->drawing_area);
 
 	gs_window_clear (window);
-	set_invisible_cursor (gtk_widget_get_window (GTK_WIDGET (window)), TRUE);
+	set_invisible_cursor (ctk_widget_get_window (GTK_WIDGET (window)), TRUE);
 
 	window_set_dialog_up (window, FALSE);
 
@@ -1556,7 +1556,7 @@ popdown_dialog (GSWindow *window)
 
 	if (window->priv->lock_box != NULL)
 	{
-		gtk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->lock_box));
+		ctk_container_remove (GTK_CONTAINER (window->priv->vbox), GTK_WIDGET (window->priv->lock_box));
 		window->priv->lock_box = NULL;
 	}
 
@@ -1730,10 +1730,10 @@ popup_dialog (GSWindow *window)
 		command = g_string_append (command, " --verbose");
 	}
 
-	gtk_widget_hide (window->priv->drawing_area);
+	ctk_widget_hide (window->priv->drawing_area);
 
-	gtk_widget_queue_draw (GTK_WIDGET (window));
-	set_invisible_cursor (gtk_widget_get_window (GTK_WIDGET (window)), FALSE);
+	ctk_widget_queue_draw (GTK_WIDGET (window));
+	set_invisible_cursor (ctk_widget_get_window (GTK_WIDGET (window)), FALSE);
 
 	window->priv->dialog_quit_requested = FALSE;
 	window->priv->dialog_shake_in_progress = FALSE;
@@ -1769,7 +1769,7 @@ gs_window_request_unlock (GSWindow *window)
 
 	gs_debug ("Requesting unlock");
 
-	if (! gtk_widget_get_visible (GTK_WIDGET (window)))
+	if (! ctk_widget_get_visible (GTK_WIDGET (window)))
 	{
 		gs_debug ("Request unlock but window is not visible!");
 		return;
@@ -1827,7 +1827,7 @@ gs_window_get_display (GSWindow  *window)
 {
 	g_return_val_if_fail (GS_IS_WINDOW (window), NULL);
 
-	return gtk_widget_get_display (GTK_WIDGET (window));
+	return ctk_widget_get_display (GTK_WIDGET (window));
 }
 
 void
@@ -1932,7 +1932,7 @@ gs_window_set_monitor (GSWindow   *window,
 
 	window->priv->monitor = monitor;
 
-	gtk_widget_queue_resize (GTK_WIDGET (window));
+	ctk_widget_queue_resize (GTK_WIDGET (window));
 
 	g_object_notify (G_OBJECT (window), "monitor");
 }
@@ -2071,7 +2071,7 @@ maybe_handle_activity (GSWindow *window)
 
 	/* if we already have a socket then don't bother */
 	if (! window->priv->lock_socket
-	        && gtk_widget_get_sensitive (GTK_WIDGET (window)))
+	        && ctk_widget_get_sensitive (GTK_WIDGET (window)))
 	{
 		g_signal_emit (window, signals [ACTIVITY], 0, &handled);
 	}
@@ -2182,11 +2182,11 @@ gs_window_real_size_request (GtkWidget      *widget,
 
 	window = GS_WINDOW (widget);
 	bin = GTK_BIN (widget);
-	child = gtk_bin_get_child (bin);
+	child = ctk_bin_get_child (bin);
 
-	if (child && gtk_widget_get_visible (child))
+	if (child && ctk_widget_get_visible (child))
 	{
-		gtk_widget_get_preferred_size (child, requisition, NULL);
+		ctk_widget_get_preferred_size (child, requisition, NULL);
 	}
 
 	old_geometry = window->priv->geometry;
@@ -2196,7 +2196,7 @@ gs_window_real_size_request (GtkWidget      *widget,
 	requisition->width  = window->priv->geometry.width;
 	requisition->height = window->priv->geometry.height;
 
-	if (! gtk_widget_get_realized (widget))
+	if (! ctk_widget_get_realized (widget))
 	{
 		return;
 	}
@@ -2429,9 +2429,9 @@ gs_window_class_init (GSWindowClass *klass)
 static void
 create_info_bar (GSWindow *window)
 {
-	window->priv->info_bar = gtk_info_bar_new ();
-	gtk_widget_set_no_show_all (window->priv->info_bar, TRUE);
-	gtk_box_pack_end (GTK_BOX (window->priv->vbox), window->priv->info_bar, FALSE, FALSE, 0);
+	window->priv->info_bar = ctk_info_bar_new ();
+	ctk_widget_set_no_show_all (window->priv->info_bar, TRUE);
+	ctk_box_pack_end (GTK_BOX (window->priv->vbox), window->priv->info_bar, FALSE, FALSE, 0);
 }
 
 static gboolean
@@ -2458,17 +2458,17 @@ gs_window_init (GSWindow *window)
 	window->priv->last_x = -1;
 	window->priv->last_y = -1;
 
-	gtk_window_set_decorated (GTK_WINDOW (window), FALSE);
+	ctk_window_set_decorated (GTK_WINDOW (window), FALSE);
 
-	gtk_window_set_skip_taskbar_hint (GTK_WINDOW (window), TRUE);
-	gtk_window_set_skip_pager_hint (GTK_WINDOW (window), TRUE);
+	ctk_window_set_skip_taskbar_hint (GTK_WINDOW (window), TRUE);
+	ctk_window_set_skip_pager_hint (GTK_WINDOW (window), TRUE);
 
-	gtk_window_set_keep_above (GTK_WINDOW (window), TRUE);
+	ctk_window_set_keep_above (GTK_WINDOW (window), TRUE);
 
-	gtk_window_fullscreen (GTK_WINDOW (window));
+	ctk_window_fullscreen (GTK_WINDOW (window));
 
-	gtk_widget_set_events (GTK_WIDGET (window),
-	                       gtk_widget_get_events (GTK_WIDGET (window))
+	ctk_widget_set_events (GTK_WIDGET (window),
+	                       ctk_widget_get_events (GTK_WIDGET (window))
 	                       | GDK_POINTER_MOTION_MASK
 	                       | GDK_BUTTON_PRESS_MASK
 	                       | GDK_BUTTON_RELEASE_MASK
@@ -2479,14 +2479,14 @@ gs_window_init (GSWindow *window)
 	                       | GDK_ENTER_NOTIFY_MASK
 	                       | GDK_LEAVE_NOTIFY_MASK);
 
-	window->priv->vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
-	gtk_widget_show (window->priv->vbox);
-	gtk_container_add (GTK_CONTAINER (window), window->priv->vbox);
+	window->priv->vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 12);
+	ctk_widget_show (window->priv->vbox);
+	ctk_container_add (GTK_CONTAINER (window), window->priv->vbox);
 
-	window->priv->drawing_area = gtk_drawing_area_new ();
-	gtk_widget_show (window->priv->drawing_area);
-	gtk_widget_set_app_paintable (window->priv->drawing_area, TRUE);
-	gtk_box_pack_start (GTK_BOX (window->priv->vbox),
+	window->priv->drawing_area = ctk_drawing_area_new ();
+	ctk_widget_show (window->priv->drawing_area);
+	ctk_widget_set_app_paintable (window->priv->drawing_area, TRUE);
+	ctk_box_pack_start (GTK_BOX (window->priv->vbox),
 	                    window->priv->drawing_area, TRUE, TRUE, 0);
 	g_signal_connect (window->priv->drawing_area,
 	                  "draw",

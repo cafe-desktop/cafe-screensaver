@@ -27,7 +27,7 @@
 #include <string.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-window.h"
 #include "gs-grab.h"
@@ -365,8 +365,8 @@ gs_grab_grab_offscreen (GSGrab *grab,
 
 	gs_debug ("Grabbing an offscreen window");
 
-	window = gtk_widget_get_window (GTK_WIDGET (grab->priv->invisible));
-	screen = gtk_invisible_get_screen (GTK_INVISIBLE (grab->priv->invisible));
+	window = ctk_widget_get_window (GTK_WIDGET (grab->priv->invisible));
+	screen = ctk_invisible_get_screen (GTK_INVISIBLE (grab->priv->invisible));
 	display = gdk_screen_get_display (screen);
 	res = gs_grab_grab_window (grab, window, display,
 	                           no_pointer_grab, hide_cursor);
@@ -411,8 +411,8 @@ gs_grab_init (GSGrab *grab)
 
 	grab->priv->no_pointer_grab = FALSE;
 	grab->priv->hide_cursor = FALSE;
-	grab->priv->invisible = gtk_invisible_new ();
-	gtk_widget_show (grab->priv->invisible);
+	grab->priv->invisible = ctk_invisible_new ();
+	ctk_widget_show (grab->priv->invisible);
 }
 
 static void
@@ -427,7 +427,7 @@ gs_grab_finalize (GObject *object)
 
 	g_return_if_fail (grab->priv != NULL);
 
-	gtk_widget_destroy (grab->priv->invisible);
+	ctk_widget_destroy (grab->priv->invisible);
 
 	G_OBJECT_CLASS (gs_grab_parent_class)->finalize (object);
 }

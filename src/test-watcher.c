@@ -26,7 +26,7 @@
 #include <stdlib.h>
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-watcher.h"
 #include "gs-debug.h"
@@ -87,7 +87,7 @@ main (int    argc,
 	textdomain (GETTEXT_PACKAGE);
 #endif
 
-	if (! gtk_init_with_args (&argc, &argv, NULL, NULL, NULL, &error))
+	if (! ctk_init_with_args (&argc, &argv, NULL, NULL, NULL, &error))
 	{
 		fprintf (stderr, "%s", error->message);
 		g_error_free (error);
@@ -98,7 +98,7 @@ main (int    argc,
 
 	test_watcher ();
 
-	gtk_main ();
+	ctk_main ();
 
 	gs_debug_shutdown ();
 

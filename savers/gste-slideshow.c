@@ -27,7 +27,7 @@
 #include <string.h>
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-theme-engine.h"
 #include "gste-slideshow.h"
@@ -320,7 +320,7 @@ update_display (GSTESlideshow *show)
 
 	cairo_destroy (cr);
 
-	gtk_widget_queue_draw (GTK_WIDGET (show));
+	ctk_widget_queue_draw (GTK_WIDGET (show));
 }
 
 static gboolean
@@ -896,7 +896,7 @@ gste_slideshow_real_configure (GtkWidget         *widget,
 		cairo_surface_destroy (show->priv->surf);
 	}
 
-	cr = gdk_cairo_create (gtk_widget_get_window (widget));
+	cr = gdk_cairo_create (ctk_widget_get_window (widget));
 	show->priv->surf = cairo_surface_create_similar (cairo_get_target (cr),
 	                   CAIRO_CONTENT_COLOR,
 	                   show->priv->window_width,
@@ -904,7 +904,7 @@ gste_slideshow_real_configure (GtkWidget         *widget,
 	cairo_destroy (cr);
 
 	/* schedule a redraw */
-	gtk_widget_queue_draw (widget);
+	ctk_widget_queue_draw (widget);
 
 	if (GTK_WIDGET_CLASS (parent_class)->configure_event)
 	{
@@ -966,14 +966,14 @@ set_visual (GtkWidget *widget)
 	GdkScreen *screen;
 	GdkVisual *visual;
 
-	screen = gtk_widget_get_screen (widget);
+	screen = ctk_widget_get_screen (widget);
 	visual = gdk_screen_get_rgba_visual (screen);
 	if (visual == NULL)
 	{
 		visual = gdk_screen_get_system_visual (screen);
 	}
 
-	gtk_widget_set_visual (widget, visual);
+	ctk_widget_set_visual (widget, visual);
 }
 
 static void
