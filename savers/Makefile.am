@@ -34,7 +34,7 @@ popsquares.desktop.in: popsquares.desktop.in.in Makefile
 	@$(edit) $< >$@
 
 edit = sed \
-	-e 's|@SLIDESHOW_COSMOS_DIR[@]|$(SLIDESHOW_COSMOS_DIR)|g' \
+	-e 's|@SLIDESHOW_SPACE_DIR[@]|$(SLIDESHOW_SPACE_DIR)|g' \
 	-e 's|@FLOATERS_FOOT_LOGO_IMAGE[@]|$(FLOATERS_FOOT_LOGO_IMAGE)|g' \
 	-e 's|@FLOATERS_FOOT_GNOME_LOGO_IMAGE[@]|$(FLOATERS_FOOT_GNOME_LOGO_IMAGE)|g' \
 	-e 's|@SAVERDIR[@]|$(privlibexecdir)|g'

@@ -12,7 +12,7 @@ BACKGROUNDS = \
 	whirlpool.jpg		\
 	$(NULL)
 
-imagesdir   = $(SLIDESHOW_COSMOS_DIR)
+imagesdir   = $(SLIDESHOW_SPACE_DIR)
 images_DATA =			\
 	$(BACKGROUNDS)		\
 	background-1.xml	\
