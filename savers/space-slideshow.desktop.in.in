@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Space
 Comment=Display a slideshow of pictures of the space
-Exec=@SAVERDIR@/slideshow --location=@SLIDESHOW_COSMOS_DIR@
+Exec=@SAVERDIR@/slideshow --location=@SLIDESHOW_SPACE_DIR@
 TryExec=@SAVERDIR@/slideshow
 StartupNotify=false
 Terminal=false
