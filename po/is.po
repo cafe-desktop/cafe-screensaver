@@ -360,21 +360,21 @@ msgstr "Sýna skjásýningu með myndum úr myndamöppunni þinni"
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
-#: savers/popsquares.desktop.in.in:3
+#: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
 msgstr "Popplista-reitir"
 
-#: savers/popsquares.desktop.in.in:4
+#: savers/squares.desktop.in.in:4
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Net af popplistarlegum flökktandi litum"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/popsquares.desktop.in.in:12
+#: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
-#: savers/popsquares.c:49 savers/floaters.c:1191
+#: savers/squares.c:49 savers/floaters.c:1191
 #, c-format
 msgid "%s. See --help for usage information.\n"
 msgstr "%s. Sjá --help fyrir upplýsingar um notkun.\n"

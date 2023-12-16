@@ -348,21 +348,21 @@ msgstr "그림 폴더에 있는 그림의 슬라이드를 보여줍니다"
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
-#: savers/popsquares.desktop.in.in:3
+#: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
 msgstr "팝 아트 사각형"
 
-#: savers/popsquares.desktop.in.in:4
+#: savers/squares.desktop.in.in:4
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "고동치는 색깔의 팝아트 형식 격자 모양."
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/popsquares.desktop.in.in:12
+#: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
-#: savers/popsquares.c:49 savers/floaters.c:1191
+#: savers/squares.c:49 savers/floaters.c:1191
 #, c-format
 msgid "%s. See --help for usage information.\n"
 msgstr "%s. 사용법을 보려면 --help를 쓰십시오.\n"

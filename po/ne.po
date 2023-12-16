@@ -355,21 +355,21 @@ msgstr "तपाईँको तस्विर फोल्डरबाट स
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
-#: savers/popsquares.desktop.in.in:3
+#: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
 msgstr "पप आर्ट वर्ग"
 
-#: savers/popsquares.desktop.in.in:4
+#: savers/squares.desktop.in.in:4
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "पल्सिङ रङको pop-art-ish ग्रिड ।"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/popsquares.desktop.in.in:12
+#: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
-#: savers/popsquares.c:49 savers/floaters.c:1191
+#: savers/squares.c:49 savers/floaters.c:1191
 #, c-format
 msgid "%s. See --help for usage information.\n"
 msgstr "%s. उपयोगी सूचनाका लागि मद्दत हेर्नुहोस् ।\n"

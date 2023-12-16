@@ -30,9 +30,9 @@
 #include <ctk/ctk.h>
 
 #include "gs-theme-engine.h"
-#include "gste-popsquares.h"
+#include "gste-squares.h"
 
-static void     gste_popsquares_finalize   (GObject             *object);
+static void     gste_squares_finalize   (GObject             *object);
 static void     draw_frame                 (GSTEPopsquares      *pop,
                                             cairo_t *cr);
 
@@ -55,7 +55,7 @@ struct GSTEPopsquaresPrivate
 
 static GObjectClass *parent_class = NULL;
 
-G_DEFINE_TYPE_WITH_PRIVATE (GSTEPopsquares, gste_popsquares, GS_TYPE_THEME_ENGINE)
+G_DEFINE_TYPE_WITH_PRIVATE (GSTEPopsquares, gste_squares, GS_TYPE_THEME_ENGINE)
 
 static void
 hsv_to_rgb (int     h,
@@ -316,7 +316,7 @@ set_colors (CtkWidget *widget,
 }
 
 static void
-gste_popsquares_set_property (GObject            *object,
+gste_squares_set_property (GObject            *object,
                               guint               prop_id,
                               const GValue       *value,
                               GParamSpec         *pspec)
@@ -332,7 +332,7 @@ gste_popsquares_set_property (GObject            *object,
 }
 
 static void
-gste_popsquares_get_property (GObject            *object,
+gste_squares_get_property (GObject            *object,
                               guint               prop_id,
                               GValue             *value,
                               GParamSpec         *pspec)
@@ -432,7 +432,7 @@ setup_colors (GSTEPopsquares *pop)
 }
 
 static void
-gste_popsquares_real_show (CtkWidget *widget)
+gste_squares_real_show (CtkWidget *widget)
 {
 	GSTEPopsquares *pop = GSTE_POPSQUARES (widget);
 
@@ -447,7 +447,7 @@ gste_popsquares_real_show (CtkWidget *widget)
 }
 
 static gboolean
-gste_popsquares_real_draw (CtkWidget *widget,
+gste_squares_real_draw (CtkWidget *widget,
                            cairo_t   *cr)
 {
 	if (CTK_WIDGET_CLASS (parent_class)->draw) {
@@ -460,7 +460,7 @@ gste_popsquares_real_draw (CtkWidget *widget,
 }
 
 static gboolean
-gste_popsquares_real_configure (CtkWidget         *widget,
+gste_squares_real_configure (CtkWidget         *widget,
                                 CdkEventConfigure *event)
 {
 	GSTEPopsquares *pop = GSTE_POPSQUARES (widget);
@@ -484,20 +484,20 @@ gste_popsquares_real_configure (CtkWidget         *widget,
 }
 
 static void
-gste_popsquares_class_init (GSTEPopsquaresClass *klass)
+gste_squares_class_init (GSTEPopsquaresClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
 	CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 
-	object_class->finalize = gste_popsquares_finalize;
-	object_class->get_property = gste_popsquares_get_property;
-	object_class->set_property = gste_popsquares_set_property;
+	object_class->finalize = gste_squares_finalize;
+	object_class->get_property = gste_squares_get_property;
+	object_class->set_property = gste_squares_set_property;
 
-	widget_class->show = gste_popsquares_real_show;
-	widget_class->draw = gste_popsquares_real_draw;
-	widget_class->configure_event = gste_popsquares_real_configure;
+	widget_class->show = gste_squares_real_show;
+	widget_class->draw = gste_squares_real_draw;
+	widget_class->configure_event = gste_squares_real_configure;
 }
 
 static void
@@ -564,11 +564,11 @@ draw_iter (GSTEPopsquares *pop)
 }
 
 static void
-gste_popsquares_init (GSTEPopsquares *pop)
+gste_squares_init (GSTEPopsquares *pop)
 {
 	int delay;
 
-	pop->priv = gste_popsquares_get_instance_private (pop);
+	pop->priv = gste_squares_get_instance_private (pop);
 
 	pop->priv->ncolors = 128;
 	pop->priv->subdivision = 5;
@@ -578,7 +578,7 @@ gste_popsquares_init (GSTEPopsquares *pop)
 }
 
 static void
-gste_popsquares_finalize (GObject *object)
+gste_squares_finalize (GObject *object)
 {
 	GSTEPopsquares *pop;
 

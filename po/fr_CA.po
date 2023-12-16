@@ -284,15 +284,15 @@ msgstr ""
 msgid "Display a slide from your Pictures folder"
 msgstr ""
 
-#: ../savers/popsquares.desktop.in.in.h:1
+#: ../savers/squares.desktop.in.in.h:1
 msgid "Pop art squares"
 msgstr ""
 
-#: ../savers/popsquares.desktop.in.in.h:2
+#: ../savers/squares.desktop.in.in.h:2
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr ""
 
-#: ../savers/popsquares.c:49 ../savers/floaters.c:1188
+#: ../savers/squares.c:49 ../savers/floaters.c:1188
 #, c-format
 msgid "%s. See --help for usage information.\n"
 msgstr ""
