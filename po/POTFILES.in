@@ -8,7 +8,7 @@ data/lock-dialog-default.ui
 data/org.cafe.screensaver.gschema.xml.in
 savers/space-slideshow.desktop.in.in
 savers/footlogo-floaters.desktop.in.in
-savers/gnomelogo-floaters.desktop.in.in
+savers/gnome-floaters.desktop.in.in
 savers/personal-slideshow.desktop.in.in
 savers/popsquares.desktop.in.in
 savers/popsquares.c

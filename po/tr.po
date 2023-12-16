@@ -346,17 +346,17 @@ msgstr "Ekran üzerinde CAFE logosu baloncukları oluşturur"
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
-#: savers/gnomelogo-floaters.desktop.in.in:3
+#: savers/gnome-floaters.desktop.in.in:3
 msgid "Floating GNOME"
 msgstr "Yüzen GNOME"
 
-#: savers/gnomelogo-floaters.desktop.in.in:4
+#: savers/gnome-floaters.desktop.in.in:4
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Ekran üzerinde GNOME logosu baloncukları oluşturur"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/gnomelogo-floaters.desktop.in.in:12
+#: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 

@@ -306,17 +306,17 @@ msgstr ""
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
-#: savers/gnomelogo-floaters.desktop.in.in:3
+#: savers/gnome-floaters.desktop.in.in:3
 msgid "Floating GNOME"
 msgstr ""
 
-#: savers/gnomelogo-floaters.desktop.in.in:4
+#: savers/gnome-floaters.desktop.in.in:4
 msgid "Bubbles the GNOME logo around the screen"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/gnomelogo-floaters.desktop.in.in:12
+#: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
