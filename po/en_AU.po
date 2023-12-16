@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-screensaver package.
+# This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,92 +8,92 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-screensaver 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-screensaver 1.23.1\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2019-11-04 23:36+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Michael Findlay <translate@cobber-linux.org>, 2020\n"
-"Language-Team: English (Australia) (https://www.transifex.com/mate/teams/13566/en_AU/)\n"
+"Language-Team: English (Australia) (https://www.transifex.com/cafe/teams/13566/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_AU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/mate-screensaver-preferences.desktop.in:3
-#: src/mate-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Screensaver"
 msgstr "Screensaver"
 
-#: data/mate-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:4
 msgid "Set your screensaver preferences"
 msgstr "Set your screensaver preferences"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver-preferences.desktop.in:6
-#: src/mate-screensaver.desktop.in.in:7
+#: data/cafe-screensaver-preferences.desktop.in:6
+#: src/cafe-screensaver.desktop.in.in:7
 msgid "preferences-desktop-screensaver"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: data/mate-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:12
 msgid "MATE;screensaver;preferences;"
 msgstr ""
 
-#: data/mate-screensaver-preferences.ui:20
+#: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
 msgstr "Screensaver Preview"
 
-#: data/mate-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:56
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Screensaver preview</b>"
 
-#: data/mate-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:164
 msgid "Screensaver Preferences"
 msgstr "Screensaver Preferences"
 
-#: data/mate-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:196
 msgid "Power _Management"
 msgstr "Power _Management"
 
-#: data/mate-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:212
 msgid "_Preview"
 msgstr "_Preview"
 
-#: data/mate-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:272
 msgid "_Screensaver theme:"
 msgstr "_Screensaver theme:"
 
-#: data/mate-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:390
 msgid "Regard the computer as _idle after:"
 msgstr "Regard the computer as _idle after:"
 
-#: data/mate-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:433
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Activate screensaver when computer is idle"
 
-#: data/mate-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:448
 msgid "_Lock screen when screensaver is active"
 msgstr "_Lock screen when screensaver is active"
 
-#: data/mate-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:465
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Warning: the screen will not be locked for the root user.</b>"
 
-#: data/mate-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:4
 msgid "Screensavers"
 msgstr "Screensavers"
 
-#: data/mate-screensaver.directory.desktop.in:5
-#: data/org.mate.screensaver.gschema.xml.in:25
+#: data/cafe-screensaver.directory.desktop.in:5
+#: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "Screensaver themes"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver.directory.desktop.in:7
+#: data/cafe-screensaver.directory.desktop.in:7
 msgid "screensaver"
 msgstr ""
 
@@ -133,28 +133,28 @@ msgstr "_Unlock"
 msgid "<b>Leave a message for %R:</b>"
 msgstr "<b>Leave a message for %R:</b>"
 
-#: data/org.mate.screensaver.gschema.xml.in:10
+#: data/org.cafe.screensaver.gschema.xml.in:10
 msgid "Activate when idle"
 msgstr "Activate when idle"
 
-#: data/org.mate.screensaver.gschema.xml.in:11
+#: data/org.cafe.screensaver.gschema.xml.in:11
 msgid "Set this to TRUE to activate the screensaver when the session is idle."
 msgstr ""
 "Set this to TRUE to activate the screensaver when the session is idle."
 
-#: data/org.mate.screensaver.gschema.xml.in:15
+#: data/org.cafe.screensaver.gschema.xml.in:15
 msgid "Lock on activation"
 msgstr "Lock on activation"
 
-#: data/org.mate.screensaver.gschema.xml.in:16
+#: data/org.cafe.screensaver.gschema.xml.in:16
 msgid "Set this to TRUE to lock the screen when the screensaver goes active."
 msgstr "Set this to TRUE to lock the screen when the screensaver goes active."
 
-#: data/org.mate.screensaver.gschema.xml.in:20
+#: data/org.cafe.screensaver.gschema.xml.in:20
 msgid "Screensaver theme selection mode"
 msgstr "Screensaver theme selection mode"
 
-#: data/org.mate.screensaver.gschema.xml.in:21
+#: data/org.cafe.screensaver.gschema.xml.in:21
 msgid ""
 "The selection mode used by screensaver. May be \"blank-only\" to enable the "
 "screensaver without using any theme on activation, \"single\" to enable "
@@ -168,7 +168,7 @@ msgstr ""
 "key), and \"random\" to enable the screensaver using a random theme on "
 "activation."
 
-#: data/org.mate.screensaver.gschema.xml.in:26
+#: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
 "This key specifies the list of themes to be used by the screensaver. It's "
 "ignored when \"mode\" key is \"blank-only\", should provide the theme name "
@@ -180,11 +180,11 @@ msgstr ""
 "when \"mode\" is \"single\", and should provide a list of themes when "
 "\"mode\" is \"random\"."
 
-#: data/org.mate.screensaver.gschema.xml.in:30
+#: data/org.cafe.screensaver.gschema.xml.in:30
 msgid "Time before power management baseline"
 msgstr "Time before power management baseline"
 
-#: data/org.mate.screensaver.gschema.xml.in:31
+#: data/org.cafe.screensaver.gschema.xml.in:31
 msgid ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
@@ -192,19 +192,19 @@ msgstr ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
 
-#: data/org.mate.screensaver.gschema.xml.in:35
+#: data/org.cafe.screensaver.gschema.xml.in:35
 msgid "Time before theme change"
 msgstr "Time before theme change"
 
-#: data/org.mate.screensaver.gschema.xml.in:36
+#: data/org.cafe.screensaver.gschema.xml.in:36
 msgid "The number of minutes to run before changing the screensaver theme."
 msgstr "The number of minutes to run before changing the screensaver theme."
 
-#: data/org.mate.screensaver.gschema.xml.in:40
+#: data/org.cafe.screensaver.gschema.xml.in:40
 msgid "Time before locking"
 msgstr "Time before locking"
 
-#: data/org.mate.screensaver.gschema.xml.in:41
+#: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
 "The number of minutes after screensaver activation before locking the "
 "screen."
@@ -212,11 +212,11 @@ msgstr ""
 "The number of minutes after screensaver activation before locking the "
 "screen."
 
-#: data/org.mate.screensaver.gschema.xml.in:45
+#: data/org.cafe.screensaver.gschema.xml.in:45
 msgid "Allow embedding a keyboard into the window"
 msgstr "Allow embedding a keyboard into the window"
 
-#: data/org.mate.screensaver.gschema.xml.in:46
+#: data/org.cafe.screensaver.gschema.xml.in:46
 msgid ""
 "Set this to TRUE to allow embedding a keyboard into the window when trying "
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
@@ -226,11 +226,11 @@ msgstr ""
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
 "command."
 
-#: data/org.mate.screensaver.gschema.xml.in:50
+#: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
 msgstr "Embedded keyboard command"
 
-#: data/org.mate.screensaver.gschema.xml.in:51
+#: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
 "set to TRUE, to embed a keyboard widget into the window. This command should"
@@ -242,11 +242,11 @@ msgstr ""
 " implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 
-#: data/org.mate.screensaver.gschema.xml.in:55
+#: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
 msgstr "Allow logout"
 
-#: data/org.mate.screensaver.gschema.xml.in:56
+#: data/org.cafe.screensaver.gschema.xml.in:56
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
@@ -254,11 +254,11 @@ msgstr ""
 "Set this to TRUE to offer an option in the unlock dialogue to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
 
-#: data/org.mate.screensaver.gschema.xml.in:60
+#: data/org.cafe.screensaver.gschema.xml.in:60
 msgid "Time before logout option"
 msgstr "Time before logout option"
 
-#: data/org.mate.screensaver.gschema.xml.in:61
+#: data/org.cafe.screensaver.gschema.xml.in:61
 msgid ""
 "The number of minutes after the screensaver activation before a logout "
 "option will appear in the unlock dialog. This key has effect only if the "
@@ -268,11 +268,11 @@ msgstr ""
 "option will appear in the unlock dialogue. This key has effect only if the "
 "\"logout_enable\" key is set to TRUE."
 
-#: data/org.mate.screensaver.gschema.xml.in:65
+#: data/org.cafe.screensaver.gschema.xml.in:65
 msgid "Logout command"
 msgstr "Logout command"
 
-#: data/org.mate.screensaver.gschema.xml.in:66
+#: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
 "The command to invoke when the logout button is clicked. This command should"
 " simply log the user out without any interaction. This key has effect only "
@@ -282,11 +282,11 @@ msgstr ""
 " simply log the user out without any interaction. This key has effect only "
 "if the \"logout_enable\" key is set to TRUE."
 
-#: data/org.mate.screensaver.gschema.xml.in:70
+#: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
 msgstr "Allow user switching"
 
-#: data/org.mate.screensaver.gschema.xml.in:71
+#: data/org.cafe.screensaver.gschema.xml.in:71
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to switch to a "
 "different user account."
@@ -294,19 +294,19 @@ msgstr ""
 "Set this to TRUE to offer an option in the unlock dialogue to switch to a "
 "different user account."
 
-#: data/org.mate.screensaver.gschema.xml.in:75
+#: data/org.cafe.screensaver.gschema.xml.in:75
 msgid "Theme for lock dialog"
 msgstr "Theme for lock dialogue"
 
-#: data/org.mate.screensaver.gschema.xml.in:76
+#: data/org.cafe.screensaver.gschema.xml.in:76
 msgid "Theme to use for the lock dialog"
 msgstr "Theme to use for the lock dialogue"
 
-#: data/org.mate.screensaver.gschema.xml.in:80
+#: data/org.cafe.screensaver.gschema.xml.in:80
 msgid "Allow the session status message to be displayed"
 msgstr "Allow the session status message to be displayed"
 
-#: data/org.mate.screensaver.gschema.xml.in:81
+#: data/org.cafe.screensaver.gschema.xml.in:81
 msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr ""
@@ -477,43 +477,43 @@ msgstr "%s does not appear to be a valid screensaver theme."
 msgid "Copying file: %u of %u"
 msgstr "Copying file: %u of %u"
 
-#: src/mate-screensaver-command.c:60
+#: src/cafe-screensaver-command.c:60
 msgid "Causes the screensaver to exit gracefully"
 msgstr "Causes the screensaver to exit gracefully"
 
-#: src/mate-screensaver-command.c:64
+#: src/cafe-screensaver-command.c:64
 msgid "Query the state of the screensaver"
 msgstr "Query the state of the screensaver"
 
-#: src/mate-screensaver-command.c:68
+#: src/cafe-screensaver-command.c:68
 msgid "Query the length of time the screensaver has been active"
 msgstr "Query the length of time the screensaver has been active"
 
-#: src/mate-screensaver-command.c:72
+#: src/cafe-screensaver-command.c:72
 msgid "Tells the running screensaver process to lock the screen immediately"
 msgstr "Tells the running screensaver process to lock the screen immediately"
 
-#: src/mate-screensaver-command.c:76
+#: src/cafe-screensaver-command.c:76
 msgid "Tells the running screensaver process to unlock the screen immediately"
 msgstr ""
 
-#: src/mate-screensaver-command.c:80
+#: src/cafe-screensaver-command.c:80
 msgid "If the screensaver is active then switch to another graphics demo"
 msgstr "If the screensaver is active then switch to another graphics demo"
 
-#: src/mate-screensaver-command.c:84
+#: src/cafe-screensaver-command.c:84
 msgid "Turn the screensaver on (blank the screen)"
 msgstr "Turn the screensaver on (blank the screen)"
 
-#: src/mate-screensaver-command.c:88
+#: src/cafe-screensaver-command.c:88
 msgid "If the screensaver is active then deactivate it (un-blank the screen)"
 msgstr "If the screensaver is active then deactivate it (un-blank the screen)"
 
-#: src/mate-screensaver-command.c:92
+#: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
 msgstr "Poke the running screensaver to simulate user activity"
 
-#: src/mate-screensaver-command.c:96
+#: src/cafe-screensaver-command.c:96
 msgid ""
 "Inhibit the screensaver from activating.  Command blocks while inhibit is "
 "active."
@@ -521,234 +521,234 @@ msgstr ""
 "Inhibit the screensaver from activating.  Command blocks while inhibit is "
 "active."
 
-#: src/mate-screensaver-command.c:100
+#: src/cafe-screensaver-command.c:100
 msgid "The calling application that is inhibiting the screensaver"
 msgstr "The calling application that is inhibiting the screensaver"
 
-#: src/mate-screensaver-command.c:104
+#: src/cafe-screensaver-command.c:104
 msgid "The reason for inhibiting the screensaver"
 msgstr "The reason for inhibiting the screensaver"
 
-#: src/mate-screensaver-command.c:108 src/mate-screensaver-dialog.c:58
-#: src/mate-screensaver.c:55
+#: src/cafe-screensaver-command.c:108 src/cafe-screensaver-dialog.c:58
+#: src/cafe-screensaver.c:55
 msgid "Version of this application"
 msgstr "Version of this application"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 #, c-format
 msgid "The screensaver is %s\n"
 msgstr "The screensaver is %s\n"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "active"
 msgstr "active"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "inactive"
 msgstr "inactive"
 
-#: src/mate-screensaver-command.c:373
+#: src/cafe-screensaver-command.c:373
 msgid "The screensaver is not inhibited\n"
 msgstr "The screensaver is not inhibited\n"
 
-#: src/mate-screensaver-command.c:381
+#: src/cafe-screensaver-command.c:381
 msgid "The screensaver is being inhibited by:\n"
 msgstr "The screensaver is being inhibited by:\n"
 
-#: src/mate-screensaver-command.c:416
+#: src/cafe-screensaver-command.c:416
 #, c-format
 msgid "The screensaver has been active for %d seconds.\n"
 msgstr "The screensaver has been active for %d seconds.\n"
 
-#: src/mate-screensaver-command.c:422
+#: src/cafe-screensaver-command.c:422
 msgid "The screensaver is not currently active.\n"
 msgstr "The screensaver is not currently active.\n"
 
-#: src/mate-screensaver-dialog.c:57
+#: src/cafe-screensaver-dialog.c:57
 msgid "Show debugging output"
 msgstr "Show debugging output"
 
-#: src/mate-screensaver-dialog.c:59
+#: src/cafe-screensaver-dialog.c:59
 msgid "Show the logout button"
 msgstr "Show the logout button"
 
-#: src/mate-screensaver-dialog.c:60
+#: src/cafe-screensaver-dialog.c:60
 msgid "Command to invoke from the logout button"
 msgstr "Command to invoke from the logout button"
 
-#: src/mate-screensaver-dialog.c:61
+#: src/cafe-screensaver-dialog.c:61
 msgid "Show the switch user button"
 msgstr "Show the switch user button"
 
-#: src/mate-screensaver-dialog.c:62
+#: src/cafe-screensaver-dialog.c:62
 msgid "Message to show in the dialog"
 msgstr "Message to show in the dialogue"
 
-#: src/mate-screensaver-dialog.c:62 src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:62 src/cafe-screensaver-dialog.c:63
 msgid "MESSAGE"
 msgstr "MESSAGE"
 
-#: src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:63
 msgid "Not used"
 msgstr "Not used"
 
-#: src/mate-screensaver-dialog.c:165 src/mate-screensaver-dialog.c:166
-#: src/mate-screensaver-dialog.c:167 src/gs-auth-pam.c:745
+#: src/cafe-screensaver-dialog.c:165 src/cafe-screensaver-dialog.c:166
+#: src/cafe-screensaver-dialog.c:167 src/gs-auth-pam.c:745
 msgid "Username:"
 msgstr "Username:"
 
-#: src/mate-screensaver-dialog.c:168 src/mate-screensaver-dialog.c:169
+#: src/cafe-screensaver-dialog.c:168 src/cafe-screensaver-dialog.c:169
 #: src/gs-auth-pam.c:171
 msgid "Password:"
 msgstr "Password:"
 
-#: src/mate-screensaver-dialog.c:170
+#: src/cafe-screensaver-dialog.c:170
 msgid "You are required to change your password immediately (password aged)"
 msgstr "You are required to change your password immediately (password aged)"
 
-#: src/mate-screensaver-dialog.c:171
+#: src/cafe-screensaver-dialog.c:171
 msgid "You are required to change your password immediately (root enforced)"
 msgstr "You are required to change your password immediately (root enforced)"
 
-#: src/mate-screensaver-dialog.c:172
+#: src/cafe-screensaver-dialog.c:172
 msgid "Your account has expired; please contact your system administrator"
 msgstr "Your account has expired; please contact your system administrator"
 
-#: src/mate-screensaver-dialog.c:173
+#: src/cafe-screensaver-dialog.c:173
 msgid "No password supplied"
 msgstr "No password supplied"
 
-#: src/mate-screensaver-dialog.c:174
+#: src/cafe-screensaver-dialog.c:174
 msgid "Password unchanged"
 msgstr "Password unchanged"
 
-#: src/mate-screensaver-dialog.c:175
+#: src/cafe-screensaver-dialog.c:175
 msgid "Can not get username"
 msgstr "Cannot get username"
 
-#: src/mate-screensaver-dialog.c:176
+#: src/cafe-screensaver-dialog.c:176
 msgid "Retype new UNIX password:"
 msgstr "Retype new UNIX password:"
 
-#: src/mate-screensaver-dialog.c:177
+#: src/cafe-screensaver-dialog.c:177
 msgid "Enter new UNIX password:"
 msgstr "Enter new UNIX password:"
 
-#: src/mate-screensaver-dialog.c:178
+#: src/cafe-screensaver-dialog.c:178
 msgid "(current) UNIX password:"
 msgstr "(current) UNIX password:"
 
-#: src/mate-screensaver-dialog.c:179
+#: src/cafe-screensaver-dialog.c:179
 msgid "Error while changing NIS password."
 msgstr "Error while changing NIS password."
 
-#: src/mate-screensaver-dialog.c:180
+#: src/cafe-screensaver-dialog.c:180
 msgid "You must choose a longer password"
 msgstr "You must choose a longer password"
 
-#: src/mate-screensaver-dialog.c:181
+#: src/cafe-screensaver-dialog.c:181
 msgid "Password has been already used. Choose another."
 msgstr "Password has been already used. Choose another."
 
-#: src/mate-screensaver-dialog.c:182
+#: src/cafe-screensaver-dialog.c:182
 msgid "You must wait longer to change your password"
 msgstr "You must wait longer to change your password"
 
-#: src/mate-screensaver-dialog.c:183
+#: src/cafe-screensaver-dialog.c:183
 msgid "Sorry, passwords do not match"
 msgstr "Sorry, passwords do not match"
 
-#: src/mate-screensaver-dialog.c:254
+#: src/cafe-screensaver-dialog.c:254
 msgid "Checking..."
 msgstr "Checking..."
 
-#: src/mate-screensaver-dialog.c:300 src/gs-auth-pam.c:483
+#: src/cafe-screensaver-dialog.c:300 src/gs-auth-pam.c:483
 msgid "Authentication failed."
 msgstr "Authentication failed."
 
-#: src/mate-screensaver-preferences.c:455
+#: src/cafe-screensaver-preferences.c:455
 msgid "Blank screen"
 msgstr "Blank screen"
 
-#: src/mate-screensaver-preferences.c:461
+#: src/cafe-screensaver-preferences.c:461
 msgid "Random"
 msgstr "Random"
 
-#: src/mate-screensaver-preferences.c:947
-#: src/mate-screensaver-preferences.c:957
+#: src/cafe-screensaver-preferences.c:947
+#: src/cafe-screensaver-preferences.c:957
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/mate-screensaver-preferences.c:950
-#: src/mate-screensaver-preferences.c:959
-#: src/mate-screensaver-preferences.c:968
-#: src/mate-screensaver-preferences.c:971
-#: src/mate-screensaver-preferences.c:976
-#: src/mate-screensaver-preferences.c:979
-#: src/mate-screensaver-preferences.c:984
-#: src/mate-screensaver-preferences.c:987
+#: src/cafe-screensaver-preferences.c:950
+#: src/cafe-screensaver-preferences.c:959
+#: src/cafe-screensaver-preferences.c:968
+#: src/cafe-screensaver-preferences.c:971
+#: src/cafe-screensaver-preferences.c:976
+#: src/cafe-screensaver-preferences.c:979
+#: src/cafe-screensaver-preferences.c:984
+#: src/cafe-screensaver-preferences.c:987
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/mate-screensaver-preferences.c:953
+#: src/cafe-screensaver-preferences.c:953
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/mate-screensaver-preferences.c:956
-#: src/mate-screensaver-preferences.c:1003
-#: src/mate-screensaver-preferences.c:1016
+#: src/cafe-screensaver-preferences.c:956
+#: src/cafe-screensaver-preferences.c:1003
+#: src/cafe-screensaver-preferences.c:1016
 #, c-format
 msgid "%s %s"
 msgstr "%s %s"
 
-#: src/mate-screensaver-preferences.c:998
+#: src/cafe-screensaver-preferences.c:998
 #, c-format
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
-#: src/mate-screensaver-preferences.c:1008
-#: src/mate-screensaver-preferences.c:1021
-#: src/mate-screensaver-preferences.c:1057
+#: src/cafe-screensaver-preferences.c:1008
+#: src/cafe-screensaver-preferences.c:1021
+#: src/cafe-screensaver-preferences.c:1057
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: src/mate-screensaver-preferences.c:1072
+#: src/cafe-screensaver-preferences.c:1072
 msgid "Never"
 msgstr "Never"
 
-#: src/mate-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1554
 msgid "Could not load the main interface"
 msgstr "Could not load the main interface"
 
-#: src/mate-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1556
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Please make sure that the screensaver is properly installed"
 
-#: src/mate-screensaver.c:56
+#: src/cafe-screensaver.c:56
 msgid "Don't become a daemon"
 msgstr "Don't become a daemon"
 
-#: src/mate-screensaver.c:57
+#: src/cafe-screensaver.c:57
 msgid "Enable debugging code"
 msgstr "Enable debugging code"
 
-#: src/mate-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:5
 msgid "Launch screensaver and locker program"
 msgstr "Launch screensaver and locker program"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: src/mate-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:12
 msgid "MATE;screensaver;locker;"
 msgstr ""
 

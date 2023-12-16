@@ -16,7 +16,7 @@
     along with MATE Screensaver.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <gresources>
-  <gresource prefix="/org/mate/screensaver">
-    <file compressed="true" alias="preferences.ui">mate-screensaver-preferences.ui</file>
+  <gresource prefix="/org/cafe/screensaver">
+    <file compressed="true" alias="preferences.ui">cafe-screensaver-preferences.ui</file>
   </gresource>
 </gresources>

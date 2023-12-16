@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-screensaver package.
+# This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -11,92 +11,92 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-screensaver 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-screensaver 1.23.1\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2019-11-04 23:36+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Youngbin Han <sukso96100@gmail.com>, 2020\n"
-"Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
+"Language-Team: Korean (https://www.transifex.com/cafe/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/mate-screensaver-preferences.desktop.in:3
-#: src/mate-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Screensaver"
 msgstr "화면 보호기"
 
-#: data/mate-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:4
 msgid "Set your screensaver preferences"
 msgstr "화면 보호기를 설정합니다"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver-preferences.desktop.in:6
-#: src/mate-screensaver.desktop.in.in:7
+#: data/cafe-screensaver-preferences.desktop.in:6
+#: src/cafe-screensaver.desktop.in.in:7
 msgid "preferences-desktop-screensaver"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: data/mate-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:12
 msgid "MATE;screensaver;preferences;"
 msgstr ""
 
-#: data/mate-screensaver-preferences.ui:20
+#: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
 msgstr "화면 보호기 미리 보기"
 
-#: data/mate-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:56
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>화면 보호기 미리 보기</b>"
 
-#: data/mate-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:164
 msgid "Screensaver Preferences"
 msgstr "화면 보호기 기본 설정"
 
-#: data/mate-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:196
 msgid "Power _Management"
 msgstr "전원 관리(_M)"
 
-#: data/mate-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:212
 msgid "_Preview"
 msgstr "미리 보기(_P)"
 
-#: data/mate-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:272
 msgid "_Screensaver theme:"
 msgstr "화면 보호기 테마(_S):"
 
-#: data/mate-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:390
 msgid "Regard the computer as _idle after:"
 msgstr "다음 시간이 지나면 입력 없는 상태로 취급(_I):"
 
-#: data/mate-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:433
 msgid "_Activate screensaver when computer is idle"
 msgstr "입력이 없는 상태일 때 화면 보호기 켜기(_A)"
 
-#: data/mate-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:448
 msgid "_Lock screen when screensaver is active"
 msgstr "화면 보호기가 켜지면 화면 잠그기(_L)"
 
-#: data/mate-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:465
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>경고: 루트 사용자의 경우에는 화면을 잠그지 않습니다.</b>"
 
-#: data/mate-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:4
 msgid "Screensavers"
 msgstr "화면 보호기"
 
-#: data/mate-screensaver.directory.desktop.in:5
-#: data/org.mate.screensaver.gschema.xml.in:25
+#: data/cafe-screensaver.directory.desktop.in:5
+#: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "화면 보호기 테마"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver.directory.desktop.in:7
+#: data/cafe-screensaver.directory.desktop.in:7
 msgid "screensaver"
 msgstr ""
 
@@ -136,27 +136,27 @@ msgstr "잠금 풀기(_U)"
 msgid "<b>Leave a message for %R:</b>"
 msgstr "<b>%R에게 남길 메시지:</b>"
 
-#: data/org.mate.screensaver.gschema.xml.in:10
+#: data/org.cafe.screensaver.gschema.xml.in:10
 msgid "Activate when idle"
 msgstr "대기시 활성"
 
-#: data/org.mate.screensaver.gschema.xml.in:11
+#: data/org.cafe.screensaver.gschema.xml.in:11
 msgid "Set this to TRUE to activate the screensaver when the session is idle."
 msgstr "참이면 세션 대기시 화면 보호기를 활성화합니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:15
+#: data/org.cafe.screensaver.gschema.xml.in:15
 msgid "Lock on activation"
 msgstr "활성시 잠금"
 
-#: data/org.mate.screensaver.gschema.xml.in:16
+#: data/org.cafe.screensaver.gschema.xml.in:16
 msgid "Set this to TRUE to lock the screen when the screensaver goes active."
 msgstr "참이면 화면 보호기 활성화시 화면을 잠급니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:20
+#: data/org.cafe.screensaver.gschema.xml.in:20
 msgid "Screensaver theme selection mode"
 msgstr "화면 보호기 테마 선택 모드"
 
-#: data/org.mate.screensaver.gschema.xml.in:21
+#: data/org.cafe.screensaver.gschema.xml.in:21
 msgid ""
 "The selection mode used by screensaver. May be \"blank-only\" to enable the "
 "screensaver without using any theme on activation, \"single\" to enable "
@@ -167,7 +167,7 @@ msgstr ""
 "화면 보호기에서 쓸 선택 모드. \"blank-only\"는 테마를 쓰지 않고 화면보호기를 켭니다. \"single\"은 화면보호기에서 "
 "(\"themes\"키에서 지정한) 하나의 테마만 씁니다. \"random\"은 아무 테마나 써서 화면보호기를 켭니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:26
+#: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
 "This key specifies the list of themes to be used by the screensaver. It's "
 "ignored when \"mode\" key is \"blank-only\", should provide the theme name "
@@ -177,39 +177,39 @@ msgstr ""
 "화면 보호기에서 쓸 테마 목록이 이 키에 지정됩니다. \"mode\"키가 \"blank-only\"이면 무시됩니다. \"mode\"키가 "
 "\"single\"이면 테마 이름이, \"random\"이면 테마 목록이 지정됩니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:30
+#: data/org.cafe.screensaver.gschema.xml.in:30
 msgid "Time before power management baseline"
 msgstr "전원 관리에 들어갈 때까지 시간"
 
-#: data/org.mate.screensaver.gschema.xml.in:31
+#: data/org.cafe.screensaver.gschema.xml.in:31
 msgid ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
 msgstr "전원 관리에 신호를 보내기까지의 입력이 없는 시간 (초 단위). 이 키 값은 전원 관리 에이전트가 설정하고 관리합니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:35
+#: data/org.cafe.screensaver.gschema.xml.in:35
 msgid "Time before theme change"
 msgstr "테마 바뀌기 전 시간"
 
-#: data/org.mate.screensaver.gschema.xml.in:36
+#: data/org.cafe.screensaver.gschema.xml.in:36
 msgid "The number of minutes to run before changing the screensaver theme."
 msgstr "화면 보호기 테마가 바뀌기 전 실행 시간(분)."
 
-#: data/org.mate.screensaver.gschema.xml.in:40
+#: data/org.cafe.screensaver.gschema.xml.in:40
 msgid "Time before locking"
 msgstr "잠그기 전 시간"
 
-#: data/org.mate.screensaver.gschema.xml.in:41
+#: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
 "The number of minutes after screensaver activation before locking the "
 "screen."
 msgstr "화면 보호기가 켜진 후 화면이 잠기는데 걸리는 시간(분)."
 
-#: data/org.mate.screensaver.gschema.xml.in:45
+#: data/org.cafe.screensaver.gschema.xml.in:45
 msgid "Allow embedding a keyboard into the window"
 msgstr "키보드를 창에 포함시킬 수 있음"
 
-#: data/org.mate.screensaver.gschema.xml.in:46
+#: data/org.cafe.screensaver.gschema.xml.in:46
 msgid ""
 "Set this to TRUE to allow embedding a keyboard into the window when trying "
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
@@ -217,11 +217,11 @@ msgid ""
 msgstr ""
 "이 값이 참이면 잠금을 풀 때 키보드를 창 안에 내장합니다. \"keyboard_command\" 키도 적당한 명령어로 설정해야 합니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:50
+#: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
 msgstr "내장 키보드 명령어"
 
-#: data/org.mate.screensaver.gschema.xml.in:51
+#: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
 "set to TRUE, to embed a keyboard widget into the window. This command should"
@@ -231,11 +231,11 @@ msgstr ""
 "\"embedded_keyboard_enabled\" 키가 참이면, 키보드 위젯을 창에 집어 넣을 때 이 명령을 실행합니다. 이 명령은 "
 "XEMBED 플러그 인터페이스에 맞아야 하고 표준 출력으로 창의 XID를 출력해야 합니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:55
+#: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
 msgstr "로그아웃 허용"
 
-#: data/org.mate.screensaver.gschema.xml.in:56
+#: data/org.cafe.screensaver.gschema.xml.in:56
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
@@ -243,11 +243,11 @@ msgstr ""
 "지연 시간이 지난 후, 잠금 풀기 창에서 로그아웃 옵션을 제공하려면 이 값을 TRUE로 설정하십시오. 지연 시간 값은 "
 "\"logout_delay\" 키로 지정합니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:60
+#: data/org.cafe.screensaver.gschema.xml.in:60
 msgid "Time before logout option"
 msgstr "로그아웃 옵션 표시 전 시간"
 
-#: data/org.mate.screensaver.gschema.xml.in:61
+#: data/org.cafe.screensaver.gschema.xml.in:61
 msgid ""
 "The number of minutes after the screensaver activation before a logout "
 "option will appear in the unlock dialog. This key has effect only if the "
@@ -256,11 +256,11 @@ msgstr ""
 "화면 보호기가 켜진 후, 잠금 풀기 창에서 로그아웃 옵션이 나타나기 까지 시간. 이 키는 \"logout_enable\"키가 TRUE로 "
 "설정되어 있을 때 만 영향을 끼칩니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:65
+#: data/org.cafe.screensaver.gschema.xml.in:65
 msgid "Logout command"
 msgstr "로그아웃 명령"
 
-#: data/org.mate.screensaver.gschema.xml.in:66
+#: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
 "The command to invoke when the logout button is clicked. This command should"
 " simply log the user out without any interaction. This key has effect only "
@@ -269,29 +269,29 @@ msgstr ""
 "로그아웃 단추를 누를 때 실행할 명령. 이 명령은 아무 상호 작용없이 로그아웃 하도록 합니다. 이 키 값은 "
 "\"logout_enable\"키 값이 TRUE로 설정되어 있을 때만 영향을 끼칩니다."
 
-#: data/org.mate.screensaver.gschema.xml.in:70
+#: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
 msgstr "사용자 전환 허용"
 
-#: data/org.mate.screensaver.gschema.xml.in:71
+#: data/org.cafe.screensaver.gschema.xml.in:71
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to switch to a "
 "different user account."
 msgstr "잠금 풀기 창에서 다른 사용자 계정으로 바꾸는 옵션을 보이려면 이 값을 TRUE로 설정하십시오."
 
-#: data/org.mate.screensaver.gschema.xml.in:75
+#: data/org.cafe.screensaver.gschema.xml.in:75
 msgid "Theme for lock dialog"
 msgstr "잠금 대화상자 테마"
 
-#: data/org.mate.screensaver.gschema.xml.in:76
+#: data/org.cafe.screensaver.gschema.xml.in:76
 msgid "Theme to use for the lock dialog"
 msgstr "잠금 대화상자에 사용할 테마입니다"
 
-#: data/org.mate.screensaver.gschema.xml.in:80
+#: data/org.cafe.screensaver.gschema.xml.in:80
 msgid "Allow the session status message to be displayed"
 msgstr "세션 상태 메시지를 표시 허용"
 
-#: data/org.mate.screensaver.gschema.xml.in:81
+#: data/org.cafe.screensaver.gschema.xml.in:81
 msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "화면을 잠궜을 때 세션 상태 메시지 출력을 허용합니다."
@@ -461,273 +461,273 @@ msgstr "%s 파일은 올바른 화면 보호기 테마가 아닌 것 같습니�
 msgid "Copying file: %u of %u"
 msgstr "파일 복사 중: %2$u개 중 %1$u개"
 
-#: src/mate-screensaver-command.c:60
+#: src/cafe-screensaver-command.c:60
 msgid "Causes the screensaver to exit gracefully"
 msgstr "화면 보호기를 정상적으로 끝냅니다"
 
-#: src/mate-screensaver-command.c:64
+#: src/cafe-screensaver-command.c:64
 msgid "Query the state of the screensaver"
 msgstr "화면 보호기의 상태를 알아봅니다"
 
-#: src/mate-screensaver-command.c:68
+#: src/cafe-screensaver-command.c:68
 msgid "Query the length of time the screensaver has been active"
 msgstr "화면 보호기가 얼마나 오랜 시간동안 동작하고 있었는지 알아봅니다"
 
-#: src/mate-screensaver-command.c:72
+#: src/cafe-screensaver-command.c:72
 msgid "Tells the running screensaver process to lock the screen immediately"
 msgstr "실행 중인 화면 보호기 프로세스에게 바로 화면을 잠그도록 합니다"
 
-#: src/mate-screensaver-command.c:76
+#: src/cafe-screensaver-command.c:76
 msgid "Tells the running screensaver process to unlock the screen immediately"
 msgstr "실행 중인 화면 보호기 프로세스에게 바로 화면 보호기를 해제하도록 합니다"
 
-#: src/mate-screensaver-command.c:80
+#: src/cafe-screensaver-command.c:80
 msgid "If the screensaver is active then switch to another graphics demo"
 msgstr "화면 보호기가 실행중이면, 다른 화면이 시작하도록 합니다"
 
-#: src/mate-screensaver-command.c:84
+#: src/cafe-screensaver-command.c:84
 msgid "Turn the screensaver on (blank the screen)"
 msgstr "화면 보호기를 켭니다(빈 화면)"
 
-#: src/mate-screensaver-command.c:88
+#: src/cafe-screensaver-command.c:88
 msgid "If the screensaver is active then deactivate it (un-blank the screen)"
 msgstr "화면 보호기가 실행중이면 화면보호기를 끕니다"
 
-#: src/mate-screensaver-command.c:92
+#: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
 msgstr "실행 중인 화면 보호기를 건드려 사용자가 동작을 흉내냅니다"
 
-#: src/mate-screensaver-command.c:96
+#: src/cafe-screensaver-command.c:96
 msgid ""
 "Inhibit the screensaver from activating.  Command blocks while inhibit is "
 "active."
 msgstr "화면 보호기 동작을 막습니다.  해당 명령이 동작하는 동안 활성화되지 않습니다."
 
-#: src/mate-screensaver-command.c:100
+#: src/cafe-screensaver-command.c:100
 msgid "The calling application that is inhibiting the screensaver"
 msgstr "화면 보호기 동작을 막는 프로그램 지정"
 
-#: src/mate-screensaver-command.c:104
+#: src/cafe-screensaver-command.c:104
 msgid "The reason for inhibiting the screensaver"
 msgstr "화면 보호기를 막는 이유"
 
-#: src/mate-screensaver-command.c:108 src/mate-screensaver-dialog.c:58
-#: src/mate-screensaver.c:55
+#: src/cafe-screensaver-command.c:108 src/cafe-screensaver-dialog.c:58
+#: src/cafe-screensaver.c:55
 msgid "Version of this application"
 msgstr "이 프로그램의 버전"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 #, c-format
 msgid "The screensaver is %s\n"
 msgstr "화면 보호기는 %s 입니다\n"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "active"
 msgstr "활성화"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "inactive"
 msgstr "비활성화"
 
-#: src/mate-screensaver-command.c:373
+#: src/cafe-screensaver-command.c:373
 msgid "The screensaver is not inhibited\n"
 msgstr "화면 보호기 동작을 막지 않았습니다\n"
 
-#: src/mate-screensaver-command.c:381
+#: src/cafe-screensaver-command.c:381
 msgid "The screensaver is being inhibited by:\n"
 msgstr "화면 보호기 동작을 다음 요소가 막고 있습니다:\n"
 
-#: src/mate-screensaver-command.c:416
+#: src/cafe-screensaver-command.c:416
 #, c-format
 msgid "The screensaver has been active for %d seconds.\n"
 msgstr "화면 보호기가 %d초 동안 동작하고 있었습니다.\n"
 
-#: src/mate-screensaver-command.c:422
+#: src/cafe-screensaver-command.c:422
 msgid "The screensaver is not currently active.\n"
 msgstr "화면 보호기를 사용하지 않고 있습니다.\n"
 
-#: src/mate-screensaver-dialog.c:57
+#: src/cafe-screensaver-dialog.c:57
 msgid "Show debugging output"
 msgstr "디버깅 출력 보기"
 
-#: src/mate-screensaver-dialog.c:59
+#: src/cafe-screensaver-dialog.c:59
 msgid "Show the logout button"
 msgstr "로그아웃 단추 보이기"
 
-#: src/mate-screensaver-dialog.c:60
+#: src/cafe-screensaver-dialog.c:60
 msgid "Command to invoke from the logout button"
 msgstr "로그아웃 단추를 누를 때 실행할 명령"
 
-#: src/mate-screensaver-dialog.c:61
+#: src/cafe-screensaver-dialog.c:61
 msgid "Show the switch user button"
 msgstr "사용자 전환 단추 보이기"
 
-#: src/mate-screensaver-dialog.c:62
+#: src/cafe-screensaver-dialog.c:62
 msgid "Message to show in the dialog"
 msgstr "대화 상자에 보여줄 메시지"
 
-#: src/mate-screensaver-dialog.c:62 src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:62 src/cafe-screensaver-dialog.c:63
 msgid "MESSAGE"
 msgstr "<메시지>"
 
-#: src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:63
 msgid "Not used"
 msgstr "사용하지 않음"
 
-#: src/mate-screensaver-dialog.c:165 src/mate-screensaver-dialog.c:166
-#: src/mate-screensaver-dialog.c:167 src/gs-auth-pam.c:745
+#: src/cafe-screensaver-dialog.c:165 src/cafe-screensaver-dialog.c:166
+#: src/cafe-screensaver-dialog.c:167 src/gs-auth-pam.c:745
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: src/mate-screensaver-dialog.c:168 src/mate-screensaver-dialog.c:169
+#: src/cafe-screensaver-dialog.c:168 src/cafe-screensaver-dialog.c:169
 #: src/gs-auth-pam.c:171
 msgid "Password:"
 msgstr "암호:"
 
-#: src/mate-screensaver-dialog.c:170
+#: src/cafe-screensaver-dialog.c:170
 msgid "You are required to change your password immediately (password aged)"
 msgstr "즉시 암호를 바꿔야 합니다(암호가 오래됨)"
 
-#: src/mate-screensaver-dialog.c:171
+#: src/cafe-screensaver-dialog.c:171
 msgid "You are required to change your password immediately (root enforced)"
 msgstr "즉시 암호를 바꿔야 합니다(루트가 강제로 지정)"
 
-#: src/mate-screensaver-dialog.c:172
+#: src/cafe-screensaver-dialog.c:172
 msgid "Your account has expired; please contact your system administrator"
 msgstr "암호가 만료되었습니다. 시스템 관리자에게 연락하십시오"
 
-#: src/mate-screensaver-dialog.c:173
+#: src/cafe-screensaver-dialog.c:173
 msgid "No password supplied"
 msgstr "암호를 입력하지 않았습니다"
 
-#: src/mate-screensaver-dialog.c:174
+#: src/cafe-screensaver-dialog.c:174
 msgid "Password unchanged"
 msgstr "암호를 바꾸지 않았습니다"
 
-#: src/mate-screensaver-dialog.c:175
+#: src/cafe-screensaver-dialog.c:175
 msgid "Can not get username"
 msgstr "사용자 이름을 얻을 수 없습니다"
 
-#: src/mate-screensaver-dialog.c:176
+#: src/cafe-screensaver-dialog.c:176
 msgid "Retype new UNIX password:"
 msgstr "새 유닉스 암호를 다시 입력하십시오:"
 
-#: src/mate-screensaver-dialog.c:177
+#: src/cafe-screensaver-dialog.c:177
 msgid "Enter new UNIX password:"
 msgstr "새 유닉스 암호를 입력하십시오:"
 
-#: src/mate-screensaver-dialog.c:178
+#: src/cafe-screensaver-dialog.c:178
 msgid "(current) UNIX password:"
 msgstr "(현재) 유닉스 암호:"
 
-#: src/mate-screensaver-dialog.c:179
+#: src/cafe-screensaver-dialog.c:179
 msgid "Error while changing NIS password."
 msgstr "NIS 암호를 바꾸는 데 오류가 발생했습니다."
 
-#: src/mate-screensaver-dialog.c:180
+#: src/cafe-screensaver-dialog.c:180
 msgid "You must choose a longer password"
 msgstr "더 긴 암호를 사용해야 합니다"
 
-#: src/mate-screensaver-dialog.c:181
+#: src/cafe-screensaver-dialog.c:181
 msgid "Password has been already used. Choose another."
 msgstr "암호를 이미 사용했습니다. 다른 암호를 사용하십시오."
 
-#: src/mate-screensaver-dialog.c:182
+#: src/cafe-screensaver-dialog.c:182
 msgid "You must wait longer to change your password"
 msgstr "암호를 바꾸려면 좀 더 기다려야 합니다"
 
-#: src/mate-screensaver-dialog.c:183
+#: src/cafe-screensaver-dialog.c:183
 msgid "Sorry, passwords do not match"
 msgstr "암호가 일치하지 않습니다"
 
-#: src/mate-screensaver-dialog.c:254
+#: src/cafe-screensaver-dialog.c:254
 msgid "Checking..."
 msgstr "확인하는 중..."
 
-#: src/mate-screensaver-dialog.c:300 src/gs-auth-pam.c:483
+#: src/cafe-screensaver-dialog.c:300 src/gs-auth-pam.c:483
 msgid "Authentication failed."
 msgstr "인증이 실패했습니다."
 
-#: src/mate-screensaver-preferences.c:455
+#: src/cafe-screensaver-preferences.c:455
 msgid "Blank screen"
 msgstr "빈 화면"
 
-#: src/mate-screensaver-preferences.c:461
+#: src/cafe-screensaver-preferences.c:461
 msgid "Random"
 msgstr "아무거나"
 
-#: src/mate-screensaver-preferences.c:947
-#: src/mate-screensaver-preferences.c:957
+#: src/cafe-screensaver-preferences.c:947
+#: src/cafe-screensaver-preferences.c:957
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] ""
 
-#: src/mate-screensaver-preferences.c:950
-#: src/mate-screensaver-preferences.c:959
-#: src/mate-screensaver-preferences.c:968
-#: src/mate-screensaver-preferences.c:971
-#: src/mate-screensaver-preferences.c:976
-#: src/mate-screensaver-preferences.c:979
-#: src/mate-screensaver-preferences.c:984
-#: src/mate-screensaver-preferences.c:987
+#: src/cafe-screensaver-preferences.c:950
+#: src/cafe-screensaver-preferences.c:959
+#: src/cafe-screensaver-preferences.c:968
+#: src/cafe-screensaver-preferences.c:971
+#: src/cafe-screensaver-preferences.c:976
+#: src/cafe-screensaver-preferences.c:979
+#: src/cafe-screensaver-preferences.c:984
+#: src/cafe-screensaver-preferences.c:987
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] ""
 
-#: src/mate-screensaver-preferences.c:953
+#: src/cafe-screensaver-preferences.c:953
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] ""
 
-#: src/mate-screensaver-preferences.c:956
-#: src/mate-screensaver-preferences.c:1003
-#: src/mate-screensaver-preferences.c:1016
+#: src/cafe-screensaver-preferences.c:956
+#: src/cafe-screensaver-preferences.c:1003
+#: src/cafe-screensaver-preferences.c:1016
 #, c-format
 msgid "%s %s"
 msgstr "%s %s"
 
-#: src/mate-screensaver-preferences.c:998
+#: src/cafe-screensaver-preferences.c:998
 #, c-format
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
-#: src/mate-screensaver-preferences.c:1008
-#: src/mate-screensaver-preferences.c:1021
-#: src/mate-screensaver-preferences.c:1057
+#: src/cafe-screensaver-preferences.c:1008
+#: src/cafe-screensaver-preferences.c:1021
+#: src/cafe-screensaver-preferences.c:1057
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: src/mate-screensaver-preferences.c:1072
+#: src/cafe-screensaver-preferences.c:1072
 msgid "Never"
 msgstr "사용 안함"
 
-#: src/mate-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1554
 msgid "Could not load the main interface"
 msgstr "주 인터페이스를 불러올 수 없습니다"
 
-#: src/mate-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1556
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "화면 보호기를 올바로 설치하십시오"
 
-#: src/mate-screensaver.c:56
+#: src/cafe-screensaver.c:56
 msgid "Don't become a daemon"
 msgstr "데몬이 되지 않았습니다"
 
-#: src/mate-screensaver.c:57
+#: src/cafe-screensaver.c:57
 msgid "Enable debugging code"
 msgstr "디버깅 코드 사용"
 
-#: src/mate-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:5
 msgid "Launch screensaver and locker program"
 msgstr "화면 보호기 및 잠금 프로그램 실행"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: src/mate-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:12
 msgid "MATE;screensaver;locker;"
 msgstr ""
 

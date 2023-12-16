@@ -43,7 +43,7 @@
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
 
-#include "libmate-desktop/mate-rr.h"
+#include "libcafe-desktop/cafe-rr.h"
 
 /* XFree86 4.x+ Gamma fading */
 
@@ -478,9 +478,9 @@ static gboolean xrandr_fade_setup (GSFade *fade)
 		return TRUE;
 
 	/* refresh the screen info */
-	mate_rr_screen_refresh (screen_priv->rrscreen, NULL);
+	cafe_rr_screen_refresh (screen_priv->rrscreen, NULL);
 
-	crtcs = mate_rr_screen_list_crtcs (screen_priv->rrscreen);
+	crtcs = cafe_rr_screen_list_crtcs (screen_priv->rrscreen);
 	while (*crtcs)
 	{
 		crtc_count++;
@@ -491,7 +491,7 @@ static gboolean xrandr_fade_setup (GSFade *fade)
 	screen_priv->num_ramps = crtc_count;
 
 	crtc_count = 0;
-	crtcs = mate_rr_screen_list_crtcs (screen_priv->rrscreen);
+	crtcs = cafe_rr_screen_list_crtcs (screen_priv->rrscreen);
 	while (*crtcs)
 	{
 		crtc = *crtcs;
@@ -499,7 +499,7 @@ static gboolean xrandr_fade_setup (GSFade *fade)
 		info = &screen_priv->info[crtc_count];
 
 		/* if no mode ignore crtc */
-		if (!mate_rr_crtc_get_current_mode (crtc))
+		if (!cafe_rr_crtc_get_current_mode (crtc))
 		{
 			info->size = 0;
 			info->r = NULL;
@@ -508,7 +508,7 @@ static gboolean xrandr_fade_setup (GSFade *fade)
 		}
 		else
 		{
-			res = mate_rr_crtc_get_gamma (crtc, &info->size,
+			res = cafe_rr_crtc_get_gamma (crtc, &info->size,
 			                              &info->r, &info->g,
 			                              &info->b);
 			if (res == FALSE)
@@ -553,7 +553,7 @@ static void xrandr_crtc_whack_gamma (MateRRCrtc *crtc,
 		b[i] = gamma_info->b[i] * ratio;
 	}
 
-	mate_rr_crtc_set_gamma (crtc, gamma_info->size,
+	cafe_rr_crtc_set_gamma (crtc, gamma_info->size,
 	                        r, g, b);
 	g_free (r);
 	g_free (g);
@@ -573,7 +573,7 @@ static gboolean xrandr_fade_set_alpha_gamma (GSFade *fade,
 	if (!screen_priv->info)
 		return FALSE;
 
-	crtcs = mate_rr_screen_list_crtcs (screen_priv->rrscreen);
+	crtcs = cafe_rr_screen_list_crtcs (screen_priv->rrscreen);
 	i = 0;
 
 	while (*crtcs)
@@ -595,7 +595,7 @@ check_randr_extension (GSFade *fade)
 
 	screen_priv = &fade->priv->screen_priv;
 
-	screen_priv->rrscreen = mate_rr_screen_new (screen,
+	screen_priv->rrscreen = cafe_rr_screen_new (screen,
 	                        NULL);
 	if (!screen_priv->rrscreen)
 	{

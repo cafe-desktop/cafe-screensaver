@@ -4,13 +4,13 @@ SUBDIRS =			\
 NULL =
 
 man_MANS = 				\
-	mate-screensaver.1		\
-	mate-screensaver-command.1	\
-	mate-screensaver-preferences.1	\
+	cafe-screensaver.1		\
+	cafe-screensaver-command.1	\
+	cafe-screensaver-preferences.1	\
 	$(NULL)
 
 desktopdir = $(datadir)/applications
-desktop_in_files = mate-screensaver-preferences.desktop.in
+desktop_in_files = cafe-screensaver-preferences.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 $(desktop_DATA): $(desktop_in_files)
@@ -18,7 +18,7 @@ $(desktop_DATA): $(desktop_in_files)
 
 directorydir = $(datadir)/desktop-directories
 directory_in_files =                            \
-	mate-screensaver.directory.desktop.in		\
+	cafe-screensaver.directory.desktop.in		\
 	$(NULL)
 directory_DATA = $(directory_in_files:.directory.desktop.in=.directory)
 
@@ -27,7 +27,7 @@ $(directory_DATA): $(directory_in_files)
 
 menudir = $(sysconfdir)/xdg/menus
 menu_DATA =					\
-	mate-screensavers.menu			\
+	cafe-screensavers.menu			\
 	$(NULL)
 
 gtkbuilderdir = $(pkgdatadir)
@@ -36,17 +36,17 @@ gtkbuilder_DATA = 					\
 	$(NULL)
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = mate-screensaver.pc
+pkgconfig_DATA = cafe-screensaver.pc
 
 dbussessionservicedir = $(DBUS_SESSION_SERVICE_DIR)
-dbussessionservice_DATA = org.mate.ScreenSaver.service
+dbussessionservice_DATA = org.cafe.ScreenSaver.service
 
 @GSETTINGS_RULES@
 
-gsettingsschema_in_files = org.mate.screensaver.gschema.xml.in
+gsettingsschema_in_files = org.cafe.screensaver.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 
-org.mate.screensaver.gschema.xml: org.mate.screensaver.gschema.xml.in
+org.cafe.screensaver.gschema.xml: org.cafe.screensaver.gschema.xml.in
 	$(AM_V_GEN) sed -e 's|@datadir[@]|$(datadir)|g' $< > $@
 
 EXTRA_DIST = 				\
@@ -55,11 +55,11 @@ EXTRA_DIST = 				\
 	$(directory_in_files)		\
 	$(gtkbuilder_DATA)		\
 	$(man_MANS)			\
-	mate-screensaver		\
-	mate-screensaver.pc.in		\
-	mate-screensaver-preferences.ui \
-	org.mate.screensaver.gresource.xml \
-	org.mate.ScreenSaver.service.in \
+	cafe-screensaver		\
+	cafe-screensaver.pc.in		\
+	cafe-screensaver-preferences.ui \
+	org.cafe.screensaver.gresource.xml \
+	org.cafe.ScreenSaver.service.in \
 	xscreensaver-config.xsl		\
 	migrate-xscreensaver-config.sh	\
 	$(NULL)
@@ -83,15 +83,15 @@ install-data-hook:
 		chmod 755 $(DESTDIR)$(PAM_PREFIX)/pam.d; \
 	   fi; \
 	   if test $$system = Linux; then \
-		if test '!' -f $(DESTDIR)$(PAM_PREFIX)/pam.d/mate-screensaver; then \
-		     $(INSTALL_DATA) mate-screensaver $(DESTDIR)$(PAM_PREFIX)/pam.d/mate-screensaver; \
+		if test '!' -f $(DESTDIR)$(PAM_PREFIX)/pam.d/cafe-screensaver; then \
+		     $(INSTALL_DATA) cafe-screensaver $(DESTDIR)$(PAM_PREFIX)/pam.d/cafe-screensaver; \
 		fi; \
 		if test "x$(PAM_PREFIX)" != "x/etc/pam.d"; then \
 	             echo "***" ; \
-	             echo "***  Warning: mate-screensaver has been compiled with support for" ; \
+	             echo "***  Warning: cafe-screensaver has been compiled with support for" ; \
 	             echo "***           Pluggable Authentication Modules (PAM).  However, you may need to" ; \
-	             echo "***           manually install $(PAM_PREFIX)/pam.d/mate-screensaver" ; \
-	             echo "***           to /etc/pam.d/mate-screensaver.  Otherwise, unlocking might" ; \
+	             echo "***           manually install $(PAM_PREFIX)/pam.d/cafe-screensaver" ; \
+	             echo "***           to /etc/pam.d/cafe-screensaver.  Otherwise, unlocking might" ; \
 	             echo "***           not work." ; \
 	             echo "***" ; \
 	             echo "***           Note: If you are using SuSE/Novell you may have to modify this file." ; \
@@ -100,9 +100,9 @@ install-data-hook:
 	   fi; \
 	   if test $$system = SunOS; then \
 	        echo "***" ; \
-	        echo "***  Warning: mate-screensaver has been compiled with support for" ; \
+	        echo "***  Warning: cafe-screensaver has been compiled with support for" ; \
 	        echo "***           Pluggable Authentication Modules (PAM).  However, you" ; \
-	        echo "***           need to manually add authentication for mate-screensaver in" ; \
+	        echo "***           need to manually add authentication for cafe-screensaver in" ; \
 	        echo "***           $(PAM_PREFIX)/pam.conf or /etc/pam.conf." ; \
 	        echo "***           Otherwise, unlocking might not work." ; \
 	        echo "***" ; \

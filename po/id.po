@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-screensaver package.
+# This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -13,92 +13,92 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-screensaver 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-screensaver 1.23.1\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2019-11-04 23:36+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
-"Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
+"Language-Team: Indonesian (https://www.transifex.com/cafe/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/mate-screensaver-preferences.desktop.in:3
-#: src/mate-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Screensaver"
 msgstr "Screensaver"
 
-#: data/mate-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:4
 msgid "Set your screensaver preferences"
 msgstr "Tentukan setingan screensaver Anda"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver-preferences.desktop.in:6
-#: src/mate-screensaver.desktop.in.in:7
+#: data/cafe-screensaver-preferences.desktop.in:6
+#: src/cafe-screensaver.desktop.in.in:7
 msgid "preferences-desktop-screensaver"
 msgstr "preferences-desktop-screensaver"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: data/mate-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:12
 msgid "MATE;screensaver;preferences;"
 msgstr "MATE;cuplikan layar;tangkapan layar;preferensi;"
 
-#: data/mate-screensaver-preferences.ui:20
+#: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
 msgstr "Preview Screensaver"
 
-#: data/mate-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:56
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Preview screensaver</b>"
 
-#: data/mate-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:164
 msgid "Screensaver Preferences"
 msgstr "Setingan Screensaver"
 
-#: data/mate-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:196
 msgid "Power _Management"
 msgstr "_Manajemen Daya"
 
-#: data/mate-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:212
 msgid "_Preview"
 msgstr "_Preview"
 
-#: data/mate-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:272
 msgid "_Screensaver theme:"
 msgstr "Tema _screensaver:"
 
-#: data/mate-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:390
 msgid "Regard the computer as _idle after:"
 msgstr "Anggap komputer menganggur _setelah:"
 
-#: data/mate-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:433
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Aktifkan screensaver ketika komputer menganggur"
 
-#: data/mate-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:448
 msgid "_Lock screen when screensaver is active"
 msgstr "Kunci _layar ketika screensaver aktif"
 
-#: data/mate-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:465
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Peringatan: layar tidak akan terkunci untuk pengguna root.</b>"
 
-#: data/mate-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:4
 msgid "Screensavers"
 msgstr "Screensaver"
 
-#: data/mate-screensaver.directory.desktop.in:5
-#: data/org.mate.screensaver.gschema.xml.in:25
+#: data/cafe-screensaver.directory.desktop.in:5
+#: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "Tema screensaver"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: data/mate-screensaver.directory.desktop.in:7
+#: data/cafe-screensaver.directory.desktop.in:7
 msgid "screensaver"
 msgstr "screensaver"
 
@@ -138,30 +138,30 @@ msgstr "B_uka kunci"
 msgid "<b>Leave a message for %R:</b>"
 msgstr "<b>Tinggalkan pesan untuk %R:</b>"
 
-#: data/org.mate.screensaver.gschema.xml.in:10
+#: data/org.cafe.screensaver.gschema.xml.in:10
 msgid "Activate when idle"
 msgstr "Aktifkan ketika menganggur"
 
-#: data/org.mate.screensaver.gschema.xml.in:11
+#: data/org.cafe.screensaver.gschema.xml.in:11
 msgid "Set this to TRUE to activate the screensaver when the session is idle."
 msgstr ""
 "Buat menjadi TRUE untuk mengaktifkan screensaver ketika sesi sedang "
 "menganggur."
 
-#: data/org.mate.screensaver.gschema.xml.in:15
+#: data/org.cafe.screensaver.gschema.xml.in:15
 msgid "Lock on activation"
 msgstr "Kunci pada aktivasi"
 
-#: data/org.mate.screensaver.gschema.xml.in:16
+#: data/org.cafe.screensaver.gschema.xml.in:16
 msgid "Set this to TRUE to lock the screen when the screensaver goes active."
 msgstr ""
 "Buat menjadi TRUE untuk mengunci layar ketika screensaver sedang aktif."
 
-#: data/org.mate.screensaver.gschema.xml.in:20
+#: data/org.cafe.screensaver.gschema.xml.in:20
 msgid "Screensaver theme selection mode"
 msgstr "Mode pemilihan tema screensaver"
 
-#: data/org.mate.screensaver.gschema.xml.in:21
+#: data/org.cafe.screensaver.gschema.xml.in:21
 msgid ""
 "The selection mode used by screensaver. May be \"blank-only\" to enable the "
 "screensaver without using any theme on activation, \"single\" to enable "
@@ -175,7 +175,7 @@ msgstr ""
 "saat aktifasi (terutama pada kunci \"tema\"), dan \"random\" untuk "
 "mengaktifkan screensaver menggunakan tema acak pada saat aktifasi."
 
-#: data/org.mate.screensaver.gschema.xml.in:26
+#: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
 "This key specifies the list of themes to be used by the screensaver. It's "
 "ignored when \"mode\" key is \"blank-only\", should provide the theme name "
@@ -187,11 +187,11 @@ msgstr ""
 "ketika \"mode\" adalah \"single\", dan menyediakan daftar tema ketika "
 "\"mode\" adalah \"random\"."
 
-#: data/org.mate.screensaver.gschema.xml.in:30
+#: data/org.cafe.screensaver.gschema.xml.in:30
 msgid "Time before power management baseline"
 msgstr "Waktu sebelum manajemen daya dasar"
 
-#: data/org.mate.screensaver.gschema.xml.in:31
+#: data/org.cafe.screensaver.gschema.xml.in:31
 msgid ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
@@ -199,29 +199,29 @@ msgstr ""
 "Jumlah detik tidak aktif sebelum pemberitahuan kepada manajemen daya. Kunci "
 "ini diatur dan dikelola oleh agen sesi manajemen daya."
 
-#: data/org.mate.screensaver.gschema.xml.in:35
+#: data/org.cafe.screensaver.gschema.xml.in:35
 msgid "Time before theme change"
 msgstr "Waktu sebelum tema berganti"
 
-#: data/org.mate.screensaver.gschema.xml.in:36
+#: data/org.cafe.screensaver.gschema.xml.in:36
 msgid "The number of minutes to run before changing the screensaver theme."
 msgstr "Berapa menit menunggu sebelum mengganti tema screensaver."
 
-#: data/org.mate.screensaver.gschema.xml.in:40
+#: data/org.cafe.screensaver.gschema.xml.in:40
 msgid "Time before locking"
 msgstr "Waktu sebelum penguncian"
 
-#: data/org.mate.screensaver.gschema.xml.in:41
+#: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
 "The number of minutes after screensaver activation before locking the "
 "screen."
 msgstr "Berapa menit setelah aktivasi screensaver sebelum mengunci layar."
 
-#: data/org.mate.screensaver.gschema.xml.in:45
+#: data/org.cafe.screensaver.gschema.xml.in:45
 msgid "Allow embedding a keyboard into the window"
 msgstr "Izinkan meyambungkan keyboard pada jendela"
 
-#: data/org.mate.screensaver.gschema.xml.in:46
+#: data/org.cafe.screensaver.gschema.xml.in:46
 msgid ""
 "Set this to TRUE to allow embedding a keyboard into the window when trying "
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
@@ -231,11 +231,11 @@ msgstr ""
 "jendela ketika membuka kunci. kunci \"keyboard_command\" harus diatur dengan"
 " perintah yang sesuai."
 
-#: data/org.mate.screensaver.gschema.xml.in:50
+#: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
 msgstr "Perintah penyambungan keyboard"
 
-#: data/org.mate.screensaver.gschema.xml.in:51
+#: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
 "set to TRUE, to embed a keyboard widget into the window. This command should"
@@ -247,11 +247,11 @@ msgstr ""
 "menerapkan interface XEMBED dan menghasilkan jendela XID pada keluaran "
 "standar."
 
-#: data/org.mate.screensaver.gschema.xml.in:55
+#: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
 msgstr "Boleh keluar"
 
-#: data/org.mate.screensaver.gschema.xml.in:56
+#: data/org.cafe.screensaver.gschema.xml.in:56
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
@@ -260,11 +260,11 @@ msgstr ""
 "untuk dapat keluar setelah jeda. Jeda waktu ditentukan pada kunci "
 "\"logout_delay\"."
 
-#: data/org.mate.screensaver.gschema.xml.in:60
+#: data/org.cafe.screensaver.gschema.xml.in:60
 msgid "Time before logout option"
 msgstr "Waktu sebelum pilihan keluar"
 
-#: data/org.mate.screensaver.gschema.xml.in:61
+#: data/org.cafe.screensaver.gschema.xml.in:61
 msgid ""
 "The number of minutes after the screensaver activation before a logout "
 "option will appear in the unlock dialog. This key has effect only if the "
@@ -274,11 +274,11 @@ msgstr ""
 "dialog buka kunci. Kunci ini hanya berlaku jika \"logout_enable\" diatur ke "
 "TRUE."
 
-#: data/org.mate.screensaver.gschema.xml.in:65
+#: data/org.cafe.screensaver.gschema.xml.in:65
 msgid "Logout command"
 msgstr "Perintah keluar"
 
-#: data/org.mate.screensaver.gschema.xml.in:66
+#: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
 "The command to invoke when the logout button is clicked. This command should"
 " simply log the user out without any interaction. This key has effect only "
@@ -288,11 +288,11 @@ msgstr ""
 "memudahkan pengguna untuk logout tanpa adanya interaksi. kunci ini hanya "
 "akan berlaku jika \"logout_enable\" diatur ke TRUE"
 
-#: data/org.mate.screensaver.gschema.xml.in:70
+#: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
 msgstr "Boleh pindah pengguna"
 
-#: data/org.mate.screensaver.gschema.xml.in:71
+#: data/org.cafe.screensaver.gschema.xml.in:71
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to switch to a "
 "different user account."
@@ -300,19 +300,19 @@ msgstr ""
 "Atur ke TRUE untuk menawarkan pilihan dalam dialog buka kunci untuk "
 "mengganti pengguna."
 
-#: data/org.mate.screensaver.gschema.xml.in:75
+#: data/org.cafe.screensaver.gschema.xml.in:75
 msgid "Theme for lock dialog"
 msgstr "Tema untuk dialog penguncian"
 
-#: data/org.mate.screensaver.gschema.xml.in:76
+#: data/org.cafe.screensaver.gschema.xml.in:76
 msgid "Theme to use for the lock dialog"
 msgstr "Tema yang digunakan untuk dialog penguncian"
 
-#: data/org.mate.screensaver.gschema.xml.in:80
+#: data/org.cafe.screensaver.gschema.xml.in:80
 msgid "Allow the session status message to be displayed"
 msgstr "Perbolehkan ditampilkannya pesan status sesi"
 
-#: data/org.mate.screensaver.gschema.xml.in:81
+#: data/org.cafe.screensaver.gschema.xml.in:81
 msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Perbolehkan ditampilkannya pesan status sesi ketika layar terkunci."
@@ -483,47 +483,47 @@ msgstr "%s sepertinya bukan merupakan tema screensaver yang valid."
 msgid "Copying file: %u of %u"
 msgstr "Menyalin berkas: %u dari %u"
 
-#: src/mate-screensaver-command.c:60
+#: src/cafe-screensaver-command.c:60
 msgid "Causes the screensaver to exit gracefully"
 msgstr "Menyebabkan screensaver keluar dengan baik"
 
-#: src/mate-screensaver-command.c:64
+#: src/cafe-screensaver-command.c:64
 msgid "Query the state of the screensaver"
 msgstr "Query bagian dari screensaver"
 
-#: src/mate-screensaver-command.c:68
+#: src/cafe-screensaver-command.c:68
 msgid "Query the length of time the screensaver has been active"
 msgstr "Simpan lama aktif dari screensaver "
 
-#: src/mate-screensaver-command.c:72
+#: src/cafe-screensaver-command.c:72
 msgid "Tells the running screensaver process to lock the screen immediately"
 msgstr "Meminta proses screensaver untuk mengunci layar dengan segera"
 
-#: src/mate-screensaver-command.c:76
+#: src/cafe-screensaver-command.c:76
 msgid "Tells the running screensaver process to unlock the screen immediately"
 msgstr ""
 "Memberitahu proses screensaver yang sedang berjalan untuk membuka kunci "
 "layar seketika"
 
-#: src/mate-screensaver-command.c:80
+#: src/cafe-screensaver-command.c:80
 msgid "If the screensaver is active then switch to another graphics demo"
 msgstr "Screensaver aktif dan pindah ke demo grafis yang lain"
 
-#: src/mate-screensaver-command.c:84
+#: src/cafe-screensaver-command.c:84
 msgid "Turn the screensaver on (blank the screen)"
 msgstr "Hidupkan screensaver (kosongkan layar)"
 
-#: src/mate-screensaver-command.c:88
+#: src/cafe-screensaver-command.c:88
 msgid "If the screensaver is active then deactivate it (un-blank the screen)"
 msgstr ""
 "Screensavernya aktif dan kemudian dinonaktifkan (tidak kosongkan layar)"
 
-#: src/mate-screensaver-command.c:92
+#: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
 msgstr ""
 "Colek screensaver yang berjalan untuk menyimulasikan aktivitas pengguna"
 
-#: src/mate-screensaver-command.c:96
+#: src/cafe-screensaver-command.c:96
 msgid ""
 "Inhibit the screensaver from activating.  Command blocks while inhibit is "
 "active."
@@ -531,233 +531,233 @@ msgstr ""
 "Halangi screensaver dari pengaktifan. Perintah yang diblok ketika "
 "penghalangan aktif."
 
-#: src/mate-screensaver-command.c:100
+#: src/cafe-screensaver-command.c:100
 msgid "The calling application that is inhibiting the screensaver"
 msgstr "Aplikasi yang menghalangi screensaver"
 
-#: src/mate-screensaver-command.c:104
+#: src/cafe-screensaver-command.c:104
 msgid "The reason for inhibiting the screensaver"
 msgstr "Alasan penghalangan screensaver"
 
-#: src/mate-screensaver-command.c:108 src/mate-screensaver-dialog.c:58
-#: src/mate-screensaver.c:55
+#: src/cafe-screensaver-command.c:108 src/cafe-screensaver-dialog.c:58
+#: src/cafe-screensaver.c:55
 msgid "Version of this application"
 msgstr "Versi dari aplikasi ini"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 #, c-format
 msgid "The screensaver is %s\n"
 msgstr "Screensaver adalah %s\n"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "active"
 msgstr "aktif"
 
-#: src/mate-screensaver-command.c:357
+#: src/cafe-screensaver-command.c:357
 msgid "inactive"
 msgstr "tidak aktif"
 
-#: src/mate-screensaver-command.c:373
+#: src/cafe-screensaver-command.c:373
 msgid "The screensaver is not inhibited\n"
 msgstr "Screensaver tidak dihalangi ⏎\n"
 
-#: src/mate-screensaver-command.c:381
+#: src/cafe-screensaver-command.c:381
 msgid "The screensaver is being inhibited by:\n"
 msgstr "Screensaver dihalangi oleh :⏎\n"
 
-#: src/mate-screensaver-command.c:416
+#: src/cafe-screensaver-command.c:416
 #, c-format
 msgid "The screensaver has been active for %d seconds.\n"
 msgstr "Screensaver sudah aktif selama %d detik.⏎\n"
 
-#: src/mate-screensaver-command.c:422
+#: src/cafe-screensaver-command.c:422
 msgid "The screensaver is not currently active.\n"
 msgstr "Screensaver sedang tidak aktif.\n"
 
-#: src/mate-screensaver-dialog.c:57
+#: src/cafe-screensaver-dialog.c:57
 msgid "Show debugging output"
 msgstr "Tampilkan hasil pencarian kesalahan"
 
-#: src/mate-screensaver-dialog.c:59
+#: src/cafe-screensaver-dialog.c:59
 msgid "Show the logout button"
 msgstr "Tampilkan tombol keluar"
 
-#: src/mate-screensaver-dialog.c:60
+#: src/cafe-screensaver-dialog.c:60
 msgid "Command to invoke from the logout button"
 msgstr "Perintah untuk dilaksanakan dari tombol keluar"
 
-#: src/mate-screensaver-dialog.c:61
+#: src/cafe-screensaver-dialog.c:61
 msgid "Show the switch user button"
 msgstr "Tampilkan tombol pindah pengguna"
 
-#: src/mate-screensaver-dialog.c:62
+#: src/cafe-screensaver-dialog.c:62
 msgid "Message to show in the dialog"
 msgstr "Pesan yang ditampilkan pada dialog"
 
-#: src/mate-screensaver-dialog.c:62 src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:62 src/cafe-screensaver-dialog.c:63
 msgid "MESSAGE"
 msgstr "PESAN"
 
-#: src/mate-screensaver-dialog.c:63
+#: src/cafe-screensaver-dialog.c:63
 msgid "Not used"
 msgstr "Tidak digunakan"
 
-#: src/mate-screensaver-dialog.c:165 src/mate-screensaver-dialog.c:166
-#: src/mate-screensaver-dialog.c:167 src/gs-auth-pam.c:745
+#: src/cafe-screensaver-dialog.c:165 src/cafe-screensaver-dialog.c:166
+#: src/cafe-screensaver-dialog.c:167 src/gs-auth-pam.c:745
 msgid "Username:"
 msgstr "Pengguna:"
 
-#: src/mate-screensaver-dialog.c:168 src/mate-screensaver-dialog.c:169
+#: src/cafe-screensaver-dialog.c:168 src/cafe-screensaver-dialog.c:169
 #: src/gs-auth-pam.c:171
 msgid "Password:"
 msgstr "Kata sandi:"
 
-#: src/mate-screensaver-dialog.c:170
+#: src/cafe-screensaver-dialog.c:170
 msgid "You are required to change your password immediately (password aged)"
 msgstr ""
 "Anda diharuskan mengganti kata sandi Anda sekarang (kata sandi sudah usang)"
 
-#: src/mate-screensaver-dialog.c:171
+#: src/cafe-screensaver-dialog.c:171
 msgid "You are required to change your password immediately (root enforced)"
 msgstr "Anda diharuskan mengganti kata sandi Anda segera (root·enforced)"
 
-#: src/mate-screensaver-dialog.c:172
+#: src/cafe-screensaver-dialog.c:172
 msgid "Your account has expired; please contact your system administrator"
 msgstr ""
 "Account Anda sudah kadaluarsa, silahkan hubungi system administrator Anda"
 
-#: src/mate-screensaver-dialog.c:173
+#: src/cafe-screensaver-dialog.c:173
 msgid "No password supplied"
 msgstr "Tidak ada kata sandi diberikan"
 
-#: src/mate-screensaver-dialog.c:174
+#: src/cafe-screensaver-dialog.c:174
 msgid "Password unchanged"
 msgstr "Kata sandi tidak berubah"
 
-#: src/mate-screensaver-dialog.c:175
+#: src/cafe-screensaver-dialog.c:175
 msgid "Can not get username"
 msgstr "Tidak mendapatkan nama pengguna"
 
-#: src/mate-screensaver-dialog.c:176
+#: src/cafe-screensaver-dialog.c:176
 msgid "Retype new UNIX password:"
 msgstr "Ketik ulang kata sandi UNIX baru:"
 
-#: src/mate-screensaver-dialog.c:177
+#: src/cafe-screensaver-dialog.c:177
 msgid "Enter new UNIX password:"
 msgstr "Berikan kata sandi UNIX baru:"
 
-#: src/mate-screensaver-dialog.c:178
+#: src/cafe-screensaver-dialog.c:178
 msgid "(current) UNIX password:"
 msgstr "Kata sandi UNIX (saat ini):"
 
-#: src/mate-screensaver-dialog.c:179
+#: src/cafe-screensaver-dialog.c:179
 msgid "Error while changing NIS password."
 msgstr "Kesalahan ketika mengganti kata sandi NIS."
 
-#: src/mate-screensaver-dialog.c:180
+#: src/cafe-screensaver-dialog.c:180
 msgid "You must choose a longer password"
 msgstr "Anda harus memilih kata sandi lebih panjang"
 
-#: src/mate-screensaver-dialog.c:181
+#: src/cafe-screensaver-dialog.c:181
 msgid "Password has been already used. Choose another."
 msgstr "Kata sandi sudah dipergunakan. Pilih yang lain."
 
-#: src/mate-screensaver-dialog.c:182
+#: src/cafe-screensaver-dialog.c:182
 msgid "You must wait longer to change your password"
 msgstr "Anda harus menunggu lebih lama untuk mengganti kata sandi"
 
-#: src/mate-screensaver-dialog.c:183
+#: src/cafe-screensaver-dialog.c:183
 msgid "Sorry, passwords do not match"
 msgstr "Maaf, kata sandi tidak cocok"
 
-#: src/mate-screensaver-dialog.c:254
+#: src/cafe-screensaver-dialog.c:254
 msgid "Checking..."
 msgstr "Memeriksa..."
 
-#: src/mate-screensaver-dialog.c:300 src/gs-auth-pam.c:483
+#: src/cafe-screensaver-dialog.c:300 src/gs-auth-pam.c:483
 msgid "Authentication failed."
 msgstr "Autentikasi gagal."
 
-#: src/mate-screensaver-preferences.c:455
+#: src/cafe-screensaver-preferences.c:455
 msgid "Blank screen"
 msgstr "Layar kosong"
 
-#: src/mate-screensaver-preferences.c:461
+#: src/cafe-screensaver-preferences.c:461
 msgid "Random"
 msgstr "Acak"
 
-#: src/mate-screensaver-preferences.c:947
-#: src/mate-screensaver-preferences.c:957
+#: src/cafe-screensaver-preferences.c:947
+#: src/cafe-screensaver-preferences.c:957
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d jam"
 
-#: src/mate-screensaver-preferences.c:950
-#: src/mate-screensaver-preferences.c:959
-#: src/mate-screensaver-preferences.c:968
-#: src/mate-screensaver-preferences.c:971
-#: src/mate-screensaver-preferences.c:976
-#: src/mate-screensaver-preferences.c:979
-#: src/mate-screensaver-preferences.c:984
-#: src/mate-screensaver-preferences.c:987
+#: src/cafe-screensaver-preferences.c:950
+#: src/cafe-screensaver-preferences.c:959
+#: src/cafe-screensaver-preferences.c:968
+#: src/cafe-screensaver-preferences.c:971
+#: src/cafe-screensaver-preferences.c:976
+#: src/cafe-screensaver-preferences.c:979
+#: src/cafe-screensaver-preferences.c:984
+#: src/cafe-screensaver-preferences.c:987
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d menit"
 
-#: src/mate-screensaver-preferences.c:953
+#: src/cafe-screensaver-preferences.c:953
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d detik"
 
-#: src/mate-screensaver-preferences.c:956
-#: src/mate-screensaver-preferences.c:1003
-#: src/mate-screensaver-preferences.c:1016
+#: src/cafe-screensaver-preferences.c:956
+#: src/cafe-screensaver-preferences.c:1003
+#: src/cafe-screensaver-preferences.c:1016
 #, c-format
 msgid "%s %s"
 msgstr "%s %s"
 
-#: src/mate-screensaver-preferences.c:998
+#: src/cafe-screensaver-preferences.c:998
 #, c-format
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
-#: src/mate-screensaver-preferences.c:1008
-#: src/mate-screensaver-preferences.c:1021
-#: src/mate-screensaver-preferences.c:1057
+#: src/cafe-screensaver-preferences.c:1008
+#: src/cafe-screensaver-preferences.c:1021
+#: src/cafe-screensaver-preferences.c:1057
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: src/mate-screensaver-preferences.c:1072
+#: src/cafe-screensaver-preferences.c:1072
 msgid "Never"
 msgstr "Tak pernah"
 
-#: src/mate-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1554
 msgid "Could not load the main interface"
 msgstr "Tidak dapat memuat antarmuka utama"
 
-#: src/mate-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1556
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Coba pastikan bahwa screensaver telah terpasang dengan benar"
 
-#: src/mate-screensaver.c:56
+#: src/cafe-screensaver.c:56
 msgid "Don't become a daemon"
 msgstr "Jangan menjadi daemon"
 
-#: src/mate-screensaver.c:57
+#: src/cafe-screensaver.c:57
 msgid "Enable debugging code"
 msgstr "Aktifkan kode pencarian kesalahan"
 
-#: src/mate-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:5
 msgid "Launch screensaver and locker program"
 msgstr "Luncurkan program screensaver dan pengunci."
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: src/mate-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:12
 msgid "MATE;screensaver;locker;"
 msgstr "MATE;screensaver;pengunci;"
 

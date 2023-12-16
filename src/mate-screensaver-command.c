@@ -33,9 +33,9 @@
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
 
-#define GS_SERVICE   "org.mate.ScreenSaver"
-#define GS_PATH      "/org/mate/ScreenSaver"
-#define GS_INTERFACE "org.mate.ScreenSaver"
+#define GS_SERVICE   "org.cafe.ScreenSaver"
+#define GS_PATH      "/org/cafe/ScreenSaver"
+#define GS_INTERFACE "org.cafe.ScreenSaver"
 
 static gboolean do_quit       = FALSE;
 static gboolean do_lock       = FALSE;
