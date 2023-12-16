@@ -2,36 +2,36 @@
 <!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="ctk+" version="3.14"/>
-  <object class="GtkFrame" id="lock-dialog">
+  <object class="CtkFrame" id="lock-dialog">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="label_xalign">0</property>
     <property name="shadow_type">out</property>
     <child>
-      <object class="GtkBox" id="lock-box">
+      <object class="CtkBox" id="lock-box">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="border_width">30</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkNotebook" id="notebook">
+          <object class="CtkNotebook" id="notebook">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="show_tabs">False</property>
             <property name="show_border">False</property>
             <child>
-              <object class="GtkBox" id="vbox2">
+              <object class="CtkBox" id="vbox2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">12</property>
                 <child>
-                  <object class="GtkBox" id="vbox4">
+                  <object class="CtkBox" id="vbox4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkLabel" id="auth-time-label">
+                      <object class="CtkLabel" id="auth-time-label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label">&lt;span size="xx-large" weight="ultrabold"&gt;%s&lt;/span&gt;</property>
@@ -44,7 +44,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="auth-date-label">
+                      <object class="CtkLabel" id="auth-date-label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label">&lt;span size="large"&gt;%s&lt;/span&gt;</property>
@@ -64,7 +64,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkImage" id="auth-face-image">
+                  <object class="CtkImage" id="auth-face-image">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="valign">end</property>
@@ -76,12 +76,12 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="vbox3">
+                  <object class="CtkBox" id="vbox3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkLabel" id="auth-realname-label">
+                      <object class="CtkLabel" id="auth-realname-label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label">&lt;span size="x-large"&gt;%R&lt;/span&gt;</property>
@@ -94,7 +94,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="auth-username-label">
+                      <object class="CtkLabel" id="auth-username-label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">&lt;span size="small"&gt;%U on %h&lt;/span&gt;</property>
@@ -114,7 +114,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="status-message-label">
+                  <object class="CtkLabel" id="status-message-label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="wrap">True</property>
@@ -126,17 +126,17 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="auth-prompt-box">
+                  <object class="CtkBox" id="auth-prompt-box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkBox" id="hbox1">
+                      <object class="CtkBox" id="hbox1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="spacing">6</property>
                         <child>
-                          <object class="GtkLabel" id="auth-prompt-label">
+                          <object class="CtkLabel" id="auth-prompt-label">
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
                           </object>
@@ -147,7 +147,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkEntry" id="auth-prompt-entry">
+                          <object class="CtkEntry" id="auth-prompt-entry">
                             <property name="can_focus">True</property>
                             <property name="visibility">False</property>
                             <property name="activates_default">True</property>
@@ -162,7 +162,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox" id="auth-prompt-kbd-layout-indicator">
+                          <object class="CtkBox" id="auth-prompt-kbd-layout-indicator">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <child>
@@ -183,7 +183,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="auth-capslock-label">
+                      <object class="CtkLabel" id="auth-capslock-label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                       </object>
@@ -201,7 +201,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="auth-status-label">
+                  <object class="CtkLabel" id="auth-status-label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                   </object>
@@ -212,13 +212,13 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButtonBox" id="auth-action-area">
+                  <object class="CtkButtonBox" id="auth-action-area">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
                     <property name="layout_style">end</property>
                     <child>
-                      <object class="GtkButton" id="auth-note-button">
+                      <object class="CtkButton" id="auth-note-button">
                         <property name="label" translatable="yes">_Leave Message</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -234,7 +234,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="auth-switch-button">
+                      <object class="CtkButton" id="auth-switch-button">
                         <property name="label" translatable="yes">_Switch User</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -250,7 +250,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="auth-logout-button">
+                      <object class="CtkButton" id="auth-logout-button">
                         <property name="label" translatable="yes">_Log Out</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -266,7 +266,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="auth-cancel-button">
+                      <object class="CtkButton" id="auth-cancel-button">
                         <property name="label" translatable="yes">_Cancel</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -282,7 +282,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="auth-unlock-button">
+                      <object class="CtkButton" id="auth-unlock-button">
                         <property name="label" translatable="yes">_Unlock</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -306,7 +306,7 @@
               </object>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label1">
+              <object class="CtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
               </object>
@@ -315,13 +315,13 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="note-tab">
+              <object class="CtkBox" id="note-tab">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">10</property>
                 <child>
-                  <object class="GtkLabel" id="note-tab-label">
+                  <object class="CtkLabel" id="note-tab-label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="halign">start</property>
@@ -335,12 +335,12 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkScrolledWindow" id="scrolledwindow1">
+                  <object class="CtkScrolledWindow" id="scrolledwindow1">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkTextView" id="note-text-view">
+                      <object class="CtkTextView" id="note-text-view">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="wrap_mode">word</property>
@@ -354,13 +354,13 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButtonBox" id="hbuttonbox1">
+                  <object class="CtkButtonBox" id="hbuttonbox1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
                     <property name="layout_style">end</property>
                     <child>
-                      <object class="GtkButton" id="note-cancel-button">
+                      <object class="CtkButton" id="note-cancel-button">
                         <property name="label">ctk-cancel</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -375,7 +375,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="note-ok-button">
+                      <object class="CtkButton" id="note-ok-button">
                         <property name="label">ctk-save</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -402,7 +402,7 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label9">
+              <object class="CtkLabel" id="label9">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
               </object>

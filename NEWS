@@ -71,7 +71,7 @@
   * support new cafe-menus api
   * Fixed some gdk deprecations
   * fixed gdk_flush warning
-  * avoid deprecated GtkStock
+  * avoid deprecated CtkStock
 
 ### cafe-screensaver 1.20.0
 

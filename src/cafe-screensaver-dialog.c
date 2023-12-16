@@ -64,7 +64,7 @@ static GOptionEntry entries[] = {
 	{NULL}
 };
 
-static char* get_id_string(GtkWidget* widget)
+static char* get_id_string(CtkWidget* widget)
 {
 	char* id = NULL;
 
@@ -75,7 +75,7 @@ static char* get_id_string(GtkWidget* widget)
 	return id;
 }
 
-static gboolean print_id(GtkWidget* widget)
+static gboolean print_id(CtkWidget* widget)
 {
 	char* id;
 
@@ -371,14 +371,14 @@ static gboolean auth_check_idle(GSLockPlug* plug)
 	return again;
 }
 
-static void show_cb(GtkWidget* widget, gpointer data)
+static void show_cb(CtkWidget* widget, gpointer data)
 {
 	print_id(widget);
 }
 
 static gboolean popup_dialog_idle(void)
 {
-	GtkWidget* widget;
+	CtkWidget* widget;
 
 	gs_profile_start(NULL);
 

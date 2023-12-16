@@ -39,13 +39,13 @@ typedef struct GSThemeEnginePrivate GSThemeEnginePrivate;
 
 typedef struct
 {
-	GtkDrawingArea        parent;
+	CtkDrawingArea        parent;
 	GSThemeEnginePrivate *priv;
 } GSThemeEngine;
 
 typedef struct
 {
-	GtkDrawingAreaClass parent_class;
+	CtkDrawingAreaClass parent_class;
 
 	/* for signals later if needed */
 	gpointer reserved_1;

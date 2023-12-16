@@ -833,7 +833,7 @@ gste_slideshow_get_property (GObject            *object,
 }
 
 static void
-gste_slideshow_real_show (GtkWidget *widget)
+gste_slideshow_real_show (CtkWidget *widget)
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
 	int            delay;
@@ -856,7 +856,7 @@ gste_slideshow_real_show (GtkWidget *widget)
 }
 
 static gboolean
-gste_slideshow_real_draw (GtkWidget *widget,
+gste_slideshow_real_draw (CtkWidget *widget,
                           cairo_t   *cr)
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
@@ -875,7 +875,7 @@ gste_slideshow_real_draw (GtkWidget *widget,
 }
 
 static gboolean
-gste_slideshow_real_configure (GtkWidget         *widget,
+gste_slideshow_real_configure (CtkWidget         *widget,
                                GdkEventConfigure *event)
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
@@ -918,7 +918,7 @@ static void
 gste_slideshow_class_init (GSTESlideshowClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+	CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 
@@ -961,7 +961,7 @@ gste_slideshow_class_init (GSTESlideshowClass *klass)
 }
 
 static void
-set_visual (GtkWidget *widget)
+set_visual (CtkWidget *widget)
 {
 	GdkScreen *screen;
 	GdkVisual *visual;

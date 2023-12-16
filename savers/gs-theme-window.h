@@ -45,7 +45,7 @@ typedef struct _GSThemeWindowClass GSThemeWindowClass;
 
 struct _GSThemeWindow
 {
-	GtkWindow parent;
+	CtkWindow parent;
 
 	/*< private >*/
 	/* reserved for priv pointer */
@@ -54,7 +54,7 @@ struct _GSThemeWindow
 
 struct _GSThemeWindowClass
 {
-	GtkWindowClass parent_class;
+	CtkWindowClass parent_class;
 
 	/* for signals later if needed */
 	gpointer reserved_1;
@@ -65,7 +65,7 @@ struct _GSThemeWindowClass
 
 #ifndef GS_HIDE_FUNCTION_DECLARATIONS
 GType         gs_theme_window_get_type (void);
-GtkWidget    *gs_theme_window_new      (void);
+CtkWidget    *gs_theme_window_new      (void);
 #endif
 
 G_END_DECLS

@@ -74,13 +74,13 @@ struct GSWindowPrivate
 	char      *keyboard_command;
 	char      *status_message;
 
-	GtkWidget *vbox;
-	GtkWidget *drawing_area;
-	GtkWidget *lock_box;
-	GtkWidget *lock_socket;
-	GtkWidget *keyboard_socket;
-	GtkWidget *info_bar;
-	GtkWidget *info_content;
+	CtkWidget *vbox;
+	CtkWidget *drawing_area;
+	CtkWidget *lock_box;
+	CtkWidget *lock_socket;
+	CtkWidget *keyboard_socket;
+	CtkWidget *info_bar;
+	CtkWidget *info_content;
 
 	cairo_surface_t *background_surface;
 
@@ -225,7 +225,7 @@ clear_children (Window window)
 }
 
 static void
-widget_clear_all_children (GtkWidget *widget)
+widget_clear_all_children (CtkWidget *widget)
 {
 	GdkWindow *w;
 	GdkDisplay *display;
@@ -376,7 +376,7 @@ gs_window_move_resize_window (GSWindow *window,
                               gboolean  move,
                               gboolean  resize)
 {
-	GtkWidget *widget;
+	CtkWidget *widget;
 	GdkWindow *gdkwindow;
 
 	widget = CTK_WIDGET (window);
@@ -413,7 +413,7 @@ gs_window_move_resize_window (GSWindow *window,
 }
 
 static void
-gs_window_real_unrealize (GtkWidget *widget)
+gs_window_real_unrealize (CtkWidget *widget)
 {
 	GdkMonitor *monitor = GS_WINDOW (widget)->priv->monitor;
 
@@ -556,7 +556,7 @@ out:
 }
 
 static void
-widget_set_best_visual (GtkWidget *widget)
+widget_set_best_visual (CtkWidget *widget)
 {
 	GdkVisual *visual;
 
@@ -571,7 +571,7 @@ widget_set_best_visual (GtkWidget *widget)
 }
 
 static void
-gs_window_real_realize (GtkWidget *widget)
+gs_window_real_realize (CtkWidget *widget)
 {
 	GdkMonitor *monitor = GS_WINDOW (widget)->priv->monitor;
 
@@ -597,7 +597,7 @@ gs_window_real_realize (GtkWidget *widget)
 static gboolean
 watchdog_timer (GSWindow *window)
 {
-	GtkWidget *widget = CTK_WIDGET (window);
+	CtkWidget *widget = CTK_WIDGET (window);
 
 	gdk_window_focus (ctk_widget_get_window (widget), GDK_CURRENT_TIME);
 
@@ -805,7 +805,7 @@ window_select_shape_events (GSWindow *window)
 }
 
 static gboolean
-gs_window_real_draw (GtkWidget *widget,
+gs_window_real_draw (CtkWidget *widget,
                      cairo_t   *cr)
 {
 	GSWindow *window = GS_WINDOW (widget);
@@ -826,7 +826,7 @@ gs_window_real_draw (GtkWidget *widget,
 }
 
 static void
-gs_window_real_show (GtkWidget *widget)
+gs_window_real_show (CtkWidget *widget)
 {
 	GSWindow *window;
 
@@ -860,14 +860,14 @@ set_info_text_and_icon (GSWindow   *window,
                         const char *primary_text,
                         const char *secondary_text)
 {
-	GtkWidget *content_area;
-	GtkWidget *hbox_content;
-	GtkWidget *image;
-	GtkWidget *vbox;
+	CtkWidget *content_area;
+	CtkWidget *hbox_content;
+	CtkWidget *image;
+	CtkWidget *vbox;
 	gchar *primary_markup;
 	gchar *secondary_markup;
-	GtkWidget *primary_label;
-	GtkWidget *secondary_label;
+	CtkWidget *primary_label;
+	CtkWidget *secondary_label;
 
 	hbox_content = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 8);
 	ctk_widget_show (hbox_content);
@@ -956,7 +956,7 @@ gs_window_show (GSWindow *window)
 }
 
 static void
-gs_window_real_hide (GtkWidget *widget)
+gs_window_real_hide (CtkWidget *widget)
 {
 	GSWindow *window;
 
@@ -990,7 +990,7 @@ gs_window_get_gdk_window (GSWindow *window)
 	return ctk_widget_get_window (CTK_WIDGET (window));
 }
 
-GtkWidget *
+CtkWidget *
 gs_window_get_drawing_area (GSWindow *window)
 {
 	g_return_val_if_fail (GS_IS_WINDOW (window), NULL);
@@ -1140,14 +1140,14 @@ spawn_on_window (GSWindow *window,
 }
 
 static void
-lock_plug_added (GtkWidget *widget,
+lock_plug_added (CtkWidget *widget,
                  GSWindow  *window)
 {
 	ctk_widget_show (widget);
 }
 
 static gboolean
-lock_plug_removed (GtkWidget *widget,
+lock_plug_removed (CtkWidget *widget,
                    GSWindow  *window)
 {
 	ctk_widget_hide (widget);
@@ -1158,14 +1158,14 @@ lock_plug_removed (GtkWidget *widget,
 }
 
 static void
-keyboard_plug_added (GtkWidget *widget,
+keyboard_plug_added (CtkWidget *widget,
                      GSWindow  *window)
 {
 	ctk_widget_show (widget);
 }
 
 static gboolean
-keyboard_plug_removed (GtkWidget *widget,
+keyboard_plug_removed (CtkWidget *widget,
                        GSWindow  *window)
 {
 	ctk_widget_hide (widget);
@@ -1175,7 +1175,7 @@ keyboard_plug_removed (GtkWidget *widget,
 }
 
 static void
-keyboard_socket_destroyed (GtkWidget *widget,
+keyboard_socket_destroyed (CtkWidget *widget,
                            GSWindow  *window)
 {
 	g_signal_handlers_disconnect_by_func (widget, keyboard_socket_destroyed, window);
@@ -1218,7 +1218,7 @@ remove_key_events (GSWindow *window)
 }
 
 static void
-lock_socket_show (GtkWidget *widget,
+lock_socket_show (CtkWidget *widget,
                   GSWindow  *window)
 {
 	ctk_widget_child_focus (window->priv->lock_socket, CTK_DIR_TAB_FORWARD);
@@ -1228,7 +1228,7 @@ lock_socket_show (GtkWidget *widget,
 }
 
 static void
-lock_socket_destroyed (GtkWidget *widget,
+lock_socket_destroyed (CtkWidget *widget,
                        GSWindow  *window)
 {
 	g_signal_handlers_disconnect_by_func (widget, lock_socket_show, window);
@@ -2080,7 +2080,7 @@ maybe_handle_activity (GSWindow *window)
 }
 
 static gboolean
-gs_window_real_key_press_event (GtkWidget   *widget,
+gs_window_real_key_press_event (CtkWidget   *widget,
                                 GdkEventKey *event)
 {
 	/*g_message ("KEY PRESS state: %u keyval %u", event->state, event->keyval);*/
@@ -2105,7 +2105,7 @@ gs_window_real_key_press_event (GtkWidget   *widget,
 }
 
 static gboolean
-gs_window_real_motion_notify_event (GtkWidget      *widget,
+gs_window_real_motion_notify_event (CtkWidget      *widget,
                                     GdkEventMotion *event)
 {
 	GSWindow   *window;
@@ -2146,7 +2146,7 @@ gs_window_real_motion_notify_event (GtkWidget      *widget,
 }
 
 static gboolean
-gs_window_real_button_press_event (GtkWidget      *widget,
+gs_window_real_button_press_event (CtkWidget      *widget,
                                    GdkEventButton *event)
 {
 	GSWindow *window;
@@ -2158,7 +2158,7 @@ gs_window_real_button_press_event (GtkWidget      *widget,
 }
 
 static gboolean
-gs_window_real_scroll_event (GtkWidget      *widget,
+gs_window_real_scroll_event (CtkWidget      *widget,
                              GdkEventScroll *event)
 {
 	GSWindow *window;
@@ -2170,12 +2170,12 @@ gs_window_real_scroll_event (GtkWidget      *widget,
 }
 
 static void
-gs_window_real_size_request (GtkWidget      *widget,
-                             GtkRequisition *requisition)
+gs_window_real_size_request (CtkWidget      *widget,
+                             CtkRequisition *requisition)
 {
 	GSWindow      *window;
-	GtkBin        *bin;
-	GtkWidget     *child;
+	CtkBin        *bin;
+	CtkWidget     *child;
 	GdkRectangle   old_geometry;
 	int            position_changed = FALSE;
 	int            size_changed = FALSE;
@@ -2217,27 +2217,27 @@ gs_window_real_size_request (GtkWidget      *widget,
 }
 
 static void
-gs_window_real_get_preferred_width (GtkWidget *widget,
+gs_window_real_get_preferred_width (CtkWidget *widget,
                                     gint      *minimal_width,
                                     gint      *natural_width)
 {
-	GtkRequisition requisition;
+	CtkRequisition requisition;
 	gs_window_real_size_request (widget, &requisition);
 	*minimal_width = *natural_width = requisition.width;
 }
 
 static void
-gs_window_real_get_preferred_height (GtkWidget *widget,
+gs_window_real_get_preferred_height (CtkWidget *widget,
                                      gint      *minimal_height,
                                      gint      *natural_height)
 {
-	GtkRequisition requisition;
+	CtkRequisition requisition;
 	gs_window_real_size_request (widget, &requisition);
 	*minimal_height = *natural_height = requisition.height;
 }
 
 static gboolean
-gs_window_real_grab_broken (GtkWidget          *widget,
+gs_window_real_grab_broken (CtkWidget          *widget,
                             GdkEventGrabBroken *event)
 {
 	if (event->grab_window != NULL)
@@ -2287,7 +2287,7 @@ window_set_obscured (GSWindow *window,
 }
 
 static gboolean
-gs_window_real_visibility_notify_event (GtkWidget          *widget,
+gs_window_real_visibility_notify_event (CtkWidget          *widget,
                                         GdkEventVisibility *event)
 {
 	switch (event->state)
@@ -2311,7 +2311,7 @@ static void
 gs_window_class_init (GSWindowClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+	CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	object_class->finalize     = gs_window_finalize;
 	object_class->get_property = gs_window_get_property;
@@ -2435,7 +2435,7 @@ create_info_bar (GSWindow *window)
 }
 
 static gboolean
-on_drawing_area_draw (GtkWidget *widget,
+on_drawing_area_draw (CtkWidget *widget,
                       cairo_t   *cr)
 {
 	cairo_set_operator (cr, CAIRO_OPERATOR_OVER);

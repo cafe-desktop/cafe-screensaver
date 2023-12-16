@@ -104,7 +104,7 @@ gs_theme_engine_get_property (GObject            *object,
 }
 
 static gboolean
-gs_theme_engine_real_draw (GtkWidget *widget,
+gs_theme_engine_real_draw (CtkWidget *widget,
                            cairo_t   *cr)
 {
 	cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
@@ -118,7 +118,7 @@ static void
 gs_theme_engine_class_init (GSThemeEngineClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+	CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 

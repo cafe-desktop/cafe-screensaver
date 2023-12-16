@@ -44,7 +44,7 @@ struct GSGrabPrivate
 	guint       no_pointer_grab : 1;
 	guint       hide_cursor : 1;
 
-	GtkWidget *invisible;
+	CtkWidget *invisible;
 };
 
 G_DEFINE_TYPE_WITH_PRIVATE (GSGrab, gs_grab, G_TYPE_OBJECT)

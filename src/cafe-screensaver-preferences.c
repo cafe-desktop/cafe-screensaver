@@ -77,13 +77,13 @@ enum
     TARGET_NS_URL
 };
 
-static GtkTargetEntry drop_types [] =
+static CtkTargetEntry drop_types [] =
 {
 	{ "text/uri-list", 0, TARGET_URI_LIST },
 	{ "_NETSCAPE_URL", 0, TARGET_NS_URL }
 };
 
-static GtkBuilder     *builder = NULL;
+static CtkBuilder     *builder = NULL;
 static GSThemeManager *theme_manager = NULL;
 static GSJob          *job = NULL;
 static GSettings      *screensaver_settings = NULL;
@@ -318,7 +318,7 @@ job_set_theme (GSJob      *job,
 }
 
 static gboolean
-preview_on_draw (GtkWidget *widget,
+preview_on_draw (CtkWidget *widget,
                  cairo_t   *cr,
                  gpointer   data)
 {
@@ -333,11 +333,11 @@ preview_on_draw (GtkWidget *widget,
 }
 
 static void
-preview_set_theme (GtkWidget  *widget,
+preview_set_theme (CtkWidget  *widget,
                    const char *theme,
                    const char *name)
 {
-	GtkWidget *label;
+	CtkWidget *label;
 	char      *markup;
 
 	if (job != NULL)
@@ -392,7 +392,7 @@ help_display (void)
 
 	if (error != NULL)
 	{
-		GtkWidget *d;
+		CtkWidget *d;
 
 		d = ctk_message_dialog_new (NULL,
 		                            CTK_DIALOG_MODAL | CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -406,7 +406,7 @@ help_display (void)
 }
 
 static void
-response_cb (GtkWidget *widget,
+response_cb (CtkWidget *widget,
              int        response_id)
 {
 
@@ -444,9 +444,9 @@ get_theme_info_list (void)
 }
 
 static void
-populate_model (GtkTreeStore *store)
+populate_model (CtkTreeStore *store)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	GSList     *themes        = NULL;
 	GSList     *l;
 
@@ -502,11 +502,11 @@ populate_model (GtkTreeStore *store)
 }
 
 static void
-tree_selection_previous (GtkTreeSelection *selection)
+tree_selection_previous (CtkTreeSelection *selection)
 {
-	GtkTreeIter   iter;
-	GtkTreeModel *model;
-	GtkTreePath  *path;
+	CtkTreeIter   iter;
+	CtkTreeModel *model;
+	CtkTreePath  *path;
 
 	if (! ctk_tree_selection_get_selected (selection, &model, &iter))
 	{
@@ -521,11 +521,11 @@ tree_selection_previous (GtkTreeSelection *selection)
 }
 
 static void
-tree_selection_next (GtkTreeSelection *selection)
+tree_selection_next (CtkTreeSelection *selection)
 {
-	GtkTreeIter   iter;
-	GtkTreeModel *model;
-	GtkTreePath  *path;
+	CtkTreeIter   iter;
+	CtkTreeModel *model;
+	CtkTreePath  *path;
 
 	if (! ctk_tree_selection_get_selected (selection, &model, &iter))
 	{
@@ -538,11 +538,11 @@ tree_selection_next (GtkTreeSelection *selection)
 }
 
 static void
-tree_selection_changed_cb (GtkTreeSelection *selection,
-                           GtkWidget        *preview)
+tree_selection_changed_cb (CtkTreeSelection *selection,
+                           CtkWidget        *preview)
 {
-	GtkTreeIter   iter;
-	GtkTreeModel *model;
+	CtkTreeIter   iter;
+	CtkTreeModel *model;
 	char         *theme;
 	char         *name;
 
@@ -567,7 +567,7 @@ tree_selection_changed_cb (GtkTreeSelection *selection,
 }
 
 static void
-activate_delay_value_changed_cb (GtkRange *range,
+activate_delay_value_changed_cb (CtkRange *range,
                                  gpointer  user_data)
 {
 	gdouble value;
@@ -630,9 +630,9 @@ compare_theme_names (char *name_a,
 }
 
 static int
-compare_theme  (GtkTreeModel *model,
-                GtkTreeIter  *a,
-                GtkTreeIter  *b,
+compare_theme  (CtkTreeModel *model,
+                CtkTreeIter  *a,
+                CtkTreeIter  *b,
                 gpointer      user_data)
 {
 	char *name_a;
@@ -657,8 +657,8 @@ compare_theme  (GtkTreeModel *model,
 }
 
 static gboolean
-separator_func (GtkTreeModel *model,
-                GtkTreeIter  *iter,
+separator_func (CtkTreeModel *model,
+                CtkTreeIter  *iter,
                 gpointer      data)
 {
 	int   column = GPOINTER_TO_INT (data);
@@ -677,13 +677,13 @@ separator_func (GtkTreeModel *model,
 }
 
 static void
-setup_treeview (GtkWidget *tree,
-                GtkWidget *preview)
+setup_treeview (CtkWidget *tree,
+                CtkWidget *preview)
 {
-	GtkTreeStore      *store;
-	GtkTreeViewColumn *column;
-	GtkCellRenderer   *renderer;
-	GtkTreeSelection  *select;
+	CtkTreeStore      *store;
+	CtkTreeViewColumn *column;
+	CtkCellRenderer   *renderer;
+	CtkTreeSelection  *select;
 
 	store = ctk_tree_store_new (N_COLUMNS,
 	                            G_TYPE_STRING,
@@ -726,12 +726,12 @@ setup_treeview (GtkWidget *tree,
 }
 
 static void
-setup_treeview_selection (GtkWidget *tree)
+setup_treeview_selection (CtkWidget *tree)
 {
 	char         *theme;
-	GtkTreeModel *model;
-	GtkTreeIter   iter;
-	GtkTreePath  *path = NULL;
+	CtkTreeModel *model;
+	CtkTreeIter   iter;
+	CtkTreePath  *path = NULL;
 	gboolean      is_writable;
 
 	theme = config_get_theme (&is_writable);
@@ -782,8 +782,8 @@ setup_treeview_selection (GtkWidget *tree)
 static void
 reload_themes (void)
 {
-	GtkWidget    *treeview;
-	GtkTreeModel *model;
+	CtkWidget    *treeview;
+	CtkTreeModel *model;
 
 	treeview = CTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
 	model = ctk_tree_view_get_model (CTK_TREE_VIEW (treeview));
@@ -795,16 +795,16 @@ reload_themes (void)
 }
 
 static void
-theme_copy_complete_cb (GtkWidget *dialog, gpointer user_data)
+theme_copy_complete_cb (CtkWidget *dialog, gpointer user_data)
 {
 	reload_themes ();
 	ctk_widget_destroy (dialog);
 }
 
 static void
-theme_installer_run (GtkWidget *prefs_dialog, GList *files)
+theme_installer_run (CtkWidget *prefs_dialog, GList *files)
 {
-	GtkWidget *copy_dialog;
+	CtkWidget *copy_dialog;
 
 	copy_dialog = copy_theme_dialog_new (files);
 	g_list_foreach (files, (GFunc) (g_object_unref), NULL);
@@ -823,7 +823,7 @@ theme_installer_run (GtkWidget *prefs_dialog, GList *files)
 
 /* Callback issued during drag movements */
 static gboolean
-drag_motion_cb (GtkWidget      *widget,
+drag_motion_cb (CtkWidget      *widget,
                 GdkDragContext *context,
                 int             x,
                 int             y,
@@ -835,7 +835,7 @@ drag_motion_cb (GtkWidget      *widget,
 
 /* Callback issued during drag leaves */
 static void
-drag_leave_cb (GtkWidget      *widget,
+drag_leave_cb (CtkWidget      *widget,
                GdkDragContext *context,
                guint           time,
                gpointer        data)
@@ -905,11 +905,11 @@ uri_list_parse (const gchar *uri_list)
 
 /* Callback issued on actual drops. Attempts to load the file dropped. */
 static void
-drag_data_received_cb (GtkWidget        *widget,
+drag_data_received_cb (CtkWidget        *widget,
                        GdkDragContext   *context,
                        int               x,
                        int               y,
-                       GtkSelectionData *selection_data,
+                       CtkSelectionData *selection_data,
                        guint             info,
                        guint             time,
                        gpointer          data)
@@ -922,7 +922,7 @@ drag_data_received_cb (GtkWidget        *widget,
 	files = uri_list_parse ((char *) ctk_selection_data_get_data (selection_data));
 	if (files != NULL)
 	{
-		GtkWidget *prefs_dialog;
+		CtkWidget *prefs_dialog;
 
 		prefs_dialog = CTK_WIDGET (ctk_builder_get_object (builder, "prefs_dialog"));
 		theme_installer_run (prefs_dialog, files);
@@ -1065,7 +1065,7 @@ time_to_string_text (long time)
 }
 
 static char *
-format_value_callback_time (GtkScale *scale,
+format_value_callback_time (CtkScale *scale,
                             gdouble   value)
 {
 	if (value == 0)
@@ -1075,19 +1075,19 @@ format_value_callback_time (GtkScale *scale,
 }
 
 static void
-lock_checkbox_toggled (GtkToggleButton *button, gpointer user_data)
+lock_checkbox_toggled (CtkToggleButton *button, gpointer user_data)
 {
 	config_set_lock (ctk_toggle_button_get_active (button));
 }
 
 static void
-enabled_checkbox_toggled (GtkToggleButton *button, gpointer user_data)
+enabled_checkbox_toggled (CtkToggleButton *button, gpointer user_data)
 {
 	config_set_enabled (ctk_toggle_button_get_active (button));
 }
 
 static void
-picture_filename_changed (GtkFileChooserButton *button, gpointer user_data)
+picture_filename_changed (CtkFileChooserButton *button, gpointer user_data)
 {
 	g_settings_set_string (screensaver_settings, "picture-filename", ctk_file_chooser_get_filename (CTK_FILE_CHOOSER (button)));
 }
@@ -1095,7 +1095,7 @@ picture_filename_changed (GtkFileChooserButton *button, gpointer user_data)
 static void
 ui_disable_lock (gboolean disable)
 {
-	GtkWidget *widget;
+	CtkWidget *widget;
 
 	widget = CTK_WIDGET (ctk_builder_get_object (builder, "lock_checkbox"));
 	ctk_widget_set_sensitive (widget, !disable);
@@ -1108,7 +1108,7 @@ ui_disable_lock (gboolean disable)
 static void
 ui_set_lock (gboolean enabled)
 {
-	GtkWidget *widget;
+	CtkWidget *widget;
 	gboolean   active;
 	gboolean   lock_disabled;
 
@@ -1126,7 +1126,7 @@ ui_set_lock (gboolean enabled)
 static void
 ui_set_enabled (gboolean enabled)
 {
-	GtkWidget *widget;
+	CtkWidget *widget;
 	gboolean   active;
 	gboolean   is_writable;
 	gboolean   lock_disabled;
@@ -1151,7 +1151,7 @@ ui_set_enabled (gboolean enabled)
 static void
 ui_set_delay (int delay)
 {
-	GtkWidget *widget;
+	CtkWidget *widget;
 
 	widget = CTK_WIDGET (ctk_builder_get_object (builder, "activate_delay_hscale"));
 	ctk_range_set_value (CTK_RANGE (widget), delay);
@@ -1186,7 +1186,7 @@ key_changed_cb (GSettings *settings, const gchar *key, gpointer data)
 	}
 	else if (strcmp (key, KEY_THEMES) == 0)
 	{
-		        GtkWidget *treeview;
+		        CtkWidget *treeview;
 
 			treeview = CTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
 			setup_treeview_selection (treeview);
@@ -1206,11 +1206,11 @@ key_changed_cb (GSettings *settings, const gchar *key, gpointer data)
 }
 
 static void
-fullscreen_preview_previous_cb (GtkWidget *fullscreen_preview_window,
+fullscreen_preview_previous_cb (CtkWidget *fullscreen_preview_window,
                                 gpointer   user_data)
 {
-	GtkWidget        *treeview;
-	GtkTreeSelection *selection;
+	CtkWidget        *treeview;
+	CtkTreeSelection *selection;
 
 	treeview = CTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
 	selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (treeview));
@@ -1218,11 +1218,11 @@ fullscreen_preview_previous_cb (GtkWidget *fullscreen_preview_window,
 }
 
 static void
-fullscreen_preview_next_cb (GtkWidget *fullscreen_preview_window,
+fullscreen_preview_next_cb (CtkWidget *fullscreen_preview_window,
                             gpointer   user_data)
 {
-	GtkWidget        *treeview;
-	GtkTreeSelection *selection;
+	CtkWidget        *treeview;
+	CtkTreeSelection *selection;
 
 	treeview = CTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
 	selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (treeview));
@@ -1230,14 +1230,14 @@ fullscreen_preview_next_cb (GtkWidget *fullscreen_preview_window,
 }
 
 static void
-fullscreen_preview_cancelled_cb (GtkWidget *button,
+fullscreen_preview_cancelled_cb (CtkWidget *button,
                                  gpointer   user_data)
 {
 
-	GtkWidget *fullscreen_preview_area;
-	GtkWidget *fullscreen_preview_window;
-	GtkWidget *preview_area;
-	GtkWidget *dialog;
+	CtkWidget *fullscreen_preview_area;
+	CtkWidget *fullscreen_preview_window;
+	CtkWidget *preview_area;
+	CtkWidget *dialog;
 
 	preview_area = CTK_WIDGET (ctk_builder_get_object (builder, "preview_area"));
 	gs_job_set_widget (job, preview_area);
@@ -1254,12 +1254,12 @@ fullscreen_preview_cancelled_cb (GtkWidget *button,
 }
 
 static void
-fullscreen_preview_start_cb (GtkWidget *widget,
+fullscreen_preview_start_cb (CtkWidget *widget,
                              gpointer   user_data)
 {
-	GtkWidget *fullscreen_preview_area;
-	GtkWidget *fullscreen_preview_window;
-	GtkWidget *dialog;
+	CtkWidget *fullscreen_preview_area;
+	CtkWidget *fullscreen_preview_window;
+	CtkWidget *dialog;
 
 	dialog = CTK_WIDGET (ctk_builder_get_object (builder, "prefs_dialog"));
 	ctk_widget_hide (dialog);
@@ -1278,11 +1278,11 @@ fullscreen_preview_start_cb (GtkWidget *widget,
 }
 
 static void
-constrain_list_size (GtkWidget      *widget,
-                     GtkAllocation  *allocation,
-                     GtkWidget      *to_size)
+constrain_list_size (CtkWidget      *widget,
+                     CtkAllocation  *allocation,
+                     CtkWidget      *to_size)
 {
-	GtkRequisition req;
+	CtkRequisition req;
 	int            max_height;
 
 	/* constrain height to be the tree height up to a max */
@@ -1293,8 +1293,8 @@ constrain_list_size (GtkWidget      *widget,
 }
 
 static void
-setup_list_size_constraint (GtkWidget *widget,
-                            GtkWidget *to_size)
+setup_list_size_constraint (CtkWidget *widget,
+                            CtkWidget *to_size)
 {
 	g_signal_connect (widget, "size-allocate",
 	                  G_CALLBACK (constrain_list_size), to_size);
@@ -1330,8 +1330,8 @@ check_is_root_user (void)
 static void
 setup_for_root_user (void)
 {
-	GtkWidget *lock_checkbox;
-	GtkWidget *label;
+	CtkWidget *lock_checkbox;
+	CtkWidget *label;
 
 	lock_checkbox = CTK_WIDGET (ctk_builder_get_object (builder, "lock_checkbox"));
 	label = CTK_WIDGET (ctk_builder_get_object (builder, "root_warning_label"));
@@ -1476,7 +1476,7 @@ out:
 
 
 static void
-widget_set_best_visual (GtkWidget *widget)
+widget_set_best_visual (CtkWidget *widget)
 {
 	GdkVisual *visual;
 
@@ -1493,8 +1493,8 @@ widget_set_best_visual (GtkWidget *widget)
 static gboolean
 setup_treeview_idle (gpointer data)
 {
-	GtkWidget *preview;
-	GtkWidget *treeview;
+	CtkWidget *preview;
+	CtkWidget *treeview;
 
 	preview  = CTK_WIDGET (ctk_builder_get_object (builder, "preview_area"));
 	treeview = CTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
@@ -1523,24 +1523,24 @@ is_program_in_path (const char *program)
 static void
 init_capplet (void)
 {
-	GtkWidget *dialog;
-	GtkWidget *preview;
-	GtkWidget *treeview;
-	GtkWidget *list_scroller;
-	GtkWidget *activate_delay_hscale;
-	GtkWidget *activate_delay_hbox;
-	GtkWidget *label;
-	GtkWidget *enabled_checkbox;
-	GtkWidget *lock_checkbox;
-	GtkWidget *root_warning_label;
-	GtkWidget *preview_button;
-	GtkWidget *gpm_button;
-	GtkWidget *fullscreen_preview_window;
-	GtkWidget *fullscreen_preview_area;
-	GtkWidget *fullscreen_preview_previous;
-	GtkWidget *fullscreen_preview_next;
-	GtkWidget *fullscreen_preview_close;
-	GtkWidget *picture_filename;
+	CtkWidget *dialog;
+	CtkWidget *preview;
+	CtkWidget *treeview;
+	CtkWidget *list_scroller;
+	CtkWidget *activate_delay_hscale;
+	CtkWidget *activate_delay_hbox;
+	CtkWidget *label;
+	CtkWidget *enabled_checkbox;
+	CtkWidget *lock_checkbox;
+	CtkWidget *root_warning_label;
+	CtkWidget *preview_button;
+	CtkWidget *gpm_button;
+	CtkWidget *fullscreen_preview_window;
+	CtkWidget *fullscreen_preview_area;
+	CtkWidget *fullscreen_preview_previous;
+	CtkWidget *fullscreen_preview_next;
+	CtkWidget *fullscreen_preview_close;
+	CtkWidget *picture_filename;
 	gdouble    activate_delay;
 	gboolean   enabled;
 	gboolean   is_writable;

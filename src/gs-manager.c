@@ -1502,7 +1502,7 @@ disconnect_window_signals (GSManager *manager,
 }
 
 static void
-window_destroyed_cb (GtkWindow *window,
+window_destroyed_cb (CtkWindow *window,
                      GSManager *manager)
 {
 	disconnect_window_signals (manager, GS_WINDOW (window));

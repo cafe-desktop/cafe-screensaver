@@ -45,14 +45,14 @@ copy_theme_dialog_finalize (GObject *obj);
 static void
 copy_theme_dialog_update_num_files (CopyThemeDialog *dlg);
 static void
-copy_theme_dialog_response (GtkDialog *dialog, gint response_id);
+copy_theme_dialog_response (CtkDialog *dialog, gint response_id);
 static void
-eel_ctk_label_make_bold (GtkLabel *label);
+eel_ctk_label_make_bold (CtkLabel *label);
 static void
-create_titled_label (GtkGrid    *grid,
+create_titled_label (CtkGrid    *grid,
                      int         row,
-                     GtkWidget **title_widget,
-                     GtkWidget **label_text_widget);
+                     CtkWidget **title_widget,
+                     CtkWidget **label_text_widget);
 
 static GObjectClass *parent_class = NULL;
 
@@ -65,11 +65,11 @@ enum
 
 struct _CopyThemeDialogPrivate
 {
-	GtkWidget *progress;
-	GtkWidget *status;
-	GtkWidget *current;
-	GtkWidget *from;
-	GtkWidget *to;
+	CtkWidget *progress;
+	CtkWidget *status;
+	CtkWidget *current;
+	CtkWidget *from;
+	CtkWidget *to;
 
 	GFile *theme_dir;
 	GSList *all_files, *file;
@@ -112,10 +112,10 @@ copy_theme_dialog_class_init (CopyThemeDialogClass *klass)
 	parent_class = g_type_class_peek_parent (klass);
 }
 
-GtkWidget*
+CtkWidget*
 copy_theme_dialog_new (GList *files)
 {
-	GtkWidget *dialog;
+	CtkWidget *dialog;
 	CopyThemeDialogPrivate *priv;
 
 	dialog = CTK_WIDGET (g_object_new (COPY_THEME_DIALOG_TYPE, NULL));
@@ -143,12 +143,12 @@ copy_finished (CopyThemeDialog *dialog)
 static void
 copy_theme_dialog_init (CopyThemeDialog *dlg)
 {
-	GtkWidget *vbox;
-	GtkWidget *hbox;
-	GtkWidget *progress_vbox;
-	GtkWidget *grid;
-	GtkWidget *label;
-	GtkWidget *dialog_vbox;
+	CtkWidget *vbox;
+	CtkWidget *hbox;
+	CtkWidget *progress_vbox;
+	CtkWidget *grid;
+	CtkWidget *label;
+	CtkWidget *dialog_vbox;
 	char      *markup;
 	gchar     *theme_dir_path;
 
@@ -257,7 +257,7 @@ add_file_to_dialog (gpointer data, gpointer user_data)
 
 	else
 	{
-		GtkWidget *dialog;
+		CtkWidget *dialog;
 		gchar *uri;
 
 		dialog = ctk_message_dialog_new (CTK_WINDOW (user_data),
@@ -454,7 +454,7 @@ copy_theme_dialog_update_num_files (CopyThemeDialog *dlg)
 }
 
 static void
-copy_theme_dialog_response (GtkDialog *dialog, gint response_id)
+copy_theme_dialog_response (CtkDialog *dialog, gint response_id)
 {
 	g_cancellable_cancel (COPY_THEME_DIALOG (dialog)->priv->cancellable);
 }
@@ -466,7 +466,7 @@ copy_theme_dialog_response (GtkDialog *dialog, gint response_id)
  * @label: The label.
  **/
 static void
-eel_ctk_label_make_bold (GtkLabel *label)
+eel_ctk_label_make_bold (CtkLabel *label)
 {
 	PangoFontDescription *font_desc;
 
@@ -486,10 +486,10 @@ eel_ctk_label_make_bold (GtkLabel *label)
 
 /* from caja */
 static void
-create_titled_label (GtkGrid    *grid,
+create_titled_label (CtkGrid    *grid,
                      int         row,
-                     GtkWidget **title_widget,
-                     GtkWidget **label_text_widget)
+                     CtkWidget **title_widget,
+                     CtkWidget **label_text_widget)
 {
 	*title_widget = ctk_label_new ("");
 	eel_ctk_label_make_bold (CTK_LABEL (*title_widget));

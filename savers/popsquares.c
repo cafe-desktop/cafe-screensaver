@@ -35,7 +35,7 @@ int
 main (int argc, char **argv)
 {
 	GSThemeEngine *engine;
-	GtkWidget     *window;
+	CtkWidget     *window;
 	GError        *error;
 
 	bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);

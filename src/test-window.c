@@ -87,7 +87,7 @@ disconnect_window_signals (GSWindow *window)
 }
 
 static void
-window_destroyed_cb (GtkWindow *window,
+window_destroyed_cb (CtkWindow *window,
                      gpointer   data)
 {
 	disconnect_window_signals (GS_WINDOW (window));

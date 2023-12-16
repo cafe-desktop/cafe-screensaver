@@ -181,7 +181,7 @@ struct _ScreenSaverFloater
 
 struct _ScreenSaver
 {
-	GtkWidget  *drawing_area;
+	CtkWidget  *drawing_area;
 	Rectangle canvas_rectangle;
 	GHashTable *cached_sources;
 
@@ -263,7 +263,7 @@ static CachedSource *cached_source_new (cairo_pattern_t *pattern,
                                         gint             height);
 static void cached_source_free (CachedSource *source);
 
-static ScreenSaver *screen_saver_new (GtkWidget       *drawing_area,
+static ScreenSaver *screen_saver_new (CtkWidget       *drawing_area,
                                       const gchar     *filename,
                                       gint             max_floater_count,
                                       gboolean         should_do_rotations,
@@ -281,7 +281,7 @@ static gdouble screen_saver_get_image_cache_usage (ScreenSaver *screen_saver);
 static void screen_saver_create_floaters (ScreenSaver *screen_saver);
 static void screen_saver_destroy_floaters (ScreenSaver *screen_saver);
 static void screen_saver_on_size_allocate (ScreenSaver   *screen_saver,
-        GtkAllocation *allocation);
+        CtkAllocation *allocation);
 static void screen_saver_on_draw (ScreenSaver    *screen_saver,
         cairo_t *context);
 static gboolean do_print_screen_saver_stats (ScreenSaver *screen_saver);
@@ -834,7 +834,7 @@ screen_saver_floater_do_draw (ScreenSaver        *screen_saver,
 }
 
 static ScreenSaver *
-screen_saver_new (GtkWidget       *drawing_area,
+screen_saver_new (CtkWidget       *drawing_area,
                   const gchar     *filename,
                   gint             max_floater_count,
                   gboolean         should_do_rotations,
@@ -982,7 +982,7 @@ screen_saver_destroy_floaters (ScreenSaver *screen_saver)
 
 static void
 screen_saver_on_size_allocate (ScreenSaver   *screen_saver,
-                               GtkAllocation *allocation)
+                               CtkAllocation *allocation)
 {
 	Rectangle canvas_rectangle;
 
@@ -1168,8 +1168,8 @@ main (int   argc,
       char *argv[])
 {
 	ScreenSaver     *screen_saver;
-	GtkWidget       *window;
-	GtkWidget       *drawing_area;
+	CtkWidget       *window;
+	CtkWidget       *drawing_area;
 	GError *error;
 
 	error = NULL;

@@ -38,7 +38,7 @@
 #include "gs-theme-window.h"
 
 static void gs_theme_window_finalize     (GObject *object);
-static void gs_theme_window_real_realize (GtkWidget *widget);
+static void gs_theme_window_real_realize (CtkWidget *widget);
 
 static GObjectClass   *parent_class = NULL;
 
@@ -50,7 +50,7 @@ static void
 gs_theme_window_class_init (GSThemeWindowClass *klass)
 {
 	GObjectClass   *object_class;
-	GtkWidgetClass *widget_class;
+	CtkWidgetClass *widget_class;
 
 	object_class = G_OBJECT_CLASS (klass);
 	widget_class = CTK_WIDGET_CLASS (klass);
@@ -82,12 +82,12 @@ gs_theme_window_finalize (GObject *object)
 }
 
 static void
-gs_theme_window_real_realize (GtkWidget *widget)
+gs_theme_window_real_realize (CtkWidget *widget)
 {
 	GdkWindow     *window;
 	Window         remote_xwindow;
-	GtkRequisition requisition;
-	GtkAllocation  allocation;
+	CtkRequisition requisition;
+	CtkAllocation  allocation;
 	const char    *preview_xid;
 	int            x;
 	int            y;
@@ -133,7 +133,7 @@ gs_theme_window_real_realize (GtkWidget *widget)
 
 	if (window == NULL)
 	{
-		GtkWidgetClass *parent_class;
+		CtkWidgetClass *parent_class;
 
 		parent_class = CTK_WIDGET_CLASS (gs_theme_window_parent_class);
 
@@ -169,7 +169,7 @@ gs_theme_window_real_realize (GtkWidget *widget)
 	ctk_window_resize (CTK_WINDOW (widget), width, height);
 }
 
-GtkWidget *
+CtkWidget *
 gs_theme_window_new (void)
 {
 	GSThemeWindow *window;
