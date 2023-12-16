@@ -1074,7 +1074,7 @@ AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)
 
 # Saver engine stuff
-SLIDESHOW_COSMOS_DIR="${EXPANDED_DATADIR}/backgrounds/cosmos"
+SLIDESHOW_COSMOS_DIR="${EXPANDED_DATADIR}/backgrounds/space"
 
 AC_SUBST(SLIDESHOW_COSMOS_DIR)
 
@@ -1113,7 +1113,7 @@ data/cafe-screensavers.menu
 data/cafe-screensaver.pc
 data/org.cafe.ScreenSaver.service
 data/images/Makefile
-data/images/cosmos/Makefile
+data/images/space/Makefile
 savers/Makefile
 doc/Makefile
 doc/cafe-screensaver.xml

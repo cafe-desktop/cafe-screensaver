@@ -3,10 +3,10 @@
 data/cafe-screensaver-preferences.desktop.in
 data/cafe-screensaver-preferences.ui
 data/cafe-screensaver.directory.desktop.in
-data/images/cosmos/cosmos.xml.in.in
+data/images/space/space.xml.in.in
 data/lock-dialog-default.ui
 data/org.cafe.screensaver.gschema.xml.in
-savers/cosmos-slideshow.desktop.in.in
+savers/space-slideshow.desktop.in.in
 savers/footlogo-floaters.desktop.in.in
 savers/gnomelogo-floaters.desktop.in.in
 savers/personal-slideshow.desktop.in.in

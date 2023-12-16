@@ -18,13 +18,13 @@ images_DATA =			\
 	background-1.xml	\
 	$(NULL)
 
-cosmos.xml.in: cosmos.xml.in.in Makefile
+space.xml.in: space.xml.in.in Makefile
 	@$(edit) $< >$@
 
 background-1.xml: background-1.xml.in Makefile
 	$(AM_V_GEN) $(edit) $< >$@
 
-metadata_in_files = cosmos.xml.in
+metadata_in_files = space.xml.in
 metadatadir = $(datadir)/cafe-background-properties
 metadata_DATA = $(metadata_in_files:.xml.in=.xml)
 
@@ -38,15 +38,15 @@ EXTRA_DIST =			\
 	CREDITS 		\
 	$(BACKGROUNDS)		\
 	background-1.xml.in	\
-	cosmos.xml.in.in	\
+	space.xml.in.in	\
 	$(NULL)
 
 CLEANFILES = \
-	cosmos.xml.in			\
+	space.xml.in			\
 	$(NULL)
 
 DISTCLEANFILES = \
-	cosmos.xml			\
+	space.xml			\
 	background-1.xml		\
 	$(NULL)
 

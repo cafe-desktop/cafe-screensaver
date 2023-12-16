@@ -106,8 +106,8 @@ msgstr "зберігач екрану"
 #. Translators: This is the name of a desktop background image that shows
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/cosmos/cosmos.xml.in.in:7
-#: savers/cosmos-slideshow.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7
+#: savers/space-slideshow.desktop.in.in:3
 msgid "Cosmos"
 msgstr "Космос"
 
@@ -319,14 +319,14 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Дозволити показ повідомлення стану сесії при заблокованому екрані."
 
-#: savers/cosmos-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the cosmos"
+#: savers/space-slideshow.desktop.in.in:4
+msgid "Display a slideshow of pictures of the space"
 msgstr "Показує слайди космічних малюнків"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/cosmos-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;cosmos;"
+#: savers/space-slideshow.desktop.in.in:12
+msgid "CAFE;screensaver;slideshow;space;"
 msgstr "CAFE;зберігач екрану;показ слайдів;космос;"
 
 #: savers/footlogo-floaters.desktop.in.in:3

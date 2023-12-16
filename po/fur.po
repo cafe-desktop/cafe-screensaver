@@ -79,8 +79,8 @@ msgstr ""
 #. Translators: This is the name of a desktop background image that shows
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: ../data/images/cosmos/cosmos.xml.in.in.h:3
-#: ../savers/cosmos-slideshow.desktop.in.in.h:1
+#: ../data/images/space/space.xml.in.in.h:3
+#: ../savers/space-slideshow.desktop.in.in.h:1
 msgid "Cosmos"
 msgstr ""
 
@@ -256,8 +256,8 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr ""
 
-#: ../savers/cosmos-slideshow.desktop.in.in.h:2
-msgid "Display a slideshow of pictures of the cosmos"
+#: ../savers/space-slideshow.desktop.in.in.h:2
+msgid "Display a slideshow of pictures of the space"
 msgstr ""
 
 #: ../savers/footlogo-floaters.desktop.in.in.h:1

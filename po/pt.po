@@ -106,8 +106,8 @@ msgstr "screensaver"
 #. Translators: This is the name of a desktop background image that shows
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/cosmos/cosmos.xml.in.in:7
-#: savers/cosmos-slideshow.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7
+#: savers/space-slideshow.desktop.in.in:3
 msgid "Cosmos"
 msgstr "Cosmos"
 
@@ -326,15 +326,15 @@ msgstr ""
 "Permitir que seja apresentada a mensagem de estado da sessão quando o ecrã "
 "está trancado."
 
-#: savers/cosmos-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the cosmos"
-msgstr "Apresenta um conjunto de fotografias do cosmos"
+#: savers/space-slideshow.desktop.in.in:4
+msgid "Display a slideshow of pictures of the space"
+msgstr "Apresenta um conjunto de fotografias do space"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/cosmos-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;cosmos;"
-msgstr "CAFE;proteção de ecrã;diaporama;cosmos;"
+#: savers/space-slideshow.desktop.in.in:12
+msgid "CAFE;screensaver;slideshow;space;"
+msgstr "CAFE;proteção de ecrã;diaporama;space;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
 msgid "Floating CAFE"
