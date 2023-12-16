@@ -47,6 +47,11 @@ requires:
     - libxml2-dev
     - meson
 
+    #required for libcafekbd
+    - gettext
+    - libxklavier-dev
+    - libxml2-utils
+
 before_scripts:
   - ./html-cppcheck
   - ./debrepo-install 'libctk-3-dev'
