@@ -152,8 +152,8 @@
 
 
 ========== cy.po ==========
-# MATE Screensaver in Welsh.
-# This file is distributed under the same license as MATE Screensaver.
+# CAFE Screensaver in Welsh.
+# This file is distributed under the same license as CAFE Screensaver.
 # Rhys Jones <rhys@sucs.org>, 2006.
 #
 
@@ -223,7 +223,7 @@
 
 ========== en_CA.po ==========
 # Canadian English translation for cafe-screensaver
-# Copyright (C) 2005-2006 Adam Weinberger and the MATE Foundation
+# Copyright (C) 2005-2006 Adam Weinberger and the CAFE Foundation
 # This file is distributed under the same licence as the cafe-screensaver package.
 # Adam Weinberger <adamw@gnome.org>, 2005, 2006.
 #
@@ -247,7 +247,7 @@
 # translation of cafe-screensaver.HEAD.po to Español
 # translation of cafe-screensaver to Spanish
 # This file is distributed under the same license as the cafe-screensaver package.
-# Copyright (C) 2005 The MATE Foundation, 2005.
+# Copyright (C) 2005 The CAFE Foundation, 2005.
 #
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005, 2006.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009.
@@ -256,10 +256,10 @@
 
 
 ========== et.po ==========
-# MATE ekraanisäästja eesti keele tõlge.
-# Estonian translation of MATE screensaver.
+# CAFE ekraanisäästja eesti keele tõlge.
+# Estonian translation of CAFE screensaver.
 #
-# Copyright (C) 2006-2008, The MATE Project.
+# Copyright (C) 2006-2008, The CAFE Project.
 # This file is distributed under the same license as the cafe-screensaver
 # package.
 #
@@ -532,9 +532,9 @@
 
 
 ========== mg.po ==========
-# MALAGASY TRANSLATION OF MATE-SCREENSAVER.
+# MALAGASY TRANSLATION OF CAFE-SCREENSAVER.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the MATE-SCREENSAVER package.
+# This file is distributed under the same license as the CAFE-SCREENSAVER package.
 # Thierry Randrianiriana <randrianiriana@gmail.com>, 2006.
 
 
@@ -893,8 +893,8 @@
 
 
 ========== vi.po ==========
-# Vietnamese translation for MATE Screensaver.
-# Copyright © 2009 MATE i18n Project for Vietnamese.
+# Vietnamese translation for CAFE Screensaver.
+# Copyright © 2009 CAFE i18n Project for Vietnamese.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
 #
 

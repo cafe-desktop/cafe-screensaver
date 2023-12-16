@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -40,7 +40,7 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
+msgid "CAFE;screensaver;preferences;"
 msgstr ""
 
 #: data/cafe-screensaver-preferences.ui:20
@@ -309,21 +309,21 @@ msgstr "कोसमोस के चित्र का स्लाइडश�
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
 msgstr ""
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
+msgid "Floating CAFE"
 msgstr "फ्लोटिंग माटे"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
+msgid "Bubbles the CAFE logo around the screen"
 msgstr "स्क्रीन के चारों ओर माटे के प्रतीक चिन्ह को बुदबुदाता है"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
+msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
@@ -337,7 +337,7 @@ msgstr "स्क्रीन के चारों ओर गनोम के 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
 #: savers/personal-slideshow.desktop.in.in:3
@@ -351,7 +351,7 @@ msgstr "अपने चित्र फोल्डर से स्लाइ�
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -365,7 +365,7 @@ msgstr "पल्सिंग रंग का एक pop-art-ish ग्रि�
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
@@ -743,7 +743,7 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
+msgid "CAFE;screensaver;locker;"
 msgstr ""
 
 #: src/gs-auth-pam.c:413

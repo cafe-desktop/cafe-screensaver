@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: CAFE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-27 15:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -261,11 +261,11 @@ msgid "Display a slideshow of pictures of the cosmos"
 msgstr ""
 
 #: ../savers/footlogo-floaters.desktop.in.in.h:1
-msgid "Floating MATE"
+msgid "Floating CAFE"
 msgstr ""
 
 #: ../savers/footlogo-floaters.desktop.in.in.h:2
-msgid "Bubbles the MATE logo around the screen"
+msgid "Bubbles the CAFE logo around the screen"
 msgstr ""
 
 #: ../savers/gnomelogo-floaters.desktop.in.in.h:1

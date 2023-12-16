@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -41,7 +41,7 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
+msgid "CAFE;screensaver;preferences;"
 msgstr ""
 
 #: data/cafe-screensaver-preferences.ui:20
@@ -322,21 +322,21 @@ msgstr "Hiển thị trình diễn các ảnh của vũ trụ"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
 msgstr ""
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
-msgstr "Biểu tượng MATE lơ lửng"
+msgid "Floating CAFE"
+msgstr "Biểu tượng CAFE lơ lửng"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
-msgstr "Thổi bong bóng biểu tượng MATE xung quanh màn hình"
+msgid "Bubbles the CAFE logo around the screen"
+msgstr "Thổi bong bóng biểu tượng CAFE xung quanh màn hình"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
+msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
@@ -350,7 +350,7 @@ msgstr "Thổi bong bóng biểu tượng GNOME xung quanh màn hình"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
 #: savers/personal-slideshow.desktop.in.in:3
@@ -364,7 +364,7 @@ msgstr "Hiển thị trình diễn các ảnh từ thư mục Ảnh (Pictures) c
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -378,7 +378,7 @@ msgstr "Vẽ lưới các màu đập kiểu dáng nghệ thuật phổ biến."
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
@@ -756,7 +756,7 @@ msgstr "Chạy bộ bảo vệ màn hình và các chương trình khóa"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
+msgid "CAFE;screensaver;locker;"
 msgstr ""
 
 #: src/gs-auth-pam.c:413

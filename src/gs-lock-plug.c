@@ -39,7 +39,7 @@
 #include <gtk/gtkx.h>
 #include <gio/gio.h>
 
-#define MATE_DESKTOP_USE_UNSTABLE_API
+#define CAFE_DESKTOP_USE_UNSTABLE_API
 #include <libcafe-desktop/cafe-desktop-utils.h>
 
 #ifdef WITH_KBD_LAYOUT_INDICATOR
@@ -2162,7 +2162,7 @@ gs_lock_plug_init (GSLockPlug *plug)
 			GtkWidget *layout_indicator;
 
 			layout_indicator = cafekbd_indicator_new ();
-			cafekbd_indicator_set_parent_tooltips (MATEKBD_INDICATOR (layout_indicator), TRUE);
+			cafekbd_indicator_set_parent_tooltips (CAFEKBD_INDICATOR (layout_indicator), TRUE);
 			gtk_box_pack_start (GTK_BOX (plug->priv->auth_prompt_kbd_layout_indicator),
 			                    layout_indicator,
 			                    FALSE,

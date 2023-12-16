@@ -9,10 +9,10 @@ themesdir = $(pkgdatadir)/themes
 AM_CPPFLAGS =							\
 	-I.							\
 	-I$(srcdir)						\
-	-DMATEMENU_I_KNOW_THIS_IS_UNSTABLE			\
-	$(MATE_SCREENSAVER_CFLAGS)				\
-	$(MATE_SCREENSAVER_DIALOG_CFLAGS)			\
-	$(MATE_SCREENSAVER_CAPPLET_CFLAGS)			\
+	-DCAFEMENU_I_KNOW_THIS_IS_UNSTABLE			\
+	$(CAFE_SCREENSAVER_CFLAGS)				\
+	$(CAFE_SCREENSAVER_DIALOG_CFLAGS)			\
+	$(CAFE_SCREENSAVER_CAPPLET_CFLAGS)			\
 	$(DISABLE_DEPRECATED_CFLAGS)				\
 	-DPREFIX=\""$(prefix)"\"				\
 	-DBINDIR=\""$(bindir)"\"				\
@@ -20,7 +20,7 @@ AM_CPPFLAGS =							\
 	-DLIBEXECDIR=\""$(libexecdir)"\"			\
 	-DDATADIR=\""$(datadir)"\"				\
 	-DSYSCONFDIR=\""$(sysconfdir)"\"			\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"			\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\"			\
 	-DSAVERDIR=\""$(saverdir)"\"				\
 	-DTHEMESDIR=\""$(themesdir)"\"				\
 	-DGTKBUILDERDIR=\"$(pkgdatadir)\"			\
@@ -29,7 +29,7 @@ AM_CPPFLAGS =							\
 	$(AUTH_CFLAGS)						\
 	$(DEBUG_CFLAGS)						\
 	$(DBUS_CFLAGS)						\
-	$(LIBMATEKBDUI_CFLAGS)					\
+	$(LIBCAFEKBDUI_CFLAGS)					\
 	$(LIBNOTIFY_CFLAGS)					\
 	$(SYSTEMD_CFLAGS)					\
 	$(LIBELOGIND_CFLAGS)					\
@@ -64,7 +64,7 @@ cafe_screensaver_command_SOURCES = 	\
 	$(NULL)
 
 cafe_screensaver_command_LDADD =	\
-	$(MATE_SCREENSAVER_COMMAND_LIBS)	\
+	$(CAFE_SCREENSAVER_COMMAND_LIBS)	\
 	$(NULL)
 
 AUTH_SOURCES = 			\
@@ -81,7 +81,7 @@ test_fade_SOURCES = 			\
 	$(NULL)
 
 test_fade_LDADD =			\
-	$(MATE_SCREENSAVER_LIBS)	\
+	$(CAFE_SCREENSAVER_LIBS)	\
 	$(SAVER_LIBS)			\
 	$(NULL)
 
@@ -95,7 +95,7 @@ test_passwd_SOURCES = 			\
 	$(NULL)
 
 test_passwd_LDADD =			\
-	$(MATE_SCREENSAVER_DIALOG_LIBS)\
+	$(CAFE_SCREENSAVER_DIALOG_LIBS)\
 	$(AUTH_LIBS)			\
 	$(NULL)
 
@@ -110,7 +110,7 @@ test_watcher_SOURCES =			\
 	$(NULL)
 
 test_watcher_LDADD =			\
-	$(MATE_SCREENSAVER_LIBS)	\
+	$(CAFE_SCREENSAVER_LIBS)	\
 	$(SAVER_LIBS)			\
 	$(NULL)
 
@@ -129,7 +129,7 @@ test_window_SOURCES =			\
 	$(NULL)
 
 test_window_LDADD =			\
-	$(MATE_SCREENSAVER_LIBS)	\
+	$(CAFE_SCREENSAVER_LIBS)	\
 	$(SAVER_LIBS)			\
 	$(NULL)
 
@@ -154,10 +154,10 @@ EXTRA_cafe_screensaver_dialog_SOURCES = \
 	$(NULL)
 
 cafe_screensaver_dialog_LDADD =	\
-	$(MATE_SCREENSAVER_DIALOG_LIBS)\
+	$(CAFE_SCREENSAVER_DIALOG_LIBS)\
 	$(SAVER_LIBS)			\
 	$(AUTH_LIBS)			\
-	$(LIBMATEKBDUI_LIBS)		\
+	$(LIBCAFEKBDUI_LIBS)		\
 	$(LIBNOTIFY_LIBS)		\
 	$(NULL)
 
@@ -204,7 +204,7 @@ cafe_screensaver_SOURCES =	\
 	$(NULL)
 
 cafe_screensaver_gl_helper_LDADD =	\
-	$(MATE_SCREENSAVER_LIBS)	\
+	$(CAFE_SCREENSAVER_LIBS)	\
 	$(GL_LIBS)			\
 	$(NULL)
 
@@ -215,7 +215,7 @@ cafe_screensaver_gl_helper_SOURCES =	\
 	$(NULL)
 
 cafe_screensaver_LDADD =		\
-	$(MATE_SCREENSAVER_LIBS)	\
+	$(CAFE_SCREENSAVER_LIBS)	\
 	$(SAVER_LIBS)			\
 	$(SYSTEMD_LIBS)			\
 	$(LIBELOGIND_LIBS)		\
@@ -245,7 +245,7 @@ cafe_screensaver_preferences_SOURCES =	\
 	$(NULL)
 
 cafe_screensaver_preferences_LDADD =	\
-	$(MATE_SCREENSAVER_CAPPLET_LIBS)	\
+	$(CAFE_SCREENSAVER_CAPPLET_LIBS)	\
 	$(NULL)
 
 EXTRA_DIST =				\

@@ -15,7 +15,7 @@
 ### cafe-screensaver 1.23.1
 
   * Translations update
-  * Set compiler debug flags / logging with MATE_DEBUG_CHECK
+  * Set compiler debug flags / logging with CAFE_DEBUG_CHECK
   * Use WARN_CFLAGS which are only set with --enable-compiler-warnings
   * Add keywords key to .desktop files
   * gs_prefs: avoid 'g_type_class_add_private'
@@ -173,9 +173,9 @@
 
   * Show date and time in lock dialog.
   * Add theme to use GNOME foot logo as floaters screensaver
-  * Rename Floating Feet as Floating MATE
+  * Rename Floating Feet as Floating CAFE
   * Add GTK3 support
 
 ### cafe-screensaver 1.1.0
 
-  * First MATE release.
+  * First CAFE release.

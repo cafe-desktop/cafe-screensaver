@@ -10,7 +10,7 @@
   <sect1 id="gs-intro">
     <title>Introduction</title>
     <para>
-      MATE Screensaver exposes a DBUS API for programs to obtain information about
+      CAFE Screensaver exposes a DBUS API for programs to obtain information about
       the screensaver state and to interact with the screensaver in limited ways.
     </para>
     <para>

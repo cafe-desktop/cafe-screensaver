@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -43,8 +43,8 @@ msgstr "preferences-desktop-screensaver"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
-msgid "MATE;screensaver;preferences;"
-msgstr "MATE;screensaver;preferenze;salvaschermo;"
+msgid "CAFE;screensaver;preferences;"
+msgstr "CAFE;screensaver;preferenze;salvaschermo;"
 
 #: data/cafe-screensaver-preferences.ui:20
 msgid "Screensaver Preview"
@@ -331,22 +331,22 @@ msgstr "Mostra una sequenza di immagini del cosmo"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/cosmos-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;slideshow;cosmos;"
-msgstr "MATE;screensaver;presentazione;cosmos;"
+msgid "CAFE;screensaver;slideshow;cosmos;"
+msgstr "CAFE;screensaver;presentazione;cosmos;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
-msgid "Floating MATE"
-msgstr "MATE fluttuante"
+msgid "Floating CAFE"
+msgstr "CAFE fluttuante"
 
 #: savers/footlogo-floaters.desktop.in.in:4
-msgid "Bubbles the MATE logo around the screen"
-msgstr "Fa rimbalzare il logo di MATE sullo schermo"
+msgid "Bubbles the CAFE logo around the screen"
+msgstr "Fa rimbalzare il logo di CAFE sullo schermo"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/footlogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;logo;bubbles;"
-msgstr "MATE;screensaver;logo;bolle;"
+msgid "CAFE;screensaver;logo;bubbles;"
+msgstr "CAFE;screensaver;logo;bolle;"
 
 #: savers/gnomelogo-floaters.desktop.in.in:3
 msgid "Floating GNOME"
@@ -359,8 +359,8 @@ msgstr "Fa rimbalzare il logo di GNOME sullo schermo"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnomelogo-floaters.desktop.in.in:12
-msgid "MATE;screensaver;GNOME;logo;bubbles;"
-msgstr "MATE;screensaver;GNOME;logo;bolle;"
+msgid "CAFE;screensaver;GNOME;logo;bubbles;"
+msgstr "CAFE;screensaver;GNOME;logo;bolle;"
 
 #: savers/personal-slideshow.desktop.in.in:3
 msgid "Pictures folder"
@@ -373,8 +373,8 @@ msgstr "Mostra una sequenza dalla propria cartella Immagini"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slideshow.desktop.in.in:12
-msgid "MATE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "MATE;screensaver;personalizza;presentazione;immagini;cartella;"
+msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+msgstr "CAFE;screensaver;personalizza;presentazione;immagini;cartella;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -387,8 +387,8 @@ msgstr "Una griglia in stile Pop-art di colori pulsanti."
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: savers/popsquares.desktop.in.in:12
-msgid "MATE;screensaver;grid;pulsing;colors;"
-msgstr "MATE;screensaver;griglia;pulsare;colori;"
+msgid "CAFE;screensaver;grid;pulsing;colors;"
+msgstr "CAFE;screensaver;griglia;pulsare;colori;"
 
 #: savers/popsquares.c:49 savers/floaters.c:1191
 #, c-format
@@ -772,8 +772,8 @@ msgstr "Lancia il programma per salvaschermo e per blocco schermo"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
-msgid "MATE;screensaver;locker;"
-msgstr "MATE;screensaver;blocco;"
+msgid "CAFE;screensaver;locker;"
+msgstr "CAFE;screensaver;blocco;"
 
 #: src/gs-auth-pam.c:413
 #, c-format
