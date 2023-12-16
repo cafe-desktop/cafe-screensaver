@@ -287,11 +287,11 @@ randomize_square_colors (square *squares,
 }
 
 static void
-set_colors (GtkWidget *widget,
+set_colors (CtkWidget *widget,
             GdkRGBA   *fg,
             GdkRGBA   *bg)
 {
-	GtkStyleContext  *style;
+	CtkStyleContext  *style;
 
 	style = ctk_widget_get_style_context (widget);
 
@@ -432,7 +432,7 @@ setup_colors (GSTEPopsquares *pop)
 }
 
 static void
-gste_popsquares_real_show (GtkWidget *widget)
+gste_popsquares_real_show (CtkWidget *widget)
 {
 	GSTEPopsquares *pop = GSTE_POPSQUARES (widget);
 
@@ -447,7 +447,7 @@ gste_popsquares_real_show (GtkWidget *widget)
 }
 
 static gboolean
-gste_popsquares_real_draw (GtkWidget *widget,
+gste_popsquares_real_draw (CtkWidget *widget,
                            cairo_t   *cr)
 {
 	if (CTK_WIDGET_CLASS (parent_class)->draw) {
@@ -460,7 +460,7 @@ gste_popsquares_real_draw (GtkWidget *widget,
 }
 
 static gboolean
-gste_popsquares_real_configure (GtkWidget         *widget,
+gste_popsquares_real_configure (CtkWidget         *widget,
                                 GdkEventConfigure *event)
 {
 	GSTEPopsquares *pop = GSTE_POPSQUARES (widget);
@@ -487,7 +487,7 @@ static void
 gste_popsquares_class_init (GSTEPopsquaresClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+	CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 

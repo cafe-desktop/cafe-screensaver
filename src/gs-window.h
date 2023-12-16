@@ -39,14 +39,14 @@ typedef struct GSWindowPrivate GSWindowPrivate;
 
 typedef struct
 {
-	GtkWindow        window;
+	CtkWindow        window;
 
 	GSWindowPrivate *priv;
 } GSWindow;
 
 typedef struct
 {
-	GtkWindowClass   parent_class;
+	CtkWindowClass   parent_class;
 
 	gboolean        (* activity)            (GSWindow *window);
 	void            (* deactivated)         (GSWindow *window);
@@ -96,7 +96,7 @@ GSWindow  * gs_window_new                (GdkMonitor *monitor,
 void        gs_window_show               (GSWindow  *window);
 void        gs_window_destroy            (GSWindow  *window);
 GdkWindow * gs_window_get_gdk_window     (GSWindow  *window);
-GtkWidget * gs_window_get_drawing_area   (GSWindow  *window);
+CtkWidget * gs_window_get_drawing_area   (GSWindow  *window);
 void        gs_window_clear              (GSWindow  *window);
 
 G_END_DECLS

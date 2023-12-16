@@ -50,7 +50,7 @@ typedef struct
 GType           gs_job_get_type                  (void);
 
 GSJob          *gs_job_new                       (void);
-GSJob          *gs_job_new_for_widget            (GtkWidget  *widget);
+GSJob          *gs_job_new_for_widget            (CtkWidget  *widget);
 
 gboolean        gs_job_is_running                (GSJob      *job);
 gboolean        gs_job_start                     (GSJob      *job);
@@ -59,7 +59,7 @@ gboolean        gs_job_suspend                   (GSJob      *job,
         gboolean    suspend);
 
 void            gs_job_set_widget                (GSJob      *job,
-        GtkWidget  *widget);
+        CtkWidget  *widget);
 
 gboolean        gs_job_set_command               (GSJob          *job,
         const char     *command);

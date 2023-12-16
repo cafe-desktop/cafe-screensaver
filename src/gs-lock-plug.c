@@ -79,34 +79,34 @@ static void gs_lock_plug_finalize   (GObject         *object);
 
 struct GSLockPlugPrivate
 {
-	GtkWidget   *vbox;
-	GtkWidget   *auth_action_area;
+	CtkWidget   *vbox;
+	CtkWidget   *auth_action_area;
 
-	GtkWidget   *notebook;
-	GtkWidget   *auth_face_image;
-	GtkWidget   *auth_time_label;
-	GtkWidget   *auth_date_label;
-	GtkWidget   *auth_realname_label;
-	GtkWidget   *auth_username_label;
-	GtkWidget   *auth_prompt_label;
-	GtkWidget   *auth_prompt_entry;
-	GtkWidget   *auth_prompt_box;
-	GtkWidget   *auth_capslock_label;
-	GtkWidget   *auth_message_label;
-	GtkWidget   *status_message_label;
+	CtkWidget   *notebook;
+	CtkWidget   *auth_face_image;
+	CtkWidget   *auth_time_label;
+	CtkWidget   *auth_date_label;
+	CtkWidget   *auth_realname_label;
+	CtkWidget   *auth_username_label;
+	CtkWidget   *auth_prompt_label;
+	CtkWidget   *auth_prompt_entry;
+	CtkWidget   *auth_prompt_box;
+	CtkWidget   *auth_capslock_label;
+	CtkWidget   *auth_message_label;
+	CtkWidget   *status_message_label;
 
-	GtkWidget   *auth_unlock_button;
-	GtkWidget   *auth_switch_button;
-	GtkWidget   *auth_cancel_button;
-	GtkWidget   *auth_logout_button;
-	GtkWidget   *auth_note_button;
-	GtkWidget   *note_tab;
-	GtkWidget   *note_tab_label;
-	GtkWidget   *note_text_view;
-	GtkWidget   *note_ok_button;
-	GtkWidget   *note_cancel_button;
+	CtkWidget   *auth_unlock_button;
+	CtkWidget   *auth_switch_button;
+	CtkWidget   *auth_cancel_button;
+	CtkWidget   *auth_logout_button;
+	CtkWidget   *auth_note_button;
+	CtkWidget   *note_tab;
+	CtkWidget   *note_tab_label;
+	CtkWidget   *note_text_view;
+	CtkWidget   *note_ok_button;
+	CtkWidget   *note_cancel_button;
 
-	GtkWidget   *auth_prompt_kbd_layout_indicator;
+	CtkWidget   *auth_prompt_kbd_layout_indicator;
 
 	gboolean     caps_lock_on;
 	gboolean     switch_enabled;
@@ -154,8 +154,8 @@ static guint lock_plug_signals [LAST_SIGNAL] = { 0 };
 G_DEFINE_TYPE_WITH_PRIVATE (GSLockPlug, gs_lock_plug, CTK_TYPE_PLUG)
 
 static void
-gs_lock_plug_style_set (GtkWidget *widget,
-                        GtkStyle  *previous_style)
+gs_lock_plug_style_set (CtkWidget *widget,
+                        CtkStyle  *previous_style)
 {
 	GSLockPlug *plug;
 
@@ -873,7 +873,7 @@ frame_pixbuf (GdkPixbuf *source)
 /* end copied from gdm-user.c */
 
 static void
-image_set_from_pixbuf (GtkImage  *image,
+image_set_from_pixbuf (CtkImage  *image,
                        GdkPixbuf *source)
 {
 	GdkPixbuf *pixbuf;
@@ -976,7 +976,7 @@ set_face_image (GSLockPlug *plug)
 
 #if !CTK_CHECK_VERSION (3, 23, 0)
 static void
-gs_lock_plug_get_preferred_width (GtkWidget *widget, gint *minimum_width, gint *natural_width)
+gs_lock_plug_get_preferred_width (CtkWidget *widget, gint *minimum_width, gint *natural_width)
 {
     gint scale;
 
@@ -988,7 +988,7 @@ gs_lock_plug_get_preferred_width (GtkWidget *widget, gint *minimum_width, gint *
 }
 
 static void
-gs_lock_plug_get_preferred_height_for_width (GtkWidget *widget, gint width, gint *minimum_height, gint *natural_height)
+gs_lock_plug_get_preferred_height_for_width (CtkWidget *widget, gint width, gint *minimum_height, gint *natural_height)
 {
     gint scale;
 
@@ -1001,7 +1001,7 @@ gs_lock_plug_get_preferred_height_for_width (GtkWidget *widget, gint width, gint
 #endif
 
 static void
-gs_lock_plug_show (GtkWidget *widget)
+gs_lock_plug_show (CtkWidget *widget)
 {
 	GSLockPlug *plug = GS_LOCK_PLUG (widget);
 
@@ -1029,7 +1029,7 @@ gs_lock_plug_show (GtkWidget *widget)
 }
 
 static void
-gs_lock_plug_hide (GtkWidget *widget)
+gs_lock_plug_hide (CtkWidget *widget)
 {
 	if (CTK_WIDGET_CLASS (gs_lock_plug_parent_class)->hide)
 	{
@@ -1249,7 +1249,7 @@ gs_lock_plug_close (GSLockPlug *plug)
 {
 	/* Synthesize delete_event to close dialog. */
 
-	GtkWidget *widget = CTK_WIDGET (plug);
+	CtkWidget *widget = CTK_WIDGET (plug);
 	GdkEvent  *event;
 
 	event = gdk_event_new (GDK_DELETE);
@@ -1264,8 +1264,8 @@ static void
 gs_lock_plug_class_init (GSLockPlugClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
-	GtkBindingSet  *binding_set;
+	CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+	CtkBindingSet  *binding_set;
 
 	object_class->finalize     = gs_lock_plug_finalize;
 	object_class->get_property = gs_lock_plug_get_property;
@@ -1335,7 +1335,7 @@ gs_lock_plug_class_init (GSLockPlugClass *klass)
 static void
 clear_clipboards (GSLockPlug *plug)
 {
-	GtkClipboard *clipboard;
+	CtkClipboard *clipboard;
 
 	clipboard = ctk_widget_get_clipboard (CTK_WIDGET (plug), GDK_SELECTION_PRIMARY);
 	ctk_clipboard_clear (clipboard);
@@ -1346,7 +1346,7 @@ clear_clipboards (GSLockPlug *plug)
 }
 
 static void
-take_note (GtkButton  *button,
+take_note (CtkButton  *button,
            GSLockPlug *plug)
 {
 	int page;
@@ -1358,15 +1358,15 @@ take_note (GtkButton  *button,
 }
 
 static void
-submit_note (GtkButton  *button,
+submit_note (CtkButton  *button,
              GSLockPlug *plug)
 {
 #ifdef WITH_LIBNOTIFY
 	char               *text;
 	char                summary[128];
 	char               *escaped_text;
-	GtkTextBuffer      *buffer;
-	GtkTextIter         start, end;
+	CtkTextBuffer      *buffer;
+	CtkTextIter         start, end;
 	time_t              t;
 	struct tm          *tmp;
 	NotifyNotification *note;
@@ -1395,10 +1395,10 @@ submit_note (GtkButton  *button,
 }
 
 static void
-cancel_note (GtkButton  *button,
+cancel_note (CtkButton  *button,
              GSLockPlug *plug)
 {
-	GtkTextBuffer *buffer;
+	CtkTextBuffer *buffer;
 
 	ctk_notebook_set_current_page (CTK_NOTEBOOK (plug->priv->notebook), AUTH_PAGE);
 	buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (plug->priv->note_text_view));
@@ -1413,7 +1413,7 @@ cancel_note (GtkButton  *button,
 }
 
 static void
-logout_button_clicked (GtkButton  *button,
+logout_button_clicked (CtkButton  *button,
                        GSLockPlug *plug)
 {
 	char   **argv  = NULL;
@@ -1457,7 +1457,7 @@ gs_lock_plug_set_busy (GSLockPlug *plug)
 {
 	GdkDisplay *display;
 	GdkCursor *cursor;
-	GtkWidget *top_level;
+	CtkWidget *top_level;
 
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
 
@@ -1473,7 +1473,7 @@ gs_lock_plug_set_ready (GSLockPlug *plug)
 {
 	GdkDisplay *display;
 	GdkCursor *cursor;
-	GtkWidget *top_level;
+	CtkWidget *top_level;
 
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
 
@@ -1539,7 +1539,7 @@ gs_lock_plug_show_message (GSLockPlug *plug,
 
 /* button press handler used to inhibit popup menu */
 static gint
-entry_button_press (GtkWidget      *widget,
+entry_button_press (CtkWidget      *widget,
                     GdkEventButton *event)
 {
 	if (event->button == 3 && event->type == GDK_BUTTON_PRESS)
@@ -1551,7 +1551,7 @@ entry_button_press (GtkWidget      *widget,
 }
 
 static gint
-entry_key_press (GtkWidget   *widget,
+entry_key_press (CtkWidget   *widget,
                  GdkEventKey *event,
                  GSLockPlug  *plug)
 {
@@ -1577,12 +1577,12 @@ entry_key_press (GtkWidget   *widget,
 }
 
 /* adapted from ctk_dialog_add_button */
-static GtkWidget *
+static CtkWidget *
 gs_lock_plug_add_button (GSLockPlug  *plug,
-                         GtkWidget   *action_area,
+                         CtkWidget   *action_area,
                          const gchar *button_text)
 {
-	GtkWidget *button;
+	CtkWidget *button;
 
 	g_return_val_if_fail (GS_IS_LOCK_PLUG (plug), NULL);
 	g_return_val_if_fail (button_text != NULL, NULL);
@@ -1810,7 +1810,7 @@ bail:
 }
 
 static void
-expand_string_for_label (GtkWidget *label)
+expand_string_for_label (CtkWidget *label)
 {
 	const char *template;
 	char       *str;
@@ -1824,9 +1824,9 @@ expand_string_for_label (GtkWidget *label)
 static void
 create_page_one (GSLockPlug *plug)
 {
-	GtkWidget            *vbox;
-	GtkWidget            *vbox2;
-	GtkWidget            *hbox;
+	CtkWidget            *vbox;
+	CtkWidget            *vbox2;
+	CtkWidget            *hbox;
 	char                 *str;
 
 	gs_profile_start ("page one");
@@ -1927,21 +1927,21 @@ create_page_one (GSLockPlug *plug)
 }
 
 static void
-unlock_button_clicked (GtkButton  *button,
+unlock_button_clicked (CtkButton  *button,
                        GSLockPlug *plug)
 {
 	gs_lock_plug_response (plug, GS_LOCK_PLUG_RESPONSE_OK);
 }
 
 static void
-cancel_button_clicked (GtkButton  *button,
+cancel_button_clicked (CtkButton  *button,
                        GSLockPlug *plug)
 {
 	gs_lock_plug_response (plug, GS_LOCK_PLUG_RESPONSE_CANCEL);
 }
 
 static void
-switch_user_button_clicked (GtkButton  *button,
+switch_user_button_clicked (CtkButton  *button,
                             GSLockPlug *plug)
 {
 
@@ -1977,8 +1977,8 @@ load_theme (GSLockPlug *plug)
 	char       *filename;
 	char       *ctkbuilder;
 	char       *css;
-	GtkBuilder *builder;
-	GtkWidget  *lock_dialog;
+	CtkBuilder *builder;
+	CtkWidget  *lock_dialog;
 	GError     *error=NULL;
 
 	theme = get_dialog_theme_name (plug);
@@ -2003,7 +2003,7 @@ load_theme (GSLockPlug *plug)
 	g_free (filename);
 	if (g_file_test (css, G_FILE_TEST_IS_REGULAR))
 	{
-		static GtkCssProvider *style_provider = NULL;
+		static CtkCssProvider *style_provider = NULL;
 
 		if (style_provider == NULL)
 		{
@@ -2090,7 +2090,7 @@ delete_handler (GSLockPlug  *plug,
 }
 
 static void
-on_note_text_buffer_changed (GtkTextBuffer *buffer,
+on_note_text_buffer_changed (CtkTextBuffer *buffer,
                              GSLockPlug    *plug)
 {
 	int len;
@@ -2115,7 +2115,7 @@ gs_lock_plug_init (GSLockPlug *plug)
 	plug->priv->leave_note_enabled = FALSE;
 #endif
 
-	GtkStyleContext *context;
+	CtkStyleContext *context;
 
 	context = ctk_widget_get_style_context (CTK_WIDGET (plug));
 	ctk_style_context_add_class (context, "lock-dialog");
@@ -2145,7 +2145,7 @@ gs_lock_plug_init (GSLockPlug *plug)
 
 	if (plug->priv->note_text_view != NULL)
 	{
-		GtkTextBuffer *buffer;
+		CtkTextBuffer *buffer;
 		buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (plug->priv->note_text_view));
 		g_signal_connect (buffer, "changed", G_CALLBACK (on_note_text_buffer_changed), plug);
 	}
@@ -2159,7 +2159,7 @@ gs_lock_plug_init (GSLockPlug *plug)
 		engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
 		if (xkl_engine_get_num_groups (engine) > 1)
 		{
-			GtkWidget *layout_indicator;
+			CtkWidget *layout_indicator;
 
 			layout_indicator = cafekbd_indicator_new ();
 			cafekbd_indicator_set_parent_tooltips (CAFEKBD_INDICATOR (layout_indicator), TRUE);
@@ -2310,10 +2310,10 @@ gs_lock_plug_finalize (GObject *object)
 	G_OBJECT_CLASS (gs_lock_plug_parent_class)->finalize (object);
 }
 
-GtkWidget *
+CtkWidget *
 gs_lock_plug_new (void)
 {
-	GtkWidget *result;
+	CtkWidget *result;
 
 	result = g_object_new (GS_TYPE_LOCK_PLUG, NULL);
 

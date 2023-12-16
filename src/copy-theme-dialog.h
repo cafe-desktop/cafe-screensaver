@@ -35,20 +35,20 @@ typedef struct _CopyThemeDialogPrivate CopyThemeDialogPrivate;
 
 struct _CopyThemeDialog
 {
-	GtkDialog dialog;
+	CtkDialog dialog;
 	CopyThemeDialogPrivate *priv;
 };
 
 struct _CopyThemeDialogClass
 {
-	GtkDialogClass parent_class;
+	CtkDialogClass parent_class;
 
 	void (*cancelled) (CopyThemeDialog *dialog);
 	void (*complete) (CopyThemeDialog *dialog);
 };
 
 GType copy_theme_dialog_get_type (void);
-GtkWidget *copy_theme_dialog_new (GList *files);
+CtkWidget *copy_theme_dialog_new (GList *files);
 void copy_theme_dialog_begin (CopyThemeDialog *dialog);
 
 G_END_DECLS

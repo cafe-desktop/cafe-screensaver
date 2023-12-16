@@ -57,7 +57,7 @@ typedef enum
 
 struct GSJobPrivate
 {
-	GtkWidget      *widget;
+	CtkWidget      *widget;
 
 	GSJobStatus     status;
 	gint            pid;
@@ -69,7 +69,7 @@ struct GSJobPrivate
 G_DEFINE_TYPE_WITH_PRIVATE (GSJob, gs_job, G_TYPE_OBJECT)
 
 static char *
-widget_get_id_string (GtkWidget *widget)
+widget_get_id_string (CtkWidget *widget)
 {
 	char *id = NULL;
 
@@ -173,7 +173,7 @@ gs_job_finalize (GObject *object)
 
 void
 gs_job_set_widget  (GSJob     *job,
-                    GtkWidget *widget)
+                    CtkWidget *widget)
 {
 	g_return_if_fail (job != NULL);
 	g_return_if_fail (GS_IS_JOB (job));
@@ -217,7 +217,7 @@ gs_job_new (void)
 }
 
 GSJob *
-gs_job_new_for_widget (GtkWidget  *widget)
+gs_job_new_for_widget (CtkWidget  *widget)
 {
 	GObject *job;
 
@@ -252,7 +252,7 @@ nice_process (int pid,
 }
 
 static GPtrArray *
-get_env_vars (GtkWidget *widget)
+get_env_vars (CtkWidget *widget)
 {
 	GPtrArray   *env;
 	const gchar *display_name;
@@ -301,7 +301,7 @@ get_env_vars (GtkWidget *widget)
 }
 
 static gboolean
-spawn_on_widget (GtkWidget  *widget,
+spawn_on_widget (CtkWidget  *widget,
                  const char *command,
                  int        *pid,
                  GIOFunc     watch_func,

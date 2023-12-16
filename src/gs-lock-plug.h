@@ -45,14 +45,14 @@ typedef struct GSLockPlugPrivate GSLockPlugPrivate;
 
 typedef struct
 {
-	GtkPlug            parent;
+	CtkPlug            parent;
 
 	GSLockPlugPrivate *priv;
 } GSLockPlug;
 
 typedef struct
 {
-	GtkPlugClass         parent_class;
+	CtkPlugClass         parent_class;
 
 	void (* response) (GSLockPlug *plug, gint response_id);
 
@@ -62,7 +62,7 @@ typedef struct
 } GSLockPlugClass;
 
 GType       gs_lock_plug_get_type       (void);
-GtkWidget * gs_lock_plug_new            (void);
+CtkWidget * gs_lock_plug_new            (void);
 
 int         gs_lock_plug_run            (GSLockPlug *plug);
 void        gs_lock_plug_set_sensitive  (GSLockPlug *plug,

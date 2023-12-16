@@ -41,7 +41,7 @@ int
 main (int argc, char **argv)
 {
 	GSThemeEngine *engine;
-	GtkWidget     *window;
+	CtkWidget     *window;
 	GError        *error;
 	gboolean       ret;
 	char          *location = NULL;
