@@ -10,8 +10,8 @@ savers/space-slide.desktop.in.in
 savers/foot-floaters.desktop.in.in
 savers/gnome-floaters.desktop.in.in
 savers/personal-slide.desktop.in.in
-savers/popsquares.desktop.in.in
-savers/popsquares.c
+savers/squares.desktop.in.in
+savers/squares.c
 savers/floaters.c
 savers/slide.c
 src/copy-theme-dialog.c

@@ -362,21 +362,21 @@ msgstr "Приказује у низу све слике из ваше личн�
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr "Мејт;чувар екрана;произвољно;покретни приказ;слике;фасцикла;"
 
-#: savers/popsquares.desktop.in.in:3
+#: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
 msgstr "Поп арт квадрати"
 
-#: savers/popsquares.desktop.in.in:4
+#: savers/squares.desktop.in.in:4
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Поп арт мрежа светлећих боја."
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/popsquares.desktop.in.in:12
+#: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr "Мејт;чувар екрана;мржа;пулсирање;боје;"
 
-#: savers/popsquares.c:49 savers/floaters.c:1191
+#: savers/squares.c:49 savers/floaters.c:1191
 #, c-format
 msgid "%s. See --help for usage information.\n"
 msgstr "%s. Погледајте „--help“ за податке о употреби.\n"

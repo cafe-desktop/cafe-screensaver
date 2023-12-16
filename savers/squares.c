@@ -29,7 +29,7 @@
 
 #include "gs-theme-window.h"
 #include "gs-theme-engine.h"
-#include "gste-popsquares.h"
+#include "gste-squares.h"
 
 int
 main (int argc, char **argv)
@@ -56,7 +56,7 @@ main (int argc, char **argv)
 	g_signal_connect (G_OBJECT (window), "delete-event",
 	                  G_CALLBACK (ctk_main_quit), NULL);
 
-	g_set_prgname ("popsquares");
+	g_set_prgname ("squares");
 
 	engine = g_object_new (GSTE_TYPE_POPSQUARES, NULL);
 	ctk_container_add (CTK_CONTAINER (window), CTK_WIDGET (engine));

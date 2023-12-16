@@ -19,7 +19,7 @@ DESKTOP_IN_IN_FILES = 			 \
 	foot-floaters.desktop.in.in	 \
 	gnome-floaters.desktop.in.in	 \
 	personal-slide.desktop.in.in \
-	popsquares.desktop.in.in	 \
+	squares.desktop.in.in	 \
 	$(NULL)
 
 space-slide.desktop.in: space-slide.desktop.in.in Makefile
@@ -30,7 +30,7 @@ gnome-floaters.desktop.in: gnome-floaters.desktop.in.in Makefile
 	@$(edit) $< >$@
 personal-slide.desktop.in: personal-slide.desktop.in.in Makefile
 	@$(edit) $< >$@
-popsquares.desktop.in: popsquares.desktop.in.in Makefile
+squares.desktop.in: squares.desktop.in.in Makefile
 	@$(edit) $< >$@
 
 edit = sed \
@@ -48,7 +48,7 @@ themes_in_files = 			\
 	foot-floaters.desktop.in    \
 	gnome-floaters.desktop.in    \
 	personal-slide.desktop.in	\
-	popsquares.desktop.in		\
+	squares.desktop.in		\
 	$(NULL)
 themes_DATA = $(themes_in_files:.desktop.in=.desktop)
 
@@ -83,7 +83,7 @@ libgs_theme_engine_a_SOURCES =		\
 saverdir = $(libexecdir)/cafe-screensaver
 saver_PROGRAMS = 	\
 	floaters	\
-	popsquares	\
+	squares	\
 	slide	\
 	$(NULL)
 
@@ -97,13 +97,13 @@ floaters_LDADD =		       \
 	-lm                             \
 	$(NULL)
 
-popsquares_SOURCES = 		\
-	gste-popsquares.c	\
-	gste-popsquares.h	\
-	popsquares.c		\
+squares_SOURCES = 		\
+	gste-squares.c	\
+	gste-squares.h	\
+	squares.c		\
 	$(NULL)
 
-popsquares_LDADD =			\
+squares_LDADD =			\
 	libgs-theme-engine.a 		\
 	$(CAFE_SCREENSAVER_SAVER_LIBS)	\
 	$(NULL)
@@ -132,7 +132,7 @@ CLEANFILES = 				\
 	space-slide.desktop.in	\
 	foot-floaters.desktop.in	\
 	gnome-floaters.desktop.in	\
-	popsquares.desktop.in		\
+	squares.desktop.in		\
 	personal-slide.desktop.in	\
 	$(NULL)
 
@@ -147,5 +147,5 @@ MAINTAINERCLEANFILES =			\
 	foot-floaters.desktop	\
 	gnome-floaters.desktop	\
 	personal-slide.desktop	\
-	popsquares.desktop		\
+	squares.desktop		\
 	$(NULL)

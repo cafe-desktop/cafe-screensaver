@@ -378,21 +378,21 @@ msgstr "Mostrar uma apresentação a partir da sua pasta de Imagens"
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr "CAFE;proteção de ecrã;personalizado;diaporama;fotos;pasta;"
 
-#: savers/popsquares.desktop.in.in:3
+#: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
 msgstr "Quadrados pop-arte"
 
-#: savers/popsquares.desktop.in.in:4
+#: savers/squares.desktop.in.in:4
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Uma grelha estilo pop-arte de cores pulsantes."
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/popsquares.desktop.in.in:12
+#: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr "CAFE;proteção de ecrã;grelha;pulsante;cores;"
 
-#: savers/popsquares.c:49 savers/floaters.c:1191
+#: savers/squares.c:49 savers/floaters.c:1191
 #, c-format
 msgid "%s. See --help for usage information.\n"
 msgstr "%s. Consulte --help para informações de utilização.\n"
