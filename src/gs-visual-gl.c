@@ -75,9 +75,9 @@ gs_visual_gl_get_best_for_display (GdkDisplay *display)
 
 	g_return_val_if_fail (display != NULL, NULL);
 
-	xdisplay = GDK_DISPLAY_XDISPLAY (display);
+	xdisplay = CDK_DISPLAY_XDISPLAY (display);
 	screen = cdk_display_get_default_screen (display);
-	screen_num = GDK_SCREEN_XNUMBER (screen);
+	screen_num = CDK_SCREEN_XNUMBER (screen);
 
 	cdk_x11_display_error_trap_push (display);
 

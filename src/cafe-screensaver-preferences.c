@@ -387,7 +387,7 @@ help_display (void)
 	error = NULL;
 	ctk_show_uri_on_window (NULL,
                                 "help:cafe-user-guide/prefs-screensaver",
-                                GDK_CURRENT_TIME,
+                                CDK_CURRENT_TIME,
                                 &error);
 
 	if (error != NULL)
@@ -1356,7 +1356,7 @@ spawn_make_environment_for_display (GdkDisplay *display,
 	gint    display_index = -1;
 	gint    i, env_len;
 
-	g_return_val_if_fail (GDK_IS_DISPLAY (display), NULL);
+	g_return_val_if_fail (CDK_IS_DISPLAY (display), NULL);
 
 	if (envp == NULL)
 		envp = environ;
@@ -1665,7 +1665,7 @@ init_capplet (void)
 
 	ctk_drag_dest_set (dialog, CTK_DEST_DEFAULT_ALL,
 	                   drop_types, G_N_ELEMENTS (drop_types),
-	                   GDK_ACTION_COPY | GDK_ACTION_LINK | GDK_ACTION_MOVE);
+	                   CDK_ACTION_COPY | CDK_ACTION_LINK | CDK_ACTION_MOVE);
 
 	g_signal_connect (dialog, "drag-motion",
 	                  G_CALLBACK (drag_motion_cb), NULL);

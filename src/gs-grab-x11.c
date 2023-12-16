@@ -54,17 +54,17 @@ grab_string (int status)
 {
 	switch (status)
 	{
-	case GDK_GRAB_SUCCESS:
+	case CDK_GRAB_SUCCESS:
 		return "GrabSuccess";
-	case GDK_GRAB_ALREADY_GRABBED:
+	case CDK_GRAB_ALREADY_GRABBED:
 		return "AlreadyGrabbed";
-	case GDK_GRAB_INVALID_TIME:
+	case CDK_GRAB_INVALID_TIME:
 		return "GrabInvalidTime";
-	case GDK_GRAB_NOT_VIEWABLE:
+	case CDK_GRAB_NOT_VIEWABLE:
 		return "GrabNotViewable";
-	case GDK_GRAB_FROZEN:
+	case CDK_GRAB_FROZEN:
 		return "GrabFrozen";
-	case GDK_GRAB_FAILED:
+	case CDK_GRAB_FAILED:
 		return "GrabFailed";
 	default:
 	{
@@ -104,15 +104,15 @@ gs_grab_get (GSGrab     *grab,
 	g_return_val_if_fail (window != NULL, FALSE);
 	g_return_val_if_fail (display != NULL, FALSE);
 
-	cursor = cdk_cursor_new_for_display (display, GDK_BLANK_CURSOR);
+	cursor = cdk_cursor_new_for_display (display, CDK_BLANK_CURSOR);
 
-	gs_debug ("Grabbing devices for window=%X", (guint32) GDK_WINDOW_XID (window));
+	gs_debug ("Grabbing devices for window=%X", (guint32) CDK_WINDOW_XID (window));
 
 	seat = cdk_display_get_default_seat (display);
 	if (!no_pointer_grab)
-		caps = GDK_SEAT_CAPABILITY_ALL;
+		caps = CDK_SEAT_CAPABILITY_ALL;
 	else
-		caps = GDK_SEAT_CAPABILITY_KEYBOARD;
+		caps = CDK_SEAT_CAPABILITY_KEYBOARD;
 
 	status = cdk_seat_grab (seat, window,
 	                        caps, TRUE,
@@ -124,7 +124,7 @@ gs_grab_get (GSGrab     *grab,
 	/* make it release grabbed pointer if requested and if any;
 	   time between grabbing and ungrabbing is minimal as grab was already
 	   completed once */
-	if (status == GDK_GRAB_SUCCESS && no_pointer_grab &&
+	if (status == CDK_GRAB_SUCCESS && no_pointer_grab &&
 	    cdk_display_device_is_grabbed (display, cdk_seat_get_pointer (seat)))
 	{
 		gs_grab_release (grab, FALSE);
@@ -135,7 +135,7 @@ gs_grab_get (GSGrab     *grab,
 		                        NULL, NULL, NULL);
 	}
 
-	if (status == GDK_GRAB_SUCCESS)
+	if (status == CDK_GRAB_SUCCESS)
 	{
 		if (grab->priv->grab_window != NULL)
 		{
@@ -211,20 +211,20 @@ gs_grab_move (GSGrab     *grab,
 	    grab->priv->no_pointer_grab == no_pointer_grab)
 	{
 		gs_debug ("Window %X is already grabbed, skipping",
-		          (guint32) GDK_WINDOW_XID (grab->priv->grab_window));
+		          (guint32) CDK_WINDOW_XID (grab->priv->grab_window));
 		return TRUE;
 	}
 
 	if (grab->priv->grab_window != NULL)
 	{
 		gs_debug ("Moving devices grab from %X to %X",
-		          (guint32) GDK_WINDOW_XID (grab->priv->grab_window),
-		          (guint32) GDK_WINDOW_XID (window));
+		          (guint32) CDK_WINDOW_XID (grab->priv->grab_window),
+		          (guint32) CDK_WINDOW_XID (window));
 	}
 	else
 	{
 		gs_debug ("Getting devices grab on %X",
-		          (guint32) GDK_WINDOW_XID (window));
+		          (guint32) CDK_WINDOW_XID (window));
 
 	}
 
@@ -243,21 +243,21 @@ gs_grab_move (GSGrab     *grab,
 	result = gs_grab_get (grab, window, display,
 	                      no_pointer_grab, hide_cursor);
 
-	if (result != GDK_GRAB_SUCCESS)
+	if (result != CDK_GRAB_SUCCESS)
 	{
 		g_usleep (G_USEC_PER_SEC);
 		result = gs_grab_get (grab, window, display,
 		                      no_pointer_grab, hide_cursor);
 	}
 
-	if ((result != GDK_GRAB_SUCCESS) && old_window)
+	if ((result != CDK_GRAB_SUCCESS) && old_window)
 	{
 		int old_result;
 
 		gs_debug ("Could not grab devices for new window. Resuming previous grab.");
 		old_result = gs_grab_get (grab, old_window, old_display,
 		                          no_pointer_grab, old_hide_cursor);
-		if (old_result != GDK_GRAB_SUCCESS)
+		if (old_result != CDK_GRAB_SUCCESS)
 			gs_debug ("Could not grab devices for old window");
 	}
 
@@ -265,7 +265,7 @@ gs_grab_move (GSGrab     *grab,
 	cdk_x11_display_ungrab (display);
 	cdk_display_flush (display);
 
-	return (result == GDK_GRAB_SUCCESS);
+	return (result == CDK_GRAB_SUCCESS);
 }
 
 static void
@@ -278,8 +278,8 @@ gs_grab_nuke_focus (GdkDisplay *display)
 
 	cdk_x11_display_error_trap_push (display);
 
-	XGetInputFocus (GDK_DISPLAY_XDISPLAY (display), &focus, &rev);
-	XSetInputFocus (GDK_DISPLAY_XDISPLAY (display), None,
+	XGetInputFocus (CDK_DISPLAY_XDISPLAY (display), &focus, &rev);
+	XSetInputFocus (CDK_DISPLAY_XDISPLAY (display), None,
 	                RevertToNone, CurrentTime);
 
 	cdk_x11_display_error_trap_pop_ignored (display);
@@ -300,7 +300,7 @@ gs_grab_grab_window (GSGrab     *grab,
 	{
 		status = gs_grab_get (grab, window, display,
 		                      no_pointer_grab, hide_cursor);
-		if (status == GDK_GRAB_SUCCESS)
+		if (status == CDK_GRAB_SUCCESS)
 		{
 			break;
 		}
@@ -314,7 +314,7 @@ gs_grab_grab_window (GSGrab     *grab,
 		g_usleep (G_USEC_PER_SEC);
 	}
 
-	if (status != GDK_GRAB_SUCCESS)
+	if (status != CDK_GRAB_SUCCESS)
 	{
 		gs_debug ("Couldn't grab devices!  (%s)",
 		          grab_string (status));

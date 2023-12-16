@@ -719,7 +719,7 @@ rounded_rectangle (cairo_t *cr,
  * @rowstride: data rowstride
  *
  * Converts the pixel data stored in @src in CAIRO_FORMAT_ARGB32 cairo format
- * to GDK_COLORSPACE_RGB pixbuf format and move them
+ * to CDK_COLORSPACE_RGB pixbuf format and move them
  * to @dst. If @src == @dst, pixel are converted in place.
  **/
 
@@ -824,7 +824,7 @@ frame_pixbuf (GdkPixbuf *source)
 	h = cdk_pixbuf_get_height (source) + frame_width * 2;
 	radius = w / 10;
 
-	dest = cdk_pixbuf_new (GDK_COLORSPACE_RGB,
+	dest = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
 						   TRUE,
 						   8,
 						   w,
@@ -1252,7 +1252,7 @@ gs_lock_plug_close (GSLockPlug *plug)
 	CtkWidget *widget = CTK_WIDGET (plug);
 	GdkEvent  *event;
 
-	event = cdk_event_new (GDK_DELETE);
+	event = cdk_event_new (CDK_DELETE);
 	event->any.window = g_object_ref (ctk_widget_get_window(widget));
 	event->any.send_event = TRUE;
 
@@ -1328,7 +1328,7 @@ gs_lock_plug_class_init (GSLockPlugClass *klass)
 
 	binding_set = ctk_binding_set_by_class (klass);
 
-	ctk_binding_entry_add_signal (binding_set, GDK_KEY_Escape, 0,
+	ctk_binding_entry_add_signal (binding_set, CDK_KEY_Escape, 0,
 	                              "close", 0);
 }
 
@@ -1337,10 +1337,10 @@ clear_clipboards (GSLockPlug *plug)
 {
 	CtkClipboard *clipboard;
 
-	clipboard = ctk_widget_get_clipboard (CTK_WIDGET (plug), GDK_SELECTION_PRIMARY);
+	clipboard = ctk_widget_get_clipboard (CTK_WIDGET (plug), CDK_SELECTION_PRIMARY);
 	ctk_clipboard_clear (clipboard);
 	ctk_clipboard_set_text (clipboard, "", -1);
-	clipboard = ctk_widget_get_clipboard (CTK_WIDGET (plug), GDK_SELECTION_CLIPBOARD);
+	clipboard = ctk_widget_get_clipboard (CTK_WIDGET (plug), CDK_SELECTION_CLIPBOARD);
 	ctk_clipboard_clear (clipboard);
 	ctk_clipboard_set_text (clipboard, "", -1);
 }
@@ -1462,7 +1462,7 @@ gs_lock_plug_set_busy (GSLockPlug *plug)
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
 
 	display = ctk_widget_get_display (CTK_WIDGET (plug));
-	cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
+	cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
 
 	cdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
 	g_object_unref (cursor);
@@ -1478,7 +1478,7 @@ gs_lock_plug_set_ready (GSLockPlug *plug)
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
 
 	display = ctk_widget_get_display (CTK_WIDGET (plug));
-	cursor = cdk_cursor_new_for_display (display, GDK_LEFT_PTR);
+	cursor = cdk_cursor_new_for_display (display, CDK_LEFT_PTR);
 	cdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
 	g_object_unref (cursor);
 }
@@ -1542,7 +1542,7 @@ static gint
 entry_button_press (CtkWidget      *widget,
                     GdkEventButton *event)
 {
-	if (event->button == 3 && event->type == GDK_BUTTON_PRESS)
+	if (event->button == 3 && event->type == CDK_BUTTON_PRESS)
 	{
 		return TRUE;
 	}
@@ -2156,7 +2156,7 @@ gs_lock_plug_init (GSLockPlug *plug)
 	{
 		XklEngine *engine;
 
-		engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()));
+		engine = xkl_engine_get_instance (CDK_DISPLAY_XDISPLAY (cdk_display_get_default ()));
 		if (xkl_engine_get_num_groups (engine) > 1)
 		{
 			CtkWidget *layout_indicator;

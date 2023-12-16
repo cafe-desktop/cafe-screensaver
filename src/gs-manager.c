@@ -1718,7 +1718,7 @@ gs_manager_create_windows_for_display (GSManager  *manager,
 
 	g_return_if_fail (manager != NULL);
 	g_return_if_fail (GS_IS_MANAGER (manager));
-	g_return_if_fail (GDK_IS_DISPLAY (display));
+	g_return_if_fail (CDK_IS_DISPLAY (display));
 
 	g_object_ref (manager);
 	g_object_ref (display);
