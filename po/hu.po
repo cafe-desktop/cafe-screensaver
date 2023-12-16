@@ -109,7 +109,7 @@ msgstr ""
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
 #: savers/space-slideshow.desktop.in.in:3
-msgid "Cosmos"
+msgid "Space"
 msgstr "Kozmosz"
 
 #: data/lock-dialog-default.ui:100

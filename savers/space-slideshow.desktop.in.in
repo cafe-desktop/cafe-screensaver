@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Cosmos
+Name=Space
 Comment=Display a slideshow of pictures of the space
 Exec=@SAVERDIR@/slideshow --location=@SLIDESHOW_COSMOS_DIR@
 TryExec=@SAVERDIR@/slideshow
