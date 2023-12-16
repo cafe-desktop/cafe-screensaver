@@ -21,7 +21,7 @@
 #ifndef __GS_VISUAL_GL_H
 #define __GS_VISUAL_GL_H
 
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 
 G_BEGIN_DECLS
 

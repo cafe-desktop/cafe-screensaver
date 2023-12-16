@@ -23,7 +23,7 @@
 #ifndef __GS_WINDOW_H
 #define __GS_WINDOW_H
 
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 #include <ctk/ctk.h>
 
 G_BEGIN_DECLS
@@ -95,7 +95,7 @@ GSWindow  * gs_window_new                (GdkMonitor *monitor,
                                           gboolean   lock_enabled);
 void        gs_window_show               (GSWindow  *window);
 void        gs_window_destroy            (GSWindow  *window);
-GdkWindow * gs_window_get_gdk_window     (GSWindow  *window);
+GdkWindow * gs_window_get_cdk_window     (GSWindow  *window);
 CtkWidget * gs_window_get_drawing_area   (GSWindow  *window);
 void        gs_window_clear              (GSWindow  *window);
 

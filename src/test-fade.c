@@ -32,7 +32,7 @@
 #include <unistd.h>
 
 #include <glib/gi18n.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 #include <ctk/ctk.h>
 
 #include "gs-fade.h"
@@ -101,7 +101,7 @@ main (int    argc,
 		exit (1);
 	}
 
-	if (! XQueryExtension (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), XF86_VIDMODE_NAME, &op, &event, &err))
+	if (! XQueryExtension (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), XF86_VIDMODE_NAME, &op, &event, &err))
 	{
 		g_message ("no " XF86_VIDMODE_NAME " extension");
 	}
@@ -111,7 +111,7 @@ main (int    argc,
 		int major;
 		int minor;
 
-		if (! XF86VidModeQueryVersion (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), &major, &minor))
+		if (! XF86VidModeQueryVersion (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), &major, &minor))
 		{
 			g_message ("unable to get " XF86_VIDMODE_NAME " version");
 		}

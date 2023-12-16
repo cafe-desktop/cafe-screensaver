@@ -27,8 +27,8 @@
 #include <sys/wait.h>
 #include <string.h>
 
-#include <gdk/gdkx.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkx.h>
+#include <cdk/cdkkeysyms.h>
 #include <ctk/ctk.h>
 #include <ctk/ctkx.h>
 
@@ -149,11 +149,11 @@ set_invisible_cursor (GdkWindow *window,
 
 	if (invisible)
 	{
-		display = gdk_window_get_display (window);
-		cursor = gdk_cursor_new_for_display (display, GDK_BLANK_CURSOR);
+		display = cdk_window_get_display (window);
+		cursor = cdk_cursor_new_for_display (display, GDK_BLANK_CURSOR);
 	}
 
-	gdk_window_set_cursor (window, cursor);
+	cdk_window_set_cursor (window, cursor);
 
 	if (cursor)
 	{
@@ -180,10 +180,10 @@ gs_window_override_user_time (GSWindow *window)
 		 * NOTE: Last resort for D-BUS or other non-interactive
 		 *       openings.  Causes roundtrip to server.  Lame.
 		 */
-		ev_time = gdk_x11_get_server_time (ctk_widget_get_window (CTK_WIDGET (window)));
+		ev_time = cdk_x11_get_server_time (ctk_widget_get_window (CTK_WIDGET (window)));
 	}
 
-	gdk_x11_window_set_user_time (ctk_widget_get_window (CTK_WIDGET (window)), ev_time);
+	cdk_x11_window_set_user_time (ctk_widget_get_window (CTK_WIDGET (window)), ev_time);
 }
 
 static void
@@ -196,7 +196,7 @@ clear_children (Window window)
 	int               status;
 
 	children = NULL;
-	status = XQueryTree (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), window, &root, &parent, &children, &n_children);
+	status = XQueryTree (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), window, &root, &parent, &children, &n_children);
 
 	if (status == 0)
 	{
@@ -215,7 +215,7 @@ clear_children (Window window)
 
 			child = children [--n_children];
 
-			XClearWindow (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), child);
+			XClearWindow (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), child);
 
 			clear_children (child);
 		}
@@ -233,13 +233,13 @@ widget_clear_all_children (CtkWidget *widget)
 	gs_debug ("Clearing all child windows");
 	display = ctk_widget_get_display (widget);
 
-	gdk_x11_display_error_trap_push (display);
+	cdk_x11_display_error_trap_push (display);
 
 	w = ctk_widget_get_window (widget);
 
 	clear_children (GDK_WINDOW_XID (w));
 
-	gdk_x11_display_error_trap_pop_ignored (display);
+	cdk_x11_display_error_trap_pop_ignored (display);
 
 }
 
@@ -286,7 +286,7 @@ gs_window_clear (GSWindow *window)
 	}
 
 	display = ctk_widget_get_display (CTK_WIDGET(window));
-	gdk_display_flush (display);
+	cdk_display_flush (display);
 }
 
 static cairo_region_t *
@@ -301,17 +301,17 @@ get_outside_region (GSWindow *window)
 
 	region = cairo_region_create ();
 
-	num_monitors = gdk_display_get_n_monitors (display);
+	num_monitors = cdk_display_get_n_monitors (display);
 	for (i = 0; i < num_monitors; i++)
 	{
-		GdkMonitor *mon = gdk_display_get_monitor (display, i);
+		GdkMonitor *mon = cdk_display_get_monitor (display, i);
 
 		if (mon != window->priv->monitor)
 		{
 			GdkRectangle geometry;
 			cairo_rectangle_int_t rectangle;
 
-			gdk_monitor_get_geometry (mon, &geometry);
+			cdk_monitor_get_geometry (mon, &geometry);
 			rectangle.x = geometry.x;
 			rectangle.y = geometry.y;
 			rectangle.width = geometry.width;
@@ -336,7 +336,7 @@ update_geometry (GSWindow *window)
 
 	outside_region = get_outside_region (window);
 
-	gdk_monitor_get_geometry (window->priv->monitor, &geometry);
+	cdk_monitor_get_geometry (window->priv->monitor, &geometry);
 	gs_debug ("got geometry for monitor: x=%d y=%d w=%d h=%d",
 	          geometry.x,
 	          geometry.y,
@@ -377,10 +377,10 @@ gs_window_move_resize_window (GSWindow *window,
                               gboolean  resize)
 {
 	CtkWidget *widget;
-	GdkWindow *gdkwindow;
+	GdkWindow *cdkwindow;
 
 	widget = CTK_WIDGET (window);
-	gdkwindow = ctk_widget_get_window (CTK_WIDGET (window));
+	cdkwindow = ctk_widget_get_window (CTK_WIDGET (window));
 
 	g_assert (ctk_widget_get_realized (widget));
 
@@ -392,7 +392,7 @@ gs_window_move_resize_window (GSWindow *window,
 
 	if (move && resize)
 	{
-		gdk_window_move_resize (gdkwindow,
+		cdk_window_move_resize (cdkwindow,
 		                        window->priv->geometry.x,
 		                        window->priv->geometry.y,
 		                        window->priv->geometry.width,
@@ -400,13 +400,13 @@ gs_window_move_resize_window (GSWindow *window,
 	}
 	else if (move)
 	{
-		gdk_window_move (gdkwindow,
+		cdk_window_move (cdkwindow,
 		                 window->priv->geometry.x,
 		                 window->priv->geometry.y);
 	}
 	else if (resize)
 	{
-		gdk_window_resize (gdkwindow,
+		cdk_window_resize (cdkwindow,
 		                   window->priv->geometry.width,
 		                   window->priv->geometry.height);
 	}
@@ -426,7 +426,7 @@ gs_window_real_unrealize (CtkWidget *widget)
 	}
 }
 
-/* copied from gdk */
+/* copied from cdk */
 extern char **environ;
 
 static gchar **
@@ -450,7 +450,7 @@ spawn_make_environment_for_display (GdkDisplay *display,
 	retval = g_new (char *, env_len + 1);
 	retval[env_len] = NULL;
 
-	display_name = gdk_display_get_name (display);
+	display_name = cdk_display_get_name (display);
 
 	for (i = 0; i < env_len; i++)
 		if (i == display_index)
@@ -515,7 +515,7 @@ get_best_visual_for_display (GdkDisplay *display)
 	gboolean      res;
 
 	visual = NULL;
-	screen = gdk_display_get_default_screen (display);
+	screen = cdk_display_get_default_screen (display);
 
 	command = g_build_filename (LIBEXECDIR, "cafe-screensaver-gl-helper", NULL);
 
@@ -541,10 +541,10 @@ get_best_visual_for_display (GdkDisplay *display)
 			VisualID      visual_id;
 
 			visual_id = (VisualID) v;
-			visual = gdk_x11_screen_lookup_visual (screen, visual_id);
+			visual = cdk_x11_screen_lookup_visual (screen, visual_id);
 
 			gs_debug ("Found best GL visual for display %s: 0x%x",
-			          gdk_display_get_name (display),
+			          cdk_display_get_name (display),
 			          (unsigned int) visual_id);
 		}
 	}
@@ -599,7 +599,7 @@ watchdog_timer (GSWindow *window)
 {
 	CtkWidget *widget = CTK_WIDGET (window);
 
-	gdk_window_focus (ctk_widget_get_window (widget), GDK_CURRENT_TIME);
+	cdk_window_focus (ctk_widget_get_window (widget), GDK_CURRENT_TIME);
 
 	return TRUE;
 }
@@ -664,7 +664,7 @@ gs_window_raise (GSWindow *window)
 
 	win = ctk_widget_get_window (CTK_WIDGET (window));
 
-	gdk_window_raise (win);
+	cdk_window_raise (win);
 }
 
 static gboolean
@@ -675,7 +675,7 @@ x11_window_is_ours (Window window)
 
 	ret = FALSE;
 
-	gwindow = gdk_x11_window_lookup_for_display (gdk_display_get_default (), window);
+	gwindow = cdk_x11_window_lookup_for_display (cdk_display_get_default (), window);
 	if (gwindow && (window != GDK_ROOT_WINDOW ()))
 	{
 		ret = TRUE;
@@ -688,7 +688,7 @@ x11_window_is_ours (Window window)
 static void
 unshape_window (GSWindow *window)
 {
-	gdk_window_shape_combine_region (ctk_widget_get_window (CTK_WIDGET (window)),
+	cdk_window_shape_combine_region (ctk_widget_get_window (CTK_WIDGET (window)),
 	                                 NULL,
 	                                 0,
 	                                 0);
@@ -770,9 +770,9 @@ select_popup_events (void)
 	unsigned long     events;
 	GdkDisplay *display;
 
-	display = gdk_display_get_default ();
+	display = cdk_display_get_default ();
 
-	gdk_x11_display_error_trap_push (display);
+	cdk_x11_display_error_trap_push (display);
 
 	memset (&attr, 0, sizeof (attr));
 	XGetWindowAttributes (GDK_DISPLAY_XDISPLAY (display), GDK_ROOT_WINDOW (), &attr);
@@ -780,7 +780,7 @@ select_popup_events (void)
 	events = SubstructureNotifyMask | attr.your_event_mask;
 	XSelectInput (GDK_DISPLAY_XDISPLAY (display), GDK_ROOT_WINDOW (), events);
 
-	gdk_x11_display_error_trap_pop_ignored (display);
+	cdk_x11_display_error_trap_pop_ignored (display);
 }
 
 static void
@@ -793,14 +793,14 @@ window_select_shape_events (GSWindow *window)
 
 	display = ctk_widget_get_display (CTK_WIDGET(window));
 
-	gdk_x11_display_error_trap_push (display);
+	cdk_x11_display_error_trap_push (display);
 
 	if (XShapeQueryExtension (GDK_DISPLAY_XDISPLAY (display), &window->priv->shape_event_base, &shape_error_base)) {
 		events = ShapeNotifyMask;
 		XShapeSelectInput (GDK_DISPLAY_XDISPLAY (display), GDK_WINDOW_XID (ctk_widget_get_window (CTK_WIDGET (window))), events);
 	}
 
-	gdk_x11_display_error_trap_pop_ignored (display);
+	cdk_x11_display_error_trap_pop_ignored (display);
 #endif
 }
 
@@ -851,7 +851,7 @@ gs_window_real_show (CtkWidget *widget)
 
 	select_popup_events ();
 	window_select_shape_events (window);
-	gdk_window_add_filter (NULL, (GdkFilterFunc)xevent_filter, window);
+	cdk_window_add_filter (NULL, (GdkFilterFunc)xevent_filter, window);
 }
 
 static void
@@ -962,7 +962,7 @@ gs_window_real_hide (CtkWidget *widget)
 
 	window = GS_WINDOW (widget);
 
-	gdk_window_remove_filter (NULL, (GdkFilterFunc)xevent_filter, window);
+	cdk_window_remove_filter (NULL, (GdkFilterFunc)xevent_filter, window);
 
 	remove_watchdog_timer (window);
 
@@ -983,7 +983,7 @@ gs_window_destroy (GSWindow *window)
 }
 
 GdkWindow *
-gs_window_get_gdk_window (GSWindow *window)
+gs_window_get_cdk_window (GSWindow *window)
 {
 	g_return_val_if_fail (GS_IS_WINDOW (window), NULL);
 
@@ -1196,7 +1196,7 @@ forward_key_events (GSWindow *window)
 
 		ctk_window_propagate_key_event (CTK_WINDOW (window), event);
 
-		gdk_event_free ((GdkEvent *)event);
+		cdk_event_free ((GdkEvent *)event);
 		window->priv->key_events = g_list_delete_link (window->priv->key_events,
 		                           window->priv->key_events);
 	}
@@ -1211,7 +1211,7 @@ remove_key_events (GSWindow *window)
 	{
 		GdkEventKey *event = window->priv->key_events->data;
 
-		gdk_event_free ((GdkEvent *)event);
+		cdk_event_free ((GdkEvent *)event);
 		window->priv->key_events = g_list_delete_link (window->priv->key_events,
 		                           window->priv->key_events);
 	}
@@ -1245,7 +1245,7 @@ create_keyboard_socket (GSWindow *window,
 {
 	int height;
 
-	height = (HeightOfScreen (gdk_x11_screen_get_xscreen (ctk_widget_get_screen (CTK_WIDGET (window))))) / 4;
+	height = (HeightOfScreen (cdk_x11_screen_get_xscreen (ctk_widget_get_screen (CTK_WIDGET (window))))) / 4;
 
 	window->priv->keyboard_socket = ctk_socket_new ();
 	ctk_widget_set_size_request (window->priv->keyboard_socket, -1, height);
@@ -2058,7 +2058,7 @@ queue_key_event (GSWindow    *window,
 	        && event->keyval != GDK_KEY_Down)
 	{
 		window->priv->key_events = g_list_prepend (window->priv->key_events,
-		                           gdk_event_copy ((GdkEvent *)event));
+		                           cdk_event_copy ((GdkEvent *)event));
 	}
 }
 
@@ -2118,8 +2118,8 @@ gs_window_real_motion_notify_event (CtkWidget      *widget,
 	window = GS_WINDOW (widget);
 
 	display = gs_window_get_display (window);
-	screen = gdk_display_get_default_screen (display);
-	min_distance = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) * min_percentage;
+	screen = cdk_display_get_default_screen (display);
+	min_distance = WidthOfScreen (cdk_x11_screen_get_xscreen (screen)) * min_percentage;
 
 	/* if the last position was not set then don't detect motion */
 	if (window->priv->last_x < 0 || window->priv->last_y < 0)
@@ -2559,8 +2559,8 @@ gs_window_new (GdkMonitor *monitor,
                gboolean   lock_enabled)
 {
 	GObject    *result;
-	GdkDisplay *display = gdk_monitor_get_display (monitor);
-	GdkScreen  *screen = gdk_display_get_default_screen (display);
+	GdkDisplay *display = cdk_monitor_get_display (monitor);
+	GdkScreen  *screen = cdk_display_get_default_screen (display);
 
 	result = g_object_new (GS_TYPE_WINDOW,
 	                       "type", CTK_WINDOW_POPUP,

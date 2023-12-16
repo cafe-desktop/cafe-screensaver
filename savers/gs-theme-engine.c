@@ -171,7 +171,7 @@ gs_theme_engine_get_window_size (GSThemeEngine *engine,
 		return;
 	}
 
-	gdk_window_get_geometry (ctk_widget_get_window (CTK_WIDGET (engine)),
+	cdk_window_get_geometry (ctk_widget_get_window (CTK_WIDGET (engine)),
 	                         NULL,
 	                         NULL,
 	                         width,

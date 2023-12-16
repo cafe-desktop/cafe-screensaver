@@ -58,19 +58,19 @@
   * disable deprecation warnings for distcheck
   * fade: fix fade computation math
   * fix more GdkScreen related deprecations
-  * gs-grab-x11: replace deprecated gdk_error_trap_push/pop
-  * gs-visual-gl: replace deprecated gdk_error_trap_push/pop
+  * gs-grab-x11: replace deprecated cdk_error_trap_push/pop
+  * gs-visual-gl: replace deprecated cdk_error_trap_push/pop
   * Remove "monitor" pointer from debug information
   * lock-plug: Only scale lock-screen widgets on older versions of CTK
-  * gs-lock-plug: avoid deprecated 'gdk_keymap_get_default'
+  * gs-lock-plug: avoid deprecated 'cdk_keymap_get_default'
 
 ### cafe-screensaver 1.21.0
 
   * Translations update
   * bump required version of cafe-menus
   * support new cafe-menus api
-  * Fixed some gdk deprecations
-  * fixed gdk_flush warning
+  * Fixed some cdk deprecations
+  * fixed cdk_flush warning
   * avoid deprecated CtkStock
 
 ### cafe-screensaver 1.20.0
@@ -92,7 +92,7 @@
   * Translations update
   * Fix: idle slider display in all languages
   * drop glib required max version
-  * avoid deprecated gdk_screen_get_width/height
+  * avoid deprecated cdk_screen_get_width/height
   * don't use deprecated ctk_show_uri
   * Restore Polish translation credits from GNOME
   * Implement OpenBSD authentication using bsd_auth(3).

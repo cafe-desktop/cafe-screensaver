@@ -33,8 +33,8 @@
 #include <glib/gprintf.h>
 #include <glib/gstdio.h>
 #include <glib/gi18n.h>
-#include <gdk/gdkkeysyms.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkkeysyms.h>
+#include <cdk/cdkx.h>
 #include <ctk/ctk.h>
 #include <ctk/ctkx.h>
 #include <gio/gio.h>
@@ -213,7 +213,7 @@ do_user_switch (GSLockPlug *plug)
 								   MDM_FLEXISERVER_ARGS);
 
 		error = NULL;
-		res = cafe_gdk_spawn_command_line_on_screen (gdk_screen_get_default (),
+		res = cafe_cdk_spawn_command_line_on_screen (cdk_screen_get_default (),
 												command,
 												&error);
 
@@ -233,7 +233,7 @@ do_user_switch (GSLockPlug *plug)
 								   GDM_FLEXISERVER_ARGS);
 
 		error = NULL;
-		res = cafe_gdk_spawn_command_line_on_screen (gdk_screen_get_default (),
+		res = cafe_cdk_spawn_command_line_on_screen (cdk_screen_get_default (),
 												command,
 												&error);
 
@@ -448,9 +448,9 @@ is_capslock_on (void)
 
 	res = FALSE;
 
-	keymap = gdk_keymap_get_for_display (gdk_display_get_default ());
+	keymap = cdk_keymap_get_for_display (cdk_display_get_default ());
 	if (keymap != NULL) {
-		res = gdk_keymap_get_caps_lock_state (keymap);
+		res = cdk_keymap_get_caps_lock_state (keymap);
 	}
 
 	return res;
@@ -587,7 +587,7 @@ gs_lock_plug_run (GSLockPlug *plug)
 		ctk_widget_show (CTK_WIDGET (plug));
 	}
 
-	keymap = gdk_keymap_get_for_display (ctk_widget_get_display (CTK_WIDGET (plug)));
+	keymap = cdk_keymap_get_for_display (ctk_widget_get_display (CTK_WIDGET (plug)));
 
 	keymap_handler =
 	    g_signal_connect (keymap,
@@ -653,12 +653,12 @@ surface_from_pixbuf (GdkPixbuf *pixbuf)
 	cairo_surface_t *surface;
 	cairo_t         *cr;
 
-	surface = cairo_image_surface_create (gdk_pixbuf_get_has_alpha (pixbuf) ?
+	surface = cairo_image_surface_create (cdk_pixbuf_get_has_alpha (pixbuf) ?
 	                                      CAIRO_FORMAT_ARGB32 : CAIRO_FORMAT_RGB24,
-	                                      gdk_pixbuf_get_width (pixbuf),
-	                                      gdk_pixbuf_get_height (pixbuf));
+	                                      cdk_pixbuf_get_width (pixbuf),
+	                                      cdk_pixbuf_get_height (pixbuf));
 	cr = cairo_create (surface);
-	gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
+	cdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 	cairo_paint (cr);
 	cairo_destroy (cr);
 
@@ -795,11 +795,11 @@ cairo_to_pixbuf (guint8    *src_data,
 	guint          h;
 	guint          rowstride;
 
-	w = gdk_pixbuf_get_width (dst_pixbuf);
-	h = gdk_pixbuf_get_height (dst_pixbuf);
-	rowstride = gdk_pixbuf_get_rowstride (dst_pixbuf);
+	w = cdk_pixbuf_get_width (dst_pixbuf);
+	h = cdk_pixbuf_get_height (dst_pixbuf);
+	rowstride = cdk_pixbuf_get_rowstride (dst_pixbuf);
 
-	dst = gdk_pixbuf_get_pixels (dst_pixbuf);
+	dst = cdk_pixbuf_get_pixels (dst_pixbuf);
 	src = src_data;
 
 	go_cairo_convert_data_to_pixbuf (dst, src, w, h, rowstride);
@@ -820,16 +820,16 @@ frame_pixbuf (GdkPixbuf *source)
 
 	frame_width = 5;
 
-	w = gdk_pixbuf_get_width (source) + frame_width * 2;
-	h = gdk_pixbuf_get_height (source) + frame_width * 2;
+	w = cdk_pixbuf_get_width (source) + frame_width * 2;
+	h = cdk_pixbuf_get_height (source) + frame_width * 2;
 	radius = w / 10;
 
-	dest = gdk_pixbuf_new (GDK_COLORSPACE_RGB,
+	dest = cdk_pixbuf_new (GDK_COLORSPACE_RGB,
 						   TRUE,
 						   8,
 						   w,
 						   h);
-	rowstride = gdk_pixbuf_get_rowstride (dest);
+	rowstride = cdk_pixbuf_get_rowstride (dest);
 
 
 	data = g_new0 (guint8, h * rowstride);
@@ -954,7 +954,7 @@ set_face_image (GSLockPlug *plug)
 	pixbuf = NULL;
 	if (check_user_file (path, uid, user_max_file, 0, 0))
 	{
-		pixbuf = gdk_pixbuf_new_from_file_at_size (path,
+		pixbuf = cdk_pixbuf_new_from_file_at_size (path,
 		         icon_size,
 		         icon_size,
 		         NULL);
@@ -1043,7 +1043,7 @@ queue_key_event (GSLockPlug  *plug,
 {
 	GdkEvent *saved_event;
 
-	saved_event = gdk_event_copy ((GdkEvent *)event);
+	saved_event = cdk_event_copy ((GdkEvent *)event);
 	plug->priv->key_events = g_list_prepend (plug->priv->key_events,
 	                         saved_event);
 }
@@ -1058,7 +1058,7 @@ forward_key_events (GSLockPlug *plug)
 
 		ctk_window_propagate_key_event (CTK_WINDOW (plug), event);
 
-		gdk_event_free ((GdkEvent *)event);
+		cdk_event_free ((GdkEvent *)event);
 
 		plug->priv->key_events = g_list_delete_link (plug->priv->key_events,
 		                         plug->priv->key_events);
@@ -1252,12 +1252,12 @@ gs_lock_plug_close (GSLockPlug *plug)
 	CtkWidget *widget = CTK_WIDGET (plug);
 	GdkEvent  *event;
 
-	event = gdk_event_new (GDK_DELETE);
+	event = cdk_event_new (GDK_DELETE);
 	event->any.window = g_object_ref (ctk_widget_get_window(widget));
 	event->any.send_event = TRUE;
 
 	ctk_main_do_event (event);
-	gdk_event_free (event);
+	cdk_event_free (event);
 }
 
 static void
@@ -1462,9 +1462,9 @@ gs_lock_plug_set_busy (GSLockPlug *plug)
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
 
 	display = ctk_widget_get_display (CTK_WIDGET (plug));
-	cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
+	cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
 
-	gdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
+	cdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
 	g_object_unref (cursor);
 }
 
@@ -1478,8 +1478,8 @@ gs_lock_plug_set_ready (GSLockPlug *plug)
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
 
 	display = ctk_widget_get_display (CTK_WIDGET (plug));
-	cursor = gdk_cursor_new_for_display (display, GDK_LEFT_PTR);
-	gdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
+	cursor = cdk_cursor_new_for_display (display, GDK_LEFT_PTR);
+	cdk_window_set_cursor (ctk_widget_get_window (top_level), cursor);
 	g_object_unref (cursor);
 }
 
@@ -2009,7 +2009,7 @@ load_theme (GSLockPlug *plug)
 		{
 			style_provider = ctk_css_provider_new ();
 
-			ctk_style_context_add_provider_for_screen (gdk_screen_get_default(),
+			ctk_style_context_add_provider_for_screen (cdk_screen_get_default(),
 			                                           CTK_STYLE_PROVIDER (style_provider),
 			                                           CTK_STYLE_PROVIDER_PRIORITY_USER);
 		}
@@ -2156,7 +2156,7 @@ gs_lock_plug_init (GSLockPlug *plug)
 	{
 		XklEngine *engine;
 
-		engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
+		engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()));
 		if (xkl_engine_get_num_groups (engine) > 1)
 		{
 			CtkWidget *layout_indicator;
