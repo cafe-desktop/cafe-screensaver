@@ -260,11 +260,11 @@ msgstr ""
 msgid "Display a slideshow of pictures of the space"
 msgstr ""
 
-#: ../savers/footlogo-floaters.desktop.in.in.h:1
+#: ../savers/foot-floaters.desktop.in.in.h:1
 msgid "Floating CAFE"
 msgstr ""
 
-#: ../savers/footlogo-floaters.desktop.in.in.h:2
+#: ../savers/foot-floaters.desktop.in.in.h:2
 msgid "Bubbles the CAFE logo around the screen"
 msgstr ""
 

@@ -320,17 +320,17 @@ msgstr "Прикажи слике свемира у низу"
 msgid "CAFE;screensaver;slideshow;space;"
 msgstr "Мејт;чувар екрана;покретни приказ;космос;"
 
-#: savers/footlogo-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Floating CAFE"
 msgstr "Лебдећи Мејт"
 
-#: savers/footlogo-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:4
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Приказује мехуриће Мејтовог обележја по екрану"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/footlogo-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "Мејт;чувар екрана;логотип;балончићи;"
 

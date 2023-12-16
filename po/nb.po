@@ -321,17 +321,17 @@ msgstr "Lysbildevisning med bilder fra verdensrommet"
 msgid "CAFE;screensaver;slideshow;space;"
 msgstr "CAFE;skjermsparer;lysbilder;kosmos;"
 
-#: savers/footlogo-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Floating CAFE"
 msgstr "Flytende CAFE"
 
-#: savers/footlogo-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:4
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Bobler av CAFE-logoen rundt omkring på skjermen"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/footlogo-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "CAFE;skjermsparer;logo;bobler;"
 
