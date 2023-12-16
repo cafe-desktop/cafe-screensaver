@@ -215,7 +215,7 @@
 
 ========== en@shaw.po ==========
 # Shavian translation for cafe-screensaver.
-# Copyright (C) 2009 The Mate Foundation.
+# Copyright (C) 2009 The Cafe Foundation.
 # Thomas Thurman <tthurman@gnome.org>, 2009.
 
 
@@ -415,7 +415,7 @@
 
 
 ========== is.po ==========
-# Icelandic translation of Mate.
+# Icelandic translation of Cafe.
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # Anna Jonna Ármannsdóttir <annajonna@gmail.com>, 2008.
 #
@@ -455,7 +455,7 @@
 ========== ka.po ==========
 # translation of ka.po to Georgian
 # Vladimer Sichinava ვლადიმერ სიჭინავა <vsichi@gnome.org>, 2007.
-# Georgian translation for Mate Screensaver.
+# Georgian translation for Cafe Screensaver.
 # Copyright © 2006 Ubuntu Georgian Translators.
 # This file is distributed under the same license as the cafe-screensaver package.
 # Malkhaz Barkalaya <malxaz@gmail.com>
@@ -787,7 +787,7 @@
 #
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
 # Matjaž Horvat <m@owca.info>, 2006.
-# Matej Urbančič <cafeju@svn.gnome.org>, 2007 - 2009.
+# Cafej Urbančič <cafeju@svn.gnome.org>, 2007 - 2009.
 #
 
 

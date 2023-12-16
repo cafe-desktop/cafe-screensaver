@@ -338,7 +338,7 @@ msgstr ""
 
 #: savers/footlogo-floaters.desktop.in.in:3
 msgid "Floating CAFE"
-msgstr "Schwebendes Mate"
+msgstr "Schwebendes Cafe"
 
 #: savers/footlogo-floaters.desktop.in.in:4
 msgid "Bubbles the CAFE logo around the screen"

@@ -49,7 +49,7 @@ struct GSManagerPrivate
 	GHashTable  *jobs;
 
 	GSThemeManager *theme_manager;
-	MateBG        *bg;
+	CafeBG        *bg;
 
 	/* Policy */
 	glong        lock_timeout;
@@ -1026,7 +1026,7 @@ gs_manager_class_init (GSManagerClass *klass)
 }
 
 static void
-on_bg_changed (MateBG   *bg,
+on_bg_changed (CafeBG   *bg,
                GSManager *manager)
 {
 	gs_debug ("background changed");
