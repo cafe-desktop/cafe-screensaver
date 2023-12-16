@@ -48,7 +48,7 @@ struct _GSThemeInfo
 
 struct GSThemeManagerPrivate
 {
-	MateMenuTree *menu_tree;
+	CafeMenuTree *menu_tree;
 };
 
 G_DEFINE_TYPE_WITH_PRIVATE (GSThemeManager, gs_theme_manager, G_TYPE_OBJECT)
@@ -228,7 +228,7 @@ gs_theme_info_get_exec (GSThemeInfo *info)
 }
 
 static GSThemeInfo *
-gs_theme_info_new_from_cafemenu_tree_entry (MateMenuTreeEntry *entry)
+gs_theme_info_new_from_cafemenu_tree_entry (CafeMenuTreeEntry *entry)
 {
 	GSThemeInfo *info;
 	const char     *str;
@@ -258,13 +258,13 @@ gs_theme_info_new_from_cafemenu_tree_entry (MateMenuTreeEntry *entry)
 }
 
 static GSThemeInfo *
-find_info_for_id (MateMenuTree  *tree,
+find_info_for_id (CafeMenuTree  *tree,
                   const char *id)
 {
 	GSThemeInfo     *info;
-	MateMenuTreeDirectory *root;
-	MateMenuTreeIter *iter;
-	MateMenuTreeItemType type;
+	CafeMenuTreeDirectory *root;
+	CafeMenuTreeIter *iter;
+	CafeMenuTreeItemType type;
 
 	root = cafemenu_tree_get_root_directory (tree);
 	if (root == NULL)
@@ -276,7 +276,7 @@ find_info_for_id (MateMenuTree  *tree,
 	iter = cafemenu_tree_directory_iter (root);
 	while ((type = cafemenu_tree_iter_next (iter)) != CAFEMENU_TREE_ITEM_INVALID) {
 		if (info == NULL && type == CAFEMENU_TREE_ITEM_ENTRY) {
-			MateMenuTreeEntry *entry;
+			CafeMenuTreeEntry *entry;
 			const char     *file_id;
 
 			entry = cafemenu_tree_iter_get_entry(iter);
@@ -312,7 +312,7 @@ gs_theme_manager_lookup_theme_info (GSThemeManager *theme_manager,
 
 static void
 theme_prepend_entry (GSList         **parent_list,
-                     MateMenuTreeEntry  *entry,
+                     CafeMenuTreeEntry  *entry,
                      const char      *filename)
 {
 	GSThemeInfo *info;
@@ -324,18 +324,18 @@ theme_prepend_entry (GSList         **parent_list,
 
 static void
 make_theme_list (GSList             **parent_list,
-                 MateMenuTreeDirectory  *directory,
+                 CafeMenuTreeDirectory  *directory,
                  const char          *filename)
 {
-	MateMenuTreeIter *iter;
-	MateMenuTreeItemType type;
+	CafeMenuTreeIter *iter;
+	CafeMenuTreeItemType type;
 
 	iter = cafemenu_tree_directory_iter (directory);
 	while ((type = cafemenu_tree_iter_next (iter)) != CAFEMENU_TREE_ITEM_INVALID) {
 		if (type == CAFEMENU_TREE_ITEM_ENTRY) {
-			MateMenuTreeEntry *item;
+			CafeMenuTreeEntry *item;
 			item = cafemenu_tree_iter_get_entry (iter);
-			theme_prepend_entry (parent_list, (MateMenuTreeEntry*)item, filename);
+			theme_prepend_entry (parent_list, (CafeMenuTreeEntry*)item, filename);
 			cafemenu_tree_item_unref (item);
 		}
 	}
@@ -347,7 +347,7 @@ GSList *
 gs_theme_manager_get_info_list (GSThemeManager *theme_manager)
 {
 	GSList             *l = NULL;
-	MateMenuTreeDirectory *root;
+	CafeMenuTreeDirectory *root;
 
 	g_return_val_if_fail (GS_IS_THEME_MANAGER (theme_manager), NULL);
 
@@ -370,10 +370,10 @@ gs_theme_manager_class_init (GSThemeManagerClass *klass)
 	object_class->finalize = gs_theme_manager_finalize;
 }
 
-static MateMenuTree *
+static CafeMenuTree *
 get_themes_tree (void)
 {
-	MateMenuTree *themes_tree = NULL;
+	CafeMenuTree *themes_tree = NULL;
 	GError *error = NULL;
 
 	/* we only need to add the locations to the path once

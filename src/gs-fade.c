@@ -73,7 +73,7 @@ struct GSFadeScreenPrivate
 	/* one per crtc in randr mode */
 	struct GSGammaInfo *info;
 	/* one per screen in theory */
-	MateRRScreen      *rrscreen;
+	CafeRRScreen      *rrscreen;
 #ifdef HAVE_XF86VMODE_GAMMA
 	/* one per screen also */
 	XF86VidModeGamma    vmg;
@@ -466,8 +466,8 @@ fade_none:
 static gboolean xrandr_fade_setup (GSFade *fade)
 {
 	struct GSFadeScreenPrivate *screen_priv;
-	MateRRCrtc *crtc;
-	MateRRCrtc **crtcs;
+	CafeRRCrtc *crtc;
+	CafeRRCrtc **crtcs;
 	int crtc_count = 0;
 	struct GSGammaInfo *info;
 	gboolean res;
@@ -523,7 +523,7 @@ fail:
 	return FALSE;
 }
 
-static void xrandr_crtc_whack_gamma (MateRRCrtc *crtc,
+static void xrandr_crtc_whack_gamma (CafeRRCrtc *crtc,
                                      struct GSGammaInfo *gamma_info,
                                      float            ratio)
 {
@@ -565,7 +565,7 @@ static gboolean xrandr_fade_set_alpha_gamma (GSFade *fade,
 {
 	struct GSFadeScreenPrivate *screen_priv;
 	struct GSGammaInfo *info;
-	MateRRCrtc **crtcs;
+	CafeRRCrtc **crtcs;
 	int i;
 
 	screen_priv = &fade->priv->screen_priv;

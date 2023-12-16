@@ -843,7 +843,7 @@ drag_leave_cb (GtkWidget      *widget,
 	gtk_widget_queue_draw (widget);
 }
 
-/* GIO has no version of cafe_vfs_uri_list_parse(), so copy from MateVFS
+/* GIO has no version of cafe_vfs_uri_list_parse(), so copy from CafeVFS
  * and re-work to create GFiles.
 **/
 static GList *

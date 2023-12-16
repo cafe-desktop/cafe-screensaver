@@ -14,7 +14,7 @@
       the screensaver state and to interact with the screensaver in limited ways.
     </para>
     <para>
-      The following constants are used to uniquely refer to the MateScreensaver
+      The following constants are used to uniquely refer to the CafeScreensaver
       object when making DBUS method calls:
     </para>
     <informaltable>
