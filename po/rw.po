@@ -81,7 +81,7 @@ msgstr ""
 #. You might want to translate it into the equivalent words of your language
 #: ../data/images/space/space.xml.in.in.h:3
 #: ../savers/space-slideshow.desktop.in.in.h:1
-msgid "Cosmos"
+msgid "Space"
 msgstr ""
 
 #: ../data/lock-dialog-default.ui.h:1

@@ -104,8 +104,8 @@ msgstr ""
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
 #: savers/space-slideshow.desktop.in.in:3
-msgid "Cosmos"
-msgstr "Cosmos"
+msgid "Space"
+msgstr "Space"
 
 #: data/lock-dialog-default.ui:100
 msgid "<span size=\"small\">%U on %h</span>"
@@ -311,7 +311,7 @@ msgstr ""
 
 #: savers/space-slideshow.desktop.in.in:4
 msgid "Display a slideshow of pictures of the space"
-msgstr "Arată o diaporamă cu imagini din Cosmos"
+msgstr "Arată o diaporamă cu imagini din Space"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!

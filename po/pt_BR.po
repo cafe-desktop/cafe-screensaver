@@ -111,8 +111,8 @@ msgstr "protetor de tela"
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
 #: savers/space-slideshow.desktop.in.in:3
-msgid "Cosmos"
-msgstr "Cosmos"
+msgid "Space"
+msgstr "Space"
 
 #: data/lock-dialog-default.ui:100
 msgid "<span size=\"small\">%U on %h</span>"
