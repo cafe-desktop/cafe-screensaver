@@ -1,7 +1,7 @@
 data/images/space/space.xml.in
-savers/space-slideshow.desktop.in
+savers/space-slide.desktop.in
 savers/foot-floaters.desktop.in
 savers/gnome-floaters.desktop.in
-savers/personal-slideshow.desktop.in
+savers/personal-slide.desktop.in
 savers/popsquares.desktop.in
 src/cafe-screensaver.desktop.in

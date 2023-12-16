@@ -29,7 +29,7 @@
 
 G_BEGIN_DECLS
 
-#define GSTE_TYPE_SLIDESHOW         (gste_slideshow_get_type ())
+#define GSTE_TYPE_SLIDESHOW         (gste_slide_get_type ())
 #define GSTE_SLIDESHOW(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), GSTE_TYPE_SLIDESHOW, GSTESlideshow))
 #define GSTE_SLIDESHOW_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), GSTE_TYPE_SLIDESHOW, GSTESlideshowClass))
 #define GSTE_IS_SLIDESHOW(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), GSTE_TYPE_SLIDESHOW))
@@ -49,19 +49,19 @@ typedef struct
 	GSThemeEngineClass     parent_class;
 } GSTESlideshowClass;
 
-GType           gste_slideshow_get_type         (void);
-GSThemeEngine  *gste_slideshow_new              (void);
+GType           gste_slide_get_type         (void);
+GSThemeEngine  *gste_slide_new              (void);
 
-void            gste_slideshow_set_images_location  (GSTESlideshow *show,
+void            gste_slide_set_images_location  (GSTESlideshow *show,
         const char    *location);
 
-void            gste_slideshow_set_sort_images      (GSTESlideshow *show,
+void            gste_slide_set_sort_images      (GSTESlideshow *show,
         gboolean       sort_image);
 
-void            gste_slideshow_set_background_color (GSTESlideshow *show,
+void            gste_slide_set_background_color (GSTESlideshow *show,
         const char    *background_color);
 
-void            gste_slideshow_set_no_stretch_hint  (GSTESlideshow *show,
+void            gste_slide_set_no_stretch_hint  (GSTESlideshow *show,
         gboolean       no_stretch_hint);
 
 G_END_DECLS

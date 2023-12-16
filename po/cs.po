@@ -108,7 +108,7 @@ msgstr "screensaver"
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Kosmos"
 
@@ -319,15 +319,15 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Povolit zobrazení zprávy o stavu sezení, je-li uzamčena obrazovka."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "Zobrazovat obrázky z kosmu jako prezentaci"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
-msgstr "CAFE;spořič obrazovky;šetřič;slideshow;prezentace;promítání;kosmos;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
+msgstr "CAFE;spořič obrazovky;šetřič;slide;prezentace;promítání;kosmos;"
 
 #: savers/foot-floaters.desktop.in.in:3
 msgid "Floating CAFE"
@@ -357,21 +357,21 @@ msgstr "Bublinky loga GNOME po obrazovce"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;spořič obrazovky;šetřič;GNOME;logo;bubliny;"
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "Složka obrázků"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "Zobrazovat obrázky z vaší složky obrázků"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 "CAFE;spořič "
-"obrazovky;šetřič;vlastní;slideshow;prezentace;promítání;obrázky;obrázků;adresář;složka;"
+"obrazovky;šetřič;vlastní;slide;prezentace;promítání;obrázky;obrázků;adresář;složka;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -432,27 +432,27 @@ msgstr "image - přesouvá obrázky přes obrazovku"
 msgid "You must specify one image.  See --help for usage information.\n"
 msgstr "Je nutné zadat alespoň jeden obrázek. Informace o použití viz --help.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "Umístění, odkud získávat obrázky"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "CESTA"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "Barvu, kterou použít na pozadí obrázků"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "Nevolit obrázky z umístění náhodně"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "Nepokoušet se na obrazovce roztahovat obrázky"
 

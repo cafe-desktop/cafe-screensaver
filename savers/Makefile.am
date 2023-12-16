@@ -15,20 +15,20 @@ AM_CPPFLAGS =							\
 	$(NULL)
 
 DESKTOP_IN_IN_FILES = 			 \
-	space-slideshow.desktop.in.in 	 \
+	space-slide.desktop.in.in 	 \
 	foot-floaters.desktop.in.in	 \
 	gnome-floaters.desktop.in.in	 \
-	personal-slideshow.desktop.in.in \
+	personal-slide.desktop.in.in \
 	popsquares.desktop.in.in	 \
 	$(NULL)
 
-space-slideshow.desktop.in: space-slideshow.desktop.in.in Makefile
+space-slide.desktop.in: space-slide.desktop.in.in Makefile
 	@$(edit) $< >$@
 foot-floaters.desktop.in: foot-floaters.desktop.in.in Makefile
 	@$(edit) $< >$@
 gnome-floaters.desktop.in: gnome-floaters.desktop.in.in Makefile
 	@$(edit) $< >$@
-personal-slideshow.desktop.in: personal-slideshow.desktop.in.in Makefile
+personal-slide.desktop.in: personal-slide.desktop.in.in Makefile
 	@$(edit) $< >$@
 popsquares.desktop.in: popsquares.desktop.in.in Makefile
 	@$(edit) $< >$@
@@ -44,10 +44,10 @@ edit = sed \
 
 themesdir = $(datadir)/applications/screensavers
 themes_in_files = 			\
-	space-slideshow.desktop.in	\
+	space-slide.desktop.in	\
 	foot-floaters.desktop.in    \
 	gnome-floaters.desktop.in    \
-	personal-slideshow.desktop.in	\
+	personal-slide.desktop.in	\
 	popsquares.desktop.in		\
 	$(NULL)
 themes_DATA = $(themes_in_files:.desktop.in=.desktop)
@@ -84,7 +84,7 @@ saverdir = $(libexecdir)/cafe-screensaver
 saver_PROGRAMS = 	\
 	floaters	\
 	popsquares	\
-	slideshow	\
+	slide	\
 	$(NULL)
 
 floaters_SOURCES =	\
@@ -108,15 +108,15 @@ popsquares_LDADD =			\
 	$(CAFE_SCREENSAVER_SAVER_LIBS)	\
 	$(NULL)
 
-slideshow_SOURCES =   \
-	gste-slideshow.c	\
-	gste-slideshow.h	\
+slide_SOURCES =   \
+	gste-slide.c	\
+	gste-slide.h	\
 	xdg-user-dir-lookup.c	\
 	xdg-user-dir-lookup.h	\
-	slideshow.c		\
+	slide.c		\
 	$(NULL)
 
-slideshow_LDADD =     \
+slide_LDADD =     \
 	libgs-theme-engine.a 		\
 	$(CAFE_SCREENSAVER_SAVER_LIBS)	\
 	$(NULL)
@@ -129,11 +129,11 @@ EXTRA_DIST =				\
 
 CLEANFILES = 				\
 	$(BUILT_SOURCES)		\
-	space-slideshow.desktop.in	\
+	space-slide.desktop.in	\
 	foot-floaters.desktop.in	\
 	gnome-floaters.desktop.in	\
 	popsquares.desktop.in		\
-	personal-slideshow.desktop.in	\
+	personal-slide.desktop.in	\
 	$(NULL)
 
 DISTCLEANFILES = 			\
@@ -143,9 +143,9 @@ DISTCLEANFILES = 			\
 MAINTAINERCLEANFILES =			\
 	*~				\
 	Makefile.in			\
-	space-slideshow.desktop	\
+	space-slide.desktop	\
 	foot-floaters.desktop	\
 	gnome-floaters.desktop	\
-	personal-slideshow.desktop	\
+	personal-slide.desktop	\
 	popsquares.desktop		\
 	$(NULL)

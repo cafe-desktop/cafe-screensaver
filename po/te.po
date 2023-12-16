@@ -101,7 +101,7 @@ msgstr ""
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "కాస్మోస్"
 
@@ -304,14 +304,14 @@ msgstr ""
 "తెర తాళంవేయబడి వున్నప్పుడు విభాగపు స్థితి సందేశము ప్రదర్శితమగుటకు "
 "అనుమతించుము."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "కాస్‌మోస్ యొక్క చిత్రముల స్లైడ్‌షో ను ప్రదర్శించుము"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -342,18 +342,18 @@ msgstr ""
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "చిత్రాల సంచయం"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "మీ చిత్రముల సంచయంనుండి స్లైడ్‌షోను ప్రదర్శించుము"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -417,27 +417,27 @@ msgstr ""
 "మీరు తప్పకుండా ఒక ప్రతిరూపాన్ని నిర్దేశించాలి. వాడుక సమాచారం కొరకు --help "
 "చూడండి.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "ప్రతిరూపాలను తీసుకోవటానికి స్థానము"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "త్రోవ"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "ప్రతిరూపాల బ్యాక్‌గ్రౌండ్ కొరకు ఉపయోగించుటకు వర్ణము"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "స్థానమునుండి చిత్రములను విభిన్నము చేయవద్దు"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "తెరపై ప్రతిరూపములను సాగదీయుటకు ప్రయత్నించవద్దు"
 

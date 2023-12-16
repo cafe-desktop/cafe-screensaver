@@ -106,7 +106,7 @@ msgstr "screensaver"
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Space"
 
@@ -317,14 +317,14 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Perbolehkan ditampilkannya pesan status sesi ketika layar terkunci."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
-msgstr "Tampilkan slideshow dari gambar space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
+msgstr "Tampilkan slide dari gambar space"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr "CAFE;"
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -355,18 +355,18 @@ msgstr "Balonkan logo kaki CAFE di sekitar layar"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;screensaver;GNOME;logo;gelembung;"
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "Folder gambar"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
-msgstr "Tampilkan slideshow dari folder Gambar Anda"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
+msgstr "Tampilkan slide dari folder Gambar Anda"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr "CAFE;screensaver;ubahan;pertunjukan salindia;gambar;folder;"
 
 #: savers/popsquares.desktop.in.in:3
@@ -429,27 +429,27 @@ msgid "You must specify one image.  See --help for usage information.\n"
 msgstr ""
 "Anda harus menentukan satu gambar.  Lihat --help untuk informasi lanjut.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "Lokasi untuk mendapat gambar"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "LOKASI"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "Warna yang digunakan untuk latar belakang citra"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "Jangan mengacak citra dari lokasi"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "Jangan coba regangkan citra pada layar"
 

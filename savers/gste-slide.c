@@ -30,9 +30,9 @@
 #include <ctk/ctk.h>
 
 #include "gs-theme-engine.h"
-#include "gste-slideshow.h"
+#include "gste-slide.h"
 
-static void     gste_slideshow_finalize   (GObject            *object);
+static void     gste_slide_finalize   (GObject            *object);
 
 struct GSTESlideshowPrivate
 {
@@ -87,7 +87,7 @@ enum
 
 static GObjectClass *parent_class = NULL;
 
-G_DEFINE_TYPE_WITH_PRIVATE (GSTESlideshow, gste_slideshow, GS_TYPE_THEME_ENGINE)
+G_DEFINE_TYPE_WITH_PRIVATE (GSTESlideshow, gste_slide, GS_TYPE_THEME_ENGINE)
 
 #define N_FADE_TICKS 10
 #define MINIMUM_FPS 3.0
@@ -97,7 +97,7 @@ G_DEFINE_TYPE_WITH_PRIVATE (GSTESlideshow, gste_slideshow, GS_TYPE_THEME_ENGINE)
 typedef struct _Op
 {
 	char          *location;
-	GSTESlideshow *slideshow;
+	GSTESlideshow *slide;
 } Op;
 
 typedef struct _OpResult
@@ -115,7 +115,7 @@ push_load_image_func (GSTESlideshow *show)
 	op = g_new (Op, 1);
 
 	op->location = g_strdup (show->priv->images_location);
-	op->slideshow = g_object_ref (show);
+	op->slide = g_object_ref (show);
 
 	g_async_queue_push (show->priv->op_q, op);
 
@@ -698,12 +698,12 @@ load_threadfunc (GAsyncQueue *op_q)
 	op = g_async_queue_pop (op_q);
 	while (op)
 	{
-		op_load_image (op->slideshow,
+		op_load_image (op->slide,
 		               op->location);
 
-		if (op->slideshow != NULL)
+		if (op->slide != NULL)
 		{
-			g_object_unref (op->slideshow);
+			g_object_unref (op->slide);
 		}
 		g_free (op->location);
 		g_free (op);
@@ -715,7 +715,7 @@ load_threadfunc (GAsyncQueue *op_q)
 }
 
 void
-gste_slideshow_set_images_location (GSTESlideshow *show,
+gste_slide_set_images_location (GSTESlideshow *show,
                                     const char    *location)
 {
 	g_return_if_fail (GSTE_IS_SLIDESHOW (show));
@@ -726,7 +726,7 @@ gste_slideshow_set_images_location (GSTESlideshow *show,
 
 
 void
-gste_slideshow_set_sort_images (GSTESlideshow *show,
+gste_slide_set_sort_images (GSTESlideshow *show,
                                 gboolean       sort_images)
 {
 	g_return_if_fail (GSTE_IS_SLIDESHOW (show));
@@ -735,7 +735,7 @@ gste_slideshow_set_sort_images (GSTESlideshow *show,
 }
 
 void
-gste_slideshow_set_no_stretch_hint (GSTESlideshow *show,
+gste_slide_set_no_stretch_hint (GSTESlideshow *show,
                                     gboolean       no_stretch_hint)
 {
 	g_return_if_fail (GSTE_IS_SLIDESHOW (show));
@@ -744,7 +744,7 @@ gste_slideshow_set_no_stretch_hint (GSTESlideshow *show,
 }
 
 void
-gste_slideshow_set_background_color (GSTESlideshow *show,
+gste_slide_set_background_color (GSTESlideshow *show,
                                      const char    *background_color)
 {
 	g_return_if_fail (GSTE_IS_SLIDESHOW (show));
@@ -768,7 +768,7 @@ gste_slideshow_set_background_color (GSTESlideshow *show,
 }
 
 static void
-gste_slideshow_set_property (GObject            *object,
+gste_slide_set_property (GObject            *object,
                              guint               prop_id,
                              const GValue       *value,
                              GParamSpec         *pspec)
@@ -780,16 +780,16 @@ gste_slideshow_set_property (GObject            *object,
 	switch (prop_id)
 	{
 	case PROP_IMAGES_LOCATION:
-		gste_slideshow_set_images_location (self, g_value_get_string (value));
+		gste_slide_set_images_location (self, g_value_get_string (value));
 		break;
 	case PROP_SORT_IMAGES:
-		gste_slideshow_set_sort_images (self, g_value_get_boolean (value));
+		gste_slide_set_sort_images (self, g_value_get_boolean (value));
 		break;
 	case PROP_SOLID_BACKGROUND:
-		gste_slideshow_set_background_color (self, g_value_get_string (value));
+		gste_slide_set_background_color (self, g_value_get_string (value));
 		break;
 	case PROP_NO_STRETCH_HINT:
-		gste_slideshow_set_no_stretch_hint (self, g_value_get_boolean (value));
+		gste_slide_set_no_stretch_hint (self, g_value_get_boolean (value));
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -798,7 +798,7 @@ gste_slideshow_set_property (GObject            *object,
 }
 
 static void
-gste_slideshow_get_property (GObject            *object,
+gste_slide_get_property (GObject            *object,
                              guint               prop_id,
                              GValue             *value,
                              GParamSpec         *pspec)
@@ -833,7 +833,7 @@ gste_slideshow_get_property (GObject            *object,
 }
 
 static void
-gste_slideshow_real_show (CtkWidget *widget)
+gste_slide_real_show (CtkWidget *widget)
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
 	int            delay;
@@ -856,7 +856,7 @@ gste_slideshow_real_show (CtkWidget *widget)
 }
 
 static gboolean
-gste_slideshow_real_draw (CtkWidget *widget,
+gste_slide_real_draw (CtkWidget *widget,
                           cairo_t   *cr)
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
@@ -875,7 +875,7 @@ gste_slideshow_real_draw (CtkWidget *widget,
 }
 
 static gboolean
-gste_slideshow_real_configure (CtkWidget         *widget,
+gste_slide_real_configure (CtkWidget         *widget,
                                CdkEventConfigure *event)
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
@@ -915,20 +915,20 @@ gste_slideshow_real_configure (CtkWidget         *widget,
 }
 
 static void
-gste_slideshow_class_init (GSTESlideshowClass *klass)
+gste_slide_class_init (GSTESlideshowClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
 	CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 
-	object_class->finalize = gste_slideshow_finalize;
-	object_class->get_property = gste_slideshow_get_property;
-	object_class->set_property = gste_slideshow_set_property;
+	object_class->finalize = gste_slide_finalize;
+	object_class->get_property = gste_slide_get_property;
+	object_class->set_property = gste_slide_set_property;
 
-	widget_class->show = gste_slideshow_real_show;
-	widget_class->draw = gste_slideshow_real_draw;
-	widget_class->configure_event = gste_slideshow_real_configure;
+	widget_class->show = gste_slide_real_show;
+	widget_class->draw = gste_slide_real_draw;
+	widget_class->configure_event = gste_slide_real_configure;
 
 	g_object_class_install_property (object_class,
 	                                 PROP_IMAGES_LOCATION,
@@ -977,9 +977,9 @@ set_visual (CtkWidget *widget)
 }
 
 static void
-gste_slideshow_init (GSTESlideshow *show)
+gste_slide_init (GSTESlideshow *show)
 {
-	show->priv = gste_slideshow_get_instance_private (show);
+	show->priv = gste_slide_get_instance_private (show);
 
 	show->priv->images_location = g_strdup (DEFAULT_IMAGES_LOCATION);
 
@@ -992,7 +992,7 @@ gste_slideshow_init (GSTESlideshow *show)
 }
 
 static void
-gste_slideshow_finalize (GObject *object)
+gste_slide_finalize (GObject *object)
 {
 	GSTESlideshow *show;
 	gpointer       result;

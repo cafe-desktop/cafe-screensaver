@@ -107,7 +107,7 @@ msgstr "screensaver"
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Space"
 
@@ -326,14 +326,14 @@ msgstr ""
 "Permitir que seja apresentada a mensagem de estado da sessão quando o ecrã "
 "está trancado."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "Apresenta um conjunto de fotografias do space"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr "CAFE;proteção de ecrã;diaporama;space;"
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -364,18 +364,18 @@ msgstr "Bolhas com o logótipo do GNOME por todo o ecrã"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;proteção de ecrã;GNOME;logótipo;bolhas;"
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "Pasta de Imagens"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "Mostrar uma apresentação a partir da sua pasta de Imagens"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr "CAFE;proteção de ecrã;personalizado;diaporama;fotos;pasta;"
 
 #: savers/popsquares.desktop.in.in:3
@@ -439,27 +439,27 @@ msgstr ""
 "Deve especificar uma imagem. Consulte --help para informação de "
 "utilização.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "Localização de onde obter as imagens"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "CAMINHO"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "A cor a utilizar para o fundo das imagens"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "Não sortear as imagens da localização"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "Não tentar esticar as imagens no ecrã"
 
