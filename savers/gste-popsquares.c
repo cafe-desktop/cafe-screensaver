@@ -296,13 +296,13 @@ set_colors (GtkWidget *widget,
 	style = ctk_widget_get_style_context (widget);
 
 	ctk_style_context_save (style);
-	ctk_style_context_set_state (style, GTK_STATE_FLAG_SELECTED);
+	ctk_style_context_set_state (style, CTK_STATE_FLAG_SELECTED);
 	ctk_style_context_get_background_color (style,
 	                                        ctk_style_context_get_state (style),
 	                                        bg);
 	if (bg->alpha == 0.0)
 	{
-		ctk_style_context_add_class (style, GTK_STYLE_CLASS_VIEW);
+		ctk_style_context_add_class (style, CTK_STYLE_CLASS_VIEW);
 		ctk_style_context_get_background_color (style,
 		                                        ctk_style_context_get_state (style),
 		                                        bg);
@@ -409,7 +409,7 @@ setup_colors (GSTEPopsquares *pop)
 		return;
 	}
 
-	set_colors (GTK_WIDGET (pop), &fg, &bg);
+	set_colors (CTK_WIDGET (pop), &fg, &bg);
 
 	if (pop->priv->colors)
 	{
@@ -440,9 +440,9 @@ gste_popsquares_real_show (GtkWidget *widget)
 	setup_squares (pop);
 	setup_colors (pop);
 
-	if (GTK_WIDGET_CLASS (parent_class)->show)
+	if (CTK_WIDGET_CLASS (parent_class)->show)
 	{
-		GTK_WIDGET_CLASS (parent_class)->show (widget);
+		CTK_WIDGET_CLASS (parent_class)->show (widget);
 	}
 }
 
@@ -450,8 +450,8 @@ static gboolean
 gste_popsquares_real_draw (GtkWidget *widget,
                            cairo_t   *cr)
 {
-	if (GTK_WIDGET_CLASS (parent_class)->draw) {
-		GTK_WIDGET_CLASS (parent_class)->draw (widget, cr);
+	if (CTK_WIDGET_CLASS (parent_class)->draw) {
+		CTK_WIDGET_CLASS (parent_class)->draw (widget, cr);
 	}
 
 	draw_frame (GSTE_POPSQUARES (widget), cr);
@@ -475,9 +475,9 @@ gste_popsquares_real_configure (GtkWidget         *widget,
 	/* schedule a redraw */
 	ctk_widget_queue_draw (widget);
 
-	if (GTK_WIDGET_CLASS (parent_class)->configure_event)
+	if (CTK_WIDGET_CLASS (parent_class)->configure_event)
 	{
-		handled = GTK_WIDGET_CLASS (parent_class)->configure_event (widget, event);
+		handled = CTK_WIDGET_CLASS (parent_class)->configure_event (widget, event);
 	}
 
 	return handled;
@@ -487,7 +487,7 @@ static void
 gste_popsquares_class_init (GSTEPopsquaresClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 
@@ -559,7 +559,7 @@ draw_frame (GSTEPopsquares *pop,
 static gboolean
 draw_iter (GSTEPopsquares *pop)
 {
-	ctk_widget_queue_draw (GTK_WIDGET (pop));
+	ctk_widget_queue_draw (CTK_WIDGET (pop));
 	return TRUE;
 }
 

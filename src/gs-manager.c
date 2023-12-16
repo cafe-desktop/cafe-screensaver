@@ -1291,8 +1291,8 @@ apply_background_to_window (GSManager *manager,
 		gs_window_set_background_surface (window, NULL);
 	}
 
-	ctk_widget_get_preferred_width (GTK_WIDGET (window), &width, NULL);
-	ctk_widget_get_preferred_height (GTK_WIDGET (window), &height, NULL);
+	ctk_widget_get_preferred_width (CTK_WIDGET (window), &width, NULL);
+	ctk_widget_get_preferred_height (CTK_WIDGET (window), &height, NULL);
 	gs_debug ("Creating background w:%d h:%d", width, height);
 	surface = cafe_bg_create_surface (manager->priv->bg,
 	                                  gs_window_get_gdk_window (window),
@@ -1402,7 +1402,7 @@ handle_window_dialog_up (GSManager *manager,
 	{
 		if (l->data != window)
 		{
-			ctk_widget_set_sensitive (GTK_WIDGET (l->data), FALSE);
+			ctk_widget_set_sensitive (CTK_WIDGET (l->data), FALSE);
 		}
 	}
 
@@ -1443,7 +1443,7 @@ handle_window_dialog_down (GSManager *manager,
 	/* make all windows sensitive to get events */
 	for (l = manager->priv->windows; l; l = l->next)
 	{
-		ctk_widget_set_sensitive (GTK_WIDGET (l->data), TRUE);
+		ctk_widget_set_sensitive (CTK_WIDGET (l->data), TRUE);
 	}
 
 	manager->priv->dialog_up = FALSE;
@@ -1562,7 +1562,7 @@ gs_manager_create_window_for_monitor (GSManager  *manager,
 
 	if (manager->priv->active && !manager->priv->fading)
 	{
-		ctk_widget_show (GTK_WIDGET (window));
+		ctk_widget_show (CTK_WIDGET (window));
 	}
 }
 
@@ -1776,7 +1776,7 @@ show_windows (GSList *windows)
 
 	for (l = windows; l; l = l->next)
 	{
-		ctk_widget_show (GTK_WIDGET (l->data));
+		ctk_widget_show (CTK_WIDGET (l->data));
 	}
 }
 

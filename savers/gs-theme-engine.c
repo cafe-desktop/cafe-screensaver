@@ -40,7 +40,7 @@ struct GSThemeEnginePrivate
 
 static GObjectClass *parent_class = NULL;
 
-G_DEFINE_ABSTRACT_TYPE_WITH_PRIVATE (GSThemeEngine, gs_theme_engine, GTK_TYPE_DRAWING_AREA)
+G_DEFINE_ABSTRACT_TYPE_WITH_PRIVATE (GSThemeEngine, gs_theme_engine, CTK_TYPE_DRAWING_AREA)
 
 void
 _gs_theme_engine_profile_log (const char *func,
@@ -118,7 +118,7 @@ static void
 gs_theme_engine_class_init (GSThemeEngineClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+	GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
 	parent_class = g_type_class_peek_parent (klass);
 
@@ -166,12 +166,12 @@ gs_theme_engine_get_window_size (GSThemeEngine *engine,
 
 	g_return_if_fail (GS_IS_THEME_ENGINE (engine));
 
-	if (! ctk_widget_get_visible (GTK_WIDGET (engine)))
+	if (! ctk_widget_get_visible (CTK_WIDGET (engine)))
 	{
 		return;
 	}
 
-	gdk_window_get_geometry (ctk_widget_get_window (GTK_WIDGET (engine)),
+	gdk_window_get_geometry (ctk_widget_get_window (CTK_WIDGET (engine)),
 	                         NULL,
 	                         NULL,
 	                         width,
@@ -183,5 +183,5 @@ gs_theme_engine_get_window (GSThemeEngine *engine)
 {
 	g_return_val_if_fail (GS_IS_THEME_ENGINE (engine), NULL);
 
-	return ctk_widget_get_window (GTK_WIDGET (engine));
+	return ctk_widget_get_window (CTK_WIDGET (engine));
 }

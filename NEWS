@@ -61,7 +61,7 @@
   * gs-grab-x11: replace deprecated gdk_error_trap_push/pop
   * gs-visual-gl: replace deprecated gdk_error_trap_push/pop
   * Remove "monitor" pointer from debug information
-  * lock-plug: Only scale lock-screen widgets on older versions of GTK
+  * lock-plug: Only scale lock-screen widgets on older versions of CTK
   * gs-lock-plug: avoid deprecated 'gdk_keymap_get_default'
 
 ### cafe-screensaver 1.21.0
@@ -76,7 +76,7 @@
 ### cafe-screensaver 1.20.0
 
   * Translations update
-  * require GTK+ 3.22 and GLib 2.50
+  * require CTK+ 3.22 and GLib 2.50
   * Add HiDPI support for lock screen
   * gs-lock-plug.c: Fix build warning:
 
@@ -100,7 +100,7 @@
   * lock-dialog UI: avoid deprecated widgets
   * Bug fix: screensaver and lock screen not correctly displayed
     in configurations with overlapping monitor geometries
-  * [GTK+3.20] Switch to GdkSeat
+  * [CTK+3.20] Switch to GdkSeat
   * Set input purpose for the password entry widget
   * copy theme dialog: fix build warning about wrong variable type
 
@@ -110,39 +110,39 @@
     generating release announcements easier
   * Build: require libcafe-menu >= 1.10
   * Build: require libcafekbd and libcafe-desktop >= 1.17
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-ctk
+  * Move to CTK+3 (require CTK+ >= 3.14), drop CTK+2 code and --with-ctk
     build option
   * Lock screen: load user's background instead of system one
-  * Preferences: fix some GTK+ deprecations
+  * Preferences: fix some CTK+ deprecations
   * Translations update
 
 ### cafe-screensaver 1.16.1
 
-  * Fix build breakage with GTK+ 3.14
-  * Fix "Blank screen" theme with GTK+ 3.22
-  * GTK+2: fix switching to "Blank screen" theme in fullscreen preview
+  * Fix build breakage with CTK+ 3.14
+  * Fix "Blank screen" theme with CTK+ 3.22
+  * CTK+2: fix switching to "Blank screen" theme in fullscreen preview
   * Properly restore password dialog position after wrong password attempt
   * Check for gdm-binary process when switching user
 
 ### cafe-screensaver 1.16.0
 
   * Fix locking when screensaver is already active
-  * GTK+3: fix background and locking in multi-monitor setup
-  * GTK+3: fix several deprecations
+  * CTK+3: fix background and locking in multi-monitor setup
+  * CTK+3: fix several deprecations
   * Some more fixes and cleanups
   * Translations update
-  * Make distcheck use currently selected GTK+ version
+  * Make distcheck use currently selected CTK+ version
 
 ### cafe-screensaver 1.14.1
 
   * Translations update
-  * GTK+-3: fix assertion 'GTK_IS_WIDGET (widget)' failed
-  * GTK+-3: add style class lock-dialog
+  * CTK+-3: fix assertion 'CTK_IS_WIDGET (widget)' failed
+  * CTK+-3: add style class lock-dialog
 
 ### cafe-screensaver 1.14.0
 
   * Drop CafeConf migration script
-  * GTK+3: fix several deprecations
+  * CTK+3: fix several deprecations
   * Some more fixes and cleanups
   * Translations update
   * Add Changelog generation
@@ -174,7 +174,7 @@
   * Show date and time in lock dialog.
   * Add theme to use GNOME foot logo as floaters screensaver
   * Rename Floating Feet as Floating CAFE
-  * Add GTK3 support
+  * Add CTK3 support
 
 ### cafe-screensaver 1.1.0
 
