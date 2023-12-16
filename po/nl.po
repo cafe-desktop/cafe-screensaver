@@ -106,8 +106,8 @@ msgstr "schermbeveiliging"
 #. Translators: This is the name of a desktop background image that shows
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/cosmos/cosmos.xml.in.in:7
-#: savers/cosmos-slideshow.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7
+#: savers/space-slideshow.desktop.in.in:3
 msgid "Cosmos"
 msgstr "Cosmos"
 
@@ -327,14 +327,14 @@ msgid ""
 msgstr ""
 "Weergave van het sessiestatusbericht toestaan als het scherm vergrendeld is."
 
-#: savers/cosmos-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the cosmos"
+#: savers/space-slideshow.desktop.in.in:4
+msgid "Display a slideshow of pictures of the space"
 msgstr "Dit toont een diapresentatie met foto's van de ruimte"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/cosmos-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;cosmos;"
+#: savers/space-slideshow.desktop.in.in:12
+msgid "CAFE;screensaver;slideshow;space;"
 msgstr "CAFE;schermbeveiliging;kosmos;"
 
 #: savers/footlogo-floaters.desktop.in.in:3
