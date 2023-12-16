@@ -125,7 +125,7 @@ gs_theme_window_real_realize (CtkWidget *widget)
 
 				ctk_window_fullscreen (CTK_WINDOW (widget));
 
-				event_mask = GDK_EXPOSURE_MASK | GDK_STRUCTURE_MASK;
+				event_mask = CDK_EXPOSURE_MASK | CDK_STRUCTURE_MASK;
 				ctk_widget_set_events (widget, ctk_widget_get_events (widget) | event_mask);
 			}
 		}

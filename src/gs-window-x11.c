@@ -150,7 +150,7 @@ set_invisible_cursor (GdkWindow *window,
 	if (invisible)
 	{
 		display = cdk_window_get_display (window);
-		cursor = cdk_cursor_new_for_display (display, GDK_BLANK_CURSOR);
+		cursor = cdk_cursor_new_for_display (display, CDK_BLANK_CURSOR);
 	}
 
 	cdk_window_set_cursor (window, cursor);
@@ -170,10 +170,10 @@ gs_window_override_user_time (GSWindow *window)
 	if (ev_time == 0)
 	{
 		gint ev_mask = ctk_widget_get_events (CTK_WIDGET (window));
-		if (!(ev_mask & GDK_PROPERTY_CHANGE_MASK))
+		if (!(ev_mask & CDK_PROPERTY_CHANGE_MASK))
 		{
 			ctk_widget_add_events (CTK_WIDGET (window),
-			                       GDK_PROPERTY_CHANGE_MASK);
+			                       CDK_PROPERTY_CHANGE_MASK);
 		}
 
 		/*
@@ -196,7 +196,7 @@ clear_children (Window window)
 	int               status;
 
 	children = NULL;
-	status = XQueryTree (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), window, &root, &parent, &children, &n_children);
+	status = XQueryTree (CDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), window, &root, &parent, &children, &n_children);
 
 	if (status == 0)
 	{
@@ -215,7 +215,7 @@ clear_children (Window window)
 
 			child = children [--n_children];
 
-			XClearWindow (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), child);
+			XClearWindow (CDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), child);
 
 			clear_children (child);
 		}
@@ -237,7 +237,7 @@ widget_clear_all_children (CtkWidget *widget)
 
 	w = ctk_widget_get_window (widget);
 
-	clear_children (GDK_WINDOW_XID (w));
+	clear_children (CDK_WINDOW_XID (w));
 
 	cdk_x11_display_error_trap_pop_ignored (display);
 
@@ -438,7 +438,7 @@ spawn_make_environment_for_display (GdkDisplay *display,
 	gint    display_index = -1;
 	gint    i, env_len;
 
-	g_return_val_if_fail (GDK_IS_DISPLAY (display), NULL);
+	g_return_val_if_fail (CDK_IS_DISPLAY (display), NULL);
 
 	if (envp == NULL)
 		envp = environ;
@@ -599,7 +599,7 @@ watchdog_timer (GSWindow *window)
 {
 	CtkWidget *widget = CTK_WIDGET (window);
 
-	cdk_window_focus (ctk_widget_get_window (widget), GDK_CURRENT_TIME);
+	cdk_window_focus (ctk_widget_get_window (widget), CDK_CURRENT_TIME);
 
 	return TRUE;
 }
@@ -676,7 +676,7 @@ x11_window_is_ours (Window window)
 	ret = FALSE;
 
 	gwindow = cdk_x11_window_lookup_for_display (cdk_display_get_default (), window);
-	if (gwindow && (window != GDK_ROOT_WINDOW ()))
+	if (gwindow && (window != CDK_ROOT_WINDOW ()))
 	{
 		ret = TRUE;
 	}
@@ -760,7 +760,7 @@ xevent_filter (GdkXEvent *xevent,
 {
 	gs_window_xevent (window, xevent);
 
-	return GDK_FILTER_CONTINUE;
+	return CDK_FILTER_CONTINUE;
 }
 
 static void
@@ -775,10 +775,10 @@ select_popup_events (void)
 	cdk_x11_display_error_trap_push (display);
 
 	memset (&attr, 0, sizeof (attr));
-	XGetWindowAttributes (GDK_DISPLAY_XDISPLAY (display), GDK_ROOT_WINDOW (), &attr);
+	XGetWindowAttributes (CDK_DISPLAY_XDISPLAY (display), CDK_ROOT_WINDOW (), &attr);
 
 	events = SubstructureNotifyMask | attr.your_event_mask;
-	XSelectInput (GDK_DISPLAY_XDISPLAY (display), GDK_ROOT_WINDOW (), events);
+	XSelectInput (CDK_DISPLAY_XDISPLAY (display), CDK_ROOT_WINDOW (), events);
 
 	cdk_x11_display_error_trap_pop_ignored (display);
 }
@@ -795,9 +795,9 @@ window_select_shape_events (GSWindow *window)
 
 	cdk_x11_display_error_trap_push (display);
 
-	if (XShapeQueryExtension (GDK_DISPLAY_XDISPLAY (display), &window->priv->shape_event_base, &shape_error_base)) {
+	if (XShapeQueryExtension (CDK_DISPLAY_XDISPLAY (display), &window->priv->shape_event_base, &shape_error_base)) {
 		events = ShapeNotifyMask;
-		XShapeSelectInput (GDK_DISPLAY_XDISPLAY (display), GDK_WINDOW_XID (ctk_widget_get_window (CTK_WIDGET (window))), events);
+		XShapeSelectInput (CDK_DISPLAY_XDISPLAY (display), CDK_WINDOW_XID (ctk_widget_get_window (CTK_WIDGET (window))), events);
 	}
 
 	cdk_x11_display_error_trap_pop_ignored (display);
@@ -2041,10 +2041,10 @@ queue_key_event (GSWindow    *window,
 {
 	/* Eat the first return, enter, escape, or space */
 	if (window->priv->key_events == NULL
-	        && (event->keyval == GDK_KEY_Return
-	            || event->keyval == GDK_KEY_KP_Enter
-	            || event->keyval == GDK_KEY_Escape
-	            || event->keyval == GDK_KEY_space))
+	        && (event->keyval == CDK_KEY_Return
+	            || event->keyval == CDK_KEY_KP_Enter
+	            || event->keyval == CDK_KEY_Escape
+	            || event->keyval == CDK_KEY_space))
 	{
 		return;
 	}
@@ -2053,9 +2053,9 @@ queue_key_event (GSWindow    *window,
 	   something is wrong */
 	/* Don't queue keys that may cause focus navigation in the dialog */
 	if (g_list_length (window->priv->key_events) < MAX_QUEUED_EVENTS
-	        && event->keyval != GDK_KEY_Tab
-	        && event->keyval != GDK_KEY_Up
-	        && event->keyval != GDK_KEY_Down)
+	        && event->keyval != CDK_KEY_Tab
+	        && event->keyval != CDK_KEY_Up
+	        && event->keyval != CDK_KEY_Down)
 	{
 		window->priv->key_events = g_list_prepend (window->priv->key_events,
 		                           cdk_event_copy ((GdkEvent *)event));
@@ -2243,14 +2243,14 @@ gs_window_real_grab_broken (CtkWidget          *widget,
 	if (event->grab_window != NULL)
 	{
 		gs_debug ("Grab broken on window %X %s, new grab on window %X",
-		          (guint32) GDK_WINDOW_XID (event->window),
+		          (guint32) CDK_WINDOW_XID (event->window),
 		          event->keyboard ? "keyboard" : "pointer",
-		          (guint32) GDK_WINDOW_XID (event->grab_window));
+		          (guint32) CDK_WINDOW_XID (event->grab_window));
 	}
 	else
 	{
 		gs_debug ("Grab broken on window %X %s, new grab is outside application",
-		          (guint32) GDK_WINDOW_XID (event->window),
+		          (guint32) CDK_WINDOW_XID (event->window),
 		          event->keyboard ? "keyboard" : "pointer");
 	}
 
@@ -2292,12 +2292,12 @@ gs_window_real_visibility_notify_event (CtkWidget          *widget,
 {
 	switch (event->state)
 	{
-	case GDK_VISIBILITY_FULLY_OBSCURED:
+	case CDK_VISIBILITY_FULLY_OBSCURED:
 		window_set_obscured (GS_WINDOW (widget), TRUE);
 		break;
-	case GDK_VISIBILITY_PARTIAL:
+	case CDK_VISIBILITY_PARTIAL:
 		break;
-	case GDK_VISIBILITY_UNOBSCURED:
+	case CDK_VISIBILITY_UNOBSCURED:
 		window_set_obscured (GS_WINDOW (widget), FALSE);
 		break;
 	default:
@@ -2469,15 +2469,15 @@ gs_window_init (GSWindow *window)
 
 	ctk_widget_set_events (CTK_WIDGET (window),
 	                       ctk_widget_get_events (CTK_WIDGET (window))
-	                       | GDK_POINTER_MOTION_MASK
-	                       | GDK_BUTTON_PRESS_MASK
-	                       | GDK_BUTTON_RELEASE_MASK
-	                       | GDK_KEY_PRESS_MASK
-	                       | GDK_KEY_RELEASE_MASK
-	                       | GDK_EXPOSURE_MASK
-	                       | GDK_VISIBILITY_NOTIFY_MASK
-	                       | GDK_ENTER_NOTIFY_MASK
-	                       | GDK_LEAVE_NOTIFY_MASK);
+	                       | CDK_POINTER_MOTION_MASK
+	                       | CDK_BUTTON_PRESS_MASK
+	                       | CDK_BUTTON_RELEASE_MASK
+	                       | CDK_KEY_PRESS_MASK
+	                       | CDK_KEY_RELEASE_MASK
+	                       | CDK_EXPOSURE_MASK
+	                       | CDK_VISIBILITY_NOTIFY_MASK
+	                       | CDK_ENTER_NOTIFY_MASK
+	                       | CDK_LEAVE_NOTIFY_MASK);
 
 	window->priv->vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 12);
 	ctk_widget_show (window->priv->vbox);

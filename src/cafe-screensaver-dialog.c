@@ -71,7 +71,7 @@ static char* get_id_string(CtkWidget* widget)
 	g_return_val_if_fail(widget != NULL, NULL);
 	g_return_val_if_fail(CTK_IS_WIDGET(widget), NULL);
 
-	id = g_strdup_printf("%" G_GUINT32_FORMAT, (guint32) GDK_WINDOW_XID(ctk_widget_get_window(widget)));
+	id = g_strdup_printf("%" G_GUINT32_FORMAT, (guint32) CDK_WINDOW_XID(ctk_widget_get_window(widget)));
 	return id;
 }
 
