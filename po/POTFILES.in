@@ -6,14 +6,14 @@ data/cafe-screensaver.directory.desktop.in
 data/images/space/space.xml.in.in
 data/lock-dialog-default.ui
 data/org.cafe.screensaver.gschema.xml.in
-savers/space-slideshow.desktop.in.in
+savers/space-slide.desktop.in.in
 savers/foot-floaters.desktop.in.in
 savers/gnome-floaters.desktop.in.in
-savers/personal-slideshow.desktop.in.in
+savers/personal-slide.desktop.in.in
 savers/popsquares.desktop.in.in
 savers/popsquares.c
 savers/floaters.c
-savers/slideshow.c
+savers/slide.c
 src/copy-theme-dialog.c
 src/cafe-screensaver-command.c
 src/cafe-screensaver-dialog.c

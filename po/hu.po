@@ -108,7 +108,7 @@ msgstr ""
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Kozmosz"
 
@@ -320,14 +320,14 @@ msgid ""
 msgstr ""
 "A munkamenet állapotüzenete megjeleníthető, ha a képernyő zárolva van."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "Egy diavetítés a kozmosz képeiből"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -358,18 +358,18 @@ msgstr "A CAFE logót lebegteti körbe a képernyőn"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "Képek mappa"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "Egy diavetítés a Képek mappából"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -433,27 +433,27 @@ msgstr ""
 "Meg kell adnia egy képet. Használati információkért lásd a --help "
 "kapcsolót.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "Képek helye"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "ÚTVONAL"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "Képek háttereként használandó szín"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "„#rrggbb”"
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "Ne véletlenszerűsítse a képeket a hely alapján"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "Ne próbálja nyújtani a képeket a képernyőn"
 

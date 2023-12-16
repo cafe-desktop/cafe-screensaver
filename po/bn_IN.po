@@ -102,7 +102,7 @@ msgstr ""
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "কসমস"
 
@@ -309,14 +309,14 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "পর্দা লক করা হলে, সেশানের অবস্থা সূচনাকারী বার্তা প্রদর্শন করা হবে।"
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "কসমস এর ছবিগুলোর একটি স্লাইডশো প্রদর্শন করুন"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -347,18 +347,18 @@ msgstr ""
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "ছবির ফোল্ডার"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "আপনার ছবির ফোল্ডার এর োর একটি স্লাইডশো প্রদর্শন করুন"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -422,27 +422,27 @@ msgstr ""
 "একটি ছবি উল্লেখ করা আবশ্যক।  ব্যবহারপ্রণালী সম্পর্কিত তথ্য জানার জন্য --help"
 " প্রয়োগ করুন।\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "ছবি প্রাপ্ত করার অবস্থান"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "PATH"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "ছবির পটভূমিতে ব্যবহারযোগ্য রঙ"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "মূল অবস্থান থেকে প্রাপ্ত ছবিগুলি যথেচ্ছ ভাবে প্রদর্শিত হবে না"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "পর্দার মধ্যে ছবিগুলিকে প্রসারিত করা হবে না"
 

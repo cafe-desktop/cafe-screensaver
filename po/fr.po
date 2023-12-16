@@ -110,7 +110,7 @@ msgstr "Économiseur d'écran"
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Space"
 
@@ -328,14 +328,14 @@ msgstr ""
 "Autoriser l'affichage du message d'état de la session lorsque l'écran est "
 "verrouillé."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "Affiche un diaporama d'images du space"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -366,18 +366,18 @@ msgstr "Diffuser le logo GNOME sous forme de bulles partout sur l'écran"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "Dossier d'images"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "Ceci affiche un diaporama des images de votre dossier d'images."
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -441,27 +441,27 @@ msgid "You must specify one image.  See --help for usage information.\n"
 msgstr ""
 "Vous devez indiquer une image. Pour en savoir davantage, utilisez --help\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "Emplacement du dossier d'images"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "CHEMIN"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "Couleur à utiliser pour l'arrière-plan des images"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrvvbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "Ne pas choisir aléatoirement les images depuis l'emplacement"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "Ne pas essayer d'étendre les images sur l'écran"
 

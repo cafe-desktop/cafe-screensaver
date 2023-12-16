@@ -33,7 +33,7 @@
 
 #include "gs-theme-window.h"
 #include "gs-theme-engine.h"
-#include "gste-slideshow.h"
+#include "gste-slide.h"
 
 #include "xdg-user-dir-lookup.h"
 
@@ -89,7 +89,7 @@ main (int argc, char **argv)
 
 	g_chdir (g_get_home_dir ());
 
-	g_set_prgname ("slideshow");
+	g_set_prgname ("slide");
 
 	window = gs_theme_window_new ();
 	g_signal_connect (G_OBJECT (window), "delete-event",

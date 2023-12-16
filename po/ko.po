@@ -104,7 +104,7 @@ msgstr ""
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "우주"
 
@@ -296,14 +296,14 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "화면을 잠궜을 때 세션 상태 메시지 출력을 허용합니다."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "우주 그림의 슬라이드를 보여줍니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -334,18 +334,18 @@ msgstr "화면에 그놈 발바닥 로고가 떠다닙니다"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "그림 폴더"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "그림 폴더에 있는 그림의 슬라이드를 보여줍니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -407,27 +407,27 @@ msgstr "그림 - 화면에 그림을 떠다니게 합니다"
 msgid "You must specify one image.  See --help for usage information.\n"
 msgstr "그림 하나를 지정해야 합니다. 사용법을 보려면 --help를 쓰십시오.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "그림을 가져오는 경로"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "경로"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "이미지 배경에 쓸 색상"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "순서대로 그림 보이기"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "화면에 그림을 늘리지 않도록 하기"
 

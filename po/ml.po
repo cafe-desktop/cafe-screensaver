@@ -102,7 +102,7 @@ msgstr ""
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "പ്രപഞ്ചം"
 
@@ -316,14 +316,14 @@ msgstr ""
 "സ്ക്രീന്‍ പൂട്ടിയിരിക്കുമ്പോള്‍ പ്രവര്‍ത്തനവേളയുടെ അവസ്ഥാസന്ദേശം "
 "കാണിക്കുവാന്‍ അനുവദിക്കുക."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "പ്രപഞ്ചത്തിന്റെ ചിത്രങ്ങളൊന്നൊന്നായി പ്രദര്‍ശിപ്പിയ്ക്കുക"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
 #: savers/foot-floaters.desktop.in.in:3
@@ -354,19 +354,19 @@ msgstr ""
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "ചിത്രങ്ങളുള്ള കൂട"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr ""
 "നിങ്ങളുടെ ചിത്രങ്ങളുള്ള കൂടയില്‍ നിന്നും ഒന്നൊന്നായി പ്രദര്‍ശിപ്പിയ്ക്കുക"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
 #: savers/popsquares.desktop.in.in:3
@@ -430,29 +430,29 @@ msgstr ""
 "നിങ്ങള്‍ ഒരു ചിത്രം വ്യക്തമാക്കണം. ഉപയോഗിയ്ക്കുന്നതിനെക്കുറിച്ചുള്ള "
 "വിവരത്തിനായി --help കാണുക.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "ചിത്രങ്ങളെടുക്കേണ്ട സ്ഥലം"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "PATH"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "ചിത്രങ്ങളുടെ പശ്ചാത്തലത്തിനുപയോഗിയ്ക്കേണ്ട നിറം"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr ""
 "സ്ഥാനത്തു് നിന്നും ചിത്രങ്ങളെടുക്കുന്നതു് ഏതെങ്കിലുമൊക്കെ ശ്രേണിയില്‍ "
 "നിന്നല്ല"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "സ്ക്രീനില്‍ ചിത്രങ്ങള്‍ വലിച്ചു് നീട്ടാന്‍ ശ്രമിയ്ക്കരുതു്"
 

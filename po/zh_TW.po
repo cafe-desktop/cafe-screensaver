@@ -103,7 +103,7 @@ msgstr "screensaver"
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "宇宙"
 
@@ -291,15 +291,15 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "允許在鎖定螢幕時顯示工作階段狀態訊息。"
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "顯示宇宙圖片的幻燈片放映"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
-msgstr "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
+msgstr "CAFE;screensaver;slide;space;"
 
 #: savers/foot-floaters.desktop.in.in:3
 msgid "Floating CAFE"
@@ -329,19 +329,19 @@ msgstr "讓 GNOME 標誌圍繞畫面"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;screensaver;GNOME;logo;bubbles;"
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "圖片資料夾"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "顯示圖片資料夾的幻燈片放映"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
+msgstr "CAFE;screensaver;custom;slide;pictures;folder;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -402,27 +402,27 @@ msgstr "圖片 - 圖片圍繞畫面"
 msgid "You must specify one image.  See --help for usage information.\n"
 msgstr "您必須指定一張圖片。請參閱 --help 以取得更多資訊。\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "取得圖片的位置"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "路徑"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "用於圖片背景的色彩"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "\"#rrggbb\""
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "不使用亂數圖片的位置"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "不延伸圖片的螢幕"
 

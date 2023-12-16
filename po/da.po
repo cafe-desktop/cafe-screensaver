@@ -103,7 +103,7 @@ msgstr "pauseskærm"
 #. outer space images.
 #. You might want to translate it into the equivalent words of your language
 #: data/images/space/space.xml.in.in:7
-#: savers/space-slideshow.desktop.in.in:3
+#: savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Kosmos"
 
@@ -312,15 +312,15 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Tillad visning af sessionstatusmeddelelser når skærmen er låst."
 
-#: savers/space-slideshow.desktop.in.in:4
-msgid "Display a slideshow of pictures of the space"
+#: savers/space-slide.desktop.in.in:4
+msgid "Display a slide of pictures of the space"
 msgstr "Viser et billedeshow af billeder af kosmos"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;slideshow;space;"
-msgstr "CAFE;screensaver;slideshow;space;"
+#: savers/space-slide.desktop.in.in:12
+msgid "CAFE;screensaver;slide;space;"
+msgstr "CAFE;screensaver;slide;space;"
 
 #: savers/foot-floaters.desktop.in.in:3
 msgid "Floating CAFE"
@@ -350,19 +350,19 @@ msgstr "Bobler GNOME-logoet omkring på skærmen"
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;screensaver;GNOME;logo;bubbles;"
 
-#: savers/personal-slideshow.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:3
 msgid "Pictures folder"
 msgstr "Billedemappe"
 
-#: savers/personal-slideshow.desktop.in.in:4
-msgid "Display a slideshow from your Pictures folder"
+#: savers/personal-slide.desktop.in.in:4
+msgid "Display a slide from your Pictures folder"
 msgstr "Viser et billedeshow af billeder fra din billedemappe"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slideshow.desktop.in.in:12
-msgid "CAFE;screensaver;custom;slideshow;pictures;folder;"
-msgstr "CAFE;screensaver;custom;slideshow;pictures;folder;"
+#: savers/personal-slide.desktop.in.in:12
+msgid "CAFE;screensaver;custom;slide;pictures;folder;"
+msgstr "CAFE;screensaver;custom;slide;pictures;folder;"
 
 #: savers/popsquares.desktop.in.in:3
 msgid "Pop art squares"
@@ -423,27 +423,27 @@ msgstr "billede - flyder billeder rundt på skærmen"
 msgid "You must specify one image.  See --help for usage information.\n"
 msgstr "Du skal specificere et billede. Se --help for hjælp til benyttelse.\n"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "Location to get images from"
 msgstr "Sted hvor billeder skal hentes fra"
 
-#: savers/slideshow.c:55
+#: savers/slide.c:55
 msgid "PATH"
 msgstr "STI"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "Color to use for images background"
 msgstr "Farven der bruges til billedbaggrund"
 
-#: savers/slideshow.c:59
+#: savers/slide.c:59
 msgid "\"#rrggbb\""
 msgstr "»#rrggbb«"
 
-#: savers/slideshow.c:63
+#: savers/slide.c:63
 msgid "Do not randomize pictures from location"
 msgstr "Sammenbland ikke billeder fra placeringen"
 
-#: savers/slideshow.c:67
+#: savers/slide.c:67
 msgid "Do not try to stretch images on screen"
 msgstr "Forsøg ikke at strække billeder på skærmen"
 
