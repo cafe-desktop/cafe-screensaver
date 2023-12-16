@@ -33,6 +33,9 @@ requires:
     - x11proto-xf86vidmode-dev
     - xmlto
 
+    #required for cafe-common
+    - autoconf
+
 before_scripts:
   - ./html-cppcheck
   - ./debrepo-install 'libctk-3-dev'
