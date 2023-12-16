@@ -1,7 +1,7 @@
 ### cafe-screensaver 1.24.1
 
   * Translations update
-  * Fix invalid gnome-logo-white.svg
+  * Fix invalid gnome-white.svg
   * Custom background image for lock screen
   * build: silent build warnings for distcheck
 

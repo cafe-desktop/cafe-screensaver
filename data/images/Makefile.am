@@ -7,7 +7,7 @@ SUBDIRS =			\
 imagedir   = $(datadir)/pixmaps
 image_DATA = 			\
 	cafe-logo-white.svg 	\
-	gnome-logo-white.svg 	\
+	gnome-white.svg 	\
 	$(NULL)
 
 EXTRA_DIST =			\
