@@ -344,17 +344,17 @@ msgstr "A CAFE logót lebegteti körbe a képernyőn"
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
-#: savers/gnomelogo-floaters.desktop.in.in:3
+#: savers/gnome-floaters.desktop.in.in:3
 msgid "Floating GNOME"
 msgstr "Lebegő CAFE"
 
-#: savers/gnomelogo-floaters.desktop.in.in:4
+#: savers/gnome-floaters.desktop.in.in:4
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "A CAFE logót lebegteti körbe a képernyőn"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/gnomelogo-floaters.desktop.in.in:12
+#: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 

@@ -268,11 +268,11 @@ msgstr ""
 msgid "Bubbles the CAFE logo around the screen"
 msgstr ""
 
-#: ../savers/gnomelogo-floaters.desktop.in.in.h:1
+#: ../savers/gnome-floaters.desktop.in.in.h:1
 msgid "Floating GNOME"
 msgstr ""
 
-#: ../savers/gnomelogo-floaters.desktop.in.in.h:2
+#: ../savers/gnome-floaters.desktop.in.in.h:2
 msgid "Bubbles the GNOME logo around the screen"
 msgstr ""
 

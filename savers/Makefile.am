@@ -17,7 +17,7 @@ AM_CPPFLAGS =							\
 DESKTOP_IN_IN_FILES = 			 \
 	space-slideshow.desktop.in.in 	 \
 	footlogo-floaters.desktop.in.in	 \
-	gnomelogo-floaters.desktop.in.in	 \
+	gnome-floaters.desktop.in.in	 \
 	personal-slideshow.desktop.in.in \
 	popsquares.desktop.in.in	 \
 	$(NULL)
@@ -26,7 +26,7 @@ space-slideshow.desktop.in: space-slideshow.desktop.in.in Makefile
 	@$(edit) $< >$@
 footlogo-floaters.desktop.in: footlogo-floaters.desktop.in.in Makefile
 	@$(edit) $< >$@
-gnomelogo-floaters.desktop.in: gnomelogo-floaters.desktop.in.in Makefile
+gnome-floaters.desktop.in: gnome-floaters.desktop.in.in Makefile
 	@$(edit) $< >$@
 personal-slideshow.desktop.in: personal-slideshow.desktop.in.in Makefile
 	@$(edit) $< >$@
@@ -46,7 +46,7 @@ themesdir = $(datadir)/applications/screensavers
 themes_in_files = 			\
 	space-slideshow.desktop.in	\
 	footlogo-floaters.desktop.in    \
-	gnomelogo-floaters.desktop.in    \
+	gnome-floaters.desktop.in    \
 	personal-slideshow.desktop.in	\
 	popsquares.desktop.in		\
 	$(NULL)
@@ -131,7 +131,7 @@ CLEANFILES = 				\
 	$(BUILT_SOURCES)		\
 	space-slideshow.desktop.in	\
 	footlogo-floaters.desktop.in	\
-	gnomelogo-floaters.desktop.in	\
+	gnome-floaters.desktop.in	\
 	popsquares.desktop.in		\
 	personal-slideshow.desktop.in	\
 	$(NULL)
@@ -145,7 +145,7 @@ MAINTAINERCLEANFILES =			\
 	Makefile.in			\
 	space-slideshow.desktop	\
 	footlogo-floaters.desktop	\
-	gnomelogo-floaters.desktop	\
+	gnome-floaters.desktop	\
 	personal-slideshow.desktop	\
 	popsquares.desktop		\
 	$(NULL)
