@@ -38,7 +38,7 @@ requires:
 
     #required for cafe-desktop
     - gobject-introspection
-    - ctk-doc-tools
+    - gtk-doc-tools
     - intltool
     - iso-codes
     - libgirepository1.0-dev
