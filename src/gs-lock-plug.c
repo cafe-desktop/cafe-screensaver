@@ -443,7 +443,7 @@ capslock_update (GSLockPlug *plug,
 static gboolean
 is_capslock_on (void)
 {
-	GdkKeymap *keymap;
+	CdkKeymap *keymap;
 	gboolean res;
 
 	res = FALSE;
@@ -532,7 +532,7 @@ run_response_handler (GSLockPlug *plug,
 
 static gint
 run_delete_handler (GSLockPlug *plug,
-                    GdkEventAny *event,
+                    CdkEventAny *event,
                     gpointer data)
 {
 	RunInfo *ri = data;
@@ -553,7 +553,7 @@ run_destroy_handler (GSLockPlug *plug,
 }
 
 static void
-run_keymap_handler (GdkKeymap *keymap,
+run_keymap_handler (CdkKeymap *keymap,
                     GSLockPlug *plug)
 {
 	capslock_update (plug, is_capslock_on ());
@@ -570,7 +570,7 @@ gs_lock_plug_run (GSLockPlug *plug)
 	gulong destroy_handler;
 	gulong delete_handler;
 	gulong keymap_handler;
-	GdkKeymap *keymap;
+	CdkKeymap *keymap;
 
 	g_return_val_if_fail (GS_IS_LOCK_PLUG (plug), -1);
 
@@ -648,7 +648,7 @@ gs_lock_plug_run (GSLockPlug *plug)
 
 
 static cairo_surface_t *
-surface_from_pixbuf (GdkPixbuf *pixbuf)
+surface_from_pixbuf (CdkPixbuf *pixbuf)
 {
 	cairo_surface_t *surface;
 	cairo_t         *cr;
@@ -787,7 +787,7 @@ go_cairo_convert_data_to_pixbuf (unsigned char *dst,
 
 static void
 cairo_to_pixbuf (guint8    *src_data,
-                 GdkPixbuf *dst_pixbuf)
+                 CdkPixbuf *dst_pixbuf)
 {
 	unsigned char *src;
 	unsigned char *dst;
@@ -805,10 +805,10 @@ cairo_to_pixbuf (guint8    *src_data,
 	go_cairo_convert_data_to_pixbuf (dst, src, w, h, rowstride);
 }
 
-static GdkPixbuf *
-frame_pixbuf (GdkPixbuf *source)
+static CdkPixbuf *
+frame_pixbuf (CdkPixbuf *source)
 {
-	GdkPixbuf       *dest;
+	CdkPixbuf       *dest;
 	cairo_t         *cr;
 	cairo_surface_t *surface;
 	guint            w;
@@ -874,9 +874,9 @@ frame_pixbuf (GdkPixbuf *source)
 
 static void
 image_set_from_pixbuf (CtkImage  *image,
-                       GdkPixbuf *source)
+                       CdkPixbuf *source)
 {
-	GdkPixbuf *pixbuf;
+	CdkPixbuf *pixbuf;
 
 	pixbuf = frame_pixbuf (source);
 	ctk_image_set_from_pixbuf (image, pixbuf);
@@ -939,7 +939,7 @@ check_user_file (const gchar *filename,
 static gboolean
 set_face_image (GSLockPlug *plug)
 {
-	GdkPixbuf    *pixbuf;
+	CdkPixbuf    *pixbuf;
 	const char   *homedir;
 	char         *path;
 	int           icon_size = 96;
@@ -1039,11 +1039,11 @@ gs_lock_plug_hide (CtkWidget *widget)
 
 static void
 queue_key_event (GSLockPlug  *plug,
-                 GdkEventKey *event)
+                 CdkEventKey *event)
 {
-	GdkEvent *saved_event;
+	CdkEvent *saved_event;
 
-	saved_event = cdk_event_copy ((GdkEvent *)event);
+	saved_event = cdk_event_copy ((CdkEvent *)event);
 	plug->priv->key_events = g_list_prepend (plug->priv->key_events,
 	                         saved_event);
 }
@@ -1054,11 +1054,11 @@ forward_key_events (GSLockPlug *plug)
 	plug->priv->key_events = g_list_reverse (plug->priv->key_events);
 	while (plug->priv->key_events != NULL)
 	{
-		GdkEventKey *event = plug->priv->key_events->data;
+		CdkEventKey *event = plug->priv->key_events->data;
 
 		ctk_window_propagate_key_event (CTK_WINDOW (plug), event);
 
-		cdk_event_free ((GdkEvent *)event);
+		cdk_event_free ((CdkEvent *)event);
 
 		plug->priv->key_events = g_list_delete_link (plug->priv->key_events,
 		                         plug->priv->key_events);
@@ -1250,7 +1250,7 @@ gs_lock_plug_close (GSLockPlug *plug)
 	/* Synthesize delete_event to close dialog. */
 
 	CtkWidget *widget = CTK_WIDGET (plug);
-	GdkEvent  *event;
+	CdkEvent  *event;
 
 	event = cdk_event_new (CDK_DELETE);
 	event->any.window = g_object_ref (ctk_widget_get_window(widget));
@@ -1455,8 +1455,8 @@ logout_button_clicked (CtkButton  *button,
 void
 gs_lock_plug_set_busy (GSLockPlug *plug)
 {
-	GdkDisplay *display;
-	GdkCursor *cursor;
+	CdkDisplay *display;
+	CdkCursor *cursor;
 	CtkWidget *top_level;
 
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
@@ -1471,8 +1471,8 @@ gs_lock_plug_set_busy (GSLockPlug *plug)
 void
 gs_lock_plug_set_ready (GSLockPlug *plug)
 {
-	GdkDisplay *display;
-	GdkCursor *cursor;
+	CdkDisplay *display;
+	CdkCursor *cursor;
 	CtkWidget *top_level;
 
 	top_level = ctk_widget_get_toplevel (CTK_WIDGET (plug));
@@ -1540,7 +1540,7 @@ gs_lock_plug_show_message (GSLockPlug *plug,
 /* button press handler used to inhibit popup menu */
 static gint
 entry_button_press (CtkWidget      *widget,
-                    GdkEventButton *event)
+                    CdkEventButton *event)
 {
 	if (event->button == 3 && event->type == CDK_BUTTON_PRESS)
 	{
@@ -1552,7 +1552,7 @@ entry_button_press (CtkWidget      *widget,
 
 static gint
 entry_key_press (CtkWidget   *widget,
-                 GdkEventKey *event,
+                 CdkEventKey *event,
                  GSLockPlug  *plug)
 {
 	restart_cancel_timeout (plug);
@@ -2081,7 +2081,7 @@ load_theme (GSLockPlug *plug)
 
 static int
 delete_handler (GSLockPlug  *plug,
-                GdkEventAny *event,
+                CdkEventAny *event,
                 gpointer     data)
 {
 	gs_lock_plug_response (plug, GS_LOCK_PLUG_RESPONSE_CANCEL);

@@ -84,7 +84,7 @@ gs_theme_window_finalize (GObject *object)
 static void
 gs_theme_window_real_realize (CtkWidget *widget)
 {
-	GdkWindow     *window;
+	CdkWindow     *window;
 	Window         remote_xwindow;
 	CtkRequisition requisition;
 	CtkAllocation  allocation;
@@ -145,7 +145,7 @@ gs_theme_window_real_realize (CtkWidget *widget)
 
 	ctk_style_context_set_background (ctk_widget_get_style_context (widget),
 	                                  window);
-	cdk_window_set_decorations (window, (GdkWMDecoration) 0);
+	cdk_window_set_decorations (window, (CdkWMDecoration) 0);
 	cdk_window_set_events (window, cdk_window_get_events (window) | event_mask);
 
 	ctk_widget_set_window (widget, window);

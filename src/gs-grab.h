@@ -57,8 +57,8 @@ void      gs_grab_release          (GSGrab    *grab,
                                     gboolean   flush);
 
 gboolean  gs_grab_grab_window      (GSGrab     *grab,
-                                    GdkWindow  *window,
-                                    GdkDisplay *display,
+                                    CdkWindow  *window,
+                                    CdkDisplay *display,
                                     gboolean    no_pointer_grab,
                                     gboolean    hide_cursor);
 
@@ -70,8 +70,8 @@ gboolean  gs_grab_grab_offscreen   (GSGrab    *grab,
                                     gboolean   hide_cursor);
 
 void      gs_grab_move_to_window   (GSGrab     *grab,
-                                    GdkWindow  *window,
-                                    GdkDisplay *display,
+                                    CdkWindow  *window,
+                                    CdkDisplay *display,
                                     gboolean    no_pointer_grab,
                                     gboolean    hide_cursor);
 

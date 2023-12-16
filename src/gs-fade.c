@@ -170,7 +170,7 @@ xf86_whack_gamma (int              screen,
 {
 	Bool status;
 	struct GSGammaInfo *gamma_info;
-	GdkDisplay *display;
+	CdkDisplay *display;
 
 	gamma_info = screen_priv->info;
 
@@ -589,8 +589,8 @@ static gboolean xrandr_fade_set_alpha_gamma (GSFade *fade,
 static void
 check_randr_extension (GSFade *fade)
 {
-	GdkDisplay *display = cdk_display_get_default ();
-	GdkScreen *screen = cdk_display_get_default_screen (display);
+	CdkDisplay *display = cdk_display_get_default ();
+	CdkScreen *screen = cdk_display_get_default_screen (display);
 	struct GSFadeScreenPrivate *screen_priv;
 
 	screen_priv = &fade->priv->screen_priv;

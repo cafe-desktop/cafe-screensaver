@@ -37,13 +37,13 @@
 #include "gs-visual-gl.h"
 #include "gs-debug.h"
 
-GdkVisual *
-gs_visual_gl_get_best_for_display (GdkDisplay *display)
+CdkVisual *
+gs_visual_gl_get_best_for_display (CdkDisplay *display)
 {
-	GdkVisual *visual;
+	CdkVisual *visual;
 #ifdef HAVE_LIBGL
 	Display   *xdisplay;
-	GdkScreen *screen;
+	CdkScreen *screen;
 	int        screen_num;
 	int        i;
 

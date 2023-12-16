@@ -25,7 +25,7 @@
 
 G_BEGIN_DECLS
 
-GdkVisual   *gs_visual_gl_get_best_for_display (GdkDisplay *display);
+CdkVisual   *gs_visual_gl_get_best_for_display (CdkDisplay *display);
 
 G_END_DECLS
 

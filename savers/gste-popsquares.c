@@ -49,7 +49,7 @@ struct GSTEPopsquaresPrivate
 	int        ncolors;
 	int        subdivision;
 
-	GdkRGBA   *colors;
+	CdkRGBA   *colors;
 	square    *squares;
 };
 
@@ -216,7 +216,7 @@ make_color_ramp (int          h1,
                  int          h2,
                  double       s2,
                  double       v2,
-                 GdkRGBA     *colors,
+                 CdkRGBA     *colors,
                  int          n_colors,
                  gboolean     closed)
 {
@@ -288,8 +288,8 @@ randomize_square_colors (square *squares,
 
 static void
 set_colors (CtkWidget *widget,
-            GdkRGBA   *fg,
-            GdkRGBA   *bg)
+            CdkRGBA   *fg,
+            CdkRGBA   *bg)
 {
 	CtkStyleContext  *style;
 
@@ -355,7 +355,7 @@ setup_squares (GSTEPopsquares *pop)
 	int       nsquares;
 	int       x, y;
 	int       sw, sh, gw, gh;
-	GdkWindow *window;
+	CdkWindow *window;
 
 	window = gs_theme_engine_get_window (GS_THEME_ENGINE (pop));
 
@@ -398,9 +398,9 @@ setup_colors (GSTEPopsquares *pop)
 	double    s1, v1, s2, v2 = 0;
 	int       h1, h2 = 0;
 	int       nsquares;
-	GdkRGBA   fg;
-	GdkRGBA   bg;
-	GdkWindow *window;
+	CdkRGBA   fg;
+	CdkRGBA   bg;
+	CdkWindow *window;
 
 	window = gs_theme_engine_get_window (GS_THEME_ENGINE (pop));
 
@@ -415,7 +415,7 @@ setup_colors (GSTEPopsquares *pop)
 	{
 		g_free (pop->priv->colors);
 	}
-	pop->priv->colors = g_new0 (GdkRGBA, pop->priv->ncolors);
+	pop->priv->colors = g_new0 (CdkRGBA, pop->priv->ncolors);
 
 	rgb_to_hsv (fg.red, fg.green, fg.blue, &h1, &s1, &v1);
 	rgb_to_hsv (bg.red, bg.green, bg.blue, &h2, &s2, &v2);
@@ -461,7 +461,7 @@ gste_popsquares_real_draw (CtkWidget *widget,
 
 static gboolean
 gste_popsquares_real_configure (CtkWidget         *widget,
-                                GdkEventConfigure *event)
+                                CdkEventConfigure *event)
 {
 	GSTEPopsquares *pop = GSTE_POPSQUARES (widget);
 	gboolean        handled = FALSE;
@@ -511,7 +511,7 @@ draw_frame (GSTEPopsquares *pop,
 	int      nsquares;
 	int      window_width;
 	int      window_height;
-	GdkWindow *window;
+	CdkWindow *window;
 
 	window = gs_theme_engine_get_window (GS_THEME_ENGINE (pop));
 

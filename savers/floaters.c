@@ -162,7 +162,7 @@ struct _Rectangle
 
 struct _ScreenSaverFloater
 {
-	GdkRectangle bounds;
+	CdkRectangle bounds;
 
 	Point start_position;
 	Point position;
@@ -285,7 +285,7 @@ static void screen_saver_on_size_allocate (ScreenSaver   *screen_saver,
 static void screen_saver_on_draw (ScreenSaver    *screen_saver,
         cairo_t *context);
 static gboolean do_print_screen_saver_stats (ScreenSaver *screen_saver);
-static GdkPixbuf *gamma_correct (const GdkPixbuf *input_pixbuf);
+static CdkPixbuf *gamma_correct (const CdkPixbuf *input_pixbuf);
 
 static CachedSource*
 cached_source_new (cairo_pattern_t *pattern,
@@ -657,11 +657,11 @@ screen_saver_floater_update_state (ScreenSaver        *screen_saver,
 	}
 }
 
-static GdkPixbuf *
-gamma_correct (const GdkPixbuf *input_pixbuf)
+static CdkPixbuf *
+gamma_correct (const CdkPixbuf *input_pixbuf)
 {
 	gint x, y, width, height, rowstride;
-	GdkPixbuf *output_pixbuf;
+	CdkPixbuf *output_pixbuf;
 	guchar *pixels;
 
 	output_pixbuf = cdk_pixbuf_copy (input_pixbuf);
@@ -701,7 +701,7 @@ screen_saver_floater_do_draw (ScreenSaver        *screen_saver,
 
 	if (source == NULL)
 	{
-		GdkPixbuf *pixbuf;
+		CdkPixbuf *pixbuf;
 		GError *error;
 
 		pixbuf = NULL;
@@ -1109,7 +1109,7 @@ screen_saver_do_update_state (ScreenSaver *screen_saver)
 	 */
 	if (screen_saver->draw_ops_pending)
 	{
-		GdkDisplay *display;
+		CdkDisplay *display;
 
 		display = ctk_widget_get_display (CTK_WIDGET(screen_saver->drawing_area));
 		cdk_display_flush (display);

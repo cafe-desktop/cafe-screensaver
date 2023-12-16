@@ -59,7 +59,7 @@ GType           gs_theme_engine_get_type         (void);
 void            gs_theme_engine_get_window_size (GSThemeEngine *engine,
         int           *width,
         int           *height);
-GdkWindow      *gs_theme_engine_get_window      (GSThemeEngine *engine);
+CdkWindow      *gs_theme_engine_get_window      (GSThemeEngine *engine);
 
 #define ENABLE_PROFILING 1
 #ifdef ENABLE_PROFILING

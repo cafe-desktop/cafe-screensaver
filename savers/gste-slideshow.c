@@ -102,7 +102,7 @@ typedef struct _Op
 
 typedef struct _OpResult
 {
-	GdkPixbuf *pixbuf;
+	CdkPixbuf *pixbuf;
 } OpResult;
 
 static gboolean
@@ -141,7 +141,7 @@ start_new_load (GSTESlideshow *show,
 
 static void
 start_fade (GSTESlideshow *show,
-            GdkPixbuf     *pixbuf)
+            CdkPixbuf     *pixbuf)
 {
 	int      pw;
 	int      ph;
@@ -168,7 +168,7 @@ start_fade (GSTESlideshow *show,
 
 	if (cdk_pixbuf_get_has_alpha (pixbuf) && show->priv->background_color)
 	{
-		GdkPixbuf *colored;
+		CdkPixbuf *colored;
 		guint32    color;
 
 		color = (show->priv->background_color->red << 16)
@@ -389,7 +389,7 @@ draw_iter (GSTESlideshow *show)
 
 static void
 process_new_pixbuf (GSTESlideshow *show,
-                    GdkPixbuf     *pixbuf)
+                    CdkPixbuf     *pixbuf)
 {
 	gs_theme_engine_profile_msg ("Processing a new image");
 
@@ -444,8 +444,8 @@ results_pull_func (GSTESlideshow *show)
 	return FALSE;
 }
 
-static GdkPixbuf *
-scale_pixbuf (GdkPixbuf *pixbuf,
+static CdkPixbuf *
+scale_pixbuf (CdkPixbuf *pixbuf,
               int        max_width,
               int        max_height,
               gboolean   no_stretch_hint)
@@ -555,11 +555,11 @@ gste_strcmp_compare_func (gconstpointer string_a, gconstpointer string_b)
 }
 
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_pixbuf_from_local_dir (GSTESlideshow *show,
                            const char    *location)
 {
-	GdkPixbuf *pixbuf, *transformed_pixbuf;
+	CdkPixbuf *pixbuf, *transformed_pixbuf;
 	char      *filename;
 	int        i;
 	GSList    *l;
@@ -612,11 +612,11 @@ get_pixbuf_from_local_dir (GSTESlideshow *show,
 	return transformed_pixbuf;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_pixbuf_from_location (GSTESlideshow *show,
                           const char    *location)
 {
-	GdkPixbuf *pixbuf = NULL;
+	CdkPixbuf *pixbuf = NULL;
 	gboolean   is_dir;
 
 	if (location == NULL)
@@ -634,14 +634,14 @@ get_pixbuf_from_location (GSTESlideshow *show,
 	return pixbuf;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_pixbuf (GSTESlideshow *show,
             const char    *location,
             int            width,
             int            height)
 {
-	GdkPixbuf *pixbuf;
-	GdkPixbuf *scaled = NULL;
+	CdkPixbuf *pixbuf;
+	CdkPixbuf *scaled = NULL;
 
 	if (location == NULL)
 	{
@@ -876,7 +876,7 @@ gste_slideshow_real_draw (CtkWidget *widget,
 
 static gboolean
 gste_slideshow_real_configure (CtkWidget         *widget,
-                               GdkEventConfigure *event)
+                               CdkEventConfigure *event)
 {
 	GSTESlideshow *show = GSTE_SLIDESHOW (widget);
 	gboolean       handled = FALSE;
@@ -963,8 +963,8 @@ gste_slideshow_class_init (GSTESlideshowClass *klass)
 static void
 set_visual (CtkWidget *widget)
 {
-	GdkScreen *screen;
-	GdkVisual *visual;
+	CdkScreen *screen;
+	CdkVisual *visual;
 
 	screen = ctk_widget_get_screen (widget);
 	visual = cdk_screen_get_rgba_visual (screen);

@@ -39,8 +39,8 @@ static gpointer grab_object = NULL;
 
 struct GSGrabPrivate
 {
-	GdkWindow  *grab_window;
-	GdkDisplay *grab_display;
+	CdkWindow  *grab_window;
+	CdkDisplay *grab_display;
 	guint       no_pointer_grab : 1;
 	guint       hide_cursor : 1;
 
@@ -82,8 +82,8 @@ xorg_lock_smasher_set_active (GSGrab  *grab,
 }
 
 static void
-prepare_window_grab_cb (GdkSeat   *seat,
-                        GdkWindow *window,
+prepare_window_grab_cb (CdkSeat   *seat,
+                        CdkWindow *window,
                         gpointer   user_data)
 {
 	cdk_window_show_unraised (window);
@@ -91,15 +91,15 @@ prepare_window_grab_cb (GdkSeat   *seat,
 
 static int
 gs_grab_get (GSGrab     *grab,
-             GdkWindow  *window,
-             GdkDisplay *display,
+             CdkWindow  *window,
+             CdkDisplay *display,
              gboolean    no_pointer_grab,
              gboolean    hide_cursor)
 {
-	GdkGrabStatus status;
-	GdkSeat      *seat;
-	GdkSeatCapabilities caps;
-	GdkCursor    *cursor;
+	CdkGrabStatus status;
+	CdkSeat      *seat;
+	CdkSeatCapabilities caps;
+	CdkCursor    *cursor;
 
 	g_return_val_if_fail (window != NULL, FALSE);
 	g_return_val_if_fail (display != NULL, FALSE);
@@ -172,8 +172,8 @@ gs_grab_reset (GSGrab *grab)
 void
 gs_grab_release (GSGrab *grab, gboolean flush)
 {
-	GdkDisplay *display;
-	GdkSeat    *seat;
+	CdkDisplay *display;
+	CdkSeat    *seat;
 
 	display = cdk_display_get_default ();
 	seat = cdk_display_get_default_seat (display);
@@ -197,14 +197,14 @@ gs_grab_release (GSGrab *grab, gboolean flush)
 
 static gboolean
 gs_grab_move (GSGrab     *grab,
-              GdkWindow  *window,
-              GdkDisplay *display,
+              CdkWindow  *window,
+              CdkDisplay *display,
               gboolean    no_pointer_grab,
               gboolean    hide_cursor)
 {
 	int         result;
-	GdkWindow  *old_window;
-	GdkDisplay *old_display;
+	CdkWindow  *old_window;
+	CdkDisplay *old_display;
 	gboolean    old_hide_cursor;
 
 	if (grab->priv->grab_window == window &&
@@ -269,7 +269,7 @@ gs_grab_move (GSGrab     *grab,
 }
 
 static void
-gs_grab_nuke_focus (GdkDisplay *display)
+gs_grab_nuke_focus (CdkDisplay *display)
 {
 	Window focus = 0;
 	int    rev = 0;
@@ -287,8 +287,8 @@ gs_grab_nuke_focus (GdkDisplay *display)
 
 gboolean
 gs_grab_grab_window (GSGrab     *grab,
-                     GdkWindow  *window,
-                     GdkDisplay *display,
+                     CdkWindow  *window,
+                     CdkDisplay *display,
                      gboolean    no_pointer_grab,
                      gboolean    hide_cursor)
 {
@@ -333,10 +333,10 @@ gs_grab_grab_root (GSGrab  *grab,
                    gboolean no_pointer_grab,
                    gboolean hide_cursor)
 {
-	GdkDisplay *display;
-	GdkWindow  *root;
-	GdkScreen  *screen;
-	GdkDevice  *device;
+	CdkDisplay *display;
+	CdkWindow  *root;
+	CdkScreen  *screen;
+	CdkDevice  *device;
 	gboolean    res;
 
 	gs_debug ("Grabbing the root window");
@@ -358,9 +358,9 @@ gs_grab_grab_offscreen (GSGrab *grab,
                         gboolean no_pointer_grab,
                         gboolean hide_cursor)
 {
-	GdkWindow *window;
-	GdkDisplay *display;
-	GdkScreen  *screen;
+	CdkWindow *window;
+	CdkDisplay *display;
+	CdkScreen  *screen;
 	gboolean    res;
 
 	gs_debug ("Grabbing an offscreen window");
@@ -377,8 +377,8 @@ gs_grab_grab_offscreen (GSGrab *grab,
 /* this is similar to gs_grab_grab_window but doesn't fail */
 void
 gs_grab_move_to_window (GSGrab     *grab,
-                        GdkWindow  *window,
-                        GdkDisplay *display,
+                        CdkWindow  *window,
+                        CdkDisplay *display,
                         gboolean    no_pointer_grab,
                         gboolean    hide_cursor)
 {

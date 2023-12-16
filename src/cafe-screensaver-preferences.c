@@ -824,7 +824,7 @@ theme_installer_run (CtkWidget *prefs_dialog, GList *files)
 /* Callback issued during drag movements */
 static gboolean
 drag_motion_cb (CtkWidget      *widget,
-                GdkDragContext *context,
+                CdkDragContext *context,
                 int             x,
                 int             y,
                 guint           time,
@@ -836,7 +836,7 @@ drag_motion_cb (CtkWidget      *widget,
 /* Callback issued during drag leaves */
 static void
 drag_leave_cb (CtkWidget      *widget,
-               GdkDragContext *context,
+               CdkDragContext *context,
                guint           time,
                gpointer        data)
 {
@@ -906,7 +906,7 @@ uri_list_parse (const gchar *uri_list)
 /* Callback issued on actual drops. Attempts to load the file dropped. */
 static void
 drag_data_received_cb (CtkWidget        *widget,
-                       GdkDragContext   *context,
+                       CdkDragContext   *context,
                        int               x,
                        int               y,
                        CtkSelectionData *selection_data,
@@ -1348,7 +1348,7 @@ extern char **environ;
 #endif
 
 static gchar **
-spawn_make_environment_for_display (GdkDisplay *display,
+spawn_make_environment_for_display (CdkDisplay *display,
                                     gchar     **envp)
 {
 	gchar **retval = NULL;
@@ -1382,7 +1382,7 @@ spawn_make_environment_for_display (GdkDisplay *display,
 }
 
 static gboolean
-spawn_command_line_on_display_sync (GdkDisplay  *display,
+spawn_command_line_on_display_sync (CdkDisplay  *display,
                                     const gchar  *command_line,
                                     char        **standard_output,
                                     char        **standard_error,
@@ -1420,17 +1420,17 @@ spawn_command_line_on_display_sync (GdkDisplay  *display,
 }
 
 
-static GdkVisual *
-get_best_visual_for_display (GdkDisplay *display)
+static CdkVisual *
+get_best_visual_for_display (CdkDisplay *display)
 {
-	GdkScreen    *screen;
+	CdkScreen    *screen;
 	char         *command;
 	char         *std_output;
 	int           exit_status;
 	GError       *error;
 	unsigned long v;
 	char          c;
-	GdkVisual    *visual;
+	CdkVisual    *visual;
 	gboolean      res;
 
 	visual = NULL;
@@ -1478,7 +1478,7 @@ out:
 static void
 widget_set_best_visual (CtkWidget *widget)
 {
-	GdkVisual *visual;
+	CdkVisual *visual;
 
 	g_return_if_fail (widget != NULL);
 
