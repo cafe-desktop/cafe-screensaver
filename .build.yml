@@ -35,6 +35,7 @@ requires:
 
 before_scripts:
   - ./html-cppcheck
+  - ./debrepo-install 'libctk-3-dev'
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
   - ./install-from-git https://github.com/cafe-desktop/cafe-desktop master
   - ./install-from-git https://github.com/cafe-desktop/libcafekbd master
