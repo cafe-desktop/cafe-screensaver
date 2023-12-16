@@ -17,7 +17,6 @@ requires:
     - libdbus-glib-1-dev
     - libdconf-dev
     - libglib2.0-dev
-    - libctk-3-dev
     - libnotify-dev
     - libpam0g-dev
     - libstartup-notification0-dev
