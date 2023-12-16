@@ -36,8 +36,8 @@
 
 #include <glib.h>
 #include <glib/gstdio.h>
-#include <gdk/gdk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdk.h>
+#include <cdk/cdkx.h>
 
 #include "gs-debug.h"
 #include "gs-job.h"
@@ -271,7 +271,7 @@ get_env_vars (CtkWidget *widget)
 
 	env = g_ptr_array_new ();
 
-	display_name = gdk_display_get_name (ctk_widget_get_display (widget));
+	display_name = cdk_display_get_name (ctk_widget_get_display (widget));
 	g_ptr_array_add (env, g_strdup_printf ("DISPLAY=%s", display_name));
 
 	g_ptr_array_add (env, g_strdup_printf ("HOME=%s",

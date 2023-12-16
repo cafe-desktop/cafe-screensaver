@@ -24,7 +24,7 @@
 #define __GSTE_POPSQUARES_H
 
 #include <glib.h>
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 #include "gs-theme-engine.h"
 
 G_BEGIN_DECLS

@@ -32,7 +32,7 @@
 #include <signal.h>
 
 #include <glib/gi18n.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 #include <ctk/ctk.h>
 #include <ctk/ctkx.h>
 

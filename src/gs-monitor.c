@@ -29,7 +29,7 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 
 #include "cafe-screensaver.h"
 
@@ -189,7 +189,7 @@ static void gs_monitor_lock_screen(GSMonitor* monitor)
 
 static void gs_monitor_simulate_user_activity(GSMonitor* monitor)
 {
-	Display *display = gdk_x11_display_get_xdisplay (gdk_display_get_default ());
+	Display *display = cdk_x11_display_get_xdisplay (cdk_display_get_default ());
 	XScreenSaverSuspend (display, TRUE);
 	XSync (display, FALSE);
 	XScreenSaverSuspend (display, FALSE);

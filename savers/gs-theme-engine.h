@@ -24,7 +24,7 @@
 #define __GS_THEME_ENGINE_H
 
 #include <glib.h>
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 
 G_BEGIN_DECLS
 

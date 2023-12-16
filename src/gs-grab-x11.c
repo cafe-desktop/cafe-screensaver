@@ -25,8 +25,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <gdk/gdk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdk.h>
+#include <cdk/cdkx.h>
 #include <ctk/ctk.h>
 
 #include "gs-window.h"
@@ -86,7 +86,7 @@ prepare_window_grab_cb (GdkSeat   *seat,
                         GdkWindow *window,
                         gpointer   user_data)
 {
-	gdk_window_show_unraised (window);
+	cdk_window_show_unraised (window);
 }
 
 static int
@@ -104,17 +104,17 @@ gs_grab_get (GSGrab     *grab,
 	g_return_val_if_fail (window != NULL, FALSE);
 	g_return_val_if_fail (display != NULL, FALSE);
 
-	cursor = gdk_cursor_new_for_display (display, GDK_BLANK_CURSOR);
+	cursor = cdk_cursor_new_for_display (display, GDK_BLANK_CURSOR);
 
 	gs_debug ("Grabbing devices for window=%X", (guint32) GDK_WINDOW_XID (window));
 
-	seat = gdk_display_get_default_seat (display);
+	seat = cdk_display_get_default_seat (display);
 	if (!no_pointer_grab)
 		caps = GDK_SEAT_CAPABILITY_ALL;
 	else
 		caps = GDK_SEAT_CAPABILITY_KEYBOARD;
 
-	status = gdk_seat_grab (seat, window,
+	status = cdk_seat_grab (seat, window,
 	                        caps, TRUE,
 	                        (hide_cursor ? cursor : NULL),
 	                        NULL,
@@ -125,11 +125,11 @@ gs_grab_get (GSGrab     *grab,
 	   time between grabbing and ungrabbing is minimal as grab was already
 	   completed once */
 	if (status == GDK_GRAB_SUCCESS && no_pointer_grab &&
-	    gdk_display_device_is_grabbed (display, gdk_seat_get_pointer (seat)))
+	    cdk_display_device_is_grabbed (display, cdk_seat_get_pointer (seat)))
 	{
 		gs_grab_release (grab, FALSE);
 		gs_debug ("Regrabbing keyboard");
-		status = gdk_seat_grab (seat, window,
+		status = cdk_seat_grab (seat, window,
 		                        caps, TRUE,
 		                        (hide_cursor ? cursor : NULL),
 		                        NULL, NULL, NULL);
@@ -175,12 +175,12 @@ gs_grab_release (GSGrab *grab, gboolean flush)
 	GdkDisplay *display;
 	GdkSeat    *seat;
 
-	display = gdk_display_get_default ();
-	seat = gdk_display_get_default_seat (display);
+	display = cdk_display_get_default ();
+	seat = cdk_display_get_default_seat (display);
 
 	gs_debug ("Ungrabbing devices");
 
-	gdk_seat_ungrab (seat);
+	cdk_seat_ungrab (seat);
 
 	gs_grab_reset (grab);
 
@@ -190,8 +190,8 @@ gs_grab_release (GSGrab *grab, gboolean flush)
 		/* FIXME: is it right to enable this? */
 		xorg_lock_smasher_set_active (grab, TRUE);
 
-		gdk_display_sync (display);
-		gdk_display_flush (display);
+		cdk_display_sync (display);
+		cdk_display_flush (display);
 	}
 }
 
@@ -229,7 +229,7 @@ gs_grab_move (GSGrab     *grab,
 	}
 
 	gs_debug ("*** doing X server grab");
-	gdk_x11_display_grab (display);
+	cdk_x11_display_grab (display);
 
 	old_window = grab->priv->grab_window;
 	old_display = grab->priv->grab_display;
@@ -262,8 +262,8 @@ gs_grab_move (GSGrab     *grab,
 	}
 
 	gs_debug ("*** releasing X server grab");
-	gdk_x11_display_ungrab (display);
-	gdk_display_flush (display);
+	cdk_x11_display_ungrab (display);
+	cdk_display_flush (display);
 
 	return (result == GDK_GRAB_SUCCESS);
 }
@@ -276,13 +276,13 @@ gs_grab_nuke_focus (GdkDisplay *display)
 
 	gs_debug ("Nuking focus");
 
-	gdk_x11_display_error_trap_push (display);
+	cdk_x11_display_error_trap_push (display);
 
 	XGetInputFocus (GDK_DISPLAY_XDISPLAY (display), &focus, &rev);
 	XSetInputFocus (GDK_DISPLAY_XDISPLAY (display), None,
 	                RevertToNone, CurrentTime);
 
-	gdk_x11_display_error_trap_pop_ignored (display);
+	cdk_x11_display_error_trap_pop_ignored (display);
 }
 
 gboolean
@@ -341,10 +341,10 @@ gs_grab_grab_root (GSGrab  *grab,
 
 	gs_debug ("Grabbing the root window");
 
-	display = gdk_display_get_default ();
-	device = gdk_seat_get_pointer (gdk_display_get_default_seat (display));
-	gdk_device_get_position (device, &screen, NULL, NULL);
-	root = gdk_screen_get_root_window (screen);
+	display = cdk_display_get_default ();
+	device = cdk_seat_get_pointer (cdk_display_get_default_seat (display));
+	cdk_device_get_position (device, &screen, NULL, NULL);
+	root = cdk_screen_get_root_window (screen);
 
 	res = gs_grab_grab_window (grab, root, display,
 	                           no_pointer_grab, hide_cursor);
@@ -367,7 +367,7 @@ gs_grab_grab_offscreen (GSGrab *grab,
 
 	window = ctk_widget_get_window (CTK_WIDGET (grab->priv->invisible));
 	screen = ctk_invisible_get_screen (CTK_INVISIBLE (grab->priv->invisible));
-	display = gdk_screen_get_display (screen);
+	display = cdk_screen_get_display (screen);
 	res = gs_grab_grab_window (grab, window, display,
 	                           no_pointer_grab, hide_cursor);
 
@@ -392,7 +392,7 @@ gs_grab_move_to_window (GSGrab     *grab,
 	{
 		result = gs_grab_move (grab, window, display,
 		                       no_pointer_grab, hide_cursor);
-		gdk_display_flush (display);
+		cdk_display_flush (display);
 	}
 }
 

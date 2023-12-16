@@ -32,7 +32,7 @@
 #include <glib-object.h>
 #include <glib/gi18n.h>
 
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 #include <ctk/ctk.h>
 
 #include "gs-theme-window.h"
@@ -109,7 +109,7 @@ gs_theme_window_real_realize (CtkWidget *widget)
 		        ((*end == ' ') || (*end == '\0')) &&
 		        ((remote_xwindow < G_MAXULONG) || (errno != ERANGE)))
 		{
-			window = gdk_x11_window_foreign_new_for_display (gdk_display_get_default (), remote_xwindow);
+			window = cdk_x11_window_foreign_new_for_display (cdk_display_get_default (), remote_xwindow);
 			if (window != NULL)
 			{
 				/* This is a kludge; we need to set the same
@@ -145,14 +145,14 @@ gs_theme_window_real_realize (CtkWidget *widget)
 
 	ctk_style_context_set_background (ctk_widget_get_style_context (widget),
 	                                  window);
-	gdk_window_set_decorations (window, (GdkWMDecoration) 0);
-	gdk_window_set_events (window, gdk_window_get_events (window) | event_mask);
+	cdk_window_set_decorations (window, (GdkWMDecoration) 0);
+	cdk_window_set_events (window, cdk_window_get_events (window) | event_mask);
 
 	ctk_widget_set_window (widget, window);
-	gdk_window_set_user_data (window, widget);
+	cdk_window_set_user_data (window, widget);
 	ctk_widget_set_realized (widget, TRUE);
 
-	gdk_window_get_geometry (window, &x, &y, &width, &height);
+	cdk_window_get_geometry (window, &x, &y, &width, &height);
 
 	if (width < MIN_SIZE || height < MIN_SIZE)
 	{

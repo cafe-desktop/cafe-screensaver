@@ -31,7 +31,7 @@
 #include <sys/types.h>          /* For uid_t, gid_t */
 
 #include <glib/gi18n.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 #include <ctk/ctk.h>
 
 #include <gio/gio.h>
@@ -421,7 +421,7 @@ response_cb (CtkWidget *widget,
 
 		error = NULL;
 
-		res = cafe_gdk_spawn_command_line_on_screen (gdk_screen_get_default (),
+		res = cafe_cdk_spawn_command_line_on_screen (cdk_screen_get_default (),
 		                                        GPM_COMMAND,
 		                                        &error);
 		if (! res)
@@ -1286,7 +1286,7 @@ constrain_list_size (CtkWidget      *widget,
 	int            max_height;
 
 	/* constrain height to be the tree height up to a max */
-	max_height = (HeightOfScreen (gdk_x11_screen_get_xscreen (ctk_widget_get_screen (widget)))) / 4;
+	max_height = (HeightOfScreen (cdk_x11_screen_get_xscreen (ctk_widget_get_screen (widget)))) / 4;
 
 	ctk_widget_get_preferred_size (to_size, &req, NULL);
 	allocation->height = MIN (req.height, max_height);
@@ -1368,7 +1368,7 @@ spawn_make_environment_for_display (GdkDisplay *display,
 	retval = g_new (char *, env_len + 1);
 	retval[env_len] = NULL;
 
-	display_name = gdk_display_get_name (display);
+	display_name = cdk_display_get_name (display);
 
 	for (i = 0; i < env_len; i++)
 		if (i == display_index)
@@ -1434,7 +1434,7 @@ get_best_visual_for_display (GdkDisplay *display)
 	gboolean      res;
 
 	visual = NULL;
-	screen = gdk_display_get_default_screen (display);
+	screen = cdk_display_get_default_screen (display);
 
 	command = g_build_filename (LIBEXECDIR, "cafe-screensaver-gl-helper", NULL);
 
@@ -1460,10 +1460,10 @@ get_best_visual_for_display (GdkDisplay *display)
 			VisualID      visual_id;
 
 			visual_id = (VisualID) v;
-			visual = gdk_x11_screen_lookup_visual (screen, visual_id);
+			visual = cdk_x11_screen_lookup_visual (screen, visual_id);
 
 			gs_debug ("Found best GL visual for display %s: 0x%x",
-			          gdk_display_get_name (display),
+			          cdk_display_get_name (display),
 			          (unsigned int) visual_id);
 		}
 	}

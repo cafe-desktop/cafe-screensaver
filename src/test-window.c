@@ -59,7 +59,7 @@ window_show_cb (GSWindow  *window,
 {
 	/* move devices grab so that dialog can be used */
 	gs_grab_move_to_window (grab,
-	                        gs_window_get_gdk_window (window),
+	                        gs_window_get_cdk_window (window),
 	                        gs_window_get_display (window),
 	                        TRUE, FALSE);
 }
@@ -127,8 +127,8 @@ test_window (void)
 
 	lock_active = TRUE;
 	user_switch_enabled = TRUE;
-	display = gdk_display_get_default ();
-	monitor = gdk_display_get_primary_monitor (display);
+	display = cdk_display_get_default ();
+	monitor = cdk_display_get_primary_monitor (display);
 
 	window = gs_window_new (monitor, lock_active);
 

@@ -26,8 +26,8 @@
 #include <unistd.h>
 #include <string.h>
 
-#include <gdk/gdk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdk.h>
+#include <cdk/cdkx.h>
 
 #ifdef HAVE_LIBGL
 #include <GL/gl.h>
@@ -76,10 +76,10 @@ gs_visual_gl_get_best_for_display (GdkDisplay *display)
 	g_return_val_if_fail (display != NULL, NULL);
 
 	xdisplay = GDK_DISPLAY_XDISPLAY (display);
-	screen = gdk_display_get_default_screen (display);
+	screen = cdk_display_get_default_screen (display);
 	screen_num = GDK_SCREEN_XNUMBER (screen);
 
-	gdk_x11_display_error_trap_push (display);
+	cdk_x11_display_error_trap_push (display);
 
 	visual = NULL;
 	for (i = 0; i < G_N_ELEMENTS (attrs); i++)
@@ -94,7 +94,7 @@ gs_visual_gl_get_best_for_display (GdkDisplay *display)
 
 			vid = XVisualIDFromVisual (vi->visual);
 
-			visual = gdk_x11_screen_lookup_visual (screen, vid);
+			visual = cdk_x11_screen_lookup_visual (screen, vid);
 
 			XFree (vi);
 
@@ -105,7 +105,7 @@ gs_visual_gl_get_best_for_display (GdkDisplay *display)
 		}
 	}
 
-	gdk_x11_display_error_trap_pop_ignored (display);
+	cdk_x11_display_error_trap_pop_ignored (display);
 #else
 	visual = NULL;
 #endif /* HAVE_LIBGL */

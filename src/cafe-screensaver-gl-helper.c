@@ -26,7 +26,7 @@
 #include <glib/gi18n.h>
 
 #include <ctk/ctk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 
 #include "gs-visual-gl.h"
 
@@ -62,12 +62,12 @@ main (int    argc,
 		exit (1);
 	}
 
-	display = gdk_display_get_default ();
+	display = cdk_display_get_default ();
 	visual = gs_visual_gl_get_best_for_display (display);
 
 	if (visual != NULL)
 	{
-		xvisual = gdk_x11_visual_get_xvisual (visual);
+		xvisual = cdk_x11_visual_get_xvisual (visual);
 		printf ("0x%x\n", (unsigned int) XVisualIDFromVisual (xvisual));
 	}
 	else
