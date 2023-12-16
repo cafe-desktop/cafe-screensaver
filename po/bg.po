@@ -325,17 +325,17 @@ msgstr "Показва прожекция със снимки от космос�
 msgid "CAFE;screensaver;slideshow;space;"
 msgstr ""
 
-#: savers/footlogo-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Floating CAFE"
 msgstr "Плаващ CAFE"
 
-#: savers/footlogo-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:4
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Балончета по екрана с логото на CAFE"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/footlogo-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 

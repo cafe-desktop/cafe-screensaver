@@ -330,17 +330,17 @@ msgstr "Показывает слайд-шоу космических рисун
 msgid "CAFE;screensaver;slideshow;space;"
 msgstr "CAFE;скринсейвер;хранитель;слайд-шоу;космос;"
 
-#: savers/footlogo-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Floating CAFE"
 msgstr "Плавающий CAFE"
 
-#: savers/footlogo-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:4
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Всплывающие по всему экрану логотипы CAFE"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: savers/footlogo-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "CAFE;скринсейвер;хранитель;логотип;плавающий;"
 
