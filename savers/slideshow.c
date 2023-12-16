@@ -29,7 +29,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-theme-window.h"
 #include "gs-theme-engine.h"
@@ -75,7 +75,7 @@ main (int argc, char **argv)
 
 	error = NULL;
 
-	ret = gtk_init_with_args (&argc, &argv,
+	ret = ctk_init_with_args (&argc, &argv,
 	                          NULL,
 	                          entries,
 	                          NULL,
@@ -93,7 +93,7 @@ main (int argc, char **argv)
 
 	window = gs_theme_window_new ();
 	g_signal_connect (G_OBJECT (window), "delete-event",
-	                  G_CALLBACK (gtk_main_quit), NULL);
+	                  G_CALLBACK (ctk_main_quit), NULL);
 
 	engine = g_object_new (GSTE_TYPE_SLIDESHOW, NULL);
 
@@ -129,14 +129,14 @@ main (int argc, char **argv)
 		g_object_set (engine, "no-stretch", no_stretch, NULL);
 	}
 
-	gtk_container_add (GTK_CONTAINER (window), GTK_WIDGET (engine));
+	ctk_container_add (GTK_CONTAINER (window), GTK_WIDGET (engine));
 
-	gtk_widget_show (GTK_WIDGET (engine));
+	ctk_widget_show (GTK_WIDGET (engine));
 
-	gtk_window_set_default_size (GTK_WINDOW (window), 640, 480);
-	gtk_widget_show (window);
+	ctk_window_set_default_size (GTK_WINDOW (window), 640, 480);
+	ctk_widget_show (window);
 
-	gtk_main ();
+	ctk_main ();
 
 	return 0;
 }

@@ -36,7 +36,7 @@
 #endif /* HAVE_UNISTD_H */
 
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-fade.h"
 #include "gs-debug.h"
@@ -847,7 +847,7 @@ gs_fade_sync (GSFade        *fade,
 
 	while (! flag)
 	{
-		gtk_main_iteration ();
+		ctk_main_iteration ();
 	}
 }
 

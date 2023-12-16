@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.22.2 -->
 <interface>
-  <requires lib="gtk+" version="3.14"/>
+  <requires lib="ctk+" version="3.14"/>
   <!-- interface-license-type gplv2 -->
   <!-- interface-name cafe-screensaver -->
   <!-- interface-description screensaver preferences -->
@@ -42,7 +42,7 @@
                 <property name="can_focus">False</property>
                 <property name="margin_left">5</property>
                 <property name="margin_right">5</property>
-                <property name="stock">gtk-dialog-warning</property>
+                <property name="stock">ctk-dialog-warning</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -87,7 +87,7 @@
                   <object class="GtkImage" id="image5">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="stock">gtk-go-back</property>
+                    <property name="stock">ctk-go-back</property>
                   </object>
                 </child>
               </object>
@@ -106,7 +106,7 @@
                   <object class="GtkImage" id="image4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="stock">gtk-go-forward</property>
+                    <property name="stock">ctk-go-forward</property>
                   </object>
                 </child>
               </object>
@@ -118,7 +118,7 @@
             </child>
             <child>
               <object class="GtkButton" id="fullscreen_preview_close">
-                <property name="label">gtk-leave-fullscreen</property>
+                <property name="label">ctk-leave-fullscreen</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">False</property>
@@ -155,11 +155,11 @@
   <object class="GtkFileFilter" id="picture_filefilter"/>
   <object class="GtkImage" id="power_image">
     <property name="can_focus">False</property>
-    <property name="stock">gtk-jump-to</property>
+    <property name="stock">ctk-jump-to</property>
   </object>
   <object class="GtkImage" id="preview_image">
     <property name="can_focus">False</property>
-    <property name="stock">gtk-fullscreen</property>
+    <property name="stock">ctk-fullscreen</property>
   </object>
   <object class="GtkDialog" id="prefs_dialog">
     <property name="visible">True</property>
@@ -185,7 +185,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="helpbutton1">
-                <property name="label">gtk-help</property>
+                <property name="label">ctk-help</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -232,7 +232,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button1">
-                <property name="label">gtk-close</property>
+                <property name="label">ctk-close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>

@@ -31,7 +31,7 @@
 #include <sys/wait.h>
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "cafe-screensaver.h"
 #include "gs-monitor.h"
@@ -39,7 +39,7 @@
 
 void cafe_screensaver_quit(void)
 {
-	gtk_main_quit();
+	ctk_main_quit();
 }
 
 int main(int argc, char **argv)
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 		textdomain(GETTEXT_PACKAGE);
 	#endif
 
-	if (!gtk_init_with_args(&argc, &argv, NULL, entries, NULL, &error))
+	if (!ctk_init_with_args(&argc, &argv, NULL, entries, NULL, &error))
 	{
 		if (error)
 		{
@@ -115,7 +115,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	gtk_main();
+	ctk_main();
 
 	g_object_unref(monitor);
 

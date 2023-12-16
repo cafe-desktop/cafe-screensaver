@@ -35,7 +35,7 @@
 #include <glib/gi18n.h>
 
 #include <gdk/gdk.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-theme-window.h"
 
@@ -1027,7 +1027,7 @@ screen_saver_on_draw (ScreenSaver    *screen_saver,
 
 		if (!screen_saver_floater_do_draw (screen_saver, floater, context))
 		{
-			gtk_main_quit ();
+			ctk_main_quit ();
 			break;
 		}
 	}
@@ -1051,14 +1051,14 @@ screen_saver_update_state (ScreenSaver *screen_saver,
 		screen_saver_floater_update_state (screen_saver, floater, time);
 
 		if (screen_saver->drawing_area != NULL &&
-		    gtk_widget_get_realized (screen_saver->drawing_area) &&
+		    ctk_widget_get_realized (screen_saver->drawing_area) &&
 		    (floater->bounds.width > 0) && (floater->bounds.height > 0))
 		{
 			gint size;
 			size = CLAMP ((int) (FLOATER_MAX_SIZE * floater->scale),
 			              FLOATER_MIN_SIZE, FLOATER_MAX_SIZE);
 
-			gtk_widget_queue_draw_area (screen_saver->drawing_area,
+			ctk_widget_queue_draw_area (screen_saver->drawing_area,
 			                            floater->bounds.x,
 			                            floater->bounds.y,
 			                            floater->bounds.width,
@@ -1068,7 +1068,7 @@ screen_saver_update_state (ScreenSaver *screen_saver,
 			 * pixels so we add +2 to invalidated region
 			 */
 			if (screen_saver->should_do_rotations)
-				gtk_widget_queue_draw_area (screen_saver->drawing_area,
+				ctk_widget_queue_draw_area (screen_saver->drawing_area,
 				                            (int) (floater->position.x -
 				                                   .5 * G_SQRT2 * size),
 				                            (int) (floater->position.y -
@@ -1076,7 +1076,7 @@ screen_saver_update_state (ScreenSaver *screen_saver,
 				                            G_SQRT2 * size + 2,
 				                            G_SQRT2 * size + 2);
 			else
-				gtk_widget_queue_draw_area (screen_saver->drawing_area,
+				ctk_widget_queue_draw_area (screen_saver->drawing_area,
 				                            (int) (floater->position.x -
 				                                   .5 * size),
 				                            (int) (floater->position.y -
@@ -1084,7 +1084,7 @@ screen_saver_update_state (ScreenSaver *screen_saver,
 				                            size + 2, size + 2);
 
 			if  (screen_saver->should_show_paths)
-				gtk_widget_queue_draw (screen_saver->drawing_area);
+				ctk_widget_queue_draw (screen_saver->drawing_area);
 		}
 
 		tmp = tmp->next;
@@ -1111,7 +1111,7 @@ screen_saver_do_update_state (ScreenSaver *screen_saver)
 	{
 		GdkDisplay *display;
 
-		display = gtk_widget_get_display (GTK_WIDGET(screen_saver->drawing_area));
+		display = ctk_widget_get_display (GTK_WIDGET(screen_saver->drawing_area));
 		gdk_display_flush (display);
 		screen_saver->draw_ops_pending = FALSE;
 	}
@@ -1178,7 +1178,7 @@ main (int   argc,
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-	gtk_init_with_args (&argc, &argv,
+	ctk_init_with_args (&argc, &argv,
 	                    /* translators: the word "image" here
 	                     * represents a command line argument
 	                     */
@@ -1205,12 +1205,12 @@ main (int   argc,
 	window = gs_theme_window_new ();
 
 	g_signal_connect (G_OBJECT (window), "delete-event",
-	                  G_CALLBACK (gtk_main_quit), NULL);
+	                  G_CALLBACK (ctk_main_quit), NULL);
 
-	drawing_area = GTK_WIDGET (gtk_drawing_area_new ());
+	drawing_area = GTK_WIDGET (ctk_drawing_area_new ());
 
-	gtk_widget_show (drawing_area);
-	gtk_container_add (GTK_CONTAINER (window), drawing_area);
+	ctk_widget_show (drawing_area);
+	ctk_container_add (GTK_CONTAINER (window), drawing_area);
 
 	screen_saver = screen_saver_new (drawing_area,
 	                                 filenames[0], max_floater_count,
@@ -1223,12 +1223,12 @@ main (int   argc,
 		               screen_saver);
 
 	if ((geometry == NULL)
-	        || !gtk_window_parse_geometry (GTK_WINDOW (window), geometry))
-		gtk_window_set_default_size (GTK_WINDOW (window), 640, 480);
+	        || !ctk_window_parse_geometry (GTK_WINDOW (window), geometry))
+		ctk_window_set_default_size (GTK_WINDOW (window), 640, 480);
 
-	gtk_widget_show (window);
+	ctk_widget_show (window);
 
-	gtk_main ();
+	ctk_main ();
 
 	screen_saver_free (screen_saver);
 

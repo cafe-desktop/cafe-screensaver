@@ -32,7 +32,7 @@
 
 #include <glib/gi18n.h>
 #include <gdk/gdkx.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <gio/gio.h>
 
@@ -345,11 +345,11 @@ preview_set_theme (GtkWidget  *widget,
 		gs_job_stop (job);
 	}
 
-	gtk_widget_queue_draw (widget);
+	ctk_widget_queue_draw (widget);
 
-	label = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_theme_label"));
+	label = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_theme_label"));
 	markup = g_markup_printf_escaped ("<i>%s</i>", name);
-	gtk_label_set_markup (GTK_LABEL (label), markup);
+	ctk_label_set_markup (GTK_LABEL (label), markup);
 	g_free (markup);
 
 	if ((theme && strcmp (theme, "__blank-only") == 0))
@@ -385,7 +385,7 @@ help_display (void)
 	GError *error;
 
 	error = NULL;
-	gtk_show_uri_on_window (NULL,
+	ctk_show_uri_on_window (NULL,
                                 "help:cafe-user-guide/prefs-screensaver",
                                 GDK_CURRENT_TIME,
                                 &error);
@@ -394,12 +394,12 @@ help_display (void)
 	{
 		GtkWidget *d;
 
-		d = gtk_message_dialog_new (NULL,
+		d = ctk_message_dialog_new (NULL,
 		                            GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
 		                            GTK_MESSAGE_ERROR, GTK_BUTTONS_OK,
 		                            "%s", error->message);
-		gtk_dialog_run (GTK_DIALOG (d));
-		gtk_widget_destroy (d);
+		ctk_dialog_run (GTK_DIALOG (d));
+		ctk_widget_destroy (d);
 		g_error_free (error);
 	}
 
@@ -432,8 +432,8 @@ response_cb (GtkWidget *widget,
 	}
 	else
 	{
-		gtk_widget_destroy (widget);
-		gtk_main_quit ();
+		ctk_widget_destroy (widget);
+		ctk_main_quit ();
 	}
 }
 
@@ -450,20 +450,20 @@ populate_model (GtkTreeStore *store)
 	GSList     *themes        = NULL;
 	GSList     *l;
 
-	gtk_tree_store_append (store, &iter, NULL);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_append (store, &iter, NULL);
+	ctk_tree_store_set (store, &iter,
 	                    NAME_COLUMN, _("Blank screen"),
 	                    ID_COLUMN, "__blank-only",
 	                    -1);
 
-	gtk_tree_store_append (store, &iter, NULL);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_append (store, &iter, NULL);
+	ctk_tree_store_set (store, &iter,
 	                    NAME_COLUMN, _("Random"),
 	                    ID_COLUMN, "__random",
 	                    -1);
 
-	gtk_tree_store_append (store, &iter, NULL);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_append (store, &iter, NULL);
+	ctk_tree_store_set (store, &iter,
 	                    NAME_COLUMN, NULL,
 	                    ID_COLUMN, "__separator",
 	                    -1);
@@ -489,8 +489,8 @@ populate_model (GtkTreeStore *store)
 		name = gs_theme_info_get_name (info);
 		id = gs_theme_info_get_id (info);
 
-		gtk_tree_store_append (store, &iter, NULL);
-		gtk_tree_store_set (store, &iter,
+		ctk_tree_store_append (store, &iter, NULL);
+		ctk_tree_store_set (store, &iter,
 		                    NAME_COLUMN, name,
 		                    ID_COLUMN, id,
 		                    -1);
@@ -508,15 +508,15 @@ tree_selection_previous (GtkTreeSelection *selection)
 	GtkTreeModel *model;
 	GtkTreePath  *path;
 
-	if (! gtk_tree_selection_get_selected (selection, &model, &iter))
+	if (! ctk_tree_selection_get_selected (selection, &model, &iter))
 	{
 		return;
 	}
 
-	path = gtk_tree_model_get_path (model, &iter);
-	if (gtk_tree_path_prev (path))
+	path = ctk_tree_model_get_path (model, &iter);
+	if (ctk_tree_path_prev (path))
 	{
-		gtk_tree_selection_select_path (selection, path);
+		ctk_tree_selection_select_path (selection, path);
 	}
 }
 
@@ -527,14 +527,14 @@ tree_selection_next (GtkTreeSelection *selection)
 	GtkTreeModel *model;
 	GtkTreePath  *path;
 
-	if (! gtk_tree_selection_get_selected (selection, &model, &iter))
+	if (! ctk_tree_selection_get_selected (selection, &model, &iter))
 	{
 		return;
 	}
 
-	path = gtk_tree_model_get_path (model, &iter);
-	gtk_tree_path_next (path);
-	gtk_tree_selection_select_path (selection, path);
+	path = ctk_tree_model_get_path (model, &iter);
+	ctk_tree_path_next (path);
+	ctk_tree_selection_select_path (selection, path);
 }
 
 static void
@@ -546,12 +546,12 @@ tree_selection_changed_cb (GtkTreeSelection *selection,
 	char         *theme;
 	char         *name;
 
-	if (! gtk_tree_selection_get_selected (selection, &model, &iter))
+	if (! ctk_tree_selection_get_selected (selection, &model, &iter))
 	{
 		return;
 	}
 
-	gtk_tree_model_get (model, &iter, ID_COLUMN, &theme, NAME_COLUMN, &name, -1);
+	ctk_tree_model_get (model, &iter, ID_COLUMN, &theme, NAME_COLUMN, &name, -1);
 
 	if (theme == NULL)
 	{
@@ -572,7 +572,7 @@ activate_delay_value_changed_cb (GtkRange *range,
 {
 	gdouble value;
 
-	value = gtk_range_get_value (range);
+	value = ctk_range_get_value (range);
 	config_set_activate_delay ((gint32)value);
 }
 
@@ -641,10 +641,10 @@ compare_theme  (GtkTreeModel *model,
 	char *id_b;
 	int   result;
 
-	gtk_tree_model_get (model, a, NAME_COLUMN, &name_a, -1);
-	gtk_tree_model_get (model, b, NAME_COLUMN, &name_b, -1);
-	gtk_tree_model_get (model, a, ID_COLUMN, &id_a, -1);
-	gtk_tree_model_get (model, b, ID_COLUMN, &id_b, -1);
+	ctk_tree_model_get (model, a, NAME_COLUMN, &name_a, -1);
+	ctk_tree_model_get (model, b, NAME_COLUMN, &name_b, -1);
+	ctk_tree_model_get (model, a, ID_COLUMN, &id_a, -1);
+	ctk_tree_model_get (model, b, ID_COLUMN, &id_b, -1);
 
 	result = compare_theme_names (name_a, name_b, id_a, id_b);
 
@@ -664,7 +664,7 @@ separator_func (GtkTreeModel *model,
 	int   column = GPOINTER_TO_INT (data);
 	char *text;
 
-	gtk_tree_model_get (model, iter, column, &text, -1);
+	ctk_tree_model_get (model, iter, column, &text, -1);
 
 	if (text != NULL && strcmp (text, "__separator") == 0)
 	{
@@ -685,40 +685,40 @@ setup_treeview (GtkWidget *tree,
 	GtkCellRenderer   *renderer;
 	GtkTreeSelection  *select;
 
-	store = gtk_tree_store_new (N_COLUMNS,
+	store = ctk_tree_store_new (N_COLUMNS,
 	                            G_TYPE_STRING,
 	                            G_TYPE_STRING);
 	populate_model (store);
 
-	gtk_tree_view_set_model (GTK_TREE_VIEW (tree),
+	ctk_tree_view_set_model (GTK_TREE_VIEW (tree),
 	                         GTK_TREE_MODEL (store));
 
 	g_object_unref (store);
 
 	g_object_set (tree, "show-expanders", FALSE, NULL);
 
-	renderer = gtk_cell_renderer_text_new ();
-	column = gtk_tree_view_column_new_with_attributes ("Name", renderer,
+	renderer = ctk_cell_renderer_text_new ();
+	column = ctk_tree_view_column_new_with_attributes ("Name", renderer,
 	         "text", NAME_COLUMN,
 	         NULL);
-	gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
+	ctk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
 
-	gtk_tree_view_column_set_sort_column_id (column, NAME_COLUMN);
-	gtk_tree_sortable_set_sort_func (GTK_TREE_SORTABLE (store),
+	ctk_tree_view_column_set_sort_column_id (column, NAME_COLUMN);
+	ctk_tree_sortable_set_sort_func (GTK_TREE_SORTABLE (store),
 	                                 NAME_COLUMN,
 	                                 compare_theme,
 	                                 NULL, NULL);
-	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
+	ctk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
 	                                      NAME_COLUMN,
 	                                      GTK_SORT_ASCENDING);
 
-	gtk_tree_view_set_row_separator_func (GTK_TREE_VIEW (tree),
+	ctk_tree_view_set_row_separator_func (GTK_TREE_VIEW (tree),
 	                                      separator_func,
 	                                      GINT_TO_POINTER (ID_COLUMN),
 	                                      NULL);
 
-	select = gtk_tree_view_get_selection (GTK_TREE_VIEW (tree));
-	gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
+	select = ctk_tree_view_get_selection (GTK_TREE_VIEW (tree));
+	ctk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
 	g_signal_connect (G_OBJECT (select), "changed",
 	                  G_CALLBACK (tree_selection_changed_cb),
 	                  preview);
@@ -738,12 +738,12 @@ setup_treeview_selection (GtkWidget *tree)
 
 	if (! is_writable)
 	{
-		gtk_widget_set_sensitive (tree, FALSE);
+		ctk_widget_set_sensitive (tree, FALSE);
 	}
 
-	model = gtk_tree_view_get_model (GTK_TREE_VIEW (tree));
+	model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
 
-	if (theme && gtk_tree_model_get_iter_first (model, &iter))
+	if (theme && ctk_tree_model_get_iter_first (model, &iter))
 	{
 
 		do
@@ -751,29 +751,29 @@ setup_treeview_selection (GtkWidget *tree)
 			char *id;
 			gboolean found;
 
-			gtk_tree_model_get (model, &iter,
+			ctk_tree_model_get (model, &iter,
 			                    ID_COLUMN, &id, -1);
 			found = (id && strcmp (id, theme) == 0);
 			g_free (id);
 
 			if (found)
 			{
-				path = gtk_tree_model_get_path (model, &iter);
+				path = ctk_tree_model_get_path (model, &iter);
 				break;
 			}
 
 		}
-		while (gtk_tree_model_iter_next (model, &iter));
+		while (ctk_tree_model_iter_next (model, &iter));
 	}
 
 	if (path)
 	{
-		gtk_tree_view_set_cursor (GTK_TREE_VIEW (tree),
+		ctk_tree_view_set_cursor (GTK_TREE_VIEW (tree),
 		                          path,
 		                          NULL,
 		                          FALSE);
 
-		gtk_tree_path_free (path);
+		ctk_tree_path_free (path);
 	}
 
 	g_free (theme);
@@ -785,12 +785,12 @@ reload_themes (void)
 	GtkWidget    *treeview;
 	GtkTreeModel *model;
 
-	treeview = GTK_WIDGET (gtk_builder_get_object (builder, "savers_treeview"));
-	model = gtk_tree_view_get_model (GTK_TREE_VIEW (treeview));
-	gtk_tree_store_clear (GTK_TREE_STORE (model));
+	treeview = GTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
+	model = ctk_tree_view_get_model (GTK_TREE_VIEW (treeview));
+	ctk_tree_store_clear (GTK_TREE_STORE (model));
 	populate_model (GTK_TREE_STORE (model));
 
-	gtk_tree_view_set_model (GTK_TREE_VIEW (treeview),
+	ctk_tree_view_set_model (GTK_TREE_VIEW (treeview),
 	                         GTK_TREE_MODEL (model));
 }
 
@@ -798,7 +798,7 @@ static void
 theme_copy_complete_cb (GtkWidget *dialog, gpointer user_data)
 {
 	reload_themes ();
-	gtk_widget_destroy (dialog);
+	ctk_widget_destroy (dialog);
 }
 
 static void
@@ -810,9 +810,9 @@ theme_installer_run (GtkWidget *prefs_dialog, GList *files)
 	g_list_foreach (files, (GFunc) (g_object_unref), NULL);
 	g_list_free (files);
 
-	gtk_window_set_transient_for (GTK_WINDOW (copy_dialog),
+	ctk_window_set_transient_for (GTK_WINDOW (copy_dialog),
 	                              GTK_WINDOW (prefs_dialog));
-	gtk_window_set_icon_name (GTK_WINDOW (copy_dialog),
+	ctk_window_set_icon_name (GTK_WINDOW (copy_dialog),
 	                          "preferences-desktop-screensaver");
 
 	g_signal_connect (copy_dialog, "complete",
@@ -840,7 +840,7 @@ drag_leave_cb (GtkWidget      *widget,
                guint           time,
                gpointer        data)
 {
-	gtk_widget_queue_draw (widget);
+	ctk_widget_queue_draw (widget);
 }
 
 /* GIO has no version of cafe_vfs_uri_list_parse(), so copy from CafeVFS
@@ -919,12 +919,12 @@ drag_data_received_cb (GtkWidget        *widget,
 	if (!(info == TARGET_URI_LIST || info == TARGET_NS_URL))
 		return;
 
-	files = uri_list_parse ((char *) gtk_selection_data_get_data (selection_data));
+	files = uri_list_parse ((char *) ctk_selection_data_get_data (selection_data));
 	if (files != NULL)
 	{
 		GtkWidget *prefs_dialog;
 
-		prefs_dialog = GTK_WIDGET (gtk_builder_get_object (builder, "prefs_dialog"));
+		prefs_dialog = GTK_WIDGET (ctk_builder_get_object (builder, "prefs_dialog"));
 		theme_installer_run (prefs_dialog, files);
 	}
 }
@@ -1077,19 +1077,19 @@ format_value_callback_time (GtkScale *scale,
 static void
 lock_checkbox_toggled (GtkToggleButton *button, gpointer user_data)
 {
-	config_set_lock (gtk_toggle_button_get_active (button));
+	config_set_lock (ctk_toggle_button_get_active (button));
 }
 
 static void
 enabled_checkbox_toggled (GtkToggleButton *button, gpointer user_data)
 {
-	config_set_enabled (gtk_toggle_button_get_active (button));
+	config_set_enabled (ctk_toggle_button_get_active (button));
 }
 
 static void
 picture_filename_changed (GtkFileChooserButton *button, gpointer user_data)
 {
-	g_settings_set_string (screensaver_settings, "picture-filename", gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (button)));
+	g_settings_set_string (screensaver_settings, "picture-filename", ctk_file_chooser_get_filename (GTK_FILE_CHOOSER (button)));
 }
 
 static void
@@ -1097,11 +1097,11 @@ ui_disable_lock (gboolean disable)
 {
 	GtkWidget *widget;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "lock_checkbox"));
-	gtk_widget_set_sensitive (widget, !disable);
+	widget = GTK_WIDGET (ctk_builder_get_object (builder, "lock_checkbox"));
+	ctk_widget_set_sensitive (widget, !disable);
 	if (disable)
 	{
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), FALSE);
+		ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), FALSE);
 	}
 }
 
@@ -1112,12 +1112,12 @@ ui_set_lock (gboolean enabled)
 	gboolean   active;
 	gboolean   lock_disabled;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "lock_checkbox"));
+	widget = GTK_WIDGET (ctk_builder_get_object (builder, "lock_checkbox"));
 
-	active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
+	active = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
 	if (active != enabled)
 	{
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), enabled);
+		ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), enabled);
 	}
 	lock_disabled = config_get_lock_disabled ();
 	ui_disable_lock (lock_disabled);
@@ -1131,18 +1131,18 @@ ui_set_enabled (gboolean enabled)
 	gboolean   is_writable;
 	gboolean   lock_disabled;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "enable_checkbox"));
-	active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
+	widget = GTK_WIDGET (ctk_builder_get_object (builder, "enable_checkbox"));
+	active = ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
 	if (active != enabled)
 	{
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), enabled);
+		ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), enabled);
 	}
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "lock_checkbox"));
+	widget = GTK_WIDGET (ctk_builder_get_object (builder, "lock_checkbox"));
 	config_get_lock (&is_writable);
 	if (is_writable)
 	{
-		gtk_widget_set_sensitive (widget, enabled);
+		ctk_widget_set_sensitive (widget, enabled);
 	}
 	lock_disabled = config_get_lock_disabled ();
 	ui_disable_lock(lock_disabled);
@@ -1153,8 +1153,8 @@ ui_set_delay (int delay)
 {
 	GtkWidget *widget;
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "activate_delay_hscale"));
-	gtk_range_set_value (GTK_RANGE (widget), delay);
+	widget = GTK_WIDGET (ctk_builder_get_object (builder, "activate_delay_hscale"));
+	ctk_range_set_value (GTK_RANGE (widget), delay);
 }
 
 static void
@@ -1188,7 +1188,7 @@ key_changed_cb (GSettings *settings, const gchar *key, gpointer data)
 	{
 		        GtkWidget *treeview;
 
-			treeview = GTK_WIDGET (gtk_builder_get_object (builder, "savers_treeview"));
+			treeview = GTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
 			setup_treeview_selection (treeview);
 	}
 	else if (strcmp (key, KEY_IDLE_DELAY) == 0)
@@ -1212,8 +1212,8 @@ fullscreen_preview_previous_cb (GtkWidget *fullscreen_preview_window,
 	GtkWidget        *treeview;
 	GtkTreeSelection *selection;
 
-	treeview = GTK_WIDGET (gtk_builder_get_object (builder, "savers_treeview"));
-	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (treeview));
+	treeview = GTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
+	selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (treeview));
 	tree_selection_previous (selection);
 }
 
@@ -1224,8 +1224,8 @@ fullscreen_preview_next_cb (GtkWidget *fullscreen_preview_window,
 	GtkWidget        *treeview;
 	GtkTreeSelection *selection;
 
-	treeview = GTK_WIDGET (gtk_builder_get_object (builder, "savers_treeview"));
-	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (treeview));
+	treeview = GTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
+	selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (treeview));
 	tree_selection_next (selection);
 }
 
@@ -1239,18 +1239,18 @@ fullscreen_preview_cancelled_cb (GtkWidget *button,
 	GtkWidget *preview_area;
 	GtkWidget *dialog;
 
-	preview_area = GTK_WIDGET (gtk_builder_get_object (builder, "preview_area"));
+	preview_area = GTK_WIDGET (ctk_builder_get_object (builder, "preview_area"));
 	gs_job_set_widget (job, preview_area);
 
-	fullscreen_preview_area = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_area"));
-	gtk_widget_queue_draw (fullscreen_preview_area);
+	fullscreen_preview_area = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_area"));
+	ctk_widget_queue_draw (fullscreen_preview_area);
 
-	fullscreen_preview_window = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_window"));
-	gtk_widget_hide (fullscreen_preview_window);
+	fullscreen_preview_window = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_window"));
+	ctk_widget_hide (fullscreen_preview_window);
 
-	dialog = GTK_WIDGET (gtk_builder_get_object (builder, "prefs_dialog"));
-	gtk_widget_show (dialog);
-	gtk_window_present (GTK_WINDOW (dialog));
+	dialog = GTK_WIDGET (ctk_builder_get_object (builder, "prefs_dialog"));
+	ctk_widget_show (dialog);
+	ctk_window_present (GTK_WINDOW (dialog));
 }
 
 static void
@@ -1261,19 +1261,19 @@ fullscreen_preview_start_cb (GtkWidget *widget,
 	GtkWidget *fullscreen_preview_window;
 	GtkWidget *dialog;
 
-	dialog = GTK_WIDGET (gtk_builder_get_object (builder, "prefs_dialog"));
-	gtk_widget_hide (dialog);
+	dialog = GTK_WIDGET (ctk_builder_get_object (builder, "prefs_dialog"));
+	ctk_widget_hide (dialog);
 
-	fullscreen_preview_window = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_window"));
+	fullscreen_preview_window = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_window"));
 
-	gtk_window_fullscreen (GTK_WINDOW (fullscreen_preview_window));
-	gtk_window_set_keep_above (GTK_WINDOW (fullscreen_preview_window), TRUE);
+	ctk_window_fullscreen (GTK_WINDOW (fullscreen_preview_window));
+	ctk_window_set_keep_above (GTK_WINDOW (fullscreen_preview_window), TRUE);
 
-	gtk_widget_show (fullscreen_preview_window);
-	gtk_widget_grab_focus (fullscreen_preview_window);
+	ctk_widget_show (fullscreen_preview_window);
+	ctk_widget_grab_focus (fullscreen_preview_window);
 
-	fullscreen_preview_area = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_area"));
-	gtk_widget_queue_draw (fullscreen_preview_area);
+	fullscreen_preview_area = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_area"));
+	ctk_widget_queue_draw (fullscreen_preview_area);
 	gs_job_set_widget (job, fullscreen_preview_area);
 }
 
@@ -1286,9 +1286,9 @@ constrain_list_size (GtkWidget      *widget,
 	int            max_height;
 
 	/* constrain height to be the tree height up to a max */
-	max_height = (HeightOfScreen (gdk_x11_screen_get_xscreen (gtk_widget_get_screen (widget)))) / 4;
+	max_height = (HeightOfScreen (gdk_x11_screen_get_xscreen (ctk_widget_get_screen (widget)))) / 4;
 
-	gtk_widget_get_preferred_size (to_size, &req, NULL);
+	ctk_widget_get_preferred_size (to_size, &req, NULL);
 	allocation->height = MIN (req.height, max_height);
 }
 
@@ -1333,13 +1333,13 @@ setup_for_root_user (void)
 	GtkWidget *lock_checkbox;
 	GtkWidget *label;
 
-	lock_checkbox = GTK_WIDGET (gtk_builder_get_object (builder, "lock_checkbox"));
-	label = GTK_WIDGET (gtk_builder_get_object (builder, "root_warning_label"));
+	lock_checkbox = GTK_WIDGET (ctk_builder_get_object (builder, "lock_checkbox"));
+	label = GTK_WIDGET (ctk_builder_get_object (builder, "root_warning_label"));
 
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (lock_checkbox), FALSE);
-	gtk_widget_set_sensitive (lock_checkbox, FALSE);
+	ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (lock_checkbox), FALSE);
+	ctk_widget_set_sensitive (lock_checkbox, FALSE);
 
-	gtk_widget_show (label);
+	ctk_widget_show (label);
 }
 
 /* copied from gs-window-x11.c */
@@ -1482,10 +1482,10 @@ widget_set_best_visual (GtkWidget *widget)
 
 	g_return_if_fail (widget != NULL);
 
-	visual = get_best_visual_for_display (gtk_widget_get_display (widget));
+	visual = get_best_visual_for_display (ctk_widget_get_display (widget));
 	if (visual != NULL)
 	{
-		gtk_widget_set_visual (widget, visual);
+		ctk_widget_set_visual (widget, visual);
 		g_object_unref (visual);
 	}
 }
@@ -1496,8 +1496,8 @@ setup_treeview_idle (gpointer data)
 	GtkWidget *preview;
 	GtkWidget *treeview;
 
-	preview  = GTK_WIDGET (gtk_builder_get_object (builder, "preview_area"));
-	treeview = GTK_WIDGET (gtk_builder_get_object (builder, "savers_treeview"));
+	preview  = GTK_WIDGET (ctk_builder_get_object (builder, "preview_area"));
+	treeview = GTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
 
 	setup_treeview (treeview, preview);
 	setup_treeview_selection (treeview);
@@ -1547,8 +1547,8 @@ init_capplet (void)
 	GError    *error=NULL;
 	gint       mode;
 
-	builder = gtk_builder_new();
-	if (!gtk_builder_add_from_resource (builder, "/org/cafe/screensaver/preferences.ui", &error))
+	builder = ctk_builder_new();
+	if (!ctk_builder_add_from_resource (builder, "/org/cafe/screensaver/preferences.ui", &error))
 	{
 		g_warning("Couldn't load builder resource: %s", error->message);
 		g_error_free(error);
@@ -1557,50 +1557,50 @@ init_capplet (void)
 	if (builder == NULL)
 	{
 
-		dialog = gtk_message_dialog_new (NULL,
+		dialog = ctk_message_dialog_new (NULL,
 		                                 0, GTK_MESSAGE_ERROR,
 		                                 GTK_BUTTONS_OK,
 		                                 _("Could not load the main interface"));
-		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+		ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 		        _("Please make sure that the screensaver is properly installed"));
 
-		gtk_dialog_set_default_response (GTK_DIALOG (dialog),
+		ctk_dialog_set_default_response (GTK_DIALOG (dialog),
 		                                 GTK_RESPONSE_OK);
-		gtk_dialog_run (GTK_DIALOG (dialog));
-		gtk_widget_destroy (dialog);
+		ctk_dialog_run (GTK_DIALOG (dialog));
+		ctk_widget_destroy (dialog);
 		exit (1);
 	}
 
-	preview            = GTK_WIDGET (gtk_builder_get_object (builder, "preview_area"));
-	dialog             = GTK_WIDGET (gtk_builder_get_object (builder, "prefs_dialog"));
-	treeview           = GTK_WIDGET (gtk_builder_get_object (builder, "savers_treeview"));
-	list_scroller      = GTK_WIDGET (gtk_builder_get_object (builder, "themes_scrolled_window"));
-	activate_delay_hscale = GTK_WIDGET (gtk_builder_get_object (builder, "activate_delay_hscale"));
-	activate_delay_hbox   = GTK_WIDGET (gtk_builder_get_object (builder, "activate_delay_hbox"));
-	enabled_checkbox   = GTK_WIDGET (gtk_builder_get_object (builder, "enable_checkbox"));
-	lock_checkbox      = GTK_WIDGET (gtk_builder_get_object (builder, "lock_checkbox"));
-	root_warning_label = GTK_WIDGET (gtk_builder_get_object (builder, "root_warning_label"));
-	preview_button     = GTK_WIDGET (gtk_builder_get_object (builder, "preview_button"));
-	gpm_button         = GTK_WIDGET (gtk_builder_get_object (builder, "gpm_button"));
-	fullscreen_preview_window = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_window"));
-	fullscreen_preview_area = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_area"));
-	fullscreen_preview_close = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_close"));
-	fullscreen_preview_previous = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_previous_button"));
-	fullscreen_preview_next = GTK_WIDGET (gtk_builder_get_object (builder, "fullscreen_preview_next_button"));
-	picture_filename = GTK_WIDGET (gtk_builder_get_object (builder, "picture_filename"));
+	preview            = GTK_WIDGET (ctk_builder_get_object (builder, "preview_area"));
+	dialog             = GTK_WIDGET (ctk_builder_get_object (builder, "prefs_dialog"));
+	treeview           = GTK_WIDGET (ctk_builder_get_object (builder, "savers_treeview"));
+	list_scroller      = GTK_WIDGET (ctk_builder_get_object (builder, "themes_scrolled_window"));
+	activate_delay_hscale = GTK_WIDGET (ctk_builder_get_object (builder, "activate_delay_hscale"));
+	activate_delay_hbox   = GTK_WIDGET (ctk_builder_get_object (builder, "activate_delay_hbox"));
+	enabled_checkbox   = GTK_WIDGET (ctk_builder_get_object (builder, "enable_checkbox"));
+	lock_checkbox      = GTK_WIDGET (ctk_builder_get_object (builder, "lock_checkbox"));
+	root_warning_label = GTK_WIDGET (ctk_builder_get_object (builder, "root_warning_label"));
+	preview_button     = GTK_WIDGET (ctk_builder_get_object (builder, "preview_button"));
+	gpm_button         = GTK_WIDGET (ctk_builder_get_object (builder, "gpm_button"));
+	fullscreen_preview_window = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_window"));
+	fullscreen_preview_area = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_area"));
+	fullscreen_preview_close = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_close"));
+	fullscreen_preview_previous = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_previous_button"));
+	fullscreen_preview_next = GTK_WIDGET (ctk_builder_get_object (builder, "fullscreen_preview_next_button"));
+	picture_filename = GTK_WIDGET (ctk_builder_get_object (builder, "picture_filename"));
 
-	label              = GTK_WIDGET (gtk_builder_get_object (builder, "activate_delay_label"));
-	gtk_label_set_mnemonic_widget (GTK_LABEL (label), activate_delay_hscale);
-	label              = GTK_WIDGET (gtk_builder_get_object (builder, "savers_label"));
-	gtk_label_set_mnemonic_widget (GTK_LABEL (label), treeview);
+	label              = GTK_WIDGET (ctk_builder_get_object (builder, "activate_delay_label"));
+	ctk_label_set_mnemonic_widget (GTK_LABEL (label), activate_delay_hscale);
+	label              = GTK_WIDGET (ctk_builder_get_object (builder, "savers_label"));
+	ctk_label_set_mnemonic_widget (GTK_LABEL (label), treeview);
 
-	gtk_widget_set_no_show_all (root_warning_label, TRUE);
+	ctk_widget_set_no_show_all (root_warning_label, TRUE);
 	widget_set_best_visual (preview);
 
 	if (! is_program_in_path (GPM_COMMAND))
 	{
-		gtk_widget_set_no_show_all (gpm_button, TRUE);
-		gtk_widget_hide (gpm_button);
+		ctk_widget_set_no_show_all (gpm_button, TRUE);
+		ctk_widget_hide (gpm_button);
 	}
 
 	screensaver_settings = g_settings_new (GSETTINGS_SCHEMA);
@@ -1625,22 +1625,22 @@ init_capplet (void)
 	ui_set_delay (activate_delay);
 	if (! is_writable)
 	{
-		gtk_widget_set_sensitive (activate_delay_hbox, FALSE);
+		ctk_widget_set_sensitive (activate_delay_hbox, FALSE);
 	}
 	g_signal_connect (activate_delay_hscale, "format-value",
 	                  G_CALLBACK (format_value_callback_time), NULL);
 
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (lock_checkbox), config_get_lock (&is_writable));
+	ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (lock_checkbox), config_get_lock (&is_writable));
 	if (! is_writable)
 	{
-		gtk_widget_set_sensitive (lock_checkbox, FALSE);
+		ctk_widget_set_sensitive (lock_checkbox, FALSE);
 	}
 	g_signal_connect (lock_checkbox, "toggled",
 	                  G_CALLBACK (lock_checkbox_toggled), NULL);
 
 	char *path = g_settings_get_string (screensaver_settings, "picture-filename");
-	gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (gtk_builder_get_object (builder, "picture_filename")), path);
-	gtk_file_filter_add_pixbuf_formats (GTK_FILE_FILTER (gtk_builder_get_object (builder, "picture_filefilter")));
+	ctk_file_chooser_set_filename (GTK_FILE_CHOOSER (ctk_builder_get_object (builder, "picture_filename")), path);
+	ctk_file_filter_add_pixbuf_formats (GTK_FILE_FILTER (ctk_builder_get_object (builder, "picture_filefilter")));
 	g_free (path);
 	g_signal_connect (picture_filename, "selection-changed",
 	                  G_CALLBACK (picture_filename_changed), NULL);
@@ -1649,21 +1649,21 @@ init_capplet (void)
 	ui_set_enabled (enabled);
 	if (! is_writable)
 	{
-		gtk_widget_set_sensitive (enabled_checkbox, FALSE);
+		ctk_widget_set_sensitive (enabled_checkbox, FALSE);
 	}
 	g_signal_connect (enabled_checkbox, "toggled",
 	                  G_CALLBACK (enabled_checkbox_toggled), NULL);
 
 	setup_list_size_constraint (list_scroller, treeview);
-	gtk_widget_set_size_request (preview, 480, 300);
-	gtk_window_set_icon_name (GTK_WINDOW (dialog), "preferences-desktop-screensaver");
-	gtk_window_set_icon_name (GTK_WINDOW (fullscreen_preview_window), "screensaver");
+	ctk_widget_set_size_request (preview, 480, 300);
+	ctk_window_set_icon_name (GTK_WINDOW (dialog), "preferences-desktop-screensaver");
+	ctk_window_set_icon_name (GTK_WINDOW (fullscreen_preview_window), "screensaver");
 
 	g_signal_connect (fullscreen_preview_area,
 	                  "draw", G_CALLBACK (preview_on_draw),
 	                  NULL);
 
-	gtk_drag_dest_set (dialog, GTK_DEST_DEFAULT_ALL,
+	ctk_drag_dest_set (dialog, GTK_DEST_DEFAULT_ALL,
 	                   drop_types, G_N_ELEMENTS (drop_types),
 	                   GDK_ACTION_COPY | GDK_ACTION_LINK | GDK_ACTION_MOVE);
 
@@ -1674,7 +1674,7 @@ init_capplet (void)
 	g_signal_connect (dialog, "drag-data-received",
 	                  G_CALLBACK (drag_data_received_cb), NULL);
 
-	gtk_widget_show_all (dialog);
+	ctk_widget_show_all (dialog);
 
 	/* Update list of themes if using random screensaver */
 	mode = g_settings_get_enum (screensaver_settings, KEY_MODE);
@@ -1734,14 +1734,14 @@ main (int    argc,
 	textdomain (GETTEXT_PACKAGE);
 #endif
 
-	gtk_init (&argc, &argv);
+	ctk_init (&argc, &argv);
 
 	job = gs_job_new ();
 	theme_manager = gs_theme_manager_new ();
 
 	init_capplet ();
 
-	gtk_main ();
+	ctk_main ();
 
 	finalize_capplet ();
 

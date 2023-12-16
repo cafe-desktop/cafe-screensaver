@@ -37,7 +37,7 @@
   * Ensure lock on suspend and unlock on resume
   * Use gresources for cafe-screensaver-preferences.ui
   * lock-dialog: add style_provider to current screen globally
-  * Replace deprecated gtk_css_provider_get_default
+  * Replace deprecated ctk_css_provider_get_default
   * drop libXxf86 dependency
 
 ### cafe-screensaver 1.23.0
@@ -93,7 +93,7 @@
   * Fix: idle slider display in all languages
   * drop glib required max version
   * avoid deprecated gdk_screen_get_width/height
-  * don't use deprecated gtk_show_uri
+  * don't use deprecated ctk_show_uri
   * Restore Polish translation credits from GNOME
   * Implement OpenBSD authentication using bsd_auth(3).
   * Bug Fix: g_get_real_name will never return NULL pointer
@@ -110,7 +110,7 @@
     generating release announcements easier
   * Build: require libcafe-menu >= 1.10
   * Build: require libcafekbd and libcafe-desktop >= 1.17
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-gtk
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-ctk
     build option
   * Lock screen: load user's background instead of system one
   * Preferences: fix some GTK+ deprecations

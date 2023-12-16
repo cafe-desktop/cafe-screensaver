@@ -26,7 +26,7 @@
 #include <unistd.h>
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-theme-engine.h"
 #include "gs-theme-engine-marshal.h"
@@ -166,12 +166,12 @@ gs_theme_engine_get_window_size (GSThemeEngine *engine,
 
 	g_return_if_fail (GS_IS_THEME_ENGINE (engine));
 
-	if (! gtk_widget_get_visible (GTK_WIDGET (engine)))
+	if (! ctk_widget_get_visible (GTK_WIDGET (engine)))
 	{
 		return;
 	}
 
-	gdk_window_get_geometry (gtk_widget_get_window (GTK_WIDGET (engine)),
+	gdk_window_get_geometry (ctk_widget_get_window (GTK_WIDGET (engine)),
 	                         NULL,
 	                         NULL,
 	                         width,
@@ -183,5 +183,5 @@ gs_theme_engine_get_window (GSThemeEngine *engine)
 {
 	g_return_val_if_fail (GS_IS_THEME_ENGINE (engine), NULL);
 
-	return gtk_widget_get_window (GTK_WIDGET (engine));
+	return ctk_widget_get_window (GTK_WIDGET (engine));
 }

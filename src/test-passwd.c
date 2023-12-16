@@ -31,7 +31,7 @@
 #include <termios.h>
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gs-auth.h"
 #include "setuid.h"
@@ -243,7 +243,7 @@ main (int    argc,
 		exit (1);
 	}
 
-	if (! gtk_init_with_args (&argc, &argv, NULL, NULL, NULL, &error))
+	if (! ctk_init_with_args (&argc, &argv, NULL, NULL, NULL, &error))
 	{
 		fprintf (stderr, "%s", error->message);
 		g_error_free (error);
