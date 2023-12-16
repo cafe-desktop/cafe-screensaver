@@ -1,0 +1,181 @@
+### mate-screensaver 1.24.1
+
+  * Translations update
+  * Fix invalid gnome-logo-white.svg
+  * Custom background image for lock screen
+  * build: silent build warnings for distcheck
+
+### mate-screensaver 1.24.0
+
+  * Translations update
+  * gs-theme-engine: avoid redundant redeclarations
+  * avoid redundant redeclarations
+  * migrate from intltool to gettext
+
+### mate-screensaver 1.23.1
+
+  * Translations update
+  * Set compiler debug flags / logging with MATE_DEBUG_CHECK
+  * Use WARN_CFLAGS which are only set with --enable-compiler-warnings
+  * Add keywords key to .desktop files
+  * gs_prefs: avoid 'g_type_class_add_private'
+  * gs-job: avoid 'g_type_class_add_private'
+  * gs-listener-dbus: avoid 'g_type_class_add_private'
+  * gs-manager: avoid 'g_type_class_add_private'
+  * copy-theme-dialog: avoid 'g_type_class_add_private'
+  * gs-theme-manager: avoid 'g_type_class_add_private'
+  * gs-lock-plug: avoid 'g_type_class_add_private'
+  * gs-fade: avoid 'g_type_class_add_private'
+  * gs-grab-x11: avoid 'g_type_class_add_private'
+  * gs-window-x11: avoid 'g_type_class_add_private'
+  * gs-monitor: avoid 'g_type_class_add_private'
+  * gs-watcher-x11: avoid 'g_type_class_add_private'
+  * gs-theme-engine: avoid 'g_type_class_add_private'
+  * gste-popsquares: avoid 'g_type_class_add_private'
+  * gste-slideshow: avoid 'g_type_class_add_private'
+  * remove old HAL remnants
+  * Ensure lock on suspend and unlock on resume
+  * Use gresources for mate-screensaver-preferences.ui
+  * lock-dialog: add style_provider to current screen globally
+  * Replace deprecated gtk_css_provider_get_default
+  * drop libXxf86 dependency
+
+### mate-screensaver 1.23.0
+
+  * Translations update
+  * Remove trailing whitespaces
+  * Change url project's website
+  * [ci] Add cppcheck html report
+  * [ci] Enable Clang Static Analyzer
+  * Add ELOGIND support
+
+### mate-screensaver 1.22.0
+
+  * Translations update
+  * Initialize Travis CI support
+  * Make translatable the auth-username-label in lock-dialog-default.ui
+  * mate-screensaver-command: Support unlocking (--unlock) the screensaver via CLI.
+  * disable deprecation warnings for distcheck
+  * fade: fix fade computation math
+  * fix more GdkScreen related deprecations
+  * gs-grab-x11: replace deprecated gdk_error_trap_push/pop
+  * gs-visual-gl: replace deprecated gdk_error_trap_push/pop
+  * Remove "monitor" pointer from debug information
+  * lock-plug: Only scale lock-screen widgets on older versions of GTK
+  * gs-lock-plug: avoid deprecated 'gdk_keymap_get_default'
+
+### mate-screensaver 1.21.0
+
+  * Translations update
+  * bump required version of mate-menus
+  * support new mate-menus api
+  * Fixed some gdk deprecations
+  * fixed gdk_flush warning
+  * avoid deprecated GtkStock
+
+### mate-screensaver 1.20.0
+
+  * Translations update
+  * require GTK+ 3.22 and GLib 2.50
+  * Add HiDPI support for lock screen
+  * gs-lock-plug.c: Fix build warning:
+
+### mate-screensaver 1.19.1
+
+  * Translations update
+  * WidthOfScreen and HeightOfScreen implementation
+  * restore the correct mate-screensaver-command manpage
+  * fix loop initial declarations
+
+### mate-screensaver 1.19.0
+
+  * Translations update
+  * Fix: idle slider display in all languages
+  * drop glib required max version
+  * avoid deprecated gdk_screen_get_width/height
+  * don't use deprecated gtk_show_uri
+  * Restore Polish translation credits from GNOME
+  * Implement OpenBSD authentication using bsd_auth(3).
+  * Bug Fix: g_get_real_name will never return NULL pointer
+  * lock-dialog UI: avoid deprecated widgets
+  * Bug fix: screensaver and lock screen not correctly displayed
+    in configurations with overlapping monitor geometries
+  * [GTK+3.20] Switch to GdkSeat
+  * Set input purpose for the password entry widget
+  * copy theme dialog: fix build warning about wrong variable type
+
+### mate-screensaver 1.18.0
+
+  * NEWS: use consistent, project wide, markdown-like formatting to make
+    generating release announcements easier
+  * Build: require libmate-menu >= 1.10
+  * Build: require libmatekbd and libmate-desktop >= 1.17
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-gtk
+    build option
+  * Lock screen: load user's background instead of system one
+  * Preferences: fix some GTK+ deprecations
+  * Translations update
+
+### mate-screensaver 1.16.1
+
+  * Fix build breakage with GTK+ 3.14
+  * Fix "Blank screen" theme with GTK+ 3.22
+  * GTK+2: fix switching to "Blank screen" theme in fullscreen preview
+  * Properly restore password dialog position after wrong password attempt
+  * Check for gdm-binary process when switching user
+
+### mate-screensaver 1.16.0
+
+  * Fix locking when screensaver is already active
+  * GTK+3: fix background and locking in multi-monitor setup
+  * GTK+3: fix several deprecations
+  * Some more fixes and cleanups
+  * Translations update
+  * Make distcheck use currently selected GTK+ version
+
+### mate-screensaver 1.14.1
+
+  * Translations update
+  * GTK+-3: fix assertion 'GTK_IS_WIDGET (widget)' failed
+  * GTK+-3: add style class lock-dialog
+
+### mate-screensaver 1.14.0
+
+  * Drop MateConf migration script
+  * GTK+3: fix several deprecations
+  * Some more fixes and cleanups
+  * Translations update
+  * Add Changelog generation
+
+### mate-screensaver 1.12.0
+
+  * Retrieve strings directly from gschema (requires intltool 0.50.1)
+  * Switch to org.gnome.SessionManager
+  * Add support for libsystemd (in addition to libsystemd-login)
+  * Don't fade to black when locking the screen
+  * Fix systemd event handling
+  * Some more fixes and cleanups
+
+### mate-screensaver 1.10.2
+
+  * Fix segfault due to wrong object being destroyed
+  * Translations update
+
+### mate-screensaver 1.10.1
+
+  * Check for running display manager when user switching 
+
+### mate-screensaver 1.10.0
+
+  * Update to api changes for MateRR* in mate-desktop (thanks monsta for testing)
+
+### mate-screensaver 1.8.0
+
+  * Show date and time in lock dialog.
+  * Add theme to use GNOME foot logo as floaters screensaver
+  * Rename Floating Feet as Floating MATE
+  * Add GTK3 support
+
+### mate-screensaver 1.1.0
+
+  * First MATE release.
