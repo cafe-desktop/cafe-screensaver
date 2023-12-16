@@ -34,8 +34,8 @@ int
 main (int    argc,
       char **argv)
 {
-	GdkDisplay     *display;
-	GdkVisual      *visual;
+	CdkDisplay     *display;
+	CdkVisual      *visual;
 	Visual         *xvisual;
 	GError         *error = NULL;
 

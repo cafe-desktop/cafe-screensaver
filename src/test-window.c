@@ -122,8 +122,8 @@ test_window (void)
 	GSWindow   *window;
 	gboolean    lock_active;
 	gboolean    user_switch_enabled;
-	GdkDisplay *display;
-	GdkMonitor *monitor;
+	CdkDisplay *display;
+	CdkMonitor *monitor;
 
 	lock_active = TRUE;
 	user_switch_enabled = TRUE;

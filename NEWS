@@ -57,7 +57,7 @@
   * cafe-screensaver-command: Support unlocking (--unlock) the screensaver via CLI.
   * disable deprecation warnings for distcheck
   * fade: fix fade computation math
-  * fix more GdkScreen related deprecations
+  * fix more CdkScreen related deprecations
   * gs-grab-x11: replace deprecated cdk_error_trap_push/pop
   * gs-visual-gl: replace deprecated cdk_error_trap_push/pop
   * Remove "monitor" pointer from debug information
@@ -100,7 +100,7 @@
   * lock-dialog UI: avoid deprecated widgets
   * Bug fix: screensaver and lock screen not correctly displayed
     in configurations with overlapping monitor geometries
-  * [CTK+3.20] Switch to GdkSeat
+  * [CTK+3.20] Switch to CdkSeat
   * Set input purpose for the password entry widget
   * copy theme dialog: fix build warning about wrong variable type
 

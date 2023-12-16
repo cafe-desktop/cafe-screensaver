@@ -178,7 +178,7 @@ gs_theme_engine_get_window_size (GSThemeEngine *engine,
 	                         height);
 }
 
-GdkWindow *
+CdkWindow *
 gs_theme_engine_get_window (GSThemeEngine *engine)
 {
 	g_return_val_if_fail (GS_IS_THEME_ENGINE (engine), NULL);

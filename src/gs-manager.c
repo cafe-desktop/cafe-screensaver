@@ -1102,9 +1102,9 @@ window_deactivated_cb (GSWindow  *window,
 static GSWindow *
 find_window_at_pointer (GSManager *manager)
 {
-	GdkDisplay *display;
-	GdkDevice  *device;
-	GdkMonitor *monitor;
+	CdkDisplay *display;
+	CdkDevice  *device;
+	CdkMonitor *monitor;
 	int         x, y;
 	GSWindow   *window;
 	GSList     *l;
@@ -1164,9 +1164,9 @@ static gboolean
 manager_maybe_grab_window (GSManager *manager,
                            GSWindow  *window)
 {
-	GdkDisplay *display;
-	GdkDevice  *device;
-	GdkMonitor *monitor;
+	CdkDisplay *display;
+	CdkDevice  *device;
+	CdkMonitor *monitor;
 	int         x, y;
 	gboolean    grabbed;
 
@@ -1193,12 +1193,12 @@ manager_maybe_grab_window (GSManager *manager,
 
 static void
 window_grab_broken_cb (GSWindow           *window,
-                       GdkEventGrabBroken *event,
+                       CdkEventGrabBroken *event,
                        GSManager          *manager)
 {
-	GdkDisplay *display;
-	GdkSeat    *seat;
-	GdkDevice  *device;
+	CdkDisplay *display;
+	CdkSeat    *seat;
+	CdkDevice  *device;
 
 	display = cdk_window_get_display (gs_window_get_cdk_window (window));
 	seat = cdk_display_get_default_seat (display);
@@ -1238,7 +1238,7 @@ add_unfade_idle (GSManager *manager)
 
 static gboolean
 window_map_event_cb (GSWindow  *window,
-                     GdkEvent  *event,
+                     CdkEvent  *event,
                      GSManager *manager)
 {
 	gs_debug ("Handling window map_event event");
@@ -1536,10 +1536,10 @@ connect_window_signals (GSManager *manager,
 
 static void
 gs_manager_create_window_for_monitor (GSManager  *manager,
-                                      GdkMonitor *monitor)
+                                      CdkMonitor *monitor)
 {
 	GSWindow    *window;
-	GdkRectangle rect;
+	CdkRectangle rect;
 
 	cdk_monitor_get_geometry (monitor, &rect);
 
@@ -1567,8 +1567,8 @@ gs_manager_create_window_for_monitor (GSManager  *manager,
 }
 
 static void
-on_display_monitor_added (GdkDisplay *display,
-                          GdkMonitor *monitor,
+on_display_monitor_added (CdkDisplay *display,
+                          CdkMonitor *monitor,
                           GSManager  *manager)
 {
 	GSList     *l;
@@ -1597,8 +1597,8 @@ on_display_monitor_added (GdkDisplay *display,
 }
 
 static void
-on_display_monitor_removed (GdkDisplay *display,
-                            GdkMonitor *monitor,
+on_display_monitor_removed (CdkDisplay *display,
+                            CdkMonitor *monitor,
                             GSManager  *manager)
 {
 	GSList     *l;
@@ -1615,8 +1615,8 @@ on_display_monitor_removed (GdkDisplay *display,
 	l = manager->priv->windows;
 	while (l != NULL)
 	{
-		GdkDisplay *this_display;
-		GdkMonitor *this_monitor;
+		CdkDisplay *this_display;
+		CdkMonitor *this_monitor;
 		GSList     *next = l->next;
 
 		this_display = gs_window_get_display (GS_WINDOW (l->data));
@@ -1639,7 +1639,7 @@ on_display_monitor_removed (GdkDisplay *display,
 static void
 gs_manager_destroy_windows (GSManager *manager)
 {
-	GdkDisplay  *display;
+	CdkDisplay  *display;
 	GSList      *l;
 
 	g_return_if_fail (manager != NULL);
@@ -1711,7 +1711,7 @@ gs_manager_finalize (GObject *object)
 
 static void
 gs_manager_create_windows_for_display (GSManager  *manager,
-                                       GdkDisplay *display)
+                                       CdkDisplay *display)
 {
 	int n_monitors;
 	int i;
@@ -1730,7 +1730,7 @@ gs_manager_create_windows_for_display (GSManager  *manager,
 
 	for (i = 0; i < n_monitors; i++)
 	{
-		GdkMonitor *mon = cdk_display_get_monitor (display, i);
+		CdkMonitor *mon = cdk_display_get_monitor (display, i);
 		gs_manager_create_window_for_monitor (manager, mon);
 	}
 
@@ -1741,7 +1741,7 @@ gs_manager_create_windows_for_display (GSManager  *manager,
 static void
 gs_manager_create_windows (GSManager *manager)
 {
-	GdkDisplay  *display;
+	CdkDisplay  *display;
 
 	g_return_if_fail (manager != NULL);
 	g_return_if_fail (GS_IS_MANAGER (manager));

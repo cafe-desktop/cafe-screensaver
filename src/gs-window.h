@@ -59,11 +59,11 @@ GType       gs_window_get_type           (void);
 gboolean    gs_window_is_obscured        (GSWindow  *window);
 gboolean    gs_window_is_dialog_up       (GSWindow  *window);
 
-GdkDisplay * gs_window_get_display       (GSWindow  *window);
+CdkDisplay * gs_window_get_display       (GSWindow  *window);
 
 void        gs_window_set_monitor        (GSWindow   *window,
-                                          GdkMonitor *monitor);
-GdkMonitor * gs_window_get_monitor        (GSWindow  *window);
+                                          CdkMonitor *monitor);
+CdkMonitor * gs_window_get_monitor        (GSWindow  *window);
 
 void        gs_window_set_background_surface (GSWindow *window,
         cairo_surface_t *surface);
@@ -91,11 +91,11 @@ void        gs_window_show_message         (GSWindow   *window,
 void        gs_window_request_unlock     (GSWindow  *window);
 void        gs_window_cancel_unlock_request (GSWindow  *window);
 
-GSWindow  * gs_window_new                (GdkMonitor *monitor,
+GSWindow  * gs_window_new                (CdkMonitor *monitor,
                                           gboolean   lock_enabled);
 void        gs_window_show               (GSWindow  *window);
 void        gs_window_destroy            (GSWindow  *window);
-GdkWindow * gs_window_get_cdk_window     (GSWindow  *window);
+CdkWindow * gs_window_get_cdk_window     (GSWindow  *window);
 CtkWidget * gs_window_get_drawing_area   (GSWindow  *window);
 void        gs_window_clear              (GSWindow  *window);
 

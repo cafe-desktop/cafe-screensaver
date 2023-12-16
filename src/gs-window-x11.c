@@ -58,9 +58,9 @@ enum
 
 struct GSWindowPrivate
 {
-	GdkMonitor *monitor;
+	CdkMonitor *monitor;
 
-	GdkRectangle geometry;
+	CdkRectangle geometry;
 	guint      obscured : 1;
 	guint      dialog_up : 1;
 
@@ -141,11 +141,11 @@ static guint           signals [LAST_SIGNAL] = { 0, };
 G_DEFINE_TYPE_WITH_PRIVATE (GSWindow, gs_window, CTK_TYPE_WINDOW)
 
 static void
-set_invisible_cursor (GdkWindow *window,
+set_invisible_cursor (CdkWindow *window,
                       gboolean   invisible)
 {
-	GdkDisplay *display;
-	GdkCursor *cursor = NULL;
+	CdkDisplay *display;
+	CdkCursor *cursor = NULL;
 
 	if (invisible)
 	{
@@ -227,8 +227,8 @@ clear_children (Window window)
 static void
 widget_clear_all_children (CtkWidget *widget)
 {
-	GdkWindow *w;
-	GdkDisplay *display;
+	CdkWindow *w;
+	CdkDisplay *display;
 
 	gs_debug ("Clearing all child windows");
 	display = ctk_widget_get_display (widget);
@@ -266,7 +266,7 @@ gs_window_set_background_surface (GSWindow        *window,
 void
 gs_window_clear (GSWindow *window)
 {
-	GdkDisplay *display;
+	CdkDisplay *display;
 	g_return_if_fail (GS_IS_WINDOW (window));
 
 	gs_debug ("Clearing widgets");
@@ -292,7 +292,7 @@ gs_window_clear (GSWindow *window)
 static cairo_region_t *
 get_outside_region (GSWindow *window)
 {
-	GdkDisplay *display;
+	CdkDisplay *display;
 	int         i;
 	int         num_monitors;
 	cairo_region_t *region;
@@ -304,11 +304,11 @@ get_outside_region (GSWindow *window)
 	num_monitors = cdk_display_get_n_monitors (display);
 	for (i = 0; i < num_monitors; i++)
 	{
-		GdkMonitor *mon = cdk_display_get_monitor (display, i);
+		CdkMonitor *mon = cdk_display_get_monitor (display, i);
 
 		if (mon != window->priv->monitor)
 		{
-			GdkRectangle geometry;
+			CdkRectangle geometry;
 			cairo_rectangle_int_t rectangle;
 
 			cdk_monitor_get_geometry (mon, &geometry);
@@ -330,7 +330,7 @@ get_outside_region (GSWindow *window)
 static void
 update_geometry (GSWindow *window)
 {
-	GdkRectangle geometry;
+	CdkRectangle geometry;
 	cairo_region_t *outside_region;
 	cairo_region_t *monitor_region;
 
@@ -362,7 +362,7 @@ update_geometry (GSWindow *window)
 }
 
 static void
-monitor_geometry_notify (GdkMonitor *monitor,
+monitor_geometry_notify (CdkMonitor *monitor,
                          GParamSpec *pspec,
                          GSWindow   *window)
 {
@@ -377,7 +377,7 @@ gs_window_move_resize_window (GSWindow *window,
                               gboolean  resize)
 {
 	CtkWidget *widget;
-	GdkWindow *cdkwindow;
+	CdkWindow *cdkwindow;
 
 	widget = CTK_WIDGET (window);
 	cdkwindow = ctk_widget_get_window (CTK_WIDGET (window));
@@ -415,7 +415,7 @@ gs_window_move_resize_window (GSWindow *window,
 static void
 gs_window_real_unrealize (CtkWidget *widget)
 {
-	GdkMonitor *monitor = GS_WINDOW (widget)->priv->monitor;
+	CdkMonitor *monitor = GS_WINDOW (widget)->priv->monitor;
 
 	g_signal_handlers_disconnect_by_func (monitor, monitor_geometry_notify,
 	                                      widget);
@@ -430,7 +430,7 @@ gs_window_real_unrealize (CtkWidget *widget)
 extern char **environ;
 
 static gchar **
-spawn_make_environment_for_display (GdkDisplay *display,
+spawn_make_environment_for_display (CdkDisplay *display,
                                     gchar     **envp)
 {
 	gchar **retval = NULL;
@@ -464,7 +464,7 @@ spawn_make_environment_for_display (GdkDisplay *display,
 }
 
 static gboolean
-spawn_command_line_on_display_sync (GdkDisplay  *display,
+spawn_command_line_on_display_sync (CdkDisplay  *display,
                                     const gchar  *command_line,
                                     char        **standard_output,
                                     char        **standard_error,
@@ -501,17 +501,17 @@ spawn_command_line_on_display_sync (GdkDisplay  *display,
 	return retval;
 }
 
-static GdkVisual *
-get_best_visual_for_display (GdkDisplay *display)
+static CdkVisual *
+get_best_visual_for_display (CdkDisplay *display)
 {
-	GdkScreen    *screen;
+	CdkScreen    *screen;
 	char         *command;
 	char         *std_output;
 	int           exit_status;
 	GError       *error;
 	unsigned long v;
 	char          c;
-	GdkVisual    *visual;
+	CdkVisual    *visual;
 	gboolean      res;
 
 	visual = NULL;
@@ -558,7 +558,7 @@ out:
 static void
 widget_set_best_visual (CtkWidget *widget)
 {
-	GdkVisual *visual;
+	CdkVisual *visual;
 
 	g_return_if_fail (widget != NULL);
 
@@ -573,7 +573,7 @@ widget_set_best_visual (CtkWidget *widget)
 static void
 gs_window_real_realize (CtkWidget *widget)
 {
-	GdkMonitor *monitor = GS_WINDOW (widget)->priv->monitor;
+	CdkMonitor *monitor = GS_WINDOW (widget)->priv->monitor;
 
 	widget_set_best_visual (widget);
 
@@ -656,7 +656,7 @@ add_emit_deactivated_idle (GSWindow *window)
 static void
 gs_window_raise (GSWindow *window)
 {
-	GdkWindow *win;
+	CdkWindow *win;
 
 	g_return_if_fail (GS_IS_WINDOW (window));
 
@@ -670,7 +670,7 @@ gs_window_raise (GSWindow *window)
 static gboolean
 x11_window_is_ours (Window window)
 {
-	GdkWindow *gwindow;
+	CdkWindow *gwindow;
 	gboolean   ret;
 
 	ret = FALSE;
@@ -697,7 +697,7 @@ unshape_window (GSWindow *window)
 
 static void
 gs_window_xevent (GSWindow  *window,
-                  GdkXEvent *xevent)
+                  CdkXEvent *xevent)
 {
 	XEvent *ev;
 
@@ -753,9 +753,9 @@ gs_window_xevent (GSWindow  *window,
 
 }
 
-static GdkFilterReturn
-xevent_filter (GdkXEvent *xevent,
-               GdkEvent  *event,
+static CdkFilterReturn
+xevent_filter (CdkXEvent *xevent,
+               CdkEvent  *event,
                GSWindow  *window)
 {
 	gs_window_xevent (window, xevent);
@@ -768,7 +768,7 @@ select_popup_events (void)
 {
 	XWindowAttributes attr;
 	unsigned long     events;
-	GdkDisplay *display;
+	CdkDisplay *display;
 
 	display = cdk_display_get_default ();
 
@@ -789,7 +789,7 @@ window_select_shape_events (GSWindow *window)
 #ifdef HAVE_SHAPE_EXT
 	unsigned long events;
 	int           shape_error_base;
-	GdkDisplay *display;
+	CdkDisplay *display;
 
 	display = ctk_widget_get_display (CTK_WIDGET(window));
 
@@ -851,7 +851,7 @@ gs_window_real_show (CtkWidget *widget)
 
 	select_popup_events ();
 	window_select_shape_events (window);
-	cdk_window_add_filter (NULL, (GdkFilterFunc)xevent_filter, window);
+	cdk_window_add_filter (NULL, (CdkFilterFunc)xevent_filter, window);
 }
 
 static void
@@ -962,7 +962,7 @@ gs_window_real_hide (CtkWidget *widget)
 
 	window = GS_WINDOW (widget);
 
-	cdk_window_remove_filter (NULL, (GdkFilterFunc)xevent_filter, window);
+	cdk_window_remove_filter (NULL, (CdkFilterFunc)xevent_filter, window);
 
 	remove_watchdog_timer (window);
 
@@ -982,7 +982,7 @@ gs_window_destroy (GSWindow *window)
 	ctk_widget_destroy (CTK_WIDGET (window));
 }
 
-GdkWindow *
+CdkWindow *
 gs_window_get_cdk_window (GSWindow *window)
 {
 	g_return_val_if_fail (GS_IS_WINDOW (window), NULL);
@@ -1192,11 +1192,11 @@ forward_key_events (GSWindow *window)
 
 	while (window->priv->key_events != NULL)
 	{
-		GdkEventKey *event = window->priv->key_events->data;
+		CdkEventKey *event = window->priv->key_events->data;
 
 		ctk_window_propagate_key_event (CTK_WINDOW (window), event);
 
-		cdk_event_free ((GdkEvent *)event);
+		cdk_event_free ((CdkEvent *)event);
 		window->priv->key_events = g_list_delete_link (window->priv->key_events,
 		                           window->priv->key_events);
 	}
@@ -1209,9 +1209,9 @@ remove_key_events (GSWindow *window)
 
 	while (window->priv->key_events)
 	{
-		GdkEventKey *event = window->priv->key_events->data;
+		CdkEventKey *event = window->priv->key_events->data;
 
-		cdk_event_free ((GdkEvent *)event);
+		cdk_event_free ((CdkEvent *)event);
 		window->priv->key_events = g_list_delete_link (window->priv->key_events,
 		                           window->priv->key_events);
 	}
@@ -1822,7 +1822,7 @@ gs_window_set_lock_enabled (GSWindow *window,
 	g_object_notify (G_OBJECT (window), "lock-enabled");
 }
 
-GdkDisplay *
+CdkDisplay *
 gs_window_get_display (GSWindow  *window)
 {
 	g_return_val_if_fail (GS_IS_WINDOW (window), NULL);
@@ -1921,7 +1921,7 @@ gs_window_set_status_message (GSWindow   *window,
 
 void
 gs_window_set_monitor (GSWindow   *window,
-                       GdkMonitor *monitor)
+                       CdkMonitor *monitor)
 {
 	g_return_if_fail (GS_IS_WINDOW (window));
 
@@ -1937,7 +1937,7 @@ gs_window_set_monitor (GSWindow   *window,
 	g_object_notify (G_OBJECT (window), "monitor");
 }
 
-GdkMonitor *
+CdkMonitor *
 gs_window_get_monitor (GSWindow *window)
 {
 	g_return_val_if_fail (GS_IS_WINDOW (window), NULL);
@@ -2037,7 +2037,7 @@ gs_window_get_property (GObject    *object,
 
 static void
 queue_key_event (GSWindow    *window,
-                 GdkEventKey *event)
+                 CdkEventKey *event)
 {
 	/* Eat the first return, enter, escape, or space */
 	if (window->priv->key_events == NULL
@@ -2058,7 +2058,7 @@ queue_key_event (GSWindow    *window,
 	        && event->keyval != CDK_KEY_Down)
 	{
 		window->priv->key_events = g_list_prepend (window->priv->key_events,
-		                           cdk_event_copy ((GdkEvent *)event));
+		                           cdk_event_copy ((CdkEvent *)event));
 	}
 }
 
@@ -2081,7 +2081,7 @@ maybe_handle_activity (GSWindow *window)
 
 static gboolean
 gs_window_real_key_press_event (CtkWidget   *widget,
-                                GdkEventKey *event)
+                                CdkEventKey *event)
 {
 	/*g_message ("KEY PRESS state: %u keyval %u", event->state, event->keyval);*/
 
@@ -2106,14 +2106,14 @@ gs_window_real_key_press_event (CtkWidget   *widget,
 
 static gboolean
 gs_window_real_motion_notify_event (CtkWidget      *widget,
-                                    GdkEventMotion *event)
+                                    CdkEventMotion *event)
 {
 	GSWindow   *window;
 	gdouble     distance;
 	gdouble     min_distance;
 	gdouble     min_percentage = 0.1;
-	GdkDisplay *display;
-	GdkScreen  *screen;
+	CdkDisplay *display;
+	CdkScreen  *screen;
 
 	window = GS_WINDOW (widget);
 
@@ -2147,7 +2147,7 @@ gs_window_real_motion_notify_event (CtkWidget      *widget,
 
 static gboolean
 gs_window_real_button_press_event (CtkWidget      *widget,
-                                   GdkEventButton *event)
+                                   CdkEventButton *event)
 {
 	GSWindow *window;
 
@@ -2159,7 +2159,7 @@ gs_window_real_button_press_event (CtkWidget      *widget,
 
 static gboolean
 gs_window_real_scroll_event (CtkWidget      *widget,
-                             GdkEventScroll *event)
+                             CdkEventScroll *event)
 {
 	GSWindow *window;
 
@@ -2176,7 +2176,7 @@ gs_window_real_size_request (CtkWidget      *widget,
 	GSWindow      *window;
 	CtkBin        *bin;
 	CtkWidget     *child;
-	GdkRectangle   old_geometry;
+	CdkRectangle   old_geometry;
 	int            position_changed = FALSE;
 	int            size_changed = FALSE;
 
@@ -2238,7 +2238,7 @@ gs_window_real_get_preferred_height (CtkWidget *widget,
 
 static gboolean
 gs_window_real_grab_broken (CtkWidget          *widget,
-                            GdkEventGrabBroken *event)
+                            CdkEventGrabBroken *event)
 {
 	if (event->grab_window != NULL)
 	{
@@ -2288,7 +2288,7 @@ window_set_obscured (GSWindow *window,
 
 static gboolean
 gs_window_real_visibility_notify_event (CtkWidget          *widget,
-                                        GdkEventVisibility *event)
+                                        CdkEventVisibility *event)
 {
 	switch (event->state)
 	{
@@ -2421,8 +2421,8 @@ gs_window_class_init (GSWindowClass *klass)
 	g_object_class_install_property (object_class,
 	                                 PROP_MONITOR,
 	                                 g_param_spec_pointer ("monitor",
-	                                         "Gdk monitor",
-	                                         "The monitor (in terms of Gdk) which the window is on",
+	                                         "Cdk monitor",
+	                                         "The monitor (in terms of Cdk) which the window is on",
 	                                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT));
 }
 
@@ -2555,12 +2555,12 @@ gs_window_finalize (GObject *object)
 }
 
 GSWindow *
-gs_window_new (GdkMonitor *monitor,
+gs_window_new (CdkMonitor *monitor,
                gboolean   lock_enabled)
 {
 	GObject    *result;
-	GdkDisplay *display = cdk_monitor_get_display (monitor);
-	GdkScreen  *screen = cdk_display_get_default_screen (display);
+	CdkDisplay *display = cdk_monitor_get_display (monitor);
+	CdkScreen  *screen = cdk_display_get_default_screen (display);
 
 	result = g_object_new (GS_TYPE_WINDOW,
 	                       "type", CTK_WINDOW_POPUP,
