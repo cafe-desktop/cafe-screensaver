@@ -161,12 +161,12 @@ start_fade (GSTESlideshow *show,
 		cairo_pattern_destroy (show->priv->pat2);
 	}
 
-	pw = cdk_pixbuf_get_width (pixbuf);
-	ph = cdk_pixbuf_get_height (pixbuf);
+	pw = gdk_pixbuf_get_width (pixbuf);
+	ph = gdk_pixbuf_get_height (pixbuf);
 	x = (window_width - pw) / 2;
 	y = (window_height - ph) / 2;
 
-	if (cdk_pixbuf_get_has_alpha (pixbuf) && show->priv->background_color)
+	if (gdk_pixbuf_get_has_alpha (pixbuf) && show->priv->background_color)
 	{
 		GdkPixbuf *colored;
 		guint32    color;
@@ -174,7 +174,7 @@ start_fade (GSTESlideshow *show,
 		color = (show->priv->background_color->red << 16)
 		        + (show->priv->background_color->green / 256 << 8)
 		        + show->priv->background_color->blue / 256;
-		colored = cdk_pixbuf_composite_color_simple (pixbuf,
+		colored = gdk_pixbuf_composite_color_simple (pixbuf,
 		          pw, ph,
 		          CDK_INTERP_BILINEAR,
 		          255,
@@ -182,9 +182,9 @@ start_fade (GSTESlideshow *show,
 		          color,
 		          color);
 
-		cdk_pixbuf_copy_area (colored, 0, 0,
-		                      cdk_pixbuf_get_width (colored),
-		                      cdk_pixbuf_get_height (colored),
+		gdk_pixbuf_copy_area (colored, 0, 0,
+		                      gdk_pixbuf_get_width (colored),
+		                      gdk_pixbuf_get_height (colored),
 		                      pixbuf, 0, 0);
 
 		g_object_unref(colored);
@@ -456,8 +456,8 @@ scale_pixbuf (GdkPixbuf *pixbuf,
 	float      scale_factor_y = 1.0;
 	float      scale_factor = 1.0;
 
-	pw = cdk_pixbuf_get_width (pixbuf);
-	ph = cdk_pixbuf_get_height (pixbuf);
+	pw = gdk_pixbuf_get_width (pixbuf);
+	ph = gdk_pixbuf_get_height (pixbuf);
 
 	/* If the image is less than 256 wide or high then it
 	   is probably a thumbnail and we should ignore it */
@@ -487,7 +487,7 @@ scale_pixbuf (GdkPixbuf *pixbuf,
 
 		scale_x = (int) (pw * scale_factor);
 		scale_y = (int) (ph * scale_factor);
-		return cdk_pixbuf_scale_simple (pixbuf,
+		return gdk_pixbuf_scale_simple (pixbuf,
 		                                scale_x,
 		                                scale_y,
 		                                CDK_INTERP_BILINEAR);
@@ -594,11 +594,11 @@ get_pixbuf_from_local_dir (GSTESlideshow *show,
 	}
 	filename = l->data;
 
-	pixbuf = cdk_pixbuf_new_from_file (filename, NULL);
+	pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
 
 	if (pixbuf != NULL)
 	{
-		transformed_pixbuf = cdk_pixbuf_apply_embedded_orientation (pixbuf);
+		transformed_pixbuf = gdk_pixbuf_apply_embedded_orientation (pixbuf);
 		g_object_unref (pixbuf);
 	}
 	else

@@ -653,10 +653,10 @@ surface_from_pixbuf (GdkPixbuf *pixbuf)
 	cairo_surface_t *surface;
 	cairo_t         *cr;
 
-	surface = cairo_image_surface_create (cdk_pixbuf_get_has_alpha (pixbuf) ?
+	surface = cairo_image_surface_create (gdk_pixbuf_get_has_alpha (pixbuf) ?
 	                                      CAIRO_FORMAT_ARGB32 : CAIRO_FORMAT_RGB24,
-	                                      cdk_pixbuf_get_width (pixbuf),
-	                                      cdk_pixbuf_get_height (pixbuf));
+	                                      gdk_pixbuf_get_width (pixbuf),
+	                                      gdk_pixbuf_get_height (pixbuf));
 	cr = cairo_create (surface);
 	cdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 	cairo_paint (cr);
@@ -795,11 +795,11 @@ cairo_to_pixbuf (guint8    *src_data,
 	guint          h;
 	guint          rowstride;
 
-	w = cdk_pixbuf_get_width (dst_pixbuf);
-	h = cdk_pixbuf_get_height (dst_pixbuf);
-	rowstride = cdk_pixbuf_get_rowstride (dst_pixbuf);
+	w = gdk_pixbuf_get_width (dst_pixbuf);
+	h = gdk_pixbuf_get_height (dst_pixbuf);
+	rowstride = gdk_pixbuf_get_rowstride (dst_pixbuf);
 
-	dst = cdk_pixbuf_get_pixels (dst_pixbuf);
+	dst = gdk_pixbuf_get_pixels (dst_pixbuf);
 	src = src_data;
 
 	go_cairo_convert_data_to_pixbuf (dst, src, w, h, rowstride);
@@ -820,16 +820,16 @@ frame_pixbuf (GdkPixbuf *source)
 
 	frame_width = 5;
 
-	w = cdk_pixbuf_get_width (source) + frame_width * 2;
-	h = cdk_pixbuf_get_height (source) + frame_width * 2;
+	w = gdk_pixbuf_get_width (source) + frame_width * 2;
+	h = gdk_pixbuf_get_height (source) + frame_width * 2;
 	radius = w / 10;
 
-	dest = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
+	dest = gdk_pixbuf_new (CDK_COLORSPACE_RGB,
 						   TRUE,
 						   8,
 						   w,
 						   h);
-	rowstride = cdk_pixbuf_get_rowstride (dest);
+	rowstride = gdk_pixbuf_get_rowstride (dest);
 
 
 	data = g_new0 (guint8, h * rowstride);
@@ -954,7 +954,7 @@ set_face_image (GSLockPlug *plug)
 	pixbuf = NULL;
 	if (check_user_file (path, uid, user_max_file, 0, 0))
 	{
-		pixbuf = cdk_pixbuf_new_from_file_at_size (path,
+		pixbuf = gdk_pixbuf_new_from_file_at_size (path,
 		         icon_size,
 		         icon_size,
 		         NULL);

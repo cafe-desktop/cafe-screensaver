@@ -664,12 +664,12 @@ gamma_correct (const GdkPixbuf *input_pixbuf)
 	GdkPixbuf *output_pixbuf;
 	guchar *pixels;
 
-	output_pixbuf = cdk_pixbuf_copy (input_pixbuf);
-	pixels = cdk_pixbuf_get_pixels (output_pixbuf);
+	output_pixbuf = gdk_pixbuf_copy (input_pixbuf);
+	pixels = gdk_pixbuf_get_pixels (output_pixbuf);
 
-	width = cdk_pixbuf_get_width (output_pixbuf);
-	height = cdk_pixbuf_get_height (output_pixbuf);
-	rowstride = cdk_pixbuf_get_rowstride (output_pixbuf);
+	width = gdk_pixbuf_get_width (output_pixbuf);
+	height = gdk_pixbuf_get_height (output_pixbuf);
+	rowstride = gdk_pixbuf_get_rowstride (output_pixbuf);
 
 	for (y = 0; y < height; y++)
 		for (x = 0; x < width; x++)
@@ -707,7 +707,7 @@ screen_saver_floater_do_draw (ScreenSaver        *screen_saver,
 		pixbuf = NULL;
 		error = NULL;
 
-		pixbuf = cdk_pixbuf_new_from_file_at_size (screen_saver->filename, size, -1,
+		pixbuf = gdk_pixbuf_new_from_file_at_size (screen_saver->filename, size, -1,
 		         &error);
 		if (pixbuf == NULL)
 		{
@@ -717,14 +717,14 @@ screen_saver_floater_do_draw (ScreenSaver        *screen_saver,
 			return FALSE;
 		}
 
-		if (cdk_pixbuf_get_has_alpha (pixbuf))
+		if (gdk_pixbuf_get_has_alpha (pixbuf))
 			gamma_correct (pixbuf);
 
 		cdk_cairo_set_source_pixbuf (context, pixbuf, 0.0, 0.0);
 
 		source = cached_source_new (cairo_get_source (context),
-		                            cdk_pixbuf_get_width (pixbuf),
-		                            cdk_pixbuf_get_height (pixbuf));
+		                            gdk_pixbuf_get_width (pixbuf),
+		                            gdk_pixbuf_get_height (pixbuf));
 		g_object_unref (pixbuf);
 		g_hash_table_insert (screen_saver->cached_sources, GINT_TO_POINTER (size),
 		                     source);
