@@ -36,6 +36,17 @@ requires:
     #required for cafe-common
     - autoconf
 
+    #required for cafe-desktop
+    - gobject-introspection
+    - gtk-doc-tools
+    - intltool
+    - iso-codes
+    - libgirepository1.0-dev
+    - libglib2.0-doc
+    - libtool
+    - libxml2-dev
+    - meson
+
 before_scripts:
   - ./html-cppcheck
   - ./debrepo-install 'libctk-3-dev'
