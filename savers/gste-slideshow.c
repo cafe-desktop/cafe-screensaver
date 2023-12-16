@@ -102,7 +102,7 @@ typedef struct _Op
 
 typedef struct _OpResult
 {
-	CdkPixbuf *pixbuf;
+	GdkPixbuf *pixbuf;
 } OpResult;
 
 static gboolean
@@ -141,7 +141,7 @@ start_new_load (GSTESlideshow *show,
 
 static void
 start_fade (GSTESlideshow *show,
-            CdkPixbuf     *pixbuf)
+            GdkPixbuf     *pixbuf)
 {
 	int      pw;
 	int      ph;
@@ -168,7 +168,7 @@ start_fade (GSTESlideshow *show,
 
 	if (cdk_pixbuf_get_has_alpha (pixbuf) && show->priv->background_color)
 	{
-		CdkPixbuf *colored;
+		GdkPixbuf *colored;
 		guint32    color;
 
 		color = (show->priv->background_color->red << 16)
@@ -389,7 +389,7 @@ draw_iter (GSTESlideshow *show)
 
 static void
 process_new_pixbuf (GSTESlideshow *show,
-                    CdkPixbuf     *pixbuf)
+                    GdkPixbuf     *pixbuf)
 {
 	gs_theme_engine_profile_msg ("Processing a new image");
 
@@ -444,8 +444,8 @@ results_pull_func (GSTESlideshow *show)
 	return FALSE;
 }
 
-static CdkPixbuf *
-scale_pixbuf (CdkPixbuf *pixbuf,
+static GdkPixbuf *
+scale_pixbuf (GdkPixbuf *pixbuf,
               int        max_width,
               int        max_height,
               gboolean   no_stretch_hint)
@@ -555,11 +555,11 @@ gste_strcmp_compare_func (gconstpointer string_a, gconstpointer string_b)
 }
 
 
-static CdkPixbuf *
+static GdkPixbuf *
 get_pixbuf_from_local_dir (GSTESlideshow *show,
                            const char    *location)
 {
-	CdkPixbuf *pixbuf, *transformed_pixbuf;
+	GdkPixbuf *pixbuf, *transformed_pixbuf;
 	char      *filename;
 	int        i;
 	GSList    *l;
@@ -612,11 +612,11 @@ get_pixbuf_from_local_dir (GSTESlideshow *show,
 	return transformed_pixbuf;
 }
 
-static CdkPixbuf *
+static GdkPixbuf *
 get_pixbuf_from_location (GSTESlideshow *show,
                           const char    *location)
 {
-	CdkPixbuf *pixbuf = NULL;
+	GdkPixbuf *pixbuf = NULL;
 	gboolean   is_dir;
 
 	if (location == NULL)
@@ -634,14 +634,14 @@ get_pixbuf_from_location (GSTESlideshow *show,
 	return pixbuf;
 }
 
-static CdkPixbuf *
+static GdkPixbuf *
 get_pixbuf (GSTESlideshow *show,
             const char    *location,
             int            width,
             int            height)
 {
-	CdkPixbuf *pixbuf;
-	CdkPixbuf *scaled = NULL;
+	GdkPixbuf *pixbuf;
+	GdkPixbuf *scaled = NULL;
 
 	if (location == NULL)
 	{

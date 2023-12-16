@@ -285,7 +285,7 @@ static void screen_saver_on_size_allocate (ScreenSaver   *screen_saver,
 static void screen_saver_on_draw (ScreenSaver    *screen_saver,
         cairo_t *context);
 static gboolean do_print_screen_saver_stats (ScreenSaver *screen_saver);
-static CdkPixbuf *gamma_correct (const CdkPixbuf *input_pixbuf);
+static GdkPixbuf *gamma_correct (const GdkPixbuf *input_pixbuf);
 
 static CachedSource*
 cached_source_new (cairo_pattern_t *pattern,
@@ -657,11 +657,11 @@ screen_saver_floater_update_state (ScreenSaver        *screen_saver,
 	}
 }
 
-static CdkPixbuf *
-gamma_correct (const CdkPixbuf *input_pixbuf)
+static GdkPixbuf *
+gamma_correct (const GdkPixbuf *input_pixbuf)
 {
 	gint x, y, width, height, rowstride;
-	CdkPixbuf *output_pixbuf;
+	GdkPixbuf *output_pixbuf;
 	guchar *pixels;
 
 	output_pixbuf = cdk_pixbuf_copy (input_pixbuf);
@@ -701,7 +701,7 @@ screen_saver_floater_do_draw (ScreenSaver        *screen_saver,
 
 	if (source == NULL)
 	{
-		CdkPixbuf *pixbuf;
+		GdkPixbuf *pixbuf;
 		GError *error;
 
 		pixbuf = NULL;

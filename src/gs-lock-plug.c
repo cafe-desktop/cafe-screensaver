@@ -648,7 +648,7 @@ gs_lock_plug_run (GSLockPlug *plug)
 
 
 static cairo_surface_t *
-surface_from_pixbuf (CdkPixbuf *pixbuf)
+surface_from_pixbuf (GdkPixbuf *pixbuf)
 {
 	cairo_surface_t *surface;
 	cairo_t         *cr;
@@ -787,7 +787,7 @@ go_cairo_convert_data_to_pixbuf (unsigned char *dst,
 
 static void
 cairo_to_pixbuf (guint8    *src_data,
-                 CdkPixbuf *dst_pixbuf)
+                 GdkPixbuf *dst_pixbuf)
 {
 	unsigned char *src;
 	unsigned char *dst;
@@ -805,10 +805,10 @@ cairo_to_pixbuf (guint8    *src_data,
 	go_cairo_convert_data_to_pixbuf (dst, src, w, h, rowstride);
 }
 
-static CdkPixbuf *
-frame_pixbuf (CdkPixbuf *source)
+static GdkPixbuf *
+frame_pixbuf (GdkPixbuf *source)
 {
-	CdkPixbuf       *dest;
+	GdkPixbuf       *dest;
 	cairo_t         *cr;
 	cairo_surface_t *surface;
 	guint            w;
@@ -874,9 +874,9 @@ frame_pixbuf (CdkPixbuf *source)
 
 static void
 image_set_from_pixbuf (CtkImage  *image,
-                       CdkPixbuf *source)
+                       GdkPixbuf *source)
 {
-	CdkPixbuf *pixbuf;
+	GdkPixbuf *pixbuf;
 
 	pixbuf = frame_pixbuf (source);
 	ctk_image_set_from_pixbuf (image, pixbuf);
@@ -939,7 +939,7 @@ check_user_file (const gchar *filename,
 static gboolean
 set_face_image (GSLockPlug *plug)
 {
-	CdkPixbuf    *pixbuf;
+	GdkPixbuf    *pixbuf;
 	const char   *homedir;
 	char         *path;
 	int           icon_size = 96;
