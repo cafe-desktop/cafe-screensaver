@@ -2130,7 +2130,7 @@ gs_window_real_motion_notify_event (CtkWidget      *widget,
 		return FALSE;
 	}
 
-	/* just an approxicafe distance */
+	/* just an approximate distance */
 	distance = MAX (ABS (window->priv->last_x - event->x),
 	                ABS (window->priv->last_y - event->y));
 
