@@ -484,7 +484,7 @@ eel_ctk_label_make_bold (CtkLabel *label)
 	pango_font_description_free (font_desc);
 }
 
-/* from caja */
+/* from baul */
 static void
 create_titled_label (CtkGrid    *grid,
                      int         row,
