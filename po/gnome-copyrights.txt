@@ -42,7 +42,7 @@
 ========== be@latin.po ==========
 # Biełaruski pierakład cafe-screensaver.
 # Copyright (C) 2007 THE cafe-screensaver'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the marco.cafe package.
+# This file is distributed under the same license as the croma.cafe package.
 # Alaksandar Navicki <zolak@lacinka.org> & Łacinka.org 2007.
 #
 
