@@ -221,7 +221,7 @@ AC_DEFUN([AC_TRY_X_COMPILE], [
     CPPFLAGS="$CPPFLAGS -I$includedir"
   fi
   CPPFLAGS="$CPPFLAGS $X_CFLAGS"
-  AC_TRY_COMPILE([$1], [$2], [$3], [$4])
+  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[$1]], [[$2]])], [$3], [$4])
   CPPFLAGS="$ac_save_CPPFLAGS"])
 
 
@@ -585,19 +585,19 @@ if test "x$have_pam" = "xyes"; then
 
     AC_MSG_CHECKING(how to call pam_strerror)
     AC_CACHE_VAL(ac_cv_pam_strerror_args,
-     [AC_TRY_COMPILE([#include <stdio.h>
-                      #include <stdlib.h>
-                      #include <security/pam_appl.h>],
-                     [pam_handle_t *pamh = 0;
-                      char *s = pam_strerror(pamh, PAM_SUCCESS);],
-                     [ac_pam_strerror_args=2],
-                     [AC_TRY_COMPILE([#include <stdio.h>
-                                      #include <stdlib.h>
-                                      #include <security/pam_appl.h>],
-                                     [char *s =
-                                       pam_strerror(PAM_SUCCESS);],
-                                     [ac_pam_strerror_args=1],
-                                     [ac_pam_strerror_args=0])])
+     [AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <stdio.h>
+                                           #include <stdlib.h>
+                                           #include <security/pam_appl.h>]],
+                                         [[pam_handle_t *pamh = 0;
+                                           char *s = pam_strerror(pamh, PAM_SUCCESS);]])],
+                                          [ac_pam_strerror_args=2],
+                                          [AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <stdio.h>
+                                                                                #include <stdlib.h>
+                                                                                #include <security/pam_appl.h>]],
+                                                                              [[char *s =
+                                                                                 pam_strerror(PAM_SUCCESS);]])],
+                                                                               [ac_pam_strerror_args=1],
+                                                                               [ac_pam_strerror_args=0])])
       ac_cv_pam_strerror_args=$ac_pam_strerror_args])
     ac_pam_strerror_args=$ac_cv_pam_strerror_args
     if test "$ac_pam_strerror_args" = 1 ; then
