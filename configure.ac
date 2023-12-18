@@ -1101,7 +1101,7 @@ AC_SUBST(themesdir)
 
 # Files
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 po/Makefile.in
 src/Makefile
@@ -1116,6 +1116,8 @@ savers/Makefile
 doc/Makefile
 doc/cafe-screensaver.xml
 ])
+
+AC_OUTPUT
 
 echo "
                     cafe-screensaver $VERSION
