@@ -7,7 +7,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # ABE Tsunehiko, 2020
 # Mika Kobayashi, 2020
-# Wolfgang Ulbrich <cafe@raveit.de>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
 # Ikuru K <kanumaiku@gmail.com>, 2020
 # 
 msgid ""

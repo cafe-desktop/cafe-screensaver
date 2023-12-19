@@ -9,7 +9,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Henrik Mattsson-Mårn <h@reglage.net>, 2020
 # Patrik Nilsson <asavartzeth@gmail.com>, 2020
-# Wolfgang Ulbrich <cafe@raveit.de>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
 # Jonatan Nyberg <jonatan.nyberg.karl@gmail.com>, 2020
 # Tobias Lekare <lekare@linux.com>, 2020
 # Luna Jernberg <bittin@cafe8bitar.se>, 2020
