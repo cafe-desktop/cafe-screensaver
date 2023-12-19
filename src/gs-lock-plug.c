@@ -1499,6 +1499,7 @@ gs_lock_plug_enable_prompt (GSLockPlug *plug,
 	ctk_widget_show (plug->priv->auth_prompt_label);
 	ctk_entry_set_visibility (CTK_ENTRY (plug->priv->auth_prompt_entry), visible);
 	ctk_widget_set_sensitive (plug->priv->auth_prompt_entry, TRUE);
+	ctk_widget_set_can_focus (plug->priv->auth_prompt_entry, TRUE);
 	ctk_widget_show (plug->priv->auth_prompt_entry);
 
 	if (! ctk_widget_has_focus (plug->priv->auth_prompt_entry))
