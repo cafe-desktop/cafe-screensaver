@@ -4,7 +4,7 @@
 requires:
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-cafe-team/cafe-screensaver
+    # cafe B-D: libctk-3-dev libcafe-desktop-dev libcafe-menu-dev libcafekbd-dev cafe-common
     - aptitude
     - autoconf-archive
     - autopoint
