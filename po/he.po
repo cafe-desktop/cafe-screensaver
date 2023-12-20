@@ -809,6 +809,3 @@ msgstr "‏%U ב־%h"
 #: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_סיסמה:"
-
-#~ msgid "preferences-desktop-screensaver"
-#~ msgstr "preferences-desktop-screensaver"

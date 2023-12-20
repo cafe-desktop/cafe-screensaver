@@ -817,9 +817,3 @@ msgstr "%U pada %h"
 #: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Kata Laluan:"
-
-#~ msgid "preferences-desktop-screensaver"
-#~ msgstr "preferences-desktop-screensaver"
-
-#~ msgid "screensaver"
-#~ msgstr "screensaver"

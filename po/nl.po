@@ -833,9 +833,3 @@ msgstr "%U op %h"
 #: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Wachtwoord:"
-
-#~ msgid "preferences-desktop-screensaver"
-#~ msgstr "voorkeuren-bureaublad-schermbeveiliging"
-
-#~ msgid "screensaver"
-#~ msgstr "schermbeveiliging"

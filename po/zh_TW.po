@@ -792,9 +792,3 @@ msgstr "%U 於 %h"
 #: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "密碼(_P):"
-
-#~ msgid "preferences-desktop-screensaver"
-#~ msgstr "preferences-desktop-screensaver"
-
-#~ msgid "screensaver"
-#~ msgstr "screensaver"
