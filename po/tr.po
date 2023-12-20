@@ -2,26 +2,26 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # tarakbumba <tarakbumba@gmail.com>, 2020
 # mauron, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Butterfly <gokhanlnx@gmail.com>, 2020
 # Sabri Ünal <yakushabb@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>, 2020\n"
 "Language-Team: Turkish (https://www.transifex.com/cafe/teams/13566/tr/)\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
@@ -33,15 +33,7 @@ msgstr "Ekran koruyucu"
 msgid "Set your screensaver preferences"
 msgstr "Ekran koruyucunuzun tercihlerini belirtin"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
@@ -50,39 +42,47 @@ msgstr ""
 msgid "Screensaver Preview"
 msgstr "Ekran koruyucu Önizleme"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Ekran koruyucu önizleme</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Ekran koruyucu Tercihleri"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "Güç Yöneti_mi"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Önizleme"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "_Ekran koruyucu teması:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "Sonrasında bilgisayarı _boş duran olarak say:"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "Bilgis_ayar bekleme durumundayken ekran koruyucuyu etkinleştir"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "Ekran koruyucu etkinken ekranı ki_litle"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Uyarı: root kullanıcısı için ekran kilitlenmeyecektir.</b>"
 
@@ -95,17 +95,9 @@ msgstr "Ekran koruyucular"
 msgid "Screensaver themes"
 msgstr "Ekran koruyucu temaları"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr ""
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Kozmos"
 
@@ -129,7 +121,7 @@ msgstr "_Çıkış"
 msgid "_Cancel"
 msgstr "_Vazgeç"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "_Kilidi aç"
 
@@ -172,8 +164,8 @@ msgstr ""
 "Ekran koruyucu tarafından kullanılan seçim kipi. Ekran koruyucuyu "
 "etkinleştirmede herhangi bir tema kullanmamak için \"blank-only\", ekran "
 "koruyucuyu etkinleştirmede sadece bir tema kullanarak etkinleştirmek için "
-"(\"themes\" anahtarında belirtildiği gibi) \"single\", etkinleştirmede ekran"
-" koruyucunun rastgele bir tema kullanarak etkinleştirilmesi için \"random\" "
+"(\"themes\" anahtarında belirtildiği gibi) \"single\", etkinleştirmede ekran "
+"koruyucunun rastgele bir tema kullanarak etkinleştirilmesi için \"random\" "
 "olabilir.  "
 
 #: data/org.cafe.screensaver.gschema.xml.in:26
@@ -207,8 +199,7 @@ msgstr "Tema değişiminden önceki zaman"
 
 #: data/org.cafe.screensaver.gschema.xml.in:36
 msgid "The number of minutes to run before changing the screensaver theme."
-msgstr ""
-"Ekran koruyucu temasını değiştirmeden önce geçecek dakikaların sayısı."
+msgstr "Ekran koruyucu temasını değiştirmeden önce geçecek dakikaların sayısı."
 
 #: data/org.cafe.screensaver.gschema.xml.in:40
 msgid "Time before locking"
@@ -216,8 +207,7 @@ msgstr "Kilitlemeden önceki zaman"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
 "Ekran koruyucunun etkinleşmesinden sonra ekranın kilitlenmesine kadarki "
 "dakikaların sayısı."
@@ -242,8 +232,8 @@ msgstr "Gömülü klavye komutu"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
 "\"embedded_keyboard_enabled\" anahtarı TRUE yapılmışsa, bir klavye "
@@ -284,9 +274,9 @@ msgstr "Oturum kapatma komutu"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
 "Oturumu kapat düğmesi tıklandığında çağrılacak komut. Bu komut basitçe "
 "herhangi bir etkileşim olmadan kullanıcının oturum kapatmasını sağlar. Bu "
@@ -322,12 +312,19 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Ekran kilitlendiğinde oturum durum mesajının gösterilmesine izin ver."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Kozmosun resimlerini slayt gösterisi şeklinde göster"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
@@ -340,8 +337,7 @@ msgstr "Yüzen CAFE"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Ekran üzerinde CAFE logosu baloncukları oluşturur"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
@@ -354,8 +350,7 @@ msgstr "Yüzen GNOME"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Ekran üzerinde GNOME logosu baloncukları oluşturur"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
@@ -368,8 +363,7 @@ msgstr "Resim dizini"
 msgid "Display a slide from your Pictures folder"
 msgstr "Resim dizininizden bir slayt gösterisi göster"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
@@ -382,8 +376,7 @@ msgstr "Pop art kareleri"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Bir pop-art-ish nabız gibi atan renklerin ızgarası."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
@@ -459,32 +452,32 @@ msgstr "Resimleri konumdan rastgele hale getirme"
 msgid "Do not try to stretch images on screen"
 msgstr "Ekrandaki görüntüleri esnetmeye çalışma"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Dosyalar kopyalanıyor"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "Kimden:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "Kime:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Temalar kopyalanıyor"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Geçersiz ekran koruyucu teması"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s geçerli bir ekran koruyucu teması gibi görünmüyor."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Dosya kopyalanıyor: %u / %u"
@@ -523,8 +516,7 @@ msgstr "Eğer ekran koruyucu etkin ise etkinliğini kaldır (ekranı boş bırak
 
 #: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
-msgstr ""
-"Kullanıcı aktivitesini taklit etmek için çalışan ekran koruyucuyu dürt"
+msgstr "Kullanıcı aktivitesini taklit etmek için çalışan ekran koruyucuyu dürt"
 
 #: src/cafe-screensaver-command.c:96
 msgid ""
@@ -739,11 +731,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Asla"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Ana arayüz yüklenemedi"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr ""
 "Lütfen ekran koruyucusunun düzgün bir şekilde kurulmuş olduğundan emin olun"
@@ -760,8 +752,7 @@ msgstr "Hata ayıklama kodunu etkinleştir"
 msgid "Launch screensaver and locker program"
 msgstr "Ekran koruyucu ve kilitleyici programı başlat"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr ""
@@ -788,20 +779,19 @@ msgstr "Şu an erişim kazanmaya izinli değil."
 msgid "No longer permitted to access the system."
 msgstr "Sisteme erişimine artık izin verilmiyor."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "mesaj veri yoluna kayıt başarısız"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "mesaj veri yoluna bağlı değil"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "Bu oturumda ekran koruyucu zaten çalışmakta"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%e %B %A"
@@ -814,18 +804,18 @@ msgstr "Süre doldu."
 msgid "You have the Caps Lock key on."
 msgstr "Büyük harf kilidi tuşunuz açık."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "K_ullanıcı Değiştir..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "_Oturumu Kapat"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%h üzerinde %U"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Parola:"

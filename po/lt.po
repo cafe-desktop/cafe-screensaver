@@ -2,26 +2,28 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # brennus <jonas.ska@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Moo, 2020
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020\n"
 "Language-Team: Lithuanian (https://www.transifex.com/cafe/teams/13566/lt/)\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lt\n"
-"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
 #: src/cafe-screensaver.desktop.in.in:4
@@ -32,15 +34,7 @@ msgstr "Ekrano užsklanda"
 msgid "Set your screensaver preferences"
 msgstr "Nurodykite ekrano užsklandos nustatymus"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr "preferences-desktop-screensaver"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr "CAFE;ekrano užsklanda;nustatymai;"
@@ -49,39 +43,47 @@ msgstr "CAFE;ekrano užsklanda;nustatymai;"
 msgid "Screensaver Preview"
 msgstr "Ekrano užsklandos peržiūra"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Ekrano užsklandos peržiūra</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Ekrano užsklandos nustatymai"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "Energijos _valdymas"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Peržiūra"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "_Ekrano užsklandos tema:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "La_ikyti kompiuterį neveikliu po:"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Aktyvuoti ekrano užsklandą, kai kompiuteris neveiklus"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "_Užrakinti ekraną, kai aktyvuota ekrano užsklanda"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Dėmesio: ekranas root naudotojui nebus užrakintas.</b>"
 
@@ -94,17 +96,9 @@ msgstr "Ekrano užsklandos"
 msgid "Screensaver themes"
 msgstr "Ekrano užsklandos temos"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr "screensaver"
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Kosmosas"
 
@@ -128,7 +122,7 @@ msgstr "At_sijungti"
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "_Atrakinti"
 
@@ -169,10 +163,10 @@ msgid ""
 "activation."
 msgstr ""
 "Ekrano užsklandos naudojama pasirinkimo veiksena. Gali būti „blank-only“, "
-"kai norima įjungti ekrano užsklandą, nenaudojant jokios temos, „single“, kai"
-" norima įjungti ekrano užsklandą, naudojant tik vieną temą (nurodytą "
-"„themes“ rakte), ir „random“, kai norima įjungti ekrano užsklandą, naudojant"
-" atsitiktinę temą."
+"kai norima įjungti ekrano užsklandą, nenaudojant jokios temos, „single“, kai "
+"norima įjungti ekrano užsklandą, naudojant tik vieną temą (nurodytą „themes“ "
+"rakte), ir „random“, kai norima įjungti ekrano užsklandą, naudojant "
+"atsitiktinę temą."
 
 #: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
@@ -181,8 +175,8 @@ msgid ""
 "when \"mode\" is \"single\", and should provide a list of themes when "
 "\"mode\" is \"random\"."
 msgstr ""
-"Šiame rakte nurodoma ekrano užsklandos naudojamų temų sąrašas. Jo nepaisoma,"
-" kai rakto „mode“ reikšmė yra „blank-only“; kai rakto „mode“ reikšmė yra "
+"Šiame rakte nurodoma ekrano užsklandos naudojamų temų sąrašas. Jo nepaisoma, "
+"kai rakto „mode“ reikšmė yra „blank-only“; kai rakto „mode“ reikšmė yra "
 "„single“, reikia nurodyti vieną temos pavadinimą, kai rakto „mode“ reikšmė "
 "yra „random“, reikia nurodyti temų sąrašą."
 
@@ -195,8 +189,8 @@ msgid ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
 msgstr ""
-"Neaktyvumo laikas sekundėmis, po kurio siunčiamas signalas energijos valdymo"
-" posistemei. Ši reikšmė nustatoma seanso energijos valdymo agento programos."
+"Neaktyvumo laikas sekundėmis, po kurio siunčiamas signalas energijos valdymo "
+"posistemei. Ši reikšmė nustatoma seanso energijos valdymo agento programos."
 
 #: data/org.cafe.screensaver.gschema.xml.in:35
 msgid "Time before theme change"
@@ -212,8 +206,7 @@ msgstr "Laikas iki užrakinimo"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
 "Minučių skaičius nuo ekrano užsklandos aktyvavimo iki ekrano užrakinimo."
 
@@ -237,13 +230,13 @@ msgstr "Įtaisytos klaviatūros komanda"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
-"Komanda, kuri bus vykdoma, jei „embedded_keyboard_enabled“ reikšmė teigiama."
-" Programa turėtų vaizduoti klaviatūrą realizuodama XEMBED įskiepio sąsają ir"
-" išvesti lango XID į standartinį išėjimą."
+"Komanda, kuri bus vykdoma, jei „embedded_keyboard_enabled“ reikšmė teigiama. "
+"Programa turėtų vaizduoti klaviatūrą realizuodama XEMBED įskiepio sąsają ir "
+"išvesti lango XID į standartinį išėjimą."
 
 #: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
@@ -278,9 +271,9 @@ msgstr "Atsijungimo komanda"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
 "Komanda, paleidžiama paspaudus atsijungimo mygtuką. Ši komanda turėtų "
 "paprasčiausiai atjungti naudotoją be pastarojo įsikišimo. Šis raktas turi "
@@ -315,12 +308,19 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Leisti rodyti seanso būsenos pranešimą, kai ekranas užrakintas."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Rodyti kosmoso paveikslų skaidrių rodymą"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr "CAFE;ekrano užsklanda;skaidrių rodymas;kosmosas;"
@@ -333,8 +333,7 @@ msgstr "Plaukiojantis CAFE"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "CAFE logotipas „burbuliuoja“ ekrane"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "CAFE;ekrano užsklanda;logotipas;burbulai;"
@@ -347,8 +346,7 @@ msgstr "Plaukiojantis CAFE"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "GNOME logotipas „burbuliuoja“ ekrane"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;ekrano užsklanda;GNOME;logotipas;burbulai;"
@@ -361,14 +359,12 @@ msgstr "Paveikslų aplankas"
 msgid "Display a slide from your Pictures folder"
 msgstr "Rodyti skaidrių šou iš jūsų paveikslų aplanko"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
-"CAFE;ekrano "
-"užsklanda;tinkintas;pasirinktinis;tinkinti;pasirinktiniai;skaidrių "
-"rodymas;paveikslai;paveiksliukai;paveikslėliai;aplankas;"
+"CAFE;ekrano užsklanda;tinkintas;pasirinktinis;tinkinti;pasirinktiniai;"
+"skaidrių rodymas;paveikslai;paveiksliukai;paveikslėliai;aplankas;"
 
 #: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
@@ -378,8 +374,7 @@ msgstr "Meniški kvadratėliai"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Pulsuojančių spalvų kvadratėliai."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr "CAFE;ekrano užsklanda;tinklelis;pulsuojančios;spalvos;"
@@ -428,8 +423,8 @@ msgstr "image - ekrane plaukioja paveikslas"
 #: savers/floaters.c:1200
 msgid "You must specify one image.  See --help for usage information.\n"
 msgstr ""
-"Turite nurodyti bent vieną paveikslą. Norėdami sužinoti kaip naudotis, žr. "
-"--help.\n"
+"Turite nurodyti bent vieną paveikslą. Norėdami sužinoti kaip naudotis, žr. --"
+"help.\n"
 
 #: savers/slide.c:55
 msgid "Location to get images from"
@@ -455,32 +450,32 @@ msgstr "Imti paveikslus iš eilės"
 msgid "Do not try to stretch images on screen"
 msgstr "Neištempti paveikslų ekrane"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Kopijuojami failai"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "Iš:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "Į:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Kopijuojamos temos"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Netinkama ekrano užsklandos tema"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s nėra tinkama ekrano užsklandos tema."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Kopijuojamas failas: %u iš %u"
@@ -503,8 +498,7 @@ msgstr "Nurodo ekrano užsklandos procesui tuojau pat užrakinti ekraną"
 
 #: src/cafe-screensaver-command.c:76
 msgid "Tells the running screensaver process to unlock the screen immediately"
-msgstr ""
-"Nurodo vykdomam ekrano užsklandos procesui tuojau pat atrakinti ekraną"
+msgstr "Nurodo vykdomam ekrano užsklandos procesui tuojau pat atrakinti ekraną"
 
 #: src/cafe-screensaver-command.c:80
 msgid "If the screensaver is active then switch to another graphics demo"
@@ -743,11 +737,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Niekada"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Nepavyko įkelti pagrindinės sąsajos"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Įsitikinkite, kad ekrano užsklanda yra tinkamai įdiegta"
 
@@ -763,8 +757,7 @@ msgstr "Įjungti derinimo kodą"
 msgid "Launch screensaver and locker program"
 msgstr "Paleisti ekrano užsklandą ir užraktą"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr "CAFE;ekrano užsklanda;užraktas;"
@@ -791,20 +784,19 @@ msgstr "Šį kartą neleista gauti priėjimo."
 msgid "No longer permitted to access the system."
 msgstr "Daugiau nebeleidžiama prieiti prie šios sistemos."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "nepavyko prisiregistruoti prie pranešimų prievado"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "neprisijungta prie pranešimų prievado"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "šiame seanse jau paleista ekrano užsklanda"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%A, %B %e"
@@ -817,18 +809,24 @@ msgstr "Baigėsi laikas."
 msgid "You have the Caps Lock key on."
 msgstr "Įjungtas jūsų Caps Lock klavišas."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "_Perjungti naudotoją..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "At_sijungti"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U kompiuteryje %h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "Sla_ptažodis:"
+
+#~ msgid "preferences-desktop-screensaver"
+#~ msgstr "preferences-desktop-screensaver"
+
+#~ msgid "screensaver"
+#~ msgstr "screensaver"

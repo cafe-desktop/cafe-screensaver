@@ -2,23 +2,23 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # karthik holla <karthikholla87@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: karthik holla <karthikholla87@gmail.com>, 2020\n"
 "Language-Team: Kannada (https://www.transifex.com/cafe/teams/13566/kn/)\n"
+"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: kn\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
@@ -30,15 +30,7 @@ msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್"
 msgid "Set your screensaver preferences"
 msgstr "ನಿಮ್ಮ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಆದ್ಯತೆಗಳನ್ನು ಅಣಿಗೊಳಿಸಿ"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
@@ -47,39 +39,47 @@ msgstr ""
 msgid "Screensaver Preview"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಮುನ್ನೋಟ"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಮುನ್ನೋಟ</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಆದ್ಯತೆಗಳು"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "ವಿದ್ಯುಚ್ಛಕ್ತಿ ನಿರ್ವಹಣೆ(_M)"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "ಮುನ್ನೋಟ(_P)"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಥೀಮ್(_S):"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "ಈ ಸಮಯದ ನಂತರ ಗಣಕಕ್ಕೆ ಕೆಲಸವಿಲ್ಲ ಎಂದು ಪರಿಗಣಿಸು(_i):"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "ಗಣಕಕ್ಕೆ ಕೆಲಸವಿಲ್ಲದೆ ಇದ್ದಾಗ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು(_A)"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸಕ್ರಿಯವಾಗಿದ್ದಾಗ ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡು(_L)"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>ಎಚ್ಚರಿಕೆ: ಮೂಲದ ಬಳಕೆದಾರರಿಗೆ ತೆರೆಯು ಲಾಕ್ ಮಾಡಲ್ಪಡುವುದಿಲ್ಲ.</b>"
 
@@ -92,17 +92,9 @@ msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರುಗಳು"
 msgid "Screensaver themes"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಥೀಮ್‌ಗಳು"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr ""
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "ಕಾಸ್ಮೋಸ್"
 
@@ -126,7 +118,7 @@ msgstr "ನಿರ್ಗಮಿಸು(_L)"
 msgid "_Cancel"
 msgstr "ರದ್ದು ಮಾಡಲಾಗಿದೆ(_C)"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "ಅನ್‌ಲಾಕ್ ಮಾಡು(_U)"
 
@@ -141,8 +133,8 @@ msgstr "ಕೆಲಸವಿಲ್ಲದಾಗ ಸಕ್ರಿಯಗೊಳಿಸ�
 #: data/org.cafe.screensaver.gschema.xml.in:11
 msgid "Set this to TRUE to activate the screensaver when the session is idle."
 msgstr ""
-"ಅಧಿವೇಶನದಲ್ಲಿ ಯಾವುದೆ ಕೆಲಸವಿಲ್ಲದೆ ಇದ್ದಾಗ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು "
-"ಇದನ್ನು TRUE ಗೆ (ನಿಜ) ಹೊಂದಿಸಿ."
+"ಅಧಿವೇಶನದಲ್ಲಿ ಯಾವುದೆ ಕೆಲಸವಿಲ್ಲದೆ ಇದ್ದಾಗ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಇದನ್ನು TRUE "
+"ಗೆ (ನಿಜ) ಹೊಂದಿಸಿ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:15
 msgid "Lock on activation"
@@ -150,9 +142,7 @@ msgstr "ಸಕ್ರಿಯಗೊಂಡಾಗ ಲಾಕ್ ಮಾಡು"
 
 #: data/org.cafe.screensaver.gschema.xml.in:16
 msgid "Set this to TRUE to lock the screen when the screensaver goes active."
-msgstr ""
-"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸಕ್ರಿಯಗೊಂಡಾಗ ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡಲು ಇದನ್ನು TRUE ಗೆ (ನಿಜ) "
-"ಹೊಂದಿಸಿ."
+msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸಕ್ರಿಯಗೊಂಡಾಗ ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡಲು ಇದನ್ನು TRUE ಗೆ (ನಿಜ) ಹೊಂದಿಸಿ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:20
 msgid "Screensaver theme selection mode"
@@ -166,11 +156,10 @@ msgid ""
 "key), and \"random\" to enable the screensaver using a random theme on "
 "activation."
 msgstr ""
-"ಸ್ಕ್ರೀನ್‌ಸೇವರಿನಿಂದ ಬಳಸಬೇಕಿರುವ ಆಯ್ಕೆಯ ವಿಧಾನ. ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಯಾವುದೆ ಥೀಮ್ "
-"ಅನ್ನು ಬಳಸದೆ ಇರಲು \"ಕೇವಲ ಖಾಲಿ\" ಅನ್ನು, ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಕೇವಲ ಒಂದು "
-"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಬಳಸಲು \"ಒಂದು\" (\"ಥೀಮ್‌ಗಳು\" ಕೀಲಿಯಿಂದ ಸೂಚಿಸಲಾದ), ಹಾಗು "
-"ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಮನಸ್ಸಿಗೆ ಬಂದಂತೆ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಬಳಸಲು \"ಮನಸ್ಸಿಗೆ "
-"ಬಂದಂತೆ\" ಅನ್ನು ಶಕ್ತಗೊಳಿಸಬಹುದಾಗಿದೆ."
+"ಸ್ಕ್ರೀನ್‌ಸೇವರಿನಿಂದ ಬಳಸಬೇಕಿರುವ ಆಯ್ಕೆಯ ವಿಧಾನ. ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಯಾವುದೆ ಥೀಮ್ ಅನ್ನು ಬಳಸದೆ "
+"ಇರಲು \"ಕೇವಲ ಖಾಲಿ\" ಅನ್ನು, ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಕೇವಲ ಒಂದು ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಬಳಸಲು "
+"\"ಒಂದು\" (\"ಥೀಮ್‌ಗಳು\" ಕೀಲಿಯಿಂದ ಸೂಚಿಸಲಾದ), ಹಾಗು ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಮನಸ್ಸಿಗೆ ಬಂದಂತೆ "
+"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಬಳಸಲು \"ಮನಸ್ಸಿಗೆ ಬಂದಂತೆ\" ಅನ್ನು ಶಕ್ತಗೊಳಿಸಬಹುದಾಗಿದೆ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
@@ -179,10 +168,10 @@ msgid ""
 "when \"mode\" is \"single\", and should provide a list of themes when "
 "\"mode\" is \"random\"."
 msgstr ""
-"ಸ್ಕ್ರೀನ್‌ಸೇವರಿನಿಂದ ಬಳಸಲ್ಪಡಬೇಕಿರುವ ಥೀಮ್‌ಗಳ ಪಟ್ಟಿಯನ್ನು ಈ ಕೀಲಿಯು ಸೂಚಿಸುತ್ತದೆ. "
-"ಇದು \"ಕ್ರಮ\" ಕೀಲಿಯು \"ಕೇವಲ ಖಾಲಿ\" ಇದ್ದಲ್ಲಿ ಆಲಕ್ಷಿಸಲ್ಪಡುತ್ತದೆ, \"ಕ್ರಮ\" ವು "
-"\"ಒಂದು\" ಆಗಿದ್ದಲ್ಲಿ ಥೀಮ್ ಹೆಸರನ್ನು ನೀಡುತ್ತದೆ, ಹಾಗು \"ಕ್ರಮ\" ವು \"ಮನಸ್ಸಿಗೆ "
-"ಬಂದಂತೆ\" ಆಗಿದ್ದಲ್ಲಿ ಥೀಮ್‌ಗಳ ಒಂದು ಪಟ್ಟಿಯನ್ನು ನೀಡುತ್ತದೆ."
+"ಸ್ಕ್ರೀನ್‌ಸೇವರಿನಿಂದ ಬಳಸಲ್ಪಡಬೇಕಿರುವ ಥೀಮ್‌ಗಳ ಪಟ್ಟಿಯನ್ನು ಈ ಕೀಲಿಯು ಸೂಚಿಸುತ್ತದೆ. ಇದು \"ಕ್ರಮ\" "
+"ಕೀಲಿಯು \"ಕೇವಲ ಖಾಲಿ\" ಇದ್ದಲ್ಲಿ ಆಲಕ್ಷಿಸಲ್ಪಡುತ್ತದೆ, \"ಕ್ರಮ\" ವು \"ಒಂದು\" ಆಗಿದ್ದಲ್ಲಿ ಥೀಮ್ "
+"ಹೆಸರನ್ನು ನೀಡುತ್ತದೆ, ಹಾಗು \"ಕ್ರಮ\" ವು \"ಮನಸ್ಸಿಗೆ ಬಂದಂತೆ\" ಆಗಿದ್ದಲ್ಲಿ ಥೀಮ್‌ಗಳ ಒಂದು "
+"ಪಟ್ಟಿಯನ್ನು ನೀಡುತ್ತದೆ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:30
 msgid "Time before power management baseline"
@@ -200,9 +189,7 @@ msgstr "ಥೀಮ್ ಬದಲಾಯಿಸಲ್ಪಡಬೇಕಿರುವ ಮ�
 
 #: data/org.cafe.screensaver.gschema.xml.in:36
 msgid "The number of minutes to run before changing the screensaver theme."
-msgstr ""
-"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಥೀಮ್ ಅನ್ನು ಬದಲಾಯಿಸುವ ಮೊದಲು ಅದನ್ನು ಚಲಾಯಿಸಬೇಕಿರುವ ನಿಮಿಷಗಳ "
-"ಸಂಖ್ಯೆ."
+msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಥೀಮ್ ಅನ್ನು ಬದಲಾಯಿಸುವ ಮೊದಲು ಅದನ್ನು ಚಲಾಯಿಸಬೇಕಿರುವ ನಿಮಿಷಗಳ ಸಂಖ್ಯೆ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:40
 msgid "Time before locking"
@@ -210,11 +197,9 @@ msgstr "ಲಾಕ್‌ ಮಾಡುವ ಮುಂಚಿನ ಸಮಯ"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
-"ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡುವ ಮೊದಲು, ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಸಕ್ರಿಯವಾಗಿರಿಸಬೇಕಿರುವ "
-"ನಿಮಿಷಗಳ ಸಂಖ್ಯೆ."
+"ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡುವ ಮೊದಲು, ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಸಕ್ರಿಯವಾಗಿರಿಸಬೇಕಿರುವ ನಿಮಿಷಗಳ ಸಂಖ್ಯೆ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:45
 msgid "Allow embedding a keyboard into the window"
@@ -226,9 +211,8 @@ msgid ""
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
 "command."
 msgstr ""
-"ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿದಾಗ ಒಂದು ಕೀಲಿ ಮಣೆಯನ್ನು ವಿಂಡೋದಲ್ಲಿ ಅಡಕಗೊಳಿಸಲು ಇದನ್ನು"
-" TRUE ಗೆ ಹೊಂದಿಸಿ. \"keyboard_command\" ಕೀಲಿಯು ಸೂಕ್ತವಾದ ಆಜ್ಞೆಯೊಂದಿಗೆ "
-"ಒದಗಿಸಿರಬೇಕು."
+"ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿದಾಗ ಒಂದು ಕೀಲಿ ಮಣೆಯನ್ನು ವಿಂಡೋದಲ್ಲಿ ಅಡಕಗೊಳಿಸಲು ಇದನ್ನು TRUE ಗೆ "
+"ಹೊಂದಿಸಿ. \"keyboard_command\" ಕೀಲಿಯು ಸೂಕ್ತವಾದ ಆಜ್ಞೆಯೊಂದಿಗೆ ಒದಗಿಸಿರಬೇಕು."
 
 #: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
@@ -237,14 +221,13 @@ msgstr "ಅಡಕಗೊಳಿಸಲಾದ ಕೀಲಿ ಮಣೆ ಆಜ್ಞೆ
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
-"\"embedded_keyboard_enabled\" ಕೀಲಿಯು TRUE ಗೆ ಹೊಂದಿಸಲ್ಪಟ್ಟಿದ್ದಲ್ಲಿ, ಒಂದು ಕೀಲಿ"
-" ವಿಜೆಟ್‌ ಅನ್ನು ವಿಂಡೋಗೆ ಅಡಕಗೊಳಿಸಲು ಚಲಾಯಿಸಬೇಕಿರುವ ಆಜ್ಞೆ. ಈ ಕೀಲಿಯು ಸ್ಟ್ಯಾಂಡರ್ಡ್"
-" ಔಟ್‌ಪುಟ್‌ನಲ್ಲಿ ಒಂದು XEMBED ಪ್ಲಗ್ ಸಂಪರ್ಕಸಾಧನ ಹಾಗು ವಿಂಡೋ XIDಯ ಔಟ್‌ಪುಟ್ ಅನ್ನು "
-"ಅನ್ವಯಿಸುತ್ತದೆ."
+"\"embedded_keyboard_enabled\" ಕೀಲಿಯು TRUE ಗೆ ಹೊಂದಿಸಲ್ಪಟ್ಟಿದ್ದಲ್ಲಿ, ಒಂದು ಕೀಲಿ "
+"ವಿಜೆಟ್‌ ಅನ್ನು ವಿಂಡೋಗೆ ಅಡಕಗೊಳಿಸಲು ಚಲಾಯಿಸಬೇಕಿರುವ ಆಜ್ಞೆ. ಈ ಕೀಲಿಯು ಸ್ಟ್ಯಾಂಡರ್ಡ್ "
+"ಔಟ್‌ಪುಟ್‌ನಲ್ಲಿ ಒಂದು XEMBED ಪ್ಲಗ್ ಸಂಪರ್ಕಸಾಧನ ಹಾಗು ವಿಂಡೋ XIDಯ ಔಟ್‌ಪುಟ್ ಅನ್ನು ಅನ್ವಯಿಸುತ್ತದೆ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
@@ -273,13 +256,13 @@ msgstr "ನಿರ್ಗಮಿಸುವ ಆಜ್ಞೆ"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
-"ನಿರ್ಗಮಿಸುವ ಗುಂಡಿಯನ್ನು ಒತ್ತಿದಾಗ ಕೋರಬೇಕಿರುವ ಆಜ್ಞೆ. ಈ ಆಜ್ಞೆಯು ಏನನ್ನೂ "
-"ಪ್ರಶ್ನಿಸದೆ, ಬಳಕೆದಾರರನ್ನು ಹೊರಗೆ ನಿರ್ಗಮಿಸುವಂತೆ ಮಾಡುಬೇಕು. \"logout_enable\" "
-"ಕೀಲಿಯು TRUE ಗೆ ಹೊಂದಿಸಿದಲ್ಲಿ ಮಾತ್ರ ಈ ಕೀಲಿಯು ಪರಿಣಾಮಕಾರಿಯಾಗುತ್ತದೆ."
+"ನಿರ್ಗಮಿಸುವ ಗುಂಡಿಯನ್ನು ಒತ್ತಿದಾಗ ಕೋರಬೇಕಿರುವ ಆಜ್ಞೆ. ಈ ಆಜ್ಞೆಯು ಏನನ್ನೂ ಪ್ರಶ್ನಿಸದೆ, "
+"ಬಳಕೆದಾರರನ್ನು ಹೊರಗೆ ನಿರ್ಗಮಿಸುವಂತೆ ಮಾಡುಬೇಕು. \"logout_enable\" ಕೀಲಿಯು TRUE ಗೆ "
+"ಹೊಂದಿಸಿದಲ್ಲಿ ಮಾತ್ರ ಈ ಕೀಲಿಯು ಪರಿಣಾಮಕಾರಿಯಾಗುತ್ತದೆ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
@@ -290,8 +273,8 @@ msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to switch to a "
 "different user account."
 msgstr ""
-"ಬೇರೊಂದು ಬಳಕೆದಾರ ಖಾತೆಗೆ ಬದಲಾಯಿಸುವ ಒಂದು ಆಯ್ಕೆಯನ್ನು ಅನ್‌ಲಾಕ್‌ ಸಂವಾದದಲ್ಲಿ "
-"ಒದಗಿಸಲು ಇದನ್ನು TRUE ಹೊಂದಿಸಿ."
+"ಬೇರೊಂದು ಬಳಕೆದಾರ ಖಾತೆಗೆ ಬದಲಾಯಿಸುವ ಒಂದು ಆಯ್ಕೆಯನ್ನು ಅನ್‌ಲಾಕ್‌ ಸಂವಾದದಲ್ಲಿ ಒದಗಿಸಲು ಇದನ್ನು "
+"TRUE ಹೊಂದಿಸಿ."
 
 #: data/org.cafe.screensaver.gschema.xml.in:75
 msgid "Theme for lock dialog"
@@ -310,12 +293,19 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "ತೆರೆಯನ್ನು ಲಾಕ್‌ ಮಾಡಿದಾಗ ಅಧಿವೇಶನದ ಸ್ಥಿತಿ ಸಂದೇಶವನ್ನು ತೋರಿಸಲು ಅನುಮತಿಸು."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "ಅಂತರಿಕ್ಷದ ಚಿತ್ರಗಳ ಒಂದು ಚಿತ್ರಪ್ರದರ್ಶನವನ್ನು(ಸ್ಲೈಡ್‌ಶೋ) ತೋರಿಸುತ್ತದೆ"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
@@ -328,8 +318,7 @@ msgstr ""
 msgid "Bubbles the CAFE logo around the screen"
 msgstr ""
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
@@ -342,8 +331,7 @@ msgstr ""
 msgid "Bubbles the GNOME logo around the screen"
 msgstr ""
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
@@ -356,8 +344,7 @@ msgstr "ಚಿತ್ರಗಳ ಕೋಶ"
 msgid "Display a slide from your Pictures folder"
 msgstr "ನಿಮ್ಮ ಚಿತ್ರದ ಕೋಶದಿಂದ ಒಂದು ಚಿತ್ರಪ್ರದರ್ಶನವನ್ನು(ಸ್ಲೈಡ್‌ಶೋ) ತೋರಿಸು"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
@@ -370,8 +357,7 @@ msgstr "ಕಲಾ ಚೌಕಗಳನ್ನು ಪುಟಿಸು"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "ಮಿನುಗುವ ಬಣ್ಣಗಳ ಕಲಾತ್ಮಕ ಚೌಕಗಳನ್ನು ಹೊಂದಿರುವ ಪುಟಿಕೆ ಚೌಕುಳಿಗಳು."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
@@ -420,8 +406,7 @@ msgstr "image - ತೆರೆಯ ಸುತ್ತ ಚಿತ್ರಗಳನ್ನ�
 #: savers/floaters.c:1200
 msgid "You must specify one image.  See --help for usage information.\n"
 msgstr ""
-"ನೀವು ಒಂದು ಚಿತ್ರವನ್ನು ಸೂಚಿಸಲೇ ಬೇಕಾಗುತ್ತದೆ.  ಬಳಕೆಯ ಮಾಹಿತಿಗಾಗಿ --help ಅನ್ನು "
-"ನೋಡಿ.\n"
+"ನೀವು ಒಂದು ಚಿತ್ರವನ್ನು ಸೂಚಿಸಲೇ ಬೇಕಾಗುತ್ತದೆ.  ಬಳಕೆಯ ಮಾಹಿತಿಗಾಗಿ --help ಅನ್ನು ನೋಡಿ.\n"
 
 #: savers/slide.c:55
 msgid "Location to get images from"
@@ -447,32 +432,32 @@ msgstr "ಸ್ಥಳದಿಂದ ಚಿತ್ರಗಳನ್ನು ಮನಬಂ�
 msgid "Do not try to stretch images on screen"
 msgstr "ತೆರೆಯಲ್ಲಿನ ಚಿತ್ರಗಳನ್ನು ಎಳೆಯಲು ಪ್ರಯತ್ನಿಸಬೇಡ"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "ಕಡತಗಳನ್ನು ಕಾಪಿ ಮಾಡಲಾಗುತ್ತಿದೆ"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "ಯಿಂದ:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "ಗೆ:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "ಥೀಮ್‌ಗಳನ್ನು ಕಾಪಿ ಮಾಡಲಾಗುತ್ತದೆ"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "ಅಮಾನ್ಯವಾದ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಥೀಮ್"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s ವು ಒಂದು ಮಾನ್ಯವಾದ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಎಂದು ಕಾಣುತ್ತಿಲ್ಲ."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "ಕಡತವನ್ನು ಕಾಪಿ ಮಾಡಲಾಗುತ್ತಿದೆ: %u, (%u ಯಲ್ಲಿ)"
@@ -492,8 +477,7 @@ msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸಕ್ರಿಯವಾಗ�
 #: src/cafe-screensaver-command.c:72
 msgid "Tells the running screensaver process to lock the screen immediately"
 msgstr ""
-"ಚಾಲನೆಯಲ್ಲಿರುವ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಪ್ರಕ್ರಿಯೆಗೆ ತಕ್ಷಣವೆ ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ "
-"ತಿಳಿಸುತ್ತದೆ"
+"ಚಾಲನೆಯಲ್ಲಿರುವ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಪ್ರಕ್ರಿಯೆಗೆ ತಕ್ಷಣವೆ ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ ತಿಳಿಸುತ್ತದೆ"
 
 #: src/cafe-screensaver-command.c:76
 msgid "Tells the running screensaver process to unlock the screen immediately"
@@ -510,22 +494,20 @@ msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಆನ್ ಮ
 #: src/cafe-screensaver-command.c:88
 msgid "If the screensaver is active then deactivate it (un-blank the screen)"
 msgstr ""
-"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸಕ್ರಿಯವಾಗಿದ್ದರೆ ಅದನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು (ತೆರೆಯನ್ನು ಖಾಲಿಯಾಗಿ "
-"ಇರಿಸಬೇಡ)"
+"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸಕ್ರಿಯವಾಗಿದ್ದರೆ ಅದನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು (ತೆರೆಯನ್ನು ಖಾಲಿಯಾಗಿ ಇರಿಸಬೇಡ)"
 
 #: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
 msgstr ""
-"ಚಲಾಯಿತಗೊಳ್ಳುತ್ತಿರುವ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಬಳಕೆದಾರರ ಕಾರ್ಯದಲ್ಲಿ "
-"ಹೊಂದಿಕೊಂಡಿರುವಂತೆ ಮಾಡು"
+"ಚಲಾಯಿತಗೊಳ್ಳುತ್ತಿರುವ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಬಳಕೆದಾರರ ಕಾರ್ಯದಲ್ಲಿ ಹೊಂದಿಕೊಂಡಿರುವಂತೆ ಮಾಡು"
 
 #: src/cafe-screensaver-command.c:96
 msgid ""
 "Inhibit the screensaver from activating.  Command blocks while inhibit is "
 "active."
 msgstr ""
-"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳ್ಳದಂತೆ ತಡೆಹಿಡಿ.  ತಡೆಯೊಡ್ಡುವಿಕೆಯು "
-"ಸಕ್ರಿಯಗೊಂಡಿದ್ದಾಗ ಆಜ್ಞೆಯು ನಿರ್ಬಂಧಿಸುತ್ತದೆ."
+"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳ್ಳದಂತೆ ತಡೆಹಿಡಿ.  ತಡೆಯೊಡ್ಡುವಿಕೆಯು ಸಕ್ರಿಯಗೊಂಡಿದ್ದಾಗ ಆಜ್ಞೆಯು "
+"ನಿರ್ಬಂಧಿಸುತ್ತದೆ."
 
 #: src/cafe-screensaver-command.c:100
 msgid "The calling application that is inhibiting the screensaver"
@@ -610,18 +592,15 @@ msgstr "ಗುಪ್ತಪದ:"
 
 #: src/cafe-screensaver-dialog.c:170
 msgid "You are required to change your password immediately (password aged)"
-msgstr ""
-"ನೀವು ಈ ಕೂಡಲೆ ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸುವ ಅಗತ್ಯವಿದೆ (ಗುಪ್ತಪದ ಹಳತಾಗಿದೆ)"
+msgstr "ನೀವು ಈ ಕೂಡಲೆ ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸುವ ಅಗತ್ಯವಿದೆ (ಗುಪ್ತಪದ ಹಳತಾಗಿದೆ)"
 
 #: src/cafe-screensaver-dialog.c:171
 msgid "You are required to change your password immediately (root enforced)"
-msgstr ""
-"ನೀವು ಈ ಕೂಡಲೆ ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸುವ ಅಗತ್ಯವಿದೆ (ಮೂಲದಿಂದ ಒತ್ತಾಯಿತಗೊಂಡ)"
+msgstr "ನೀವು ಈ ಕೂಡಲೆ ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸುವ ಅಗತ್ಯವಿದೆ (ಮೂಲದಿಂದ ಒತ್ತಾಯಿತಗೊಂಡ)"
 
 #: src/cafe-screensaver-dialog.c:172
 msgid "Your account has expired; please contact your system administrator"
-msgstr ""
-"ನಿಮ್ಮ ಖಾತೆಯು ವಾಯಿದೆಯು ಮುಗಿದಿದೆ; ದಯವಿಟ್ಟು ನಿಮ್ಮ ಗಣಕ ವ್ಯವಸ್ಥಾಪಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"
+msgstr "ನಿಮ್ಮ ಖಾತೆಯು ವಾಯಿದೆಯು ಮುಗಿದಿದೆ; ದಯವಿಟ್ಟು ನಿಮ್ಮ ಗಣಕ ವ್ಯವಸ್ಥಾಪಕರನ್ನು ಸಂಪರ್ಕಿಸಿ"
 
 #: src/cafe-screensaver-dialog.c:173
 msgid "No password supplied"
@@ -735,14 +714,13 @@ msgstr "%s"
 msgid "Never"
 msgstr "ಎಂದೂ ಬೇಡ"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "ಮುಖ್ಯ ಸಂಪರ್ಕ ಸಾಧನವನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
-msgstr ""
-"ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸರಿಯಾಗಿ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿದೆ ಎಂದು ದಯವಿಟ್ಟು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ"
+msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಸರಿಯಾಗಿ ಅನುಸ್ಥಾಪಿತಗೊಂಡಿದೆ ಎಂದು ದಯವಿಟ್ಟು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ"
 
 #: src/cafe-screensaver.c:56
 msgid "Don't become a daemon"
@@ -756,8 +734,7 @@ msgstr "ದೋಷನಿವಾರಣಾ ಸಂಜ್ಞೆಯನ್ನು ಶಕ�
 msgid "Launch screensaver and locker program"
 msgstr ""
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr ""
@@ -784,20 +761,19 @@ msgstr "ಈ ಸಮಯದಲ್ಲಿ ನಿಲುಕನ್ನು ಪಡೆದು
 msgid "No longer permitted to access the system."
 msgstr "ಗಣಕವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ಇನ್ನು ಮುಂದೆ ಅನುಮತಿ ಇಲ್ಲ."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "ಸಂದೇಶ ಬಸ್‌ನೊಂದಿಗೆ ನೋಂದಾಯಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "ಸಂದೇಶ ಬಸ್‌ಗೆ ಸಂಪರ್ಕಿತಗೊಂಡಿಲ್ಲ"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಈಗಾಗಲೆ ಈ ಅಧಿವೇಶನದಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿದೆ"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr ""
@@ -810,18 +786,18 @@ msgstr "ಕಾಲಾವಧಿ ಮುಗಿದಿದೆ."
 msgid "You have the Caps Lock key on."
 msgstr "ನಿಮ್ಮ Caps Lock ಕೀಲಿಯು ಆನ್ ಆಗಿದೆ."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "ಬಳಕೆದಾರರನ್ನು ಬದಲಾಯಿಸು(_w)..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "ಹೊರ ನಡೆ(_O)"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U, %h ದಲ್ಲಿ"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "ಗುಪ್ತಪದ(_P):"

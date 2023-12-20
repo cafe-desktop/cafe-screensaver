@@ -2,27 +2,29 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Alexei Sorokin, 2020
 # Дмитрий Михирев, 2020
 # monsta <monsta@inbox.ru>, 2020
 # Anna Vyalkova <cybertailor@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/cafe/teams/13566/ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
 #: src/cafe-screensaver.desktop.in.in:4
@@ -33,15 +35,7 @@ msgstr "Хранитель экрана"
 msgid "Set your screensaver preferences"
 msgstr "Параметры хранителя экрана"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr "preferences-desktop-screensaver"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr "CAFE;скринсейвер;хранитель;настройки;"
@@ -50,39 +44,47 @@ msgstr "CAFE;скринсейвер;хранитель;настройки;"
 msgid "Screensaver Preview"
 msgstr "Просмотр хранителя экрана"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Просмотр хранителя экрана</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Параметры хранителя экрана"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "Управление _питанием"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Просмотр"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "_Тема хранителя экрана:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "Считать компьютер _простаивающим через:"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Запускать хранитель экрана, когда компьютер простаивает"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "_Блокировать экран, когда запущен хранитель экрана"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Внимание: экран не будет блокироваться для пользователя root.</b>"
 
@@ -95,17 +97,9 @@ msgstr "Хранители экрана"
 msgid "Screensaver themes"
 msgstr "Темы хранителя экрана"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr "screensaver"
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Космос"
 
@@ -129,7 +123,7 @@ msgstr "Завершить _сеанс"
 msgid "_Cancel"
 msgstr "О_тмена"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "_Разблокировать"
 
@@ -169,9 +163,9 @@ msgid ""
 "key), and \"random\" to enable the screensaver using a random theme on "
 "activation."
 msgstr ""
-"Режим выбора, используемый хранителем экрана. Возможные варианты: «disabled»"
-" — отключён, «blank-only» — чёрный экран, «single» — использовать одну тему,"
-" указанную ключом «темы», «random» — использовать случайно выбранную тему."
+"Режим выбора, используемый хранителем экрана. Возможные варианты: «disabled» "
+"— отключён, «blank-only» — чёрный экран, «single» — использовать одну тему, "
+"указанную ключом «темы», «random» — использовать случайно выбранную тему."
 
 #: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
@@ -212,8 +206,7 @@ msgstr "Интервал блокировки"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
 "Количество минут после активации хранителя экрана, по истечении которых "
 "экран будет заблокирован."
@@ -229,8 +222,8 @@ msgid ""
 "command."
 msgstr ""
 "Установите значение TRUE, чтобы разрешить встраивание клавиатуры в окно при "
-"попытке разблокирования. Соответствующая команда должна быть указана в ключе"
-" «keyboard_command»."
+"попытке разблокирования. Соответствующая команда должна быть указана в ключе "
+"«keyboard_command»."
 
 #: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
@@ -239,8 +232,8 @@ msgstr "Команда встроенной клавиатуры"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
 "Команда, которая должна выполняться, если установлено значение TRUE для "
@@ -257,8 +250,8 @@ msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
 msgstr ""
-"Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась"
-" возможность выхода из системы после некоторой задержки. Время задержки "
+"Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась "
+"возможность выхода из системы после некоторой задержки. Время задержки "
 "указывается в ключе «logout_delay»."
 
 #: data/org.cafe.screensaver.gschema.xml.in:60
@@ -272,8 +265,8 @@ msgid ""
 "\"logout_enable\" key is set to TRUE."
 msgstr ""
 "Интервал в минутах между активацией хранителя экрана и появлением параметра "
-"выхода из сеанса в диалоге разблокирования. Действие этого ключа проявляется"
-" только в том случае, если установлено значение TRUE для ключа "
+"выхода из сеанса в диалоге разблокирования. Действие этого ключа проявляется "
+"только в том случае, если установлено значение TRUE для ключа "
 "«logout_enable»."
 
 #: data/org.cafe.screensaver.gschema.xml.in:65
@@ -282,9 +275,9 @@ msgstr "Команда выхода из сеанса"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
 "Команда, вызываемая при нажатии кнопки выхода из сеанса. Эта команда должна "
 "просто завершать сеанс пользователя без всякого интерактивного "
@@ -320,12 +313,19 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Разрешить показ состояния сеанса, когда экран заблокирован."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Показывает слайд-шоу космических рисунков"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr "CAFE;скринсейвер;хранитель;слайд-шоу;космос;"
@@ -338,8 +338,7 @@ msgstr "Плавающий CAFE"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Всплывающие по всему экрану логотипы CAFE"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "CAFE;скринсейвер;хранитель;логотип;плавающий;"
@@ -352,8 +351,7 @@ msgstr "Плавающий GNOME"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Всплывающие по всему экрану логотипы GNOME"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;скринсейвер;хранитель;GNOME;логотип;плавающий;"
@@ -366,13 +364,12 @@ msgstr "Папка рисунков"
 msgid "Display a slide from your Pictures folder"
 msgstr "Показывает слайд-шоу изображений из папки Рисунки"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
-"CAFE;скринсейвер;хранитель;пользовательский;настраиваемый;свой;слайд-"
-"шоу;картинки;изображения;папка;"
+"CAFE;скринсейвер;хранитель;пользовательский;настраиваемый;свой;слайд-шоу;"
+"картинки;изображения;папка;"
 
 #: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
@@ -382,8 +379,7 @@ msgstr "Пульсирующие ячейки"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Сеть из пульсирующих цветных ячеек"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr "CAFE;скринсейвер;хранитель;сетка;пульсирующий;цвета;"
@@ -432,8 +428,8 @@ msgstr "image - плавающие по всему экрану изображе
 #: savers/floaters.c:1200
 msgid "You must specify one image.  See --help for usage information.\n"
 msgstr ""
-"Необходимо указать один рисунок. Используйте --help для получения информации"
-" о параметрах.\n"
+"Необходимо указать один рисунок. Используйте --help для получения информации "
+"о параметрах.\n"
 
 #: savers/slide.c:55
 msgid "Location to get images from"
@@ -459,32 +455,32 @@ msgstr "Не перемешивать изображения из каталог
 msgid "Do not try to stretch images on screen"
 msgstr "Не пытаться растянуть изображения на экране"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Копирование файлов"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "Из:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "В:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Копирование тем"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Неверная тема хранителя экрана"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "Файл %s не похож на файл темы хранителя экрана."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Копируется файл: %u из %u"
@@ -526,8 +522,7 @@ msgstr "Включить хранитель экрана (чёрный экра�
 
 #: src/cafe-screensaver-command.c:88
 msgid "If the screensaver is active then deactivate it (un-blank the screen)"
-msgstr ""
-"Если хранитель экрана активен, деактивировать его (восстановить экран)"
+msgstr "Если хранитель экрана активен, деактивировать его (восстановить экран)"
 
 #: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
@@ -755,11 +750,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Никогда"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Не удалось загрузить основной интерфейс"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Убедитесь, что хранитель экрана установлен должным образом"
 
@@ -775,8 +770,7 @@ msgstr "Включить режим отладки"
 msgid "Launch screensaver and locker program"
 msgstr "Запустить хранитель экрана и программу блокировки"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr "CAFE;скринсейвер;хранитель;блокировка;"
@@ -803,20 +797,19 @@ msgstr "Нет доступа к системе в это время."
 msgid "No longer permitted to access the system."
 msgstr "Больше нет доступа к этой системе."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "ошибка регистрации на шине сообщений"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "не подключен к шине сообщений"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "хранитель экрана уже запущен в этом сеансе"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%A, %B %e"
@@ -829,18 +822,24 @@ msgstr "Время истекло."
 msgid "You have the Caps Lock key on."
 msgstr "Включен режим Caps Lock."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "Пе_реключить пользователя..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "Завершить _сеанс"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U на %h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Пароль:"
+
+#~ msgid "preferences-desktop-screensaver"
+#~ msgstr "preferences-desktop-screensaver"
+
+#~ msgid "screensaver"
+#~ msgstr "screensaver"

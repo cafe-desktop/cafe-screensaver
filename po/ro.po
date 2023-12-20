@@ -2,25 +2,26 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Daniel <danny3@tutanota.com>, 2020
 # sorinn <nemes.sorin@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: sorinn <nemes.sorin@gmail.com>, 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/cafe/teams/13566/ro/)\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ro\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
 #: src/cafe-screensaver.desktop.in.in:4
@@ -31,15 +32,7 @@ msgstr "Protector ecran"
 msgid "Set your screensaver preferences"
 msgstr "Alegeți preferințele pentru protector ecran"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
@@ -48,39 +41,47 @@ msgstr ""
 msgid "Screensaver Preview"
 msgstr "Previzualizare protector ecran"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Previzualizare protector ecran</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Preferințe pentru economizorul de ecran"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "Gestionare ali_mentare"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Previzualizare"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "Temă _protector ecran:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "Calculatorul este considerat _inactiv după:"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Activează protector ecran când calculatorul este inactiv"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "B_lochează ecranul când protectorul ecran este activ"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Avertisment: ecranul nu va fi blocat pentru utilizatorul root.</b>"
 
@@ -93,17 +94,9 @@ msgstr "Protectoare ecran"
 msgid "Screensaver themes"
 msgstr "Teme protectoare ecran"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr ""
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Space"
 
@@ -127,7 +120,7 @@ msgstr "_Deconectează"
 msgid "_Cancel"
 msgstr "_Renunță"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "_Deblocare"
 
@@ -181,8 +174,8 @@ msgid ""
 msgstr ""
 "Această cheie specifică lista de teme de folosit pentru economizoare. E "
 "ignorată când cheia „mode” este „blank-only”, ar trebui să conțină numele "
-"temei când „mode” este „single” și ar trebui să conțină o listă de teme când"
-" „mode” este „random”."
+"temei când „mode” este „single” și ar trebui să conțină o listă de teme când "
+"„mode” este „random”."
 
 #: data/org.cafe.screensaver.gschema.xml.in:30
 msgid "Time before power management baseline"
@@ -208,8 +201,7 @@ msgstr "Timp scurs înainte de blocare"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
 "Numărul de minute de la activarea protectorului după care se blochează "
 "ecranul."
@@ -224,8 +216,8 @@ msgid ""
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
 "command."
 msgstr ""
-"Alegeți TRUE pentru a permite înglobarea unei tastaturi în fereastră când se"
-" încearcă deblocarea. Cheia „keyboard_command” trebuie să fie setată cu o "
+"Alegeți TRUE pentru a permite înglobarea unei tastaturi în fereastră când se "
+"încearcă deblocarea. Cheia „keyboard_command” trebuie să fie setată cu o "
 "comandă potrivită."
 
 #: data/org.cafe.screensaver.gschema.xml.in:50
@@ -235,12 +227,12 @@ msgstr "Comandă tastatură integrată"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
-"Comanda care va fi executată pentru a îngloba o tastatură în fereastră, dacă"
-" cheia „embedded_keyboard_enabled” este TRUE. Comanda aceasta ar trebui să "
+"Comanda care va fi executată pentru a îngloba o tastatură în fereastră, dacă "
+"cheia „embedded_keyboard_enabled” este TRUE. Comanda aceasta ar trebui să "
 "implementeze o interfață de conectare XEMBED și să întoarcă o fereastră XID "
 "pe ieșirea standard."
 
@@ -271,9 +263,9 @@ msgstr "Comandă de deconectare"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
 "Comanda de invocat când butonul „Ieșire din sesiune” este apăsat. Această "
 "comandă ar trebui să închidă sesiunea curentă în mod neinteractiv. Cheia "
@@ -309,12 +301,19 @@ msgid ""
 msgstr ""
 "Permite afișarea mesajului de stare a sesiunii când ecranul este blocat."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Arată o diaporamă cu imagini din Space"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
@@ -327,8 +326,7 @@ msgstr " CAFE plutitor"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Plimbă sigla CAFE pe ecran"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
@@ -341,8 +339,7 @@ msgstr "GNOME plutitor"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Plimbă sigla GNOME pe ecran"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
@@ -355,8 +352,7 @@ msgstr "Dosar cu poze"
 msgid "Display a slide from your Pictures folder"
 msgstr "Arată o diaporamă cu imagini din dosarul cu poze"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
@@ -369,8 +365,7 @@ msgstr "Pătrate pop-art"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "O grilă de culori care pulsează într-un stil pop-art."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
@@ -445,32 +440,32 @@ msgstr "Nu amesteca aleator imaginile"
 msgid "Do not try to stretch images on screen"
 msgstr "Nu încerca să întinzi imaginile pe ecran"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Se copiază fișierele"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "De la:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "Către:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Se copiază temele"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Tema protector ecran nu este validă"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s nu pare a fi o temă validă de protector ecran."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Se copiază fișierul: %u din %u"
@@ -730,11 +725,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Niciodată"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Nu se poate încărca interfața principală"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Asigurați-vă că protectorul ecran este instalat corespunzător"
 
@@ -750,8 +745,7 @@ msgstr "Activează codul de depanare"
 msgid "Launch screensaver and locker program"
 msgstr "Lansați programul de protecție și blocare a ecranului"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr ""
@@ -778,20 +772,19 @@ msgstr "Deocamdată nu vă este permis accesul."
 msgid "No longer permitted to access the system."
 msgstr "Nu vă mai este permis accesul la sistem."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "eșec la înregistrarea cu magistrala de mesaje"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "deconectat de la magistrala de mesaje"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "protectorul ecran rulează deja în această sesiune"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%A, %e %B"
@@ -804,18 +797,18 @@ msgstr "Timpul a expirat."
 msgid "You have the Caps Lock key on."
 msgstr "Caps Lock activat."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "S_chimbă utilizatorul..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "_Ieșire din sesiune"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U pe %h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Parolă:"

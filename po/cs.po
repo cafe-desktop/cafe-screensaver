@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Ondřej Kolín <ondrej.kolin@gmail.com>, 2020
@@ -12,20 +12,21 @@
 # Lucas Lommer <drom@kdyne.net>, 2020
 # LiberteCzech <liberte.czech@gmail.com>, 2020
 # ToMáš Marný, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: ToMáš Marný, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/cafe/teams/13566/cs/)\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
 #: src/cafe-screensaver.desktop.in.in:4
@@ -36,15 +37,7 @@ msgstr "Šetřič obrazovky"
 msgid "Set your screensaver preferences"
 msgstr "Nastaví šetřič obrazovky"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr "preferences-desktop-screensaver"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr "CAFE;spořič obrazovky;šetřič;předvolby;"
@@ -53,39 +46,47 @@ msgstr "CAFE;spořič obrazovky;šetřič;předvolby;"
 msgid "Screensaver Preview"
 msgstr "Náhled šetřiče obrazovky"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Náhled šetřiče obrazovky</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Předvolby šetřiče obrazovky"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "Správa napá_jení"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Náhled"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "_Motiv šetřiče obrazovky:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "Doba, po které považovat počítač za neč_inný:"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "Spouštět šetřič obr_azovky při nečinnosti"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "Uzamykat o_brazovku po spuštění šetřiče"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Varování: obrazovka nebude uzamčena pro superuživatele.</b>"
 
@@ -98,17 +99,9 @@ msgstr "Šetřiče obrazovky"
 msgid "Screensaver themes"
 msgstr "Motivy šetřiče obrazovky"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr "screensaver"
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Kosmos"
 
@@ -132,7 +125,7 @@ msgstr "_Odhlásit se"
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "_Odemknout"
 
@@ -172,10 +165,10 @@ msgid ""
 "key), and \"random\" to enable the screensaver using a random theme on "
 "activation."
 msgstr ""
-"Režim výběru používaný šetřičem obrazovky. Šetřič obrazovky v režimu "
-"\"blank-only\" nespustí žádný motiv, při použití režimu \"single\" spustí "
-"pouze jeden motiv (zadaný v klíči \"themes\"), při použití režimu \"random\""
-" bude spouštět motivy v náhodném pořadí."
+"Režim výběru používaný šetřičem obrazovky. Šetřič obrazovky v režimu \"blank-"
+"only\" nespustí žádný motiv, při použití režimu \"single\" spustí pouze "
+"jeden motiv (zadaný v klíči \"themes\"), při použití režimu \"random\" bude "
+"spouštět motivy v náhodném pořadí."
 
 #: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
@@ -215,8 +208,7 @@ msgstr "Čas do uzamčení"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr "Počet minut od spuštění šetřiče obrazovky po uzamčení obrazovky."
 
 #: data/org.cafe.screensaver.gschema.xml.in:45
@@ -240,14 +232,14 @@ msgstr "Příkaz vložené klávesnice"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
 "Příkaz k vložení prvku rozhraní klávesnice, který bude spuštěn, je-li klíč "
 "\"embedded_keyboard_enabled\" nastaven na hodnotu \"TRUE\". Tento příkaz by "
-"měl implementovat zásuvné rozhraní XEMBED a na standardní výstup posílat XID"
-" okna."
+"měl implementovat zásuvné rozhraní XEMBED a na standardní výstup posílat XID "
+"okna."
 
 #: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
@@ -282,13 +274,13 @@ msgstr "Příkaz odhlášení"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
-"Příkaz, který má být spuštěn po kliknutí na tlačítko odhlášení. Tento příkaz"
-" by měl jednoduše odhlásit uživatele bez dalšího dotazování se. Účinné jen v"
-" případě, pokud je klíč \"logout_enable\" nastaven na hodnotu \"TRUE\"."
+"Příkaz, který má být spuštěn po kliknutí na tlačítko odhlášení. Tento příkaz "
+"by měl jednoduše odhlásit uživatele bez dalšího dotazování se. Účinné jen v "
+"případě, pokud je klíč \"logout_enable\" nastaven na hodnotu \"TRUE\"."
 
 #: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
@@ -319,12 +311,19 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "Povolit zobrazení zprávy o stavu sezení, je-li uzamčena obrazovka."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Zobrazovat obrázky z kosmu jako prezentaci"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr "CAFE;spořič obrazovky;šetřič;slide;prezentace;promítání;kosmos;"
@@ -337,8 +336,7 @@ msgstr "Plovoucí logo CAFE"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Bublinky loga CAFE po obrazovce"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "CAFE;spořič obrazovky;šetřič;logo;bubliny;"
@@ -351,8 +349,7 @@ msgstr "Plovoucí logo GNOME"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Bublinky loga GNOME po obrazovce"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;spořič obrazovky;šetřič;GNOME;logo;bubliny;"
@@ -365,13 +362,12 @@ msgstr "Složka obrázků"
 msgid "Display a slide from your Pictures folder"
 msgstr "Zobrazovat obrázky z vaší složky obrázků"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
-"CAFE;spořič "
-"obrazovky;šetřič;vlastní;slide;prezentace;promítání;obrázky;obrázků;adresář;složka;"
+"CAFE;spořič obrazovky;šetřič;vlastní;slide;prezentace;promítání;obrázky;"
+"obrázků;adresář;složka;"
 
 #: savers/squares.desktop.in.in:3
 msgid "Pop art squares"
@@ -381,8 +377,7 @@ msgstr "Pop-artové čtverce"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Pop-artová mřížka pulzujících barev."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr "CAFE;spořič obrazovky;šetřič;mřížka;pulzující;barvy;"
@@ -430,7 +425,8 @@ msgstr "image - přesouvá obrázky přes obrazovku"
 
 #: savers/floaters.c:1200
 msgid "You must specify one image.  See --help for usage information.\n"
-msgstr "Je nutné zadat alespoň jeden obrázek. Informace o použití viz --help.\n"
+msgstr ""
+"Je nutné zadat alespoň jeden obrázek. Informace o použití viz --help.\n"
 
 #: savers/slide.c:55
 msgid "Location to get images from"
@@ -456,32 +452,32 @@ msgstr "Nevolit obrázky z umístění náhodně"
 msgid "Do not try to stretch images on screen"
 msgstr "Nepokoušet se na obrazovce roztahovat obrázky"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Kopírování souborů"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "Z:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "Do:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Kopírování motivů"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Neplatný motiv šetřiče obrazovky"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s zřejmě není platným motivem šetřiče obrazovky."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Kopírování souboru: %u z %u"
@@ -501,14 +497,12 @@ msgstr "Dotáže se na dobu, po kterou byl šetřič obrazovky aktivní"
 #: src/cafe-screensaver-command.c:72
 msgid "Tells the running screensaver process to lock the screen immediately"
 msgstr ""
-"Oznámí běžícímu procesu šetřiče obrazovky, že má okamžitě uzamknout "
-"obrazovku"
+"Oznámí běžícímu procesu šetřiče obrazovky, že má okamžitě uzamknout obrazovku"
 
 #: src/cafe-screensaver-command.c:76
 msgid "Tells the running screensaver process to unlock the screen immediately"
 msgstr ""
-"Oznámí běžícímu procesu šetřiče obrazovky, že má okamžitě odemknout "
-"obrazovku"
+"Oznámí běžícímu procesu šetřiče obrazovky, že má okamžitě odemknout obrazovku"
 
 #: src/cafe-screensaver-command.c:80
 msgid "If the screensaver is active then switch to another graphics demo"
@@ -746,11 +740,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Nikdy"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Nelze načíst hlavní rozhraní"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Přesvědčte se prosím, že šetřič obrazovky je správně nainstalován"
 
@@ -766,8 +760,7 @@ msgstr "Povolí ladící kód"
 msgid "Launch screensaver and locker program"
 msgstr "Spustí šetřič obrazovky a program uzamknutí"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr "CAFE;spořič obrazovky;šetřič;zámek;uzamknout;uzamknutí;"
@@ -794,20 +787,19 @@ msgstr "V tento okamžik není povoleno získat přístup."
 msgid "No longer permitted to access the system."
 msgstr "K tomuto systému již nadále není dovoleno přistupovat."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "nelze se zaregistrovat u sběrnice zpráv"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "nepřipojen ke sběrnici zpráv"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "šetřič obrazovky již v tomto sezení běží"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%A, %B %e"
@@ -820,18 +812,24 @@ msgstr "Čas vypršel."
 msgid "You have the Caps Lock key on."
 msgstr "Je zapnut \"Caps Lock\"."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "_Přepnout uživatele..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "_Odhlásit"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U na %h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Heslo:"
+
+#~ msgid "preferences-desktop-screensaver"
+#~ msgstr "preferences-desktop-screensaver"
+
+#~ msgid "screensaver"
+#~ msgstr "screensaver"

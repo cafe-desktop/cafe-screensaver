@@ -2,26 +2,27 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # 83471bf16eb03bd248ce865f88678158_08f49ba <b37580a9d5c210d723d81df1f8c6f8f2_815>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Allan Nordhøy <epost@anotheragency.no>, 2020
 # Kenneth Jenssen <kennethjenssen@yahoo.com>, 2020
 # Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/cafe/teams/13566/nb/)\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/cafe/teams/13566/"
+"nb/)\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
@@ -33,15 +34,7 @@ msgstr "Skjermsparer"
 msgid "Set your screensaver preferences"
 msgstr "Sett brukervalg for skjermspareren"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr "preferences-desktop-screensaver"
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr "CAFE;skjermsparer;innstillinger;"
@@ -50,39 +43,47 @@ msgstr "CAFE;skjermsparer;innstillinger;"
 msgid "Screensaver Preview"
 msgstr "Forhåndsvisning av skjermsparer"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Forhåndsvisning av skjermsparer</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Brukervalg for skjermsparer"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "Strø_mstyring"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Forhåndsvisning"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "Draktvalg for _skjermsparer:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "Se på datamaskinen som _inaktiv etter:"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Aktiver skjermsparer når datamaskinen er inaktiv"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "_Lås skjermen når aktiv"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Advarsel: skjermen vil ikke bli låst for root.</b>"
 
@@ -95,17 +96,9 @@ msgstr "Skjermsparere"
 msgid "Screensaver themes"
 msgstr "Drakt for skjermsparer"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr "screensaver"
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Kosmos"
 
@@ -129,7 +122,7 @@ msgstr "_Logg ut"
 msgid "_Cancel"
 msgstr "_Avbryt"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "Lå_s opp"
 
@@ -191,8 +184,8 @@ msgid ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
 msgstr ""
-"Antall sekunder med inaktivitet før strømstyring får beskjed. Denne nøkkelen"
-" er satt og vedlikeholdt av øktas strømstyringsagent."
+"Antall sekunder med inaktivitet før strømstyring får beskjed. Denne nøkkelen "
+"er satt og vedlikeholdt av øktas strømstyringsagent."
 
 #: data/org.cafe.screensaver.gschema.xml.in:35
 msgid "Time before theme change"
@@ -208,8 +201,7 @@ msgstr "Tid før låsning"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
 "Antallet minutter etter at skjermspareren aktiveres før skjermen låses."
 
@@ -224,8 +216,8 @@ msgid ""
 "command."
 msgstr ""
 "Sett denne til TRUE for å gjøre det mulig å innlemme et tastatur i vinduet "
-"ved man skal låse opp skjermen. Nøkkelen «keyboard_command» må være satt med"
-" riktig kommando."
+"ved man skal låse opp skjermen. Nøkkelen «keyboard_command» må være satt med "
+"riktig kommando."
 
 #: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
@@ -234,8 +226,8 @@ msgstr "Innebygd tastaturkommando"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
 "Kommando som skal kjøres hvis nøkkelen «embedded_keyboard_enabled» er satt "
@@ -274,13 +266,13 @@ msgstr "Utloggingskommando"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
-"Kommandoen som skal kjøres når logg-ut-knappen trykkes. Denne kommandoen bør"
-" logge brukeren ut uten noen interaksjon. Denne nøkkelen har kun effekt hvis"
-" \"logout_enable\"-nøkkelen er satt til SANN."
+"Kommandoen som skal kjøres når logg-ut-knappen trykkes. Denne kommandoen bør "
+"logge brukeren ut uten noen interaksjon. Denne nøkkelen har kun effekt hvis "
+"\"logout_enable\"-nøkkelen er satt til SANN."
 
 #: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
@@ -311,12 +303,19 @@ msgid ""
 "Allow the session status message to be displayed when the screen is locked."
 msgstr "La statusmeldinger for økta vises når skjermen er låst."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Lysbildevisning med bilder fra verdensrommet"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr "CAFE;skjermsparer;lysbilder;kosmos;"
@@ -329,8 +328,7 @@ msgstr "Flytende CAFE"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Bobler av CAFE-logoen rundt omkring på skjermen"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "CAFE;skjermsparer;logo;bobler;"
@@ -343,8 +341,7 @@ msgstr "Flytende GNOME"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Bobler av GNOME-logoen rundt omkring på skjermen"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;skjermsparer;GNOME;logo;bobler;"
@@ -357,8 +354,7 @@ msgstr "Bildemappe"
 msgid "Display a slide from your Pictures folder"
 msgstr "Vis en lysbildefremvisning fra din bildemappe"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr "CAFE;skjermsparer;tilpasset;lysbilder;bilder;mappe;"
@@ -371,8 +367,7 @@ msgstr "Popkunstfirkanter"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Et popkunst-aktig rutenett med pulserende farger."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr "CAFE;skjermsparer;rutenett;pulserende;farger;"
@@ -446,32 +441,32 @@ msgstr "Ikke hent bilder i tilfeldig rekkefølge fra plassering"
 msgid "Do not try to stretch images on screen"
 msgstr "Ikke strekk bildene på skjermen"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Kopierer filer"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "Fra:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "Til:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Kopierer drakter"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Ugyldig draktvalg for skjermsparer"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s ser ikke ut til å være en gyldig drakt for skjermspareren."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Kopierer fil: %u av %u"
@@ -725,11 +720,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Aldri"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Kunne ikke laste hovedbrukergrensesnittet"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Se til at skjermspareren er skikkelig installert"
 
@@ -745,8 +740,7 @@ msgstr "Aktiver avlusingskode"
 msgid "Launch screensaver and locker program"
 msgstr "Start skjermsparer og låseprogram"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr "CAFE;skjermsparer;skjermlås;"
@@ -773,20 +767,19 @@ msgstr "Ingen tillatelse til å få tilgang nå."
 msgid "No longer permitted to access the system."
 msgstr "Tilgangen til systemet er fjernet."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "klarte ikke å registrere hos meldingsbussen"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "ikke koblet til meldingsbussen"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "skjermsparer kjører allerede i denne økta"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%A, %e. %B"
@@ -799,18 +792,24 @@ msgstr "Tiden har løpt ut."
 msgid "You have the Caps Lock key on."
 msgstr "Caps-Lock tasten er aktivert."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "_Bytt bruker …"
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "Logg _ut"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U på %h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Passord:"
+
+#~ msgid "preferences-desktop-screensaver"
+#~ msgstr "preferences-desktop-screensaver"
+
+#~ msgid "screensaver"
+#~ msgstr "screensaver"

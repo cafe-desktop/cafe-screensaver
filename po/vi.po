@@ -2,24 +2,24 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Duy Truong Nguyen <truongap.ars@gmail.com>, 2020
 # Horazone Detex <thmmt2017d@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Horazone Detex <thmmt2017d@gmail.com>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/cafe/teams/13566/vi/)\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: vi\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
@@ -31,15 +31,7 @@ msgstr "Bộ bảo vệ màn hình"
 msgid "Set your screensaver preferences"
 msgstr "Lập các tùy thích cho trình bảo vệ màn hình"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
@@ -48,42 +40,49 @@ msgstr ""
 msgid "Screensaver Preview"
 msgstr "Xem thử ảnh bảo vệ màn hình"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Xem thử ảnh bảo vệ màn hình</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Tùy thích Bộ bảo vệ màn hình"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "_Quản lý điện năng"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Xem thử"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "_Sắc thái của ảnh bảo vệ màn hình:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "Co_i như máy tính nghỉ sau :"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Hoạt hoá bộ bảo vệ màn hình khi máy tính mới nghỉ"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "_Khoá màn hình khi bộ bảo vệ màn hình hoạt động"
 
-#: data/cafe-screensaver-preferences.ui:465
-msgid "<b>Warning: the screen will not be locked for the root user.</b>"
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
 msgstr ""
-"<b>Cảnh báo : màn hình sẽ không bị khoá cho người dùng chủ (root).</b>"
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
+msgid "<b>Warning: the screen will not be locked for the root user.</b>"
+msgstr "<b>Cảnh báo : màn hình sẽ không bị khoá cho người dùng chủ (root).</b>"
 
 #: data/cafe-screensaver.directory.desktop.in:4
 msgid "Screensavers"
@@ -94,17 +93,9 @@ msgstr "Ảnh bảo vệ màn hình"
 msgid "Screensaver themes"
 msgstr "Sắc thái của ảnh bảo vệ màn hình"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr ""
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Vũ trụ"
 
@@ -128,7 +119,7 @@ msgstr "Đăng _xuất"
 msgid "_Cancel"
 msgstr "Th_ôi"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "_Bỏ khoá"
 
@@ -179,8 +170,8 @@ msgid ""
 "when \"mode\" is \"single\", and should provide a list of themes when "
 "\"mode\" is \"random\"."
 msgstr ""
-"Khoá này ghi rõ danh sách các sắc thái cho bộ bảo vệ màn hình dùng. Nó bị bỏ"
-" qua khi khoá chế độ \"mode\" là \"blank-only\", cung cấp tên sắc thái khi "
+"Khoá này ghi rõ danh sách các sắc thái cho bộ bảo vệ màn hình dùng. Nó bị bỏ "
+"qua khi khoá chế độ \"mode\" là \"blank-only\", cung cấp tên sắc thái khi "
 "\"mode\" là \"single\", cung cấp danh sách các sắc thái khi \"mode\" là "
 "\"random\"."
 
@@ -211,8 +202,7 @@ msgstr "Thời gian trước khi khoá"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
 "Số phút sau khi bộ bảo vệ màn hình mới hoạt động, trước khi khoá màn hình."
 
@@ -226,8 +216,8 @@ msgid ""
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
 "command."
 msgstr ""
-"Đặt là TRUE để cho phép nhúng bàn phím trong cửa sổ khi thử mở khoá. Khoá \""
-" keyboard_command\" phải được đặt bằng lệnh thích hợp."
+"Đặt là TRUE để cho phép nhúng bàn phím trong cửa sổ khi thử mở khoá. Khoá \" "
+"keyboard_command\" phải được đặt bằng lệnh thích hợp."
 
 #: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
@@ -236,13 +226,13 @@ msgstr "Lệnh bàn phím nhúng"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
 "Lệnh sẽ được chạy, nếu khoá \"embedded_keyboard_enabled\" được đặt là TRUE, "
-"để nhúng ô điều khiển bàn phím trong cửa sổ. Lệnh này nên thực hiện một giao"
-" diện nút XEMBED và xuất một XID cửa sổ ra thiết bị xuất chuẩn."
+"để nhúng ô điều khiển bàn phím trong cửa sổ. Lệnh này nên thực hiện một giao "
+"diện nút XEMBED và xuất một XID cửa sổ ra thiết bị xuất chuẩn."
 
 #: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
@@ -277,9 +267,9 @@ msgstr "Lệnh đăng xuất"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
 "Lệnh cần chạy khi cái nút đăng xuất được bấm. Lệnh này nên đơn giản đăng "
 "xuất người dùng, không tương tác gì. Khoá này có tác động chỉ nếu khoá "
@@ -315,12 +305,19 @@ msgid ""
 msgstr ""
 "Cho phép hiển thị thông điệp về trạng thái phiên chạy khi màn hình bị khoá."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Hiển thị trình diễn các ảnh của vũ trụ"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
@@ -333,8 +330,7 @@ msgstr "Biểu tượng CAFE lơ lửng"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Thổi bong bóng biểu tượng CAFE xung quanh màn hình"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
@@ -347,8 +343,7 @@ msgstr "Biểu tượng GNOME lơ lửng"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Thổi bong bóng biểu tượng GNOME xung quanh màn hình"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
@@ -361,8 +356,7 @@ msgstr "Thư mục Ảnh"
 msgid "Display a slide from your Pictures folder"
 msgstr "Hiển thị trình diễn các ảnh từ thư mục Ảnh (Pictures) của bạn"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
@@ -375,8 +369,7 @@ msgstr "Vuông nghệ thuật phổ biến"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Vẽ lưới các màu đập kiểu dáng nghệ thuật phổ biến."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
@@ -453,32 +446,32 @@ msgstr "Đừng ngẫu nhiên hoá các ảnh từ địa điểm"
 msgid "Do not try to stretch images on screen"
 msgstr "Đừng thử kéo giãn ảnh trên màn hình"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Đang sao chép tập tin"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "Từ:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "Đến:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Đang sao chép các sắc thái"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Sắc thái bảo vệ màn hình không hợp lệ"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "Có vẻ là %s không phải là một sắc thái bảo vệ màn hình hợp lệ."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Đang sao chép tập tin: %u trên %u"
@@ -733,11 +726,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Không bao giờ"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Không thể tải giao diện chính"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Hãy chắc là bộ bảo vệ màn hình được cài đặt đúng"
 
@@ -753,8 +746,7 @@ msgstr "Bật chạy mã gỡ lỗi"
 msgid "Launch screensaver and locker program"
 msgstr "Chạy bộ bảo vệ màn hình và các chương trình khóa"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr ""
@@ -781,20 +773,19 @@ msgstr "Không cho phép truy cập vào lúc này."
 msgid "No longer permitted to access the system."
 msgstr "Không còn có quyền truy cập lại hệ thống."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "việc đăng ký với mạch nối thông điệp bị lỗi"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "chưa kết nối đến mạch nối thông điệp"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "bộ bảo vệ màn hình đang chạy trong phiên làm việc này"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%A, %B %e"
@@ -807,18 +798,18 @@ msgstr "Quá giờ."
 msgid "You have the Caps Lock key on."
 msgstr "Bạn đã bật phím Khoá Chữ Hoa (CapsLock)."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "_Chuyển đổi người dùng..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "Đăng _xuất"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U trên %h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Mật khẩu:"

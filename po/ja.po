@@ -2,26 +2,26 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # ABE Tsunehiko, 2020
 # Mika Kobayashi, 2020
 # Wolfgang Ulbrich <mate@raveit.de>, 2020
 # Ikuru K <kanumaiku@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Ikuru K <kanumaiku@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/cafe/teams/13566/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
@@ -33,15 +33,7 @@ msgstr "スクリーンセーバーのテーマ"
 msgid "Set your screensaver preferences"
 msgstr "お使いのスクリーンセーバーを設定します"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
@@ -50,41 +42,50 @@ msgstr ""
 msgid "Screensaver Preview"
 msgstr "スクリーンセーバーのプレビュー"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>スクリーンセーバーのプレビュー</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "スクリーンセーバーを設定する"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "電源管理(_M)"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "プレビュー(_P)"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "スクリーンセーバーのテーマ(_S):"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "アイドル状態になるまでの時間(_I):"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "アイドル状態になったらスクリーンセーバーを起動する(_A)"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "スクリーンセーバーを起動したら画面をロックする(_L):"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
-msgstr "<b>注意: root ユーザの場合、スクリーンはロックされないので注意して下さい</b>"
+msgstr ""
+"<b>注意: root ユーザの場合、スクリーンはロックされないので注意して下さい</b>"
 
 #: data/cafe-screensaver.directory.desktop.in:4
 msgid "Screensavers"
@@ -95,17 +96,9 @@ msgstr "いろいろなスクリーンセーバーを格納するフォルダ"
 msgid "Screensaver themes"
 msgstr "スクリーンセーバーのテーマ"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr ""
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "宇宙"
 
@@ -129,7 +122,7 @@ msgstr "ログアウト(_L)"
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "ロックの解除(_U)"
 
@@ -143,7 +136,9 @@ msgstr "アイドル時に起動する"
 
 #: data/org.cafe.screensaver.gschema.xml.in:11
 msgid "Set this to TRUE to activate the screensaver when the session is idle."
-msgstr "TRUE にすると、セッションがアイドル状態になったらスクリーンセーバーを起動します。"
+msgstr ""
+"TRUE にすると、セッションがアイドル状態になったらスクリーンセーバーを起動しま"
+"す。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:15
 msgid "Lock on activation"
@@ -165,9 +160,11 @@ msgid ""
 "key), and \"random\" to enable the screensaver using a random theme on "
 "activation."
 msgstr ""
-"スクリーンセーバーが使用する選択モードを指定します。指定可能な値: \"blank-only\" "
-"(テーマを使用せずにスクリーンセーバーを起動する)、\"single\" (\"themes\" "
-"キーで指定したテーマを一つだけ使用してスクリーンセーバーを起動する)、\"random\" (テーマをランダムに使用してスクリーンセーバーを起動する)"
+"スクリーンセーバーが使用する選択モードを指定します。指定可能な値: \"blank-"
+"only\" (テーマを使用せずにスクリーンセーバーを起動す"
+"る)、\"single\" (\"themes\" キーで指定したテーマを一つだけ使用してスクリーン"
+"セーバーを起動する)、\"random\" (テーマをランダムに使用してスクリーンセーバー"
+"を起動する)"
 
 #: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
@@ -176,9 +173,10 @@ msgid ""
 "when \"mode\" is \"single\", and should provide a list of themes when "
 "\"mode\" is \"random\"."
 msgstr ""
-"スクリーンセーバーで使用するテーマを並べて指定します。これは \"mode\" キーが \"blank-only\" の場合は無視され、\"mode\""
-" キーが \"single\" の場合はテーマの名前を指定し、\"mode\" キーが \"random\" "
-"の場合はテーマの名前を複数個並べて指定して下さい。"
+"スクリーンセーバーで使用するテーマを並べて指定します。これは \"mode\" キーが "
+"\"blank-only\" の場合は無視され、\"mode\" キーが \"single\" の場合はテーマの"
+"名前を指定し、\"mode\" キーが \"random\" の場合はテーマの名前を複数個並べて指"
+"定して下さい。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:30
 msgid "Time before power management baseline"
@@ -189,8 +187,9 @@ msgid ""
 "The number of seconds of inactivity before signalling to power management. "
 "This key is set and maintained by the session power management agent."
 msgstr ""
-"パワーマネージメント機能へシグナルを送信する前の待ち時間 (秒単位) "
-"です。これは、セッション単位でパワーマネージメントエージェントがセットしたり管理するキーです。"
+"パワーマネージメント機能へシグナルを送信する前の待ち時間 (秒単位) です。これ"
+"は、セッション単位でパワーマネージメントエージェントがセットしたり管理する"
+"キーです。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:35
 msgid "Time before theme change"
@@ -198,7 +197,9 @@ msgstr "テーマを変更する際の遅延時間"
 
 #: data/org.cafe.screensaver.gschema.xml.in:36
 msgid "The number of minutes to run before changing the screensaver theme."
-msgstr "スクリーンセーバーのテーマを変更して実際に表示するまでのアイドル時間 (分) です。"
+msgstr ""
+"スクリーンセーバーのテーマを変更して実際に表示するまでのアイドル時間 (分) で"
+"す。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:40
 msgid "Time before locking"
@@ -206,9 +207,9 @@ msgstr "画面をロックするまでの時間"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
-msgstr "スクリーンセーバーを起動して画面をロックするまでのアイドル時間 (分) です。"
+"The number of minutes after screensaver activation before locking the screen."
+msgstr ""
+"スクリーンセーバーを起動して画面をロックするまでのアイドル時間 (分) です。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:45
 msgid "Allow embedding a keyboard into the window"
@@ -220,8 +221,9 @@ msgid ""
 "to unlock. The \"keyboard_command\" key must be set with the appropriate "
 "command."
 msgstr ""
-"TRUE にすると、スクリーンのロックを解除する際にキーボードを画面に埋め込むことが可能になります。\"keyboard_command\" "
-"のキーに適切なコマンドをセットしておいて下さい。"
+"TRUE にすると、スクリーンのロックを解除する際にキーボードを画面に埋め込むこと"
+"が可能になります。\"keyboard_command\" のキーに適切なコマンドをセットしておい"
+"て下さい。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:50
 msgid "Embedded keyboard command"
@@ -230,13 +232,14 @@ msgstr "キーボードを埋め込むコマンド"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
-"\"embedded_keyboard_enabled\" キーを TRUE "
-"にした場合、ウィンドウの中にキーボードを埋め込む際に使用するコマンドです。ここで指定できるコマンドは XEMBED "
-"プラグインインタフェースを実装し、ウィンドウの XID を標準出力に出力できるものでなくてはなりません。"
+"\"embedded_keyboard_enabled\" キーを TRUE にした場合、ウィンドウの中にキー"
+"ボードを埋め込む際に使用するコマンドです。ここで指定できるコマンドは XEMBED "
+"プラグインインタフェースを実装し、ウィンドウの XID を標準出力に出力できるもの"
+"でなくてはなりません。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
@@ -246,7 +249,9 @@ msgstr "ログアウトを許可する"
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
-msgstr "TRUE にすると、ロックを解除するダイアログに遅延ログアウトするためのオプションを表示します。"
+msgstr ""
+"TRUE にすると、ロックを解除するダイアログに遅延ログアウトするためのオプション"
+"を表示します。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:60
 msgid "Time before logout option"
@@ -258,8 +263,9 @@ msgid ""
 "option will appear in the unlock dialog. This key has effect only if the "
 "\"logout_enable\" key is set to TRUE."
 msgstr ""
-"スクリーンセーバーを起動してからロックを解除するダイアログにログアウトのオプションが表示されるまでのアイドル時間 (分) "
-"です。このキーは、\"logout_enable\" キーが TRUE の場合にのみ効果があります。"
+"スクリーンセーバーを起動してからロックを解除するダイアログにログアウトのオプ"
+"ションが表示されるまでのアイドル時間 (分) です。このキー"
+"は、\"logout_enable\" キーが TRUE の場合にのみ効果があります。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:65
 msgid "Logout command"
@@ -267,12 +273,13 @@ msgstr "ログアウトのコマンド"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
-"ログアウトボタンをクリックした際に呼び出されるコマンドです。このコマンドは、ユーザに問い合わせを行うことなく単にログアウトするようなコマンドにして下さい。このキーは、\"logout_enable\""
-" キーが TRUE の場合にのみ効果があります。"
+"ログアウトボタンをクリックした際に呼び出されるコマンドです。このコマンドは、"
+"ユーザに問い合わせを行うことなく単にログアウトするようなコマンドにして下さ"
+"い。このキーは、\"logout_enable\" キーが TRUE の場合にのみ効果があります。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
@@ -282,7 +289,9 @@ msgstr "ユーザ間の切り替えを許可する"
 msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to switch to a "
 "different user account."
-msgstr "TRUE にすると、ロックを解除するダイアログに他のユーザーアカウントへ切り替えるためのオプションを表示します。"
+msgstr ""
+"TRUE にすると、ロックを解除するダイアログに他のユーザーアカウントへ切り替える"
+"ためのオプションを表示します。"
 
 #: data/org.cafe.screensaver.gschema.xml.in:75
 msgid "Theme for lock dialog"
@@ -299,14 +308,23 @@ msgstr "ステータスメッセージを表示できるようにする"
 #: data/org.cafe.screensaver.gschema.xml.in:81
 msgid ""
 "Allow the session status message to be displayed when the screen is locked."
-msgstr "スクリーンをロック中にセッションの状態を表すメッセージを表示できるようにします。"
+msgstr ""
+"スクリーンをロック中にセッションの状態を表すメッセージを表示できるようにしま"
+"す。"
+
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
 
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "\"宇宙の画像\" をスライドショー形式で表示します"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
@@ -319,8 +337,7 @@ msgstr "フローティング CAFE"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "画面の回りに CAFE のロゴが浮かびます"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
@@ -333,8 +350,7 @@ msgstr "フローティング GNOME"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "画面の回りに GNOME のロゴが浮かびます"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
@@ -347,8 +363,7 @@ msgstr "画像フォルダ"
 msgid "Display a slide from your Pictures folder"
 msgstr "これはお気に入りのフォルダにある画像をスライドショー形式で表示します"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
@@ -361,8 +376,7 @@ msgstr "ポップな矩形のアート"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "四角形が脈打つように見えるポップアートを表示します"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
@@ -410,7 +424,9 @@ msgstr "画像 - スクリーンの回りに画像を浮かす"
 
 #: savers/floaters.c:1200
 msgid "You must specify one image.  See --help for usage information.\n"
-msgstr "少なくとも画像を一つ指定して下さい (用法については --help オプションで確認して下さい)\n"
+msgstr ""
+"少なくとも画像を一つ指定して下さい (用法については --help オプションで確認し"
+"て下さい)\n"
 
 #: savers/slide.c:55
 msgid "Location to get images from"
@@ -436,32 +452,32 @@ msgstr "画像をランダムに表示しない"
 msgid "Do not try to stretch images on screen"
 msgstr "画像を画面の大きさに引き伸ばさない"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "ファイルをコピーしています"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "コピー元:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "コピー先:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "テーマのコピー中"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "スクリーンセーバーのテーマが間違っています"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s はスクリーンセーバーとして妥当なテーマではないようです。"
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "ファイルのコピー中: %u / %u"
@@ -496,17 +512,20 @@ msgstr "スクリーンセーバーを有効にする (ブランクスクリー�
 
 #: src/cafe-screensaver-command.c:88
 msgid "If the screensaver is active then deactivate it (un-blank the screen)"
-msgstr "有効になっているスクリーンセーバーを無効にする (ブランクスクリーン解除)"
+msgstr ""
+"有効になっているスクリーンセーバーを無効にする (ブランクスクリーン解除)"
 
 #: src/cafe-screensaver-command.c:92
 msgid "Poke the running screensaver to simulate user activity"
-msgstr "ユーザが設定できる機能を模擬するためにスクリーンセーバーをランダムに実行する"
+msgstr ""
+"ユーザが設定できる機能を模擬するためにスクリーンセーバーをランダムに実行する"
 
 #: src/cafe-screensaver-command.c:96
 msgid ""
 "Inhibit the screensaver from activating.  Command blocks while inhibit is "
 "active."
-msgstr "スクリーンセーバーの起動を抑制する (これが有効な場合はコマンドが無視される)"
+msgstr ""
+"スクリーンセーバーの起動を抑制する (これが有効な場合はコマンドが無視される)"
 
 #: src/cafe-screensaver-command.c:100
 msgid "The calling application that is inhibiting the screensaver"
@@ -710,11 +729,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "確認しない"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "メインインターフェースを読み込めませんでした"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "cafe-screensaver が正しくインストールされているか確認して下さい。"
 
@@ -730,8 +749,7 @@ msgstr "デバッグモードにする"
 msgid "Launch screensaver and locker program"
 msgstr "スクリーンセーバーとロックするプロラグラムを起動"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr ""
@@ -758,20 +776,19 @@ msgstr "この時点ではアクセスが拒否されています"
 msgid "No longer permitted to access the system."
 msgstr "システムへのアクセスが許可されていません"
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "メッセージバスへの登録に失敗しました"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "メッセージバスに接続していません"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "このセッションで既にスクリーンセーバーが実行中です"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%B%e日(%a)"
@@ -784,18 +801,18 @@ msgstr "タイムアウトしました"
 msgid "You have the Caps Lock key on."
 msgstr "[Caps Lock] キーが押されています"
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "ユーザの切り替え(_W)..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "ログアウト(_O)"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U@%h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "パスワード(_P):"

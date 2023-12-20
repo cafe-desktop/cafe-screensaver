@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-screensaver package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Alberto Federman Neto <mrtabac@gmail.com>, 2020
@@ -14,19 +14,20 @@
 # Wolfgang Ulbrich <mate@raveit.de>, 2020
 # Roger Araújo <roger.rf@gmail.com>, 2020
 # gustavo s, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-screensaver 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2019-11-04 23:36+0100\n"
+"POT-Creation-Date: 2023-12-20 09:27+0100\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: gustavo s, 2020\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/cafe/teams/13566/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/cafe/"
+"teams/13566/pt_BR/)\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/cafe-screensaver-preferences.desktop.in:3
@@ -38,15 +39,7 @@ msgstr "Proteção de Tela"
 msgid "Set your screensaver preferences"
 msgstr "Defina suas preferências de proteção de tela"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver-preferences.desktop.in:6
-#: src/cafe-screensaver.desktop.in.in:7
-msgid "preferences-desktop-screensaver"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/cafe-screensaver-preferences.desktop.in:12
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
@@ -55,39 +48,47 @@ msgstr ""
 msgid "Screensaver Preview"
 msgstr "Visualização de proteção de tela"
 
-#: data/cafe-screensaver-preferences.ui:56
+#: data/cafe-screensaver-preferences.ui:59
 msgid "<b>Screensaver preview</b>"
 msgstr "<b>Visualização da proteção de tela</b>"
 
-#: data/cafe-screensaver-preferences.ui:164
+#: data/cafe-screensaver-preferences.ui:168
 msgid "Screensaver Preferences"
 msgstr "Preferências de Proteção de Tela"
 
-#: data/cafe-screensaver-preferences.ui:196
+#: data/cafe-screensaver-preferences.ui:203
 msgid "Power _Management"
 msgstr "Gerencia_mento de energia"
 
-#: data/cafe-screensaver-preferences.ui:212
+#: data/cafe-screensaver-preferences.ui:219
 msgid "_Preview"
 msgstr "_Visualizar"
 
-#: data/cafe-screensaver-preferences.ui:272
+#: data/cafe-screensaver-preferences.ui:279
 msgid "_Screensaver theme:"
 msgstr "_Tema de proteção de tela:"
 
-#: data/cafe-screensaver-preferences.ui:390
+#: data/cafe-screensaver-preferences.ui:397
 msgid "Regard the computer as _idle after:"
 msgstr "_Considerar o computador ocioso após:"
 
-#: data/cafe-screensaver-preferences.ui:433
+#: data/cafe-screensaver-preferences.ui:440
 msgid "_Activate screensaver when computer is idle"
 msgstr "_Ativar proteção de tela quando o computador estiver ocioso"
 
-#: data/cafe-screensaver-preferences.ui:448
+#: data/cafe-screensaver-preferences.ui:455
 msgid "_Lock screen when screensaver is active"
 msgstr "B_loquear a tela quando a proteção de tela estiver ativa"
 
-#: data/cafe-screensaver-preferences.ui:465
+#: data/cafe-screensaver-preferences.ui:477
+msgid "Background picture for lock screen:"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:496
+msgid "Select Background Image"
+msgstr ""
+
+#: data/cafe-screensaver-preferences.ui:522
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>Aviso: a tela não será bloqueada para o usuário root.</b>"
 
@@ -100,17 +101,9 @@ msgstr "Proteções de tela"
 msgid "Screensaver themes"
 msgstr "Temas de proteção de tela"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/cafe-screensaver.directory.desktop.in:7
-msgid "screensaver"
-msgstr "protetor de tela"
-
-#. Translators: This is the name of a desktop background image that shows
-#. outer space images.
+#. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7
-#: savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
 msgid "Space"
 msgstr "Space"
 
@@ -134,7 +127,7 @@ msgstr "Sair"
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1676
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
 msgid "_Unlock"
 msgstr "_Desbloquear"
 
@@ -175,9 +168,9 @@ msgid ""
 "activation."
 msgstr ""
 "O modo de seleção usado pela proteção de tela. Pode ser \"blank-only\" para "
-"habilitar a proteção de tela sem usar nenhum tema, \"single\" para habilitar"
-" a proteção de tela usando apenas um tema (especificado na chave \"themes\")"
-" e \"random\" para habilitar a proteção de tela usando um tema aleatório."
+"habilitar a proteção de tela sem usar nenhum tema, \"single\" para habilitar "
+"a proteção de tela usando apenas um tema (especificado na chave \"themes\") "
+"e \"random\" para habilitar a proteção de tela usando um tema aleatório."
 
 #: data/org.cafe.screensaver.gschema.xml.in:26
 msgid ""
@@ -219,11 +212,10 @@ msgstr "Tempo antes de bloquear"
 
 #: data/org.cafe.screensaver.gschema.xml.in:41
 msgid ""
-"The number of minutes after screensaver activation before locking the "
-"screen."
+"The number of minutes after screensaver activation before locking the screen."
 msgstr ""
-"Tempo de espera em minutos antes de bloquear a tela depois que a proteção de"
-" tela for ativada."
+"Tempo de espera em minutos antes de bloquear a tela depois que a proteção de "
+"tela for ativada."
 
 #: data/org.cafe.screensaver.gschema.xml.in:45
 msgid "Allow embedding a keyboard into the window"
@@ -246,14 +238,14 @@ msgstr "Comando de teclado embutido"
 #: data/org.cafe.screensaver.gschema.xml.in:51
 msgid ""
 "The command that will be run, if the \"embedded_keyboard_enabled\" key is "
-"set to TRUE, to embed a keyboard widget into the window. This command should"
-" implement an XEMBED plug interface and output a window XID on the standard "
+"set to TRUE, to embed a keyboard widget into the window. This command should "
+"implement an XEMBED plug interface and output a window XID on the standard "
 "output."
 msgstr ""
 "O comando que será executado para incorporar um teclado na janela, caso a "
 "chave \"embedded_keyboard_enabled\" seja definida como VERDADEIRO. Esse "
-"comando deve implementar uma interface XEMBED e enviar um XID da janela para"
-" a saída padrão."
+"comando deve implementar uma interface XEMBED e enviar um XID da janela para "
+"a saída padrão."
 
 #: data/org.cafe.screensaver.gschema.xml.in:55
 msgid "Allow logout"
@@ -264,8 +256,8 @@ msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to allow logging "
 "out after a delay. The delay is specified in the \"logout_delay\" key."
 msgstr ""
-"Defina como VERDADEIRO para oferecer uma opção na janela de desbloqueio para"
-" encerrar a sessão após algum tempo. O tempo é especificado na chave "
+"Defina como VERDADEIRO para oferecer uma opção na janela de desbloqueio para "
+"encerrar a sessão após algum tempo. O tempo é especificado na chave "
 "\"logout_delay\"."
 
 #: data/org.cafe.screensaver.gschema.xml.in:60
@@ -288,14 +280,14 @@ msgstr "Comando de encerramento de sessão"
 
 #: data/org.cafe.screensaver.gschema.xml.in:66
 msgid ""
-"The command to invoke when the logout button is clicked. This command should"
-" simply log the user out without any interaction. This key has effect only "
-"if the \"logout_enable\" key is set to TRUE."
+"The command to invoke when the logout button is clicked. This command should "
+"simply log the user out without any interaction. This key has effect only if "
+"the \"logout_enable\" key is set to TRUE."
 msgstr ""
 "O comando a executar quando o botão de encerramento de sessão for clicado. "
 "Esse comando deve simplesmente encerrar a sessão do usuário sem qualquer "
-"interação. Essa chave tem efeito apenas se a chave \"logout_enable\" estiver"
-" definida como VERDADEIRO."
+"interação. Essa chave tem efeito apenas se a chave \"logout_enable\" estiver "
+"definida como VERDADEIRO."
 
 #: data/org.cafe.screensaver.gschema.xml.in:70
 msgid "Allow user switching"
@@ -306,8 +298,8 @@ msgid ""
 "Set this to TRUE to offer an option in the unlock dialog to switch to a "
 "different user account."
 msgstr ""
-"Defina como VERDADEIRO para oferecer uma opção na janela de desbloqueio para"
-" trocar de usuário."
+"Defina como VERDADEIRO para oferecer uma opção na janela de desbloqueio para "
+"trocar de usuário."
 
 #: data/org.cafe.screensaver.gschema.xml.in:75
 msgid "Theme for lock dialog"
@@ -328,12 +320,19 @@ msgstr ""
 "Permite que a mensagem de estado da sessão seja mostrada quando a tela "
 "estiver bloqueada."
 
+#: data/org.cafe.screensaver.gschema.xml.in:85
+msgid "Picture Filename"
+msgstr ""
+
+#: data/org.cafe.screensaver.gschema.xml.in:86
+msgid "File to use for the background image."
+msgstr ""
+
 #: savers/space-slide.desktop.in.in:4
 msgid "Display a slide of pictures of the space"
 msgstr "Mostra uma apresentação de slides de fotos do cosmo"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/space-slide.desktop.in.in:12
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
@@ -346,8 +345,7 @@ msgstr "CAFE Flutuante"
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Borbulha o logotipo CAFE ao redor da tela"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/foot-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
@@ -360,8 +358,7 @@ msgstr "GNOME Flutuante"
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Borbulha o logotipo GNOME ao redor da tela"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/gnome-floaters.desktop.in.in:12
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
@@ -375,8 +372,7 @@ msgid "Display a slide from your Pictures folder"
 msgstr ""
 "Exibe uma apresentação de slides com as figuras da sua pasta de imagens"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/personal-slide.desktop.in.in:12
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
@@ -389,8 +385,7 @@ msgstr "Quadrados pop"
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Uma grade de arte pop de cores pulsantes."
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: savers/squares.desktop.in.in:12
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
@@ -464,32 +459,32 @@ msgstr "Não percorrer as imagens da localização aleatoriamente"
 msgid "Do not try to stretch images on screen"
 msgstr "Não tentar redimensionar as imagens na tela"
 
-#: src/copy-theme-dialog.c:184
+#: src/copy-theme-dialog.c:180
 msgid "Copying files"
 msgstr "Copiando arquivos"
 
-#: src/copy-theme-dialog.c:203
+#: src/copy-theme-dialog.c:199
 msgid "From:"
 msgstr "De:"
 
-#: src/copy-theme-dialog.c:207
+#: src/copy-theme-dialog.c:203
 msgid "To:"
 msgstr "Para:"
 
-#: src/copy-theme-dialog.c:228
+#: src/copy-theme-dialog.c:224
 msgid "Copying themes"
 msgstr "Copiando temas"
 
-#: src/copy-theme-dialog.c:271
+#: src/copy-theme-dialog.c:267
 msgid "Invalid screensaver theme"
 msgstr "Tema de proteção de tela inválido"
 
-#: src/copy-theme-dialog.c:274
+#: src/copy-theme-dialog.c:270
 #, c-format
 msgid "%s does not appear to be a valid screensaver theme."
 msgstr "%s não parece ser um tema de proteção de tela válido."
 
-#: src/copy-theme-dialog.c:454
+#: src/copy-theme-dialog.c:450
 #, c-format
 msgid "Copying file: %u of %u"
 msgstr "Copiando arquivo: %u de %u"
@@ -748,11 +743,11 @@ msgstr "%s"
 msgid "Never"
 msgstr "Nunca"
 
-#: src/cafe-screensaver-preferences.c:1554
+#: src/cafe-screensaver-preferences.c:1563
 msgid "Could not load the main interface"
 msgstr "Não foi possível carregar a interface principal"
 
-#: src/cafe-screensaver-preferences.c:1556
+#: src/cafe-screensaver-preferences.c:1565
 msgid "Please make sure that the screensaver is properly installed"
 msgstr "Certifique-se de que a proteção de tela foi instalada corretamente"
 
@@ -768,8 +763,7 @@ msgstr "Habilitar depuração de código"
 msgid "Launch screensaver and locker program"
 msgstr "Executar protetor de tela e programa de bloqueio"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: src/cafe-screensaver.desktop.in.in:12
 msgid "CAFE;screensaver;locker;"
 msgstr ""
@@ -796,20 +790,19 @@ msgstr "Acesso não permitido no momento."
 msgid "No longer permitted to access the system."
 msgstr "Não é mais permitido ter acesso ao sistema."
 
-#: src/gs-listener-dbus.c:2247
+#: src/gs-listener-dbus.c:2245
 msgid "failed to register with the message bus"
 msgstr "falha ao registrar no barramento de mensagens"
 
-#: src/gs-listener-dbus.c:2258
+#: src/gs-listener-dbus.c:2256
 msgid "not connected to the message bus"
 msgstr "não conectado ao barramento de mensagens"
 
-#: src/gs-listener-dbus.c:2268 src/gs-listener-dbus.c:2300
+#: src/gs-listener-dbus.c:2266 src/gs-listener-dbus.c:2298
 msgid "screensaver already running in this session"
 msgstr "proteção de tela já ativa nesta sessão"
 
-#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-
-#. GDateTime.html#g-date-time-format
+#. Translators: Date format, see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format
 #: src/gs-lock-plug.c:301
 msgid "%A, %B %e"
 msgstr "%A, %B %e"
@@ -822,18 +815,21 @@ msgstr "Tempo expirado."
 msgid "You have the Caps Lock key on."
 msgstr "A tecla Caps Lock está ativada."
 
-#: src/gs-lock-plug.c:1656
+#: src/gs-lock-plug.c:1657
 msgid "S_witch User..."
 msgstr "_Trocar usuário..."
 
-#: src/gs-lock-plug.c:1665
+#: src/gs-lock-plug.c:1666
 msgid "Log _Out"
 msgstr "_Encerrar sessão"
 
-#: src/gs-lock-plug.c:1878
+#: src/gs-lock-plug.c:1879
 msgid "%U on %h"
 msgstr "%U em %h"
 
-#: src/gs-lock-plug.c:1893
+#: src/gs-lock-plug.c:1894
 msgid "_Password:"
 msgstr "_Senha:"
+
+#~ msgid "screensaver"
+#~ msgstr "protetor de tela"
