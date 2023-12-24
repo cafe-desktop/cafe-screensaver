@@ -323,6 +323,8 @@ gs_lock_plug_set_sensitive (GSLockPlug *plug,
 
 	ctk_widget_set_sensitive (plug->priv->auth_prompt_entry, sensitive);
 	ctk_widget_set_sensitive (plug->priv->auth_action_area, sensitive);
+	ctk_widget_set_can_focus (plug->priv->auth_prompt_entry, sensitive);
+	ctk_widget_set_can_focus (plug->priv->auth_action_area, sensitive);
 }
 
 static void
