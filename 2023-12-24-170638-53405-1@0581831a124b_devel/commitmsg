@@ -1,0 +1,1 @@
+gs-lock-plug: make sensitive and can_focus the same inside gs_lock_plug_set_sensitive
