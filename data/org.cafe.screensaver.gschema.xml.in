@@ -81,7 +81,7 @@
       <description>Allow the session status message to be displayed when the screen is locked.</description>
     </key>
     <key name="picture-filename" type="s">
-      <default>'@datadir@/backgrounds/cafe/desktop/Stripes.png'</default>
+      <default>'@datadir@/images/desktop-base/desktop-background'</default>
       <summary>Picture Filename</summary>
       <description>File to use for the background image.</description>
     </key>
