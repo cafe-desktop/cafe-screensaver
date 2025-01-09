@@ -1,0 +1,5 @@
+Listen to org.freedesktop.ScreenSaver events
+
+based in mate-screensaver PR 300
+
+Closes https://github.com/cafe-desktop/cafe-screensaver/issues/5
