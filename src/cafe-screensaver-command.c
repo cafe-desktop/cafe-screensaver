@@ -34,7 +34,7 @@
 #include <dbus/dbus-glib-lowlevel.h>
 
 #define GS_SERVICE   "org.freedesktop.ScreenSaver"
-#define GS_PATH      "/org/freedesktop/ScreenSaver"
+#define GS_PATH      "/"
 #define GS_INTERFACE "org.freedesktop.ScreenSaver"
 
 static gboolean do_quit       = FALSE;
