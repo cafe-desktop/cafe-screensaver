@@ -1,3 +1,13 @@
+### cafe-screensaver 2.0.0
+
+  * gs-lock-plug: make sensitive and can_focus the same inside gs_lock_plug_set_sensitive
+  * ci: some improvements
+  * gschema: update default background image
+  * Listen to org.freedesktop.ScreenSaver events
+  * port from GdkPixbuf to CdkPixbuf
+  * update translations
+
+
 ### cafe-screensaver 1.25.0
 
   * initial release: mate-screensaver 1.24.1 fork
