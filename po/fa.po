@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-screensaver 1.25.0\n"
+"Project-Id-Version: cafe-screensaver 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-12-20 09:27+0100\n"
+"POT-Creation-Date: 2026-09-25 20:07+0200\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Mahdi Pourghasem <mahdipourghasem@gmail.com>, 2020\n"
 "Language-Team: Persian (https://www.transifex.com/cafe/teams/13566/fa/)\n"
@@ -23,17 +23,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/cafe-screensaver-preferences.desktop.in:3
-#: src/cafe-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:2
+#: src/cafe-screensaver.desktop.in.in:3
 msgid "Screensaver"
 msgstr "محافظ صفحهٔ نمایش"
 
-#: data/cafe-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
 msgid "Set your screensaver preferences"
 msgstr "ترجیحات محافظ صفحهٔ نمایش خود را تنظیم کنید"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/cafe-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:11
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
 
@@ -85,18 +85,18 @@ msgstr ""
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>اخطار: صفحهٔ نمایش کاربر root قفل نخواهد شد.</b>"
 
-#: data/cafe-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:3
 msgid "Screensavers"
 msgstr "محافظ‌های صفحهٔ نمایش"
 
-#: data/cafe-screensaver.directory.desktop.in:5
+#: data/cafe-screensaver.directory.desktop.in:4
 #: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "تم‌های محافظ صفحهٔ نمایش"
 
 #. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:2
 msgid "Space"
 msgstr "کیهان"
 
@@ -120,7 +120,7 @@ msgstr "_خروج از سیستم"
 msgid "_Cancel"
 msgstr "ان_صراف"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1679
 msgid "_Unlock"
 msgstr "_باز کردن قفل"
 
@@ -309,64 +309,64 @@ msgstr ""
 msgid "File to use for the background image."
 msgstr ""
 
-#: savers/space-slide.desktop.in.in:4
+#: savers/space-slide.desktop.in.in:3
 msgid "Display a slide of pictures of the space"
 msgstr "اسلایدهایی از تصاویر کیهان نمایش داده شود"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slide.desktop.in.in:12
+#: savers/space-slide.desktop.in.in:11
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
-#: savers/foot-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:2
 msgid "Floating CAFE"
 msgstr "CAFE معلق"
 
-#: savers/foot-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "حباب‌پراکنی از لوگوی CAFE در اطراف صفحهٔ نمایش"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/foot-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
-#: savers/gnome-floaters.desktop.in.in:3
+#: savers/gnome-floaters.desktop.in.in:2
 msgid "Floating GNOME"
 msgstr "GNOME معلق"
 
-#: savers/gnome-floaters.desktop.in.in:4
+#: savers/gnome-floaters.desktop.in.in:3
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "حباب‌پراکنی از لوگوی گنوم در اطراف صفحهٔ نمایش"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/gnome-floaters.desktop.in.in:12
+#: savers/gnome-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slide.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:2
 msgid "Pictures folder"
 msgstr "پوشهٔ تصاویر"
 
-#: savers/personal-slide.desktop.in.in:4
+#: savers/personal-slide.desktop.in.in:3
 msgid "Display a slide from your Pictures folder"
 msgstr "اسلایدهایی از پوشهٔ تصاویر شما نمایش داده شود"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slide.desktop.in.in:12
+#: savers/personal-slide.desktop.in.in:11
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
-#: savers/squares.desktop.in.in:3
+#: savers/squares.desktop.in.in:2
 msgid "Pop art squares"
 msgstr "مربع‌های پاپ"
 
-#: savers/squares.desktop.in.in:4
+#: savers/squares.desktop.in.in:3
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "چهارخانه‌ای با رنگ‌های تپنده به سبک هنر پاپ."
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/squares.desktop.in.in:12
+#: savers/squares.desktop.in.in:11
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
@@ -737,12 +737,12 @@ msgstr "شبح نشود"
 msgid "Enable debugging code"
 msgstr "اشکال‌زدایی کُد به کار انداخته شود"
 
-#: src/cafe-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Launch screensaver and locker program"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: src/cafe-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:11
 msgid "CAFE;screensaver;locker;"
 msgstr ""
 
@@ -785,26 +785,26 @@ msgstr "محافظ صفحهٔ نمایش از قبل در این نشست در �
 msgid "%A, %B %e"
 msgstr "%l:%M %p"
 
-#: src/gs-lock-plug.c:403
+#: src/gs-lock-plug.c:405
 msgid "Time has expired."
 msgstr "زمان منقضی شد."
 
-#: src/gs-lock-plug.c:434
+#: src/gs-lock-plug.c:436
 msgid "You have the Caps Lock key on."
 msgstr "کلید قفل تبدیل روشن است."
 
-#: src/gs-lock-plug.c:1657
+#: src/gs-lock-plug.c:1659
 msgid "S_witch User..."
 msgstr "ت_عویض کاربر..."
 
-#: src/gs-lock-plug.c:1666
+#: src/gs-lock-plug.c:1668
 msgid "Log _Out"
 msgstr "_خروج از سیستم"
 
-#: src/gs-lock-plug.c:1879
+#: src/gs-lock-plug.c:1881
 msgid "%U on %h"
 msgstr "%U روی %h"
 
-#: src/gs-lock-plug.c:1894
+#: src/gs-lock-plug.c:1896
 msgid "_Password:"
 msgstr "کلمه عبور"

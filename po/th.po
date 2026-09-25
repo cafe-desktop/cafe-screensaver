@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-screensaver 1.25.0\n"
+"Project-Id-Version: cafe-screensaver 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-12-20 09:27+0100\n"
+"POT-Creation-Date: 2026-09-25 20:07+0200\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Aefgh Threenine <aefgh3962@gmail.com>, 2020\n"
 "Language-Team: Thai (https://www.transifex.com/cafe/teams/13566/th/)\n"
@@ -23,17 +23,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/cafe-screensaver-preferences.desktop.in:3
-#: src/cafe-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:2
+#: src/cafe-screensaver.desktop.in.in:3
 msgid "Screensaver"
 msgstr "โปรแกรมรักษาหน้าจอ"
 
-#: data/cafe-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
 msgid "Set your screensaver preferences"
 msgstr "ปรับแต่งโปรแกรมรักษาหน้าจอของคุณ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/cafe-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:11
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
 
@@ -85,18 +85,18 @@ msgstr ""
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>คำเตือน: จะไม่ล็อคหน้าจอถ้าเข้าระบบด้วยบัญชี root</b>"
 
-#: data/cafe-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:3
 msgid "Screensavers"
 msgstr "โปรแกรมรักษาหน้าจอ"
 
-#: data/cafe-screensaver.directory.desktop.in:5
+#: data/cafe-screensaver.directory.desktop.in:4
 #: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "ชุดโปรแกรมรักษาหน้าจอ"
 
 #. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:2
 msgid "Space"
 msgstr "อวกาศ"
 
@@ -120,7 +120,7 @@ msgstr "_ออกจากระบบ"
 msgid "_Cancel"
 msgstr "_ยกเลิก"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1679
 msgid "_Unlock"
 msgstr "_ปลดล็อค"
 
@@ -303,64 +303,64 @@ msgstr ""
 msgid "File to use for the background image."
 msgstr ""
 
-#: savers/space-slide.desktop.in.in:4
+#: savers/space-slide.desktop.in.in:3
 msgid "Display a slide of pictures of the space"
 msgstr "แสดงภาพสไลด์ของภาพจากอวกาศ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slide.desktop.in.in:12
+#: savers/space-slide.desktop.in.in:11
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
-#: savers/foot-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:2
 msgid "Floating CAFE"
 msgstr "Floating CAFE"
 
-#: savers/foot-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "เลื่อนโลโก้ของ CAFE ไปรอบๆหน้าจอ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/foot-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
-#: savers/gnome-floaters.desktop.in.in:3
+#: savers/gnome-floaters.desktop.in.in:2
 msgid "Floating GNOME"
 msgstr "Floating GNOME"
 
-#: savers/gnome-floaters.desktop.in.in:4
+#: savers/gnome-floaters.desktop.in.in:3
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "เลื่อนโลโก้ของ GNOME ไปรอบๆหน้าจอ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/gnome-floaters.desktop.in.in:12
+#: savers/gnome-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slide.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:2
 msgid "Pictures folder"
 msgstr "โฟลเดอร์ภาพ"
 
-#: savers/personal-slide.desktop.in.in:4
+#: savers/personal-slide.desktop.in.in:3
 msgid "Display a slide from your Pictures folder"
 msgstr "แสดงภาพสไลด์จากโฟลเดอร์ภาพของคุณ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slide.desktop.in.in:12
+#: savers/personal-slide.desktop.in.in:11
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
-#: savers/squares.desktop.in.in:3
+#: savers/squares.desktop.in.in:2
 msgid "Pop art squares"
 msgstr "จัตุรัสศิลปะแนวป๊อป"
 
-#: savers/squares.desktop.in.in:4
+#: savers/squares.desktop.in.in:3
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "ตารางไฟกะพริบแบบศิลปะแนวป๊อป"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/squares.desktop.in.in:12
+#: savers/squares.desktop.in.in:11
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
@@ -723,12 +723,12 @@ msgstr "ไม่ต้องเป็นดีมอน"
 msgid "Enable debugging code"
 msgstr "เปิดใช้โค้ดส่วนดีบั๊ก"
 
-#: src/cafe-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Launch screensaver and locker program"
 msgstr "เรียกใช้โปรแกรมรักษาหน้าจอและโปรแกรมล็อกเกอร์"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: src/cafe-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:11
 msgid "CAFE;screensaver;locker;"
 msgstr ""
 
@@ -771,26 +771,26 @@ msgstr "โปรแกรมรักษาหน้าจอกำลังท
 msgid "%A, %B %e"
 msgstr "%A, %B %e"
 
-#: src/gs-lock-plug.c:403
+#: src/gs-lock-plug.c:405
 msgid "Time has expired."
 msgstr "หมดเวลา"
 
-#: src/gs-lock-plug.c:434
+#: src/gs-lock-plug.c:436
 msgid "You have the Caps Lock key on."
 msgstr "ปุ่ม Caps Lock ถูกกดอยู่"
 
-#: src/gs-lock-plug.c:1657
+#: src/gs-lock-plug.c:1659
 msgid "S_witch User..."
 msgstr "_สลับผู้ใช้..."
 
-#: src/gs-lock-plug.c:1666
+#: src/gs-lock-plug.c:1668
 msgid "Log _Out"
 msgstr "_ออกจากระบบ"
 
-#: src/gs-lock-plug.c:1879
+#: src/gs-lock-plug.c:1881
 msgid "%U on %h"
 msgstr "%s ที่เครื่อง %s"
 
-#: src/gs-lock-plug.c:1894
+#: src/gs-lock-plug.c:1896
 msgid "_Password:"
 msgstr "รหัส_ผ่าน:"

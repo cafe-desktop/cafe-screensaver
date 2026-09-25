@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-screensaver 1.25.0\n"
+"Project-Id-Version: cafe-screensaver 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-12-20 09:27+0100\n"
+"POT-Creation-Date: 2026-09-25 20:07+0200\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: karthik holla <karthikholla87@gmail.com>, 2020\n"
 "Language-Team: Kannada (https://www.transifex.com/cafe/teams/13566/kn/)\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/cafe-screensaver-preferences.desktop.in:3
-#: src/cafe-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:2
+#: src/cafe-screensaver.desktop.in.in:3
 msgid "Screensaver"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್"
 
-#: data/cafe-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
 msgid "Set your screensaver preferences"
 msgstr "ನಿಮ್ಮ ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಆದ್ಯತೆಗಳನ್ನು ಅಣಿಗೊಳಿಸಿ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/cafe-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:11
 msgid "CAFE;screensaver;preferences;"
 msgstr ""
 
@@ -83,18 +83,18 @@ msgstr ""
 msgid "<b>Warning: the screen will not be locked for the root user.</b>"
 msgstr "<b>ಎಚ್ಚರಿಕೆ: ಮೂಲದ ಬಳಕೆದಾರರಿಗೆ ತೆರೆಯು ಲಾಕ್ ಮಾಡಲ್ಪಡುವುದಿಲ್ಲ.</b>"
 
-#: data/cafe-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:3
 msgid "Screensavers"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರುಗಳು"
 
-#: data/cafe-screensaver.directory.desktop.in:5
+#: data/cafe-screensaver.directory.desktop.in:4
 #: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಥೀಮ್‌ಗಳು"
 
 #. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:2
 msgid "Space"
 msgstr "ಕಾಸ್ಮೋಸ್"
 
@@ -118,7 +118,7 @@ msgstr "ನಿರ್ಗಮಿಸು(_L)"
 msgid "_Cancel"
 msgstr "ರದ್ದು ಮಾಡಲಾಗಿದೆ(_C)"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1679
 msgid "_Unlock"
 msgstr "ಅನ್‌ಲಾಕ್ ಮಾಡು(_U)"
 
@@ -301,64 +301,64 @@ msgstr ""
 msgid "File to use for the background image."
 msgstr ""
 
-#: savers/space-slide.desktop.in.in:4
+#: savers/space-slide.desktop.in.in:3
 msgid "Display a slide of pictures of the space"
 msgstr "ಅಂತರಿಕ್ಷದ ಚಿತ್ರಗಳ ಒಂದು ಚಿತ್ರಪ್ರದರ್ಶನವನ್ನು(ಸ್ಲೈಡ್‌ಶೋ) ತೋರಿಸುತ್ತದೆ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slide.desktop.in.in:12
+#: savers/space-slide.desktop.in.in:11
 msgid "CAFE;screensaver;slide;space;"
 msgstr ""
 
-#: savers/foot-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:2
 msgid "Floating CAFE"
 msgstr ""
 
-#: savers/foot-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Bubbles the CAFE logo around the screen"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/foot-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr ""
 
-#: savers/gnome-floaters.desktop.in.in:3
+#: savers/gnome-floaters.desktop.in.in:2
 msgid "Floating GNOME"
 msgstr ""
 
-#: savers/gnome-floaters.desktop.in.in:4
+#: savers/gnome-floaters.desktop.in.in:3
 msgid "Bubbles the GNOME logo around the screen"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/gnome-floaters.desktop.in.in:12
+#: savers/gnome-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr ""
 
-#: savers/personal-slide.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:2
 msgid "Pictures folder"
 msgstr "ಚಿತ್ರಗಳ ಕೋಶ"
 
-#: savers/personal-slide.desktop.in.in:4
+#: savers/personal-slide.desktop.in.in:3
 msgid "Display a slide from your Pictures folder"
 msgstr "ನಿಮ್ಮ ಚಿತ್ರದ ಕೋಶದಿಂದ ಒಂದು ಚಿತ್ರಪ್ರದರ್ಶನವನ್ನು(ಸ್ಲೈಡ್‌ಶೋ) ತೋರಿಸು"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slide.desktop.in.in:12
+#: savers/personal-slide.desktop.in.in:11
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr ""
 
-#: savers/squares.desktop.in.in:3
+#: savers/squares.desktop.in.in:2
 msgid "Pop art squares"
 msgstr "ಕಲಾ ಚೌಕಗಳನ್ನು ಪುಟಿಸು"
 
-#: savers/squares.desktop.in.in:4
+#: savers/squares.desktop.in.in:3
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "ಮಿನುಗುವ ಬಣ್ಣಗಳ ಕಲಾತ್ಮಕ ಚೌಕಗಳನ್ನು ಹೊಂದಿರುವ ಪುಟಿಕೆ ಚೌಕುಳಿಗಳು."
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/squares.desktop.in.in:12
+#: savers/squares.desktop.in.in:11
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr ""
 
@@ -730,12 +730,12 @@ msgstr "ಒಂದು ಡೆಮನ್ ಆಗಬೇಡ"
 msgid "Enable debugging code"
 msgstr "ದೋಷನಿವಾರಣಾ ಸಂಜ್ಞೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು"
 
-#: src/cafe-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Launch screensaver and locker program"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: src/cafe-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:11
 msgid "CAFE;screensaver;locker;"
 msgstr ""
 
@@ -778,26 +778,26 @@ msgstr "ಸ್ಕ್ರೀನ್‌ಸೇವರ್ ಈಗಾಗಲೆ ಈ ಅಧ
 msgid "%A, %B %e"
 msgstr ""
 
-#: src/gs-lock-plug.c:403
+#: src/gs-lock-plug.c:405
 msgid "Time has expired."
 msgstr "ಕಾಲಾವಧಿ ಮುಗಿದಿದೆ."
 
-#: src/gs-lock-plug.c:434
+#: src/gs-lock-plug.c:436
 msgid "You have the Caps Lock key on."
 msgstr "ನಿಮ್ಮ Caps Lock ಕೀಲಿಯು ಆನ್ ಆಗಿದೆ."
 
-#: src/gs-lock-plug.c:1657
+#: src/gs-lock-plug.c:1659
 msgid "S_witch User..."
 msgstr "ಬಳಕೆದಾರರನ್ನು ಬದಲಾಯಿಸು(_w)..."
 
-#: src/gs-lock-plug.c:1666
+#: src/gs-lock-plug.c:1668
 msgid "Log _Out"
 msgstr "ಹೊರ ನಡೆ(_O)"
 
-#: src/gs-lock-plug.c:1879
+#: src/gs-lock-plug.c:1881
 msgid "%U on %h"
 msgstr "%U, %h ದಲ್ಲಿ"
 
-#: src/gs-lock-plug.c:1894
+#: src/gs-lock-plug.c:1896
 msgid "_Password:"
 msgstr "ಗುಪ್ತಪದ(_P):"

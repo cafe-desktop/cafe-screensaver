@@ -12,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-screensaver 1.25.0\n"
+"Project-Id-Version: cafe-screensaver 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-12-20 09:27+0100\n"
+"POT-Creation-Date: 2026-09-25 20:07+0200\n"
 "PO-Revision-Date: 2020-02-16 14:34+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/cafe/teams/13566/nl/)\n"
@@ -24,17 +24,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/cafe-screensaver-preferences.desktop.in:3
-#: src/cafe-screensaver.desktop.in.in:4
+#: data/cafe-screensaver-preferences.desktop.in:2
+#: src/cafe-screensaver.desktop.in.in:3
 msgid "Screensaver"
 msgstr "Schermbeveiliging"
 
-#: data/cafe-screensaver-preferences.desktop.in:4
+#: data/cafe-screensaver-preferences.desktop.in:3
 msgid "Set your screensaver preferences"
 msgstr "Voorkeuren voor de schermbeveiliging instellen"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/cafe-screensaver-preferences.desktop.in:12
+#: data/cafe-screensaver-preferences.desktop.in:11
 msgid "CAFE;screensaver;preferences;"
 msgstr "CAFE;schermbeveiliging;voorkeuren;"
 
@@ -88,18 +88,18 @@ msgstr ""
 "<b>Waarschuwing: het scherm zal niet vergrendeld worden voor de gebruiker "
 "root.</b>"
 
-#: data/cafe-screensaver.directory.desktop.in:4
+#: data/cafe-screensaver.directory.desktop.in:3
 msgid "Screensavers"
 msgstr "Schermbeveiligingen"
 
-#: data/cafe-screensaver.directory.desktop.in:5
+#: data/cafe-screensaver.directory.desktop.in:4
 #: data/org.cafe.screensaver.gschema.xml.in:25
 msgid "Screensaver themes"
 msgstr "Schermbeveiligingsthema's"
 
 #. Translators: This is the name of a desktop background image that shows outer space images.
 #. You might want to translate it into the equivalent words of your language
-#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:3
+#: data/images/space/space.xml.in.in:7 savers/space-slide.desktop.in.in:2
 msgid "Space"
 msgstr "Space"
 
@@ -123,7 +123,7 @@ msgstr "Af_melden"
 msgid "_Cancel"
 msgstr "_Afbreken"
 
-#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1677
+#: data/lock-dialog-default.ui:286 src/gs-lock-plug.c:1679
 msgid "_Unlock"
 msgstr "Ontgren_delen"
 
@@ -326,64 +326,64 @@ msgstr ""
 msgid "File to use for the background image."
 msgstr ""
 
-#: savers/space-slide.desktop.in.in:4
+#: savers/space-slide.desktop.in.in:3
 msgid "Display a slide of pictures of the space"
 msgstr "Dit toont een diapresentatie met foto's van de ruimte"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/space-slide.desktop.in.in:12
+#: savers/space-slide.desktop.in.in:11
 msgid "CAFE;screensaver;slide;space;"
 msgstr "CAFE;schermbeveiliging;kosmos;"
 
-#: savers/foot-floaters.desktop.in.in:3
+#: savers/foot-floaters.desktop.in.in:2
 msgid "Floating CAFE"
 msgstr "CAFE-logo's"
 
-#: savers/foot-floaters.desktop.in.in:4
+#: savers/foot-floaters.desktop.in.in:3
 msgid "Bubbles the CAFE logo around the screen"
 msgstr "Toont vliegende CAFE-logo's op het scherm"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/foot-floaters.desktop.in.in:12
+#: savers/foot-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;logo;bubbles;"
 msgstr "CAFE;schermbeveiliging;logo;bellen;"
 
-#: savers/gnome-floaters.desktop.in.in:3
+#: savers/gnome-floaters.desktop.in.in:2
 msgid "Floating GNOME"
 msgstr "Vliegend GNOME-logo"
 
-#: savers/gnome-floaters.desktop.in.in:4
+#: savers/gnome-floaters.desktop.in.in:3
 msgid "Bubbles the GNOME logo around the screen"
 msgstr "Toont een GNOME-logo dat over het scherm vliegt"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/gnome-floaters.desktop.in.in:12
+#: savers/gnome-floaters.desktop.in.in:11
 msgid "CAFE;screensaver;GNOME;logo;bubbles;"
 msgstr "CAFE;schermbeveiliging;GNOME;logo;bellen;"
 
-#: savers/personal-slide.desktop.in.in:3
+#: savers/personal-slide.desktop.in.in:2
 msgid "Pictures folder"
 msgstr "Afbeeldingenmap"
 
-#: savers/personal-slide.desktop.in.in:4
+#: savers/personal-slide.desktop.in.in:3
 msgid "Display a slide from your Pictures folder"
 msgstr "Dit toont een diapresentatie met afbeeldingen uit uw afbeeldingenmap"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/personal-slide.desktop.in.in:12
+#: savers/personal-slide.desktop.in.in:11
 msgid "CAFE;screensaver;custom;slide;pictures;folder;"
 msgstr "CAFE;schermbeveiliging;diavoorstelling;foto's;map;"
 
-#: savers/squares.desktop.in.in:3
+#: savers/squares.desktop.in.in:2
 msgid "Pop art squares"
 msgstr "Pop-art blokken"
 
-#: savers/squares.desktop.in.in:4
+#: savers/squares.desktop.in.in:3
 msgid "A pop-art-ish grid of pulsing colors."
 msgstr "Dit toont pop-art-achtige blokken in pulserende kleuren."
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: savers/squares.desktop.in.in:12
+#: savers/squares.desktop.in.in:11
 msgid "CAFE;screensaver;grid;pulsing;colors;"
 msgstr "CAFE;schermbeveiliging;raster;pulserend;kleuren;"
 
@@ -762,12 +762,12 @@ msgstr "Niet als achtergronddienst uitvoeren"
 msgid "Enable debugging code"
 msgstr "Foutopsporing code inschakelen"
 
-#: src/cafe-screensaver.desktop.in.in:5
+#: src/cafe-screensaver.desktop.in.in:4
 msgid "Launch screensaver and locker program"
 msgstr "Programma opstarten voor schermbeveiling en -vergrendeling"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: src/cafe-screensaver.desktop.in.in:12
+#: src/cafe-screensaver.desktop.in.in:11
 msgid "CAFE;screensaver;locker;"
 msgstr "CAFE;schermbeveiliging;vergrendelaar;"
 
@@ -810,26 +810,26 @@ msgstr "schermbeveiliging al actief in deze sessie"
 msgid "%A, %B %e"
 msgstr "%A %e %B"
 
-#: src/gs-lock-plug.c:403
+#: src/gs-lock-plug.c:405
 msgid "Time has expired."
 msgstr "Tijd is verlopen."
 
-#: src/gs-lock-plug.c:434
+#: src/gs-lock-plug.c:436
 msgid "You have the Caps Lock key on."
 msgstr "De Caps Lock-toets staat aan."
 
-#: src/gs-lock-plug.c:1657
+#: src/gs-lock-plug.c:1659
 msgid "S_witch User..."
 msgstr "Gebruiker _wisselen…"
 
-#: src/gs-lock-plug.c:1666
+#: src/gs-lock-plug.c:1668
 msgid "Log _Out"
 msgstr "_Afmelden"
 
-#: src/gs-lock-plug.c:1879
+#: src/gs-lock-plug.c:1881
 msgid "%U on %h"
 msgstr "%U op %h"
 
-#: src/gs-lock-plug.c:1894
+#: src/gs-lock-plug.c:1896
 msgid "_Password:"
 msgstr "_Wachtwoord:"
