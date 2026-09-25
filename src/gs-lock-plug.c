@@ -721,7 +721,7 @@ rounded_rectangle (cairo_t *cr,
  * @rowstride: data rowstride
  *
  * Converts the pixel data stored in @src in CAIRO_FORMAT_ARGB32 cairo format
- * to GDK_COLORSPACE_RGB pixbuf format and move them
+ * to CDK_COLORSPACE_RGB pixbuf format and move them
  * to @dst. If @src == @dst, pixel are converted in place.
  **/
 
@@ -826,7 +826,7 @@ frame_pixbuf (GdkPixbuf *source)
 	h = cdk_pixbuf_get_height (source) + frame_width * 2;
 	radius = w / 10;
 
-	dest = cdk_pixbuf_new (GDK_COLORSPACE_RGB,
+	dest = cdk_pixbuf_new (CDK_COLORSPACE_RGB,
 						   TRUE,
 						   8,
 						   w,

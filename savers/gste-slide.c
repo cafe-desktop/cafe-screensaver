@@ -176,7 +176,7 @@ start_fade (GSTESlideshow *show,
 		        + show->priv->background_color->blue / 256;
 		colored = cdk_pixbuf_composite_color_simple (pixbuf,
 		          pw, ph,
-		          GDK_INTERP_BILINEAR,
+		          CDK_INTERP_BILINEAR,
 		          255,
 		          256,
 		          color,
@@ -490,7 +490,7 @@ scale_pixbuf (GdkPixbuf *pixbuf,
 		return cdk_pixbuf_scale_simple (pixbuf,
 		                                scale_x,
 		                                scale_y,
-		                                GDK_INTERP_BILINEAR);
+		                                CDK_INTERP_BILINEAR);
 	}
 	else
 	{
