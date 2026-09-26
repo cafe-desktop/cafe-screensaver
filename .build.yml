@@ -3,66 +3,12 @@
 ##########################################################
 requires:
   debian:
-    # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # cafe B-D: libctk-3-dev libcafe-desktop-dev libcafe-menu-dev libcafekbd-dev cafe-common
-    - aptitude
-    - autoconf-archive
-    - autopoint
-    - clang
-    - clang-tools
-    - cppcheck
-    - expect #required for unbuffer
-    - gcc
-    - git
-    - libdbus-glib-1-dev
-    - libdconf-dev
-    - libglib2.0-dev
-    - libnotify-dev
-    - libpam0g-dev
-    - libstartup-notification0-dev
-    - libsystemd-dev
-    - libx11-dev
-    - libxext-dev
-    - libxss-dev
-    - libxt-dev
-    - libxxf86vm-dev
-    - make
-    - x11proto-scrnsaver-dev
-    - x11proto-xext-dev
-    - x11proto-xf86vidmode-dev
-    - xmlto
-
-    #required for cafe-common
-    - autoconf
-
-    #required for cafe-desktop
-    - gobject-introspection
-    - gtk-doc-tools
-    - intltool
-    - iso-codes
-    - libgirepository1.0-dev
-    - libglib2.0-doc
-    - libtool
-    - libxml2-dev
-    - meson
-
-    #required for libcafekbd
-    - gettext
-    - libxklavier-dev
-    - libxml2-utils
 
 before_scripts:
-  - ./html-cppcheck
-  - ./debrepo-install 'libctk-3-dev'
-  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
-  - ./install-from-git https://github.com/cafe-desktop/cafe-desktop master
-  - ./install-from-git https://github.com/cafe-desktop/libcafekbd master
-  - ./install-from-git https://github.com/cafe-desktop/cafe-menus master
+  - ./debrepo-install
 
 build_scripts:
-  - ./before-build
-  - ./make-scanbuild '--enable-compile-warnings=maximum'
-  - ./after-build
+  - ./build-debs https://github.com/cafe-desktop/debian-packages devel cafe-screensaver
 
 after_scripts:
   - if [ -f "gen-index" ]; then ./gen-index -l 20; fi
