@@ -184,6 +184,7 @@ struct _ScreenSaver
 	CtkWidget  *drawing_area;
 	Rectangle canvas_rectangle;
 	GHashTable *cached_sources;
+	CdkPixbuf  *master_pixbuf;
 
 	char *filename;
 
@@ -702,20 +703,19 @@ screen_saver_floater_do_draw (ScreenSaver        *screen_saver,
 	if (source == NULL)
 	{
 		CdkPixbuf *pixbuf;
-		GError *error;
+		gint       master_width, master_height;
 
-		pixbuf = NULL;
-		error = NULL;
+		master_width = cdk_pixbuf_get_width (screen_saver->master_pixbuf);
+		master_height = cdk_pixbuf_get_height (screen_saver->master_pixbuf);
 
-		pixbuf = cdk_pixbuf_new_from_file_at_size (screen_saver->filename, size, -1,
-		         &error);
+		pixbuf = cdk_pixbuf_scale_simple (screen_saver->master_pixbuf,
+		                                  size,
+		                                  MAX (1, (gint) (master_height *
+		                                          ((gdouble) size /
+		                                           (gdouble) master_width))),
+		                                  CDK_INTERP_BILINEAR);
 		if (pixbuf == NULL)
-		{
-			g_assert (error != NULL);
-			g_printerr ("%s", _(error->message));
-			g_error_free (error);
-			return FALSE;
-		}
+			return TRUE;
 
 		if (cdk_pixbuf_get_has_alpha (pixbuf))
 			gamma_correct (pixbuf);
@@ -841,10 +841,26 @@ screen_saver_new (CtkWidget       *drawing_area,
                   gboolean         should_show_paths)
 {
 	ScreenSaver *screen_saver;
+	CdkPixbuf   *master_pixbuf;
+	GError      *error;
+
+	error = NULL;
+
+	master_pixbuf = cdk_pixbuf_new_from_file_at_size (filename,
+	                                                  (gint) FLOATER_MAX_SIZE, -1,
+	                                                  &error);
+	if (master_pixbuf == NULL)
+	{
+		g_assert (error != NULL);
+		g_printerr ("%s", _(error->message));
+		g_error_free (error);
+		return NULL;
+	}
 
 	screen_saver = g_new (ScreenSaver, 1);
 	screen_saver->filename = g_strdup (filename);
 	screen_saver->drawing_area = drawing_area;
+	screen_saver->master_pixbuf = master_pixbuf;
 	screen_saver->cached_sources =
 	    g_hash_table_new_full (NULL, NULL, NULL,
 	                           (GDestroyNotify) cached_source_free);
@@ -890,6 +906,11 @@ screen_saver_free (ScreenSaver *screen_saver)
 		return;
 
 	g_free (screen_saver->filename);
+
+	if (screen_saver->master_pixbuf != NULL) {
+		g_object_unref (screen_saver->master_pixbuf);
+		screen_saver->master_pixbuf = NULL;
+	}
 
 	g_hash_table_destroy (screen_saver->cached_sources);
 
@@ -1026,10 +1047,7 @@ screen_saver_on_draw (ScreenSaver    *screen_saver,
 		floater = (ScreenSaverFloater *) tmp->data;
 
 		if (!screen_saver_floater_do_draw (screen_saver, floater, context))
-		{
-			ctk_main_quit ();
-			break;
-		}
+			continue;
 	}
 
 	screen_saver->draw_ops_pending = TRUE;
@@ -1216,6 +1234,9 @@ main (int   argc,
 	                                 filenames[0], max_floater_count,
 	                                 should_do_rotations, should_show_paths);
 	g_strfreev (filenames);
+
+	if (screen_saver == NULL)
+		return EX_NOINPUT;
 
 	if (should_print_stats)
 		g_timeout_add (STAT_PRINT_FREQUENCY,
