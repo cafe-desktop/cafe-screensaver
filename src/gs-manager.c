@@ -421,11 +421,10 @@ gs_manager_set_throttled (GSManager *manager,
 
 		manager->priv->throttled = throttled;
 
+		manager_throttle_jobs (manager);
+
 		if (! manager->priv->dialog_up)
 		{
-
-			manager_throttle_jobs (manager);
-
 			for (l = manager->priv->windows; l; l = l->next)
 			{
 				gs_window_clear (l->data);
@@ -1886,6 +1885,7 @@ gs_manager_deactivate (GSManager *manager)
 	manager->priv->lock_active = FALSE;
 	manager->priv->dialog_up = FALSE;
 	manager->priv->fading = FALSE;
+	manager->priv->throttled = FALSE;
 
 	return TRUE;
 }
