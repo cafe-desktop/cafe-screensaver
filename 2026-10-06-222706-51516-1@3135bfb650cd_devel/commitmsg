@@ -1,0 +1,3 @@
+savers,floaters: load image once and scale in memory
+
+never quit on draw failure
