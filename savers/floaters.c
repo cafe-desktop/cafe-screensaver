@@ -886,15 +886,18 @@ screen_saver_new (CtkWidget       *drawing_area,
 	screen_saver->should_show_paths = should_show_paths;
 	screen_saver->should_do_rotations = should_do_rotations;
 
+	screen_saver->state_update_timeout_id = 0;
+	screen_saver->stats_update_timeout_id = 0;
+
 	screen_saver_get_initial_state (screen_saver);
 
-	screen_saver->state_update_timeout_id =
-	    g_timeout_add (1000 / (2.0 * OPTIMAL_FRAME_RATE),
-	                   (GSourceFunc) screen_saver_do_update_state, screen_saver);
-
-	screen_saver->stats_update_timeout_id =
-	    g_timeout_add (1000, (GSourceFunc) screen_saver_do_update_stats,
-	                   screen_saver);
+	/* The animation timers are not started here: the toplevel window
+	 * has not been realized yet, and ticking against a
+	 * half-constructed widget hierarchy is what triggers the
+	 * startup criticals from the draw machinery (a NULL instance in
+	 * g_signal_connect_data and a NULL frame clock in
+	 * cdk_frame_clock_begin_updating).  screen_saver_on_draw()
+	 * starts them once the drawing area is actually drawable. */
 
 	return screen_saver;
 }
@@ -1030,6 +1033,20 @@ screen_saver_on_draw (ScreenSaver    *screen_saver,
 
 	if (screen_saver->floaters == NULL)
 		screen_saver_create_floaters (screen_saver);
+
+	/* First draw: the drawing area is realized and has a window
+	 * now, so it is safe to let the animation timers run. */
+	if (screen_saver->state_update_timeout_id == 0)
+	{
+		screen_saver->state_update_timeout_id =
+		    g_timeout_add (1000 / (2.0 * OPTIMAL_FRAME_RATE),
+		                   (GSourceFunc) screen_saver_do_update_state,
+		                   screen_saver);
+
+		screen_saver->stats_update_timeout_id =
+		    g_timeout_add (1000, (GSourceFunc) screen_saver_do_update_stats,
+		                   screen_saver);
+	}
 
 	screen_saver->floaters = g_list_sort (screen_saver->floaters,
 	                                      (GCompareFunc)compare_floaters);
@@ -1221,8 +1238,8 @@ main (int   argc,
 
 	drawing_area = CTK_WIDGET (ctk_drawing_area_new ());
 
-	ctk_widget_show (drawing_area);
 	ctk_container_add (CTK_CONTAINER (window), drawing_area);
+	ctk_widget_show (drawing_area);
 
 	screen_saver = screen_saver_new (drawing_area,
 	                                 filenames[0], max_floater_count,
