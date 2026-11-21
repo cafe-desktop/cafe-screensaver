@@ -1,0 +1,3 @@
+gs-listener-dbus: avoid deprecated GTimeVal
+
+g_date_time_format_iso8601 requires GLib 2.62

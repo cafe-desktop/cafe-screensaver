@@ -1,0 +1,1 @@
+floaters: do not tick or show the drawing area before the window exists

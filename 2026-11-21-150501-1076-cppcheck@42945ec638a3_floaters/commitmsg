@@ -1,0 +1,1 @@
+window: free the child environment when spawning fails
