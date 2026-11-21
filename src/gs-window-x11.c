@@ -1138,6 +1138,7 @@ spawn_on_window (GSWindow *window,
 		gs_debug ("Could not start command '%s': %s", command, error->message);
 		g_error_free (error);
 		g_strfreev (argv);
+		g_strfreev (envp);
 		return FALSE;
 	}
 
