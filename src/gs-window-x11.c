@@ -45,6 +45,7 @@ static void gs_window_finalize   (GObject       *object);
 
 static gboolean popup_dialog_idle (GSWindow *window);
 static void gs_window_dialog_finish (GSWindow *window);
+static void popdown_dialog (GSWindow *window);
 static void remove_command_watches (GSWindow *window);
 
 enum
@@ -55,6 +56,11 @@ enum
 
 #define MAX_QUEUED_EVENTS 16
 #define INFO_BAR_SECONDS 30
+
+/* Seconds to wait for the unlock dialog to embed itself before
+ * considering it broken and tearing it down.  A healthy dialog
+ * embeds in well under a second. */
+#define DIALOG_WATCHDOG_SECONDS 30
 
 struct GSWindowPrivate
 {
@@ -85,6 +91,7 @@ struct GSWindowPrivate
 	cairo_surface_t *background_surface;
 
 	guint      popup_dialog_idle_id;
+	guint      dialog_watchdog_id;
 
 	guint      dialog_map_signal_id;
 	guint      dialog_unmap_signal_id;
@@ -637,6 +644,44 @@ static void
 add_popup_dialog_idle (GSWindow *window)
 {
 	window->priv->popup_dialog_idle_id = g_idle_add ((GSourceFunc)popup_dialog_idle, window);
+}
+
+static void
+remove_dialog_watchdog (GSWindow *window)
+{
+	if (window->priv->dialog_watchdog_id != 0)
+	{
+		g_source_remove (window->priv->dialog_watchdog_id);
+		window->priv->dialog_watchdog_id = 0;
+	}
+}
+
+/* A half-constructed unlock dialog (for instance one whose
+ * embedded content fails to load) can stay alive without ever
+ * embedding its window and without ever answering.  While it is
+ * up the manager keeps dialog-up set, no job can be started and
+ * the screen stays black until the daemon is restarted.  Tear it
+ * down after a grace period so the screensaver can continue. */
+static gboolean
+dialog_watchdog (GSWindow *window)
+{
+	window->priv->dialog_watchdog_id = 0;
+
+	if (window->priv->lock_pid > 0
+	    && window->priv->lock_socket == NULL)
+	{
+		gs_debug ("Unlock dialog did not embed within %d seconds, killing it",
+		          DIALOG_WATCHDOG_SECONDS);
+
+		/* SIGKILL because the dialog is by definition stuck and may
+		 * not honour SIGTERM; waiting for it to die would block the
+		 * daemon forever. */
+		signal_pid (window->priv->lock_pid, SIGKILL);
+
+		popdown_dialog (window);
+	}
+
+	return FALSE;
 }
 
 static gboolean
@@ -1468,6 +1513,8 @@ gs_window_dialog_finish (GSWindow *window)
 
 	/* remove events for the case were we failed to show socket */
 	remove_key_events (window);
+
+	remove_dialog_watchdog (window);
 }
 
 static void
@@ -1561,6 +1608,7 @@ popdown_dialog (GSWindow *window)
 	}
 
 	remove_popup_dialog_idle (window);
+	remove_dialog_watchdog (window);
 	remove_command_watches (window);
 }
 
@@ -1755,6 +1803,13 @@ popup_dialog (GSWindow *window)
 		 * ever started again (black screen until the daemon is
 		 * restarted). */
 		popdown_dialog (window);
+	}
+	else
+	{
+		window->priv->dialog_watchdog_id =
+		    g_timeout_add_seconds (DIALOG_WATCHDOG_SECONDS,
+		                           (GSourceFunc) dialog_watchdog,
+		                           window);
 	}
 
 	g_string_free (command, TRUE);
