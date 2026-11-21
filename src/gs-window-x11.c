@@ -1747,6 +1747,14 @@ popup_dialog (GSWindow *window)
 	if (! result)
 	{
 		gs_debug ("Could not start command: %s", command->str);
+
+		/* dialog-up was already set in gs_window_request_unlock()
+		 * and no lock watch will ever fire to clear it, so we must
+		 * take the dialog state back down here.  Otherwise the
+		 * manager stays with "dialog is up" forever and no job is
+		 * ever started again (black screen until the daemon is
+		 * restarted). */
+		popdown_dialog (window);
 	}
 
 	g_string_free (command, TRUE);
