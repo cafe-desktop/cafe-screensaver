@@ -1089,28 +1089,58 @@ static void
 listener_service_deleted (GSListener  *listener,
                           DBusMessage *message)
 {
+	const char *name;
 	const char *old_service_name;
 	const char *new_service_name;
 	gboolean    removed;
 
+	/* NameOwnerChanged carries three arguments: the name, the
+	 * old owner and the new owner.  The owner fields identify
+	 * the connection to act on: an empty new owner means the
+	 * old owner released the name (clean up its entries), an
+	 * empty old owner means the name was just acquired, and a
+	 * non-empty new owner means the name changed hands (the
+	 * old owner connection is still alive). */
+
 	if (! dbus_message_get_args (message, NULL,
+	                             DBUS_TYPE_STRING, &name,
 	                             DBUS_TYPE_STRING, &old_service_name,
 	                             DBUS_TYPE_STRING, &new_service_name,
 	                             DBUS_TYPE_INVALID))
 	{
-		g_error ("Invalid NameOwnerChanged signal from bus!");
+		gs_debug ("Invalid NameOwnerChanged signal from bus!");
 		return;
 	}
 
-	gs_debug ("DBUS service deleted: %s", new_service_name);
+	if (new_service_name != NULL && *new_service_name != '\0')
+	{
+		/* The name was transferred to a new owner.  The old owner
+		 * connection is still alive; its entries will be cleaned
+		 * up when it disconnects. */
+		gs_debug ("DBUS service changed: %s old owner %s new owner %s",
+		          name,
+		          old_service_name,
+		          new_service_name);
+		return;
+	}
 
-	removed = listener_ref_entry_remove_for_connection (listener, REF_ENTRY_TYPE_THROTTLE, new_service_name);
+	if (old_service_name == NULL || *old_service_name == '\0')
+	{
+		/* The name was just acquired; nothing to clean up. */
+		return;
+	}
+
+	gs_debug ("DBUS service deleted: %s (owner was %s)",
+	          name,
+	          old_service_name);
+
+	removed = listener_ref_entry_remove_for_connection (listener, REF_ENTRY_TYPE_THROTTLE, old_service_name);
 	if (removed)
 	{
 		listener_ref_entry_check (listener, REF_ENTRY_TYPE_THROTTLE);
 	}
 
-	removed = listener_ref_entry_remove_for_connection (listener, REF_ENTRY_TYPE_INHIBIT, new_service_name);
+	removed = listener_ref_entry_remove_for_connection (listener, REF_ENTRY_TYPE_INHIBIT, old_service_name);
 	if (removed)
 	{
 		listener_ref_entry_check (listener, REF_ENTRY_TYPE_INHIBIT);
