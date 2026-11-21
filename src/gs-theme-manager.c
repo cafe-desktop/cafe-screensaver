@@ -37,6 +37,7 @@
 #include "gs-debug.h"
 
 static void     gs_theme_manager_finalize   (GObject             *object);
+static CafeMenuTree *get_themes_tree        (void);
 
 struct _GSThemeInfo
 {
@@ -266,6 +267,13 @@ find_info_for_id (CafeMenuTree  *tree,
 	CafeMenuTreeIter *iter;
 	CafeMenuTreeItemType type;
 
+	/* A NULL tree (its initial load failed) means there
+	 * simply are no themes to find. */
+	if (tree == NULL)
+	{
+		return NULL;
+	}
+
 	root = cafemenu_tree_get_root_directory (tree);
 	if (root == NULL)
 	{
@@ -305,6 +313,29 @@ gs_theme_manager_lookup_theme_info (GSThemeManager *theme_manager,
 
 	id = g_strdup_printf ("%s.desktop", name);
 	info = find_info_for_id (theme_manager->priv->menu_tree, id);
+
+	if (info == NULL)
+	{
+		/* The tree is loaded once, when the manager is
+		 * created, and never reloaded: menu files change
+		 * while the daemon runs, and the initial load may
+		 * have failed altogether.  Load a fresh tree and
+		 * look again before giving up. */
+		CafeMenuTree *tree;
+
+		tree = get_themes_tree ();
+		if (tree != NULL)
+		{
+			if (theme_manager->priv->menu_tree != NULL)
+			{
+				g_object_unref (theme_manager->priv->menu_tree);
+			}
+			theme_manager->priv->menu_tree = tree;
+
+			info = find_info_for_id (tree, id);
+		}
+	}
+
 	g_free (id);
 
 	return info;
@@ -351,6 +382,12 @@ gs_theme_manager_get_info_list (GSThemeManager *theme_manager)
 
 	g_return_val_if_fail (GS_IS_THEME_MANAGER (theme_manager), NULL);
 
+	/* there are no themes to list when the tree failed to load */
+	if (theme_manager->priv->menu_tree == NULL)
+	{
+		return NULL;
+	}
+
 	root = cafemenu_tree_get_root_directory (theme_manager->priv->menu_tree);
 
 	if (root != NULL)
@@ -381,11 +418,15 @@ get_themes_tree (void)
 	add_known_engine_locations_to_path ();
 
 	themes_tree = cafemenu_tree_new ("cafe-screensavers.menu", CAFEMENU_TREE_FLAGS_NONE);
-	if (!cafemenu_tree_load_sync (themes_tree, &error)) {
-		g_debug("Load cafemenu tree got error: %s\n", error->message);
-		g_error_free(error);
-		g_object_unref(themes_tree);
-		return NULL;
+	if (themes_tree != NULL) {
+		if (!cafemenu_tree_load_sync (themes_tree, &error)) {
+			if (error != NULL) {
+				g_debug("Load cafemenu tree got error: %s\n", error->message);
+				g_error_free(error);
+			}
+			g_object_unref(themes_tree);
+			return NULL;
+		}
 	}
 
 	return themes_tree;
